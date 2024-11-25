@@ -1,0 +1,129 @@
+.btn {
+  @include mid-flex;
+  width: fit-content;
+  text-align: center;
+  cursor: pointer;
+  padding: 1.2rem 3.2rem;
+  @include transition(0.5s, ease);
+  overflow: hidden;
+  position: relative;
+  background: var(--color-pri);
+  gap: 0.8rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+  @include font-second;
+  @include max(600px) {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+  }
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+  .text {
+  }
+  .icon {
+    width: 2rem;
+    height: 2rem;
+    @include mid-flex;
+    flex-shrink: 0;
+    font-weight: 500;
+    color: var(--color-white);
+    transition: 0.3s ease-in-out;
+  }
+  &.invert {
+    background: #323b53;
+    &::after {
+      background: var(--color-sec);
+    }
+    .icon {
+      color: #fff;
+    }
+  }
+  &.center {
+    margin: 0 auto;
+  }
+  &.none-icon {
+    .icon {
+      display: none;
+    }
+  }
+  &.second {
+    background: #f2794d;
+    @include hover {
+      color: #f2794d;
+    }
+  }
+  &.three {
+    background: transparent;
+    color: #000;
+    padding: unset;
+    min-width: unset;
+    overflow: unset;
+    &::after {
+      display: none;
+    }
+    @include hover {
+      color: var(--color-pri);
+      .icon {
+        transform: translateX(0.4rem);
+      }
+    }
+    .icon {
+      display: flex;
+      font-size: 1.2rem;
+    }
+  }
+  &.trans {
+    background: transparent;
+    color: var(--color-pri);
+    border: 0.1rem solid var(--color-pri);
+    @include hover {
+      color: var(--color-white);
+    }
+    &::after {
+      background: var(--color-pri);
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: var(--color-sec);
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  @include hover {
+    color: var(--color-white);
+    &::after {
+      left: 0;
+      width: 100%;
+    }
+    .icon {
+      transform: unset;
+      color: var(--color-white);
+    }
+  }
+  &__center {
+    margin: 0 auto;
+  }
+  &__cir {
+    width: 4rem;
+    height: 4rem;
+    padding: unset;
+  }
+  &.four {
+    background: #fff;
+    color: var(--color-pri);
+    @include hover {
+      color: #fff;
+    }
+    &::after {
+      background: var(--color-pri);
+    }
+  }
+}
