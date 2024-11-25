@@ -7,8 +7,11 @@
   --color-black: #000;
   --color-white: #fff;
 
+  --color-text-2: #344054;
+
   // distance section
   --pd-sc: 6rem;
+  --rs: 1.2rem;
 
   @media (max-width: 1200px) {
     --pd-sc: 4rem;
@@ -19,7 +22,9 @@
 //Responsive
 $res-mobile: 1199px;
 $res-mobile-min: 1200px;
-$mobile: 500px;
+$res-tablet: 1024px;
+$res-tablet-min: 1025px;
+$mobile: 700px;
 //Distance
 $radius: 0.6rem;
 // cubic
