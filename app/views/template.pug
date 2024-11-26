@@ -232,6 +232,23 @@ block container
 					h1.t24.fw-6 Việt Event tại North Carolina
 				.pro-side.row 
 					.pro-left.col 
+						.pro-bar 
+							.pro-calendar 
+								.pro-calendar-head 
+									span.pro-li 
+										+img('ic-calendar-white.svg')
+										span.txt Tháng 10, 2024
+									i.fas.fa-angle-down
+								ul 
+									li January 2025
+									li December 2024
+									li November 2024
+									li.active October 2024
+									li September 2024
+									li August 2024
+									li July 2024
+							.pro-qc 
+								+img('pro-qc.jpg')
 					.pro-right.col
 						.pro-list.row 
 							- 
@@ -592,4 +609,157 @@ block container
 													else 
 														span.txt.fw-5.c-txt-2 #{note.name}
 									.pro-des #{item.address}
-										
+	section.sec-pro 
+		.pro.ss-pd
+			.container 
+				.re-head.mb-24
+					h1.t24.fw-6 Rao vặt khác tại North Carolina
+				.pro-grid 
+					.pro-grid-item 
+						.pro-bner 
+							.pro-bner-tag Sponsored
+							.pro-bner-dc
+								+img('pro-bner-dc.png')
+							.pro-bner-img
+								+img('pro-bner-img.jpg')
+							.pro-bner-content 
+								h3.pro-bner-name Chăm sóc người lớn tuổi
+								p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
+								.pro-btn 
+									span.txt Khám phá ngay
+					each item in proArrFour
+						.pro-grid-item 
+							.pro-wr.four 
+								+img("ic-loa.svg")
+								.pro-content 
+									h3.pro-name Chăm sóc người già - Marietta, GA 30062
+									.pro-des Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...
+									.pro-note 
+										.pro-note-item 
+											.pro-li.fw-6.c-txt-2 
+												+img('ic-pro-2.svg')
+												span.txt Marietta 30062
+										.pro-note-item 
+											.pro-li.fw-6.c-txt-2 
+												+img('ic-pro-7.svg')
+												span.txt 2 ngày trước
+										.pro-note-item 
+											.pro-li.fw-6.c-txt-2 
+												+img('ic-pro-4.svg')
+												span.txt 1000
+	section.sec-pro
+		.pro.ss-pd
+			.container 
+				.re-head.mb-24
+					h1.t24.fw-6 Góc tài liệu/thông tin cho cộng đồng
+				.pro-fil
+					.pro-fil-head 
+						span.txt  Tài liệu
+						i.fas.fa-angle-down
+					ul 
+						li 
+							a(href="#").pro-fil-link.active Tài liệu
+						li 
+							a(href="#").pro-fil-link Cẩm nang business
+						li 
+							a(href="#").pro-fil-link Phòng khám Việt 
+						li 
+							a(href="#").pro-fil-link Khai thuế/CPA Việt
+						li 
+							a(href="#").pro-fil-link Luật sư Việt
+						li 
+							a(href="#").pro-fil-link Realtor Việt
+						li 
+							a(href="#").pro-fil-link Thợ Việt sửa nhà/vườn
+				.pro-row.row 
+					.pro-col.col 
+						.pro-list.row 
+							.pro-item.col 
+								.pro-wr.five 
+									.pro-out
+										.inner
+											+img('pro-out.jpg')
+									.pro-content 
+										.pro-li 
+											+img('ic-pro-4.svg')
+											span.txt 1000
+										h3.pro-name Bộ 5000 câu hỏi trắc nghiệm về Nail - Cẩm nang
+										p.pro-des Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai, TP Hà Nội) với nhiều hoạt động hấp dẫn; là một trong những sự kiện quan trọng của quận Hoàng Mai hướng tới chào mừng kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10-10-1954 / 10-10-2024). Hội chợ được tổ chức nhằm thúc đẩy hoạt động xúc tiến thương mại, giao lưu kinh tế, tạo điểm sinh hoạt văn hóa, vui chơi giải trí, mua sắm cho nhân dân trong dịp kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10/10).
+										.pro-control 
+											a.pro-btn(href="#")
+												span.txt Xem chi tiết
+											a.pro-btn(href="#").second
+												+img('ic-dl.svg')
+												span.txt Tải xuống
+							.pro-item.col 
+								.pro-wr.five 
+									.pro-content 
+										.pro-li 
+											+img('ic-pro-4.svg')
+											span.txt 1000
+										h3.pro-name Bộ 5000 câu hỏi trắc nghiệm về Nail - Cẩm nang
+										p.pro-des Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai, TP Hà Nội) với nhiều hoạt động hấp dẫn; là một trong những sự kiện quan trọng của quận Hoàng Mai hướng tới chào mừng kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10-10-1954 / 10-10-2024). Hội chợ được tổ chức nhằm thúc đẩy hoạt động xúc tiến thương mại, giao lưu kinh tế, tạo điểm sinh hoạt văn hóa, vui chơi giải trí, mua sắm cho nhân dân trong dịp kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10/10).
+										.pro-control 
+											a.pro-btn(href="#")
+												span.txt Xem chi tiết
+											a.pro-btn(href="#").second
+												+img('ic-dl.svg')
+												span.txt Tải xuống
+							.pro-item.col 
+								.pro-wr.five 
+									.pro-content 
+										.pro-li 
+											+img('ic-pro-4.svg')
+											span.txt 1000
+										h3.pro-name Bộ 5000 câu hỏi trắc nghiệm về Nail - Cẩm nang
+										p.pro-des Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai, TP Hà Nội) với nhiều hoạt động hấp dẫn; là một trong những sự kiện quan trọng của quận Hoàng Mai hướng tới chào mừng kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10-10-1954 / 10-10-2024). Hội chợ được tổ chức nhằm thúc đẩy hoạt động xúc tiến thương mại, giao lưu kinh tế, tạo điểm sinh hoạt văn hóa, vui chơi giải trí, mua sắm cho nhân dân trong dịp kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10/10).
+										.pro-control 
+											a.pro-btn(href="#")
+												span.txt Xem chi tiết
+											a.pro-btn(href="#").second
+												+img('ic-dl.svg')
+												span.txt Tải xuống
+					.pro-col.col
+						.pro-list.row 
+							.pro-item.col 
+								.pro-wr.five 
+									.pro-content 
+										.pro-li 
+											+img('ic-pro-4.svg')
+											span.txt 1000
+										h3.pro-name Bộ 5000 câu hỏi trắc nghiệm về Nail - Cẩm nang
+										p.pro-des Bộ các câu hỏi chuyên sâu phục vụ bài thi xét duyệt thi chứng chỉ làm móng
+										.pro-control 
+											a.pro-btn(href="#")
+												span.txt Xem chi tiết
+											a.pro-btn(href="#").second
+												+img('ic-dl.svg')
+												span.txt Tải xuống
+							.pro-item.col 
+								.pro-wr.five 
+									.pro-content 
+										.pro-li 
+											+img('ic-pro-4.svg')
+											span.txt 1000
+										h3.pro-name Bộ 5000 câu hỏi trắc nghiệm về Nail - Cẩm nang
+										p.pro-des Bộ các câu hỏi chuyên sâu phục vụ bài thi xét duyệt thi chứng chỉ làm móng
+										.pro-control 
+											a.pro-btn(href="#")
+												span.txt Xem chi tiết
+											a.pro-btn(href="#").second
+												+img('ic-dl.svg')
+												span.txt Tải xuống
+							.pro-item.col 
+								.pro-wr.five 
+									.pro-content 
+										.pro-li 
+											+img('ic-pro-4.svg')
+											span.txt 1000
+										h3.pro-name Bộ 5000 câu hỏi trắc nghiệm về Nail - Cẩm nang
+										p.pro-des Bộ các câu hỏi chuyên sâu phục vụ bài thi xét duyệt thi chứng chỉ làm móng
+										.pro-control 
+											a.pro-btn(href="#")
+												span.txt Xem chi tiết
+											a.pro-btn(href="#").second
+												+img('ic-dl.svg')
+												span.txt Tải xuống
