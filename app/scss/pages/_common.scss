@@ -2,21 +2,50 @@
   &-head {
     padding: 1rem 2rem;
     border: 0.1rem solid var(--border-color);
+    @include max(1200px) {
+      padding: 0.6rem;
+    }
   }
   &-form {
-    width: 50%;
+    max-width: 104rem;
     .row {
       flex: 1;
       --cg: 0.8rem;
       --rg: 0rem;
-    }
-    .b-form-gr {
-      display: flex;
-      gap: 1.6rem;
-      .btn {
-        flex-shrink: 0;
-        min-width: unset;
+      @include max(920px) {
+        --rg: 0.8rem;
       }
+      > .col-4 {
+        @include max(920px) {
+          width: 100%;
+        }
+      }
+      > .col-3 {
+        @include max(920px) {
+          width: 40%;
+        }
+        @include max(500px) {
+          width: 50%;
+        }
+      }
+      > .col-2 {
+        @include max(920px) {
+          width: 20%;
+        }
+        @include max(500px) {
+          width: 35%;
+          margin: 0 auto;
+          margin-bottom: var(--rg);
+        }
+      }
+    }
+    .btn {
+      flex-shrink: 0;
+      min-width: unset;
+      height: 5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+      padding: 0.6rem;
     }
   }
 }
@@ -25,11 +54,12 @@
   border: 0.1rem solid var(--border-color);
   border-radius: 0.5rem;
   align-items: center;
+  height: 5rem;
   .icon {
     width: 5rem;
-    height: 5rem;
     @include mid-flex;
     flex-shrink: 0;
+    height: 100%;
   }
   input {
     width: 100%;
@@ -37,5 +67,33 @@
     outline: unset;
     margin: unset;
     height: 100%;
+    font-weight: 500;
+    background: unset;
+    &::placeholder {
+      color: #b3b3b3;
+    }
+  }
+}
+.sear {
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  &-row {
+    --cg: 1.2rem;
+    --rg: 0;
+  }
+  &-block {
+    height: 100%;
+    overflow: hidden;
+  }
+  &-map {
+    img,
+    iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   }
 }

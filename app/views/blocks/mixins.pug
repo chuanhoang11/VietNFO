@@ -123,7 +123,7 @@ mixin popupDt(classCustom="",id="")
                .popup-wrapper
                   block
          
-mixin title(text, classCustom)
+mixin title(text,des, classCustom)
    if(!classCustom)
       .head
          h2.t-title 
@@ -134,6 +134,8 @@ mixin title(text, classCustom)
       .head(class=classCustom)
          h2.t-title 
             | #{text}
+         p.t-des 
+            | #{des}
 mixin Checker(type,shape,text,classCustom,num,name)
    if(num == "has")
       if (shape == "circle")
