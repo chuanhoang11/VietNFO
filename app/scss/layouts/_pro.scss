@@ -1,3 +1,13 @@
+.--hide-mobile{
+    @include max($mobile) {
+        display: none;
+    }   
+}
+.--hide-desk {
+    @include min($mobile-min) {
+        display: none;
+    }
+}
 .pro {}
 
 .pro-list {
@@ -5,6 +15,7 @@
     --cg: 1.6rem;
 }
 
+.pro-slider .swiper-slide.col-4,
 .pro-item.col-4 {
     @include max($res-tablet) {
         width: 50%;
@@ -27,6 +38,7 @@
     flex-direction: column;
     --pd-content: 1.1em;
     background-color: white;
+    width: 100%;
 
     @include max($res-mobile) {
         font-size: 1.2vw;
@@ -193,6 +205,9 @@
 
     @include max($mobile) {
         width: 100%;
+        .pro-qc{
+            display: none;
+        }
     }
 }
 
@@ -703,5 +718,35 @@
 
     .pro-btn {
         border-radius: .8rem;
+    }
+}
+
+.pro-slider .swiper.rows {
+    --cg: 1.6rem;
+    --rg: 1.6rem;
+}
+
+.pro-slider .swiper-wrapper {
+    flex-direction: row;
+    margin-bottom: calc(var(--rg) * -1);
+
+    @include max($mobile) {
+        flex-wrap: wrap;
+    }
+}
+
+.pro-slider .swiper-slide {
+    margin-bottom: var(--cg) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pro-slider-second .swiper-wrapper {
+    @include max($mobile) {
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
     }
 }

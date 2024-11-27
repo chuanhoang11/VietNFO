@@ -6,225 +6,258 @@ block vars
 
 block container 
 	section.sec-pro 
-		.pro.ss-pd 
+		.pro.ss-pd.pro-slider
 			.container 
 				.re-head.mb-24
 					h1.t24.fw-6 Việc làm tại North Carolina
-				.pro-list.row 
-					- 
-						var proArrSecond = [
-							{
-								name: "Tuyển phục vụ nhà hàng Việt Nam",
-								time: "59 phút trước",
-								type: "Nhà hàng",
-								name_location: "Pho Dai Viet Restaurant",
-								name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
-								price: "25 - 40",
-								views: "500"
-							},
-							{
-								name: "Tuyển phục vụ nhà hàng Việt Nam",
-								time: "59 phút trước",
-								type: "Nhà hàng",
-								name_location: "Pho Dai Viet Restaurant",
-								name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
-								price: "25 - 40",
-								views: "500"
-							},
-							{
-								name: "Tuyển phục vụ nhà hàng Việt Nam",
-								time: "59 phút trước",
-								type: "Nhà hàng",
-								name_location: "Pho Dai Viet Restaurant",
-								name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
-								price: "25 - 40",
-								views: "500"
-							},
-							{
-								name: "Tuyển quản lý nhà hàng Nhật",
-								time: "59 phút trước",
-								type: "Nhà hàng",
-								name_location: "Japanese Restaurant",
-								name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
-								price: "25 - 40",
-								views: "500"
-							},
-							{
-								name: "Tuyển trợ lý luật sư",
-								time: "59 phút trước",
-								type: "Văn phòng",
-								name_location: "United Lawyer Firm",
-								name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
-								price: "25 - 40",
-								views: "500"
-							},
-							{
-								name: "Tuyển nhân viên cắt tóc",
-								time: "59 phút trước",
-								type: "Việc khác",
-								name_location: "United Lawyer Firm",
-								name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
-								price: "25 - 40",
-								views: "500"
-							},
-							
-						]
-					each item in proArrSecond
-						.pro-item.col.col-4
-							.pro-wr.second
-								.pro-content 
-									.pro-flex 
-										.pro-time #{item.time}
-										.pro-type #{item.type}
-									h3.pro-name #{item.name}
-									ul.pro-ul 
-										li 
-											.pro-li
-												+img('ic-pro-1.svg')
-												span.txt #{item.name_location}
-										li 
-											.pro-li
-												+img('ic-pro-2.svg')
-												span.txt #{item.name_address}
-									.pro-flex
-										.pro-li
-											+img('ic-pro-3.svg')
-											span.txt 
-												span(style="font-size: 1.1em").c-pri.fw-6 #{item.price}
-												span /hour
-										.pro-li
-											+img('ic-pro-4.svg')
-											span.txt #{item.views} Views
+				.swiper-container
+					.swiper.rows
+						.swiper-wrapper
+							- 
+								var proArrSecond = [
+									{
+										name: "Tuyển phục vụ nhà hàng Việt Nam",
+										time: "59 phút trước",
+										type: "Nhà hàng",
+										name_location: "Pho Dai Viet Restaurant",
+										name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
+										price: "25 - 40",
+										views: "500"
+									},
+									{
+										name: "Tuyển phục vụ nhà hàng Việt Nam",
+										time: "59 phút trước",
+										type: "Nhà hàng",
+										name_location: "Pho Dai Viet Restaurant",
+										name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
+										price: "25 - 40",
+										views: "500"
+									},
+									{
+										name: "Tuyển phục vụ nhà hàng Việt Nam",
+										time: "59 phút trước",
+										type: "Nhà hàng",
+										name_location: "Pho Dai Viet Restaurant",
+										name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
+										price: "25 - 40",
+										views: "500"
+									},
+									{
+										name: "Tuyển quản lý nhà hàng Nhật",
+										time: "59 phút trước",
+										type: "Nhà hàng",
+										name_location: "Japanese Restaurant",
+										name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
+										price: "25 - 40",
+										views: "500"
+									},
+									{
+										name: "Tuyển trợ lý luật sư",
+										time: "59 phút trước",
+										type: "Văn phòng",
+										name_location: "United Lawyer Firm",
+										name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
+										price: "25 - 40",
+										views: "500"
+									},
+									{
+										name: "Tuyển nhân viên cắt tóc",
+										time: "59 phút trước",
+										type: "Việc khác",
+										name_location: "United Lawyer Firm",
+										name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
+										price: "25 - 40",
+										views: "500"
+									},
+									{
+										name: "Tuyển nhân viên cắt tóc",
+										time: "59 phút trước",
+										type: "Việc khác",
+										name_location: "United Lawyer Firm",
+										name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
+										price: "25 - 40",
+										views: "500"
+									}
+								]
+							each item in proArrSecond
+								.swiper-slide.col.col-4
+									.pro-wr.second
+										.pro-content 
+											.pro-flex 
+												.pro-time #{item.time}
+												.pro-type #{item.type}
+											h3.pro-name #{item.name}
+											ul.pro-ul 
+												li 
+													.pro-li
+														+img('ic-pro-1.svg')
+														span.txt #{item.name_location}
+												li 
+													.pro-li
+														+img('ic-pro-2.svg')
+														span.txt #{item.name_address}
+											.pro-flex
+												.pro-li
+													+img('ic-pro-3.svg')
+													span.txt 
+														span(style="font-size: 1.1em").c-pri.fw-6 #{item.price}
+														span /hour
+												.pro-li
+													+img('ic-pro-4.svg')
+													span.txt #{item.views} Views
+							.swiper-slide.col.col-4
+								a(href="#").pro-btn 
+									span.txt Xem tất cả
 	section.sec-pro 
-		.pro.ss-pd 
+		.pro.ss-pd.pro-slider
 			.container 
 				.re-head.mb-24
 					h1.t24.fw-6 Sang nhượng Business tại North Carolina
-				.pro-list.row 
-					- 
-						var proArr = [
-							{
-								img: "pro-1.jpg",
-								time: "2 ngày trước",
-								type: "Tiệm nail",
-								price: "$500,000",
-								tag: "Thương lượng",
-								note: [
-									"6 tables",
-									"6 chairs",
-									"11,300 sqft"
-								],
-								rent: "$1,500",
-								income: "$1,000,000",
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-2.jpg",
-								time: "2 ngày trước",
-								type: "Nhà hàng",
-								price: "$500,000",
-								tag: "Thương lượng",
-								note: [
-									"Nam Phuong Restaurant",
-									"36 seats",
-									"11,300 sqft"
-								],
-								rent: "$1,500",
-								income: "$1,000,000",
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-3.jpg",
-								time: "2 ngày trước",
-								type: "Kinh doanh khác",
-								price: "$500,000",
-								note: [
-									"Xưởng sửa chữa ô tô Đại Việt",
-									"11,300 sqft"
-								],
-								rent: "$1,500",
-								income: "$1,000,000",
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-4.jpg",
-								time: "2 ngày trước",
-								type: "Tiệm nail",
-								price: "$500,000",
-								note: [
-									"6 tables",
-									"6 chairs",
-									"11,300 sqft"
-								],
-								rent: "$1,500",
-								income: "$1,000,000",
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-5.jpg",
-								time: "2 ngày trước",
-								type: "Tiệm nail",
-								price: "$500,000",
-								note: [
-									"6 tables",
-									"6 chairs",
-									"11,300 sqft"
-								],
-								rent: "$1,500",
-								income: "$1,000,000",
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-6.jpg",
-								time: "2 ngày trước",
-								type: "Tiệm nail",
-								price: "$500,000",
-								note: [
-									"6 tables",
-									"6 chairs",
-									"11,300 sqft"
-								],
-								rent: "$1,500",
-								income: "$1,000,000",
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							}
-						]
-					each item in proArr
-						.pro-item.col.col-4
-							.pro-wr 
-								.pro-img 
-									.pro-time #{item.time}
-									.pro-type #{item.type}
-									a(href="#").inner 
-										+img(item.img)
-								.pro-content
-									if item.tag
-										.pro-top 
-											h3.pro-name #{item.price}
+				.swiper-container 
+					.swiper.rows
+						.swiper-wrapper 
+							- 
+								var proArr = [
+									{
+										img: "pro-1.jpg",
+										time: "2 ngày trước",
+										type: "Tiệm nail",
+										price: "$500,000",
+										tag: "Thương lượng",
+										note: [
+											"6 tables",
+											"6 chairs",
+											"11,300 sqft"
+										],
+										rent: "$1,500",
+										income: "$1,000,000",
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+									},
+									{
+										img: "pro-2.jpg",
+										time: "2 ngày trước",
+										type: "Nhà hàng",
+										price: "$500,000",
+										tag: "Thương lượng",
+										note: [
+											"Nam Phuong Restaurant",
+											"36 seats",
+											"11,300 sqft"
+										],
+										rent: "$1,500",
+										income: "$1,000,000",
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+									},
+									{
+										img: "pro-3.jpg",
+										time: "2 ngày trước",
+										type: "Kinh doanh khác",
+										price: "$500,000",
+										note: [
+											"Xưởng sửa chữa ô tô Đại Việt",
+											"11,300 sqft"
+										],
+										rent: "$1,500",
+										income: "$1,000,000",
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+									},
+										{
+										img: "pro-6.jpg",
+										time: "2 ngày trước",
+										type: "Tiệm nail",
+										price: "$500,000",
+										note: [
+											"6 tables",
+											"6 chairs",
+											"11,300 sqft"
+										],
+										rent: "$1,500",
+										income: "$1,000,000",
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+									},
+									{
+										img: "pro-4.jpg",
+										time: "2 ngày trước",
+										type: "Tiệm nail",
+										price: "$500,000",
+										note: [
+											"6 tables",
+											"6 chairs",
+											"11,300 sqft"
+										],
+										rent: "$1,500",
+										income: "$1,000,000",
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+									},
+									{
+										img: "pro-5.jpg",
+										time: "2 ngày trước",
+										type: "Tiệm nail",
+										price: "$500,000",
+										note: [
+											"6 tables",
+											"6 chairs",
+											"11,300 sqft"
+										],
+										rent: "$1,500",
+										income: "$1,000,000",
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+									},
+									{
+										img: "pro-6.jpg",
+										time: "2 ngày trước",
+										type: "Tiệm nail",
+										price: "$500,000",
+										note: [
+											"6 tables",
+											"6 chairs",
+											"11,300 sqft"
+										],
+										rent: "$1,500",
+										income: "$1,000,000",
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+									},
+								
+								]
+							each item in proArr
+								.swiper-slide.col.col-4
+									.pro-wr 
+										.pro-img 
+											.pro-time #{item.time}
+											.pro-type #{item.type}
+											a(href="#").inner 
+												+img(item.img)
+										.pro-content
 											if item.tag
-												.pro-tag #{item.tag}
-									else 
-										h3.pro-name #{item.price}
-									if item.name
-										h3.pro-name #{item.name}
-									if item.note.length > 0 
-										.pro-note
-											each note in item.note
-												.pro-note-item 
-													span.txt.fw-5.c-txt-2 #{note}
-									if item.rent || item.income
-										.pro-note
-											if item.rent
-												.pro-note-item 
-													span.txt.fw-5 Rent: 
-														span.fw-6.c-txt-3 #{item.rent}
-														span(style="font-size: .8em") /month
-											if item.income
-												.pro-note-item 
-													span.txt.fw-5 Income: 
-														span.fw-6.c-txt-3 #{item.income}
-														span(style="font-size: .8em") /year
-									.pro-des #{item.address}
+												.pro-top 
+													h3.pro-name #{item.price}
+													if item.tag
+														.pro-tag #{item.tag}
+											else 
+												h3.pro-name #{item.price}
+											if item.name
+												h3.pro-name #{item.name}
+											if item.note.length > 0 
+												.pro-note
+													each note in item.note
+														.pro-note-item 
+															span.txt.fw-5.c-txt-2 #{note}
+											if item.rent || item.income
+												.pro-note
+													if item.rent
+														.pro-note-item 
+															span.txt.fw-5 Rent: 
+																span.fw-6.c-txt-3 #{item.rent}
+																span(style="font-size: .8em") /month
+													if item.income
+														.pro-note-item 
+															span.txt.fw-5 Income: 
+																span.fw-6.c-txt-3 #{item.income}
+																span(style="font-size: .8em") /year
+											.pro-des #{item.address}
+							.swiper-slide.col.col-4 
+								a(href="#").pro-btn 
+									span.txt Xem tất cả
 	section.sec-pro 
 		.pro.ss-pd 
 			.container
@@ -286,7 +319,11 @@ block container
 										views: "1000"
 									}
 								]
-							each item in proArrFive
+							each item, index in proArrFive
+								if(index == 2)
+									.pro-item.col.col-third.--hide-desk
+										.pro-qc 
+											+img('pro-qc.jpg')
 								.pro-item.col.col-third
 									.pro-wr.third
 										.pro-img 
@@ -311,342 +348,397 @@ block container
 																+img('ic-pro-4.svg')
 																span.txt #{item.views}
 	section.sec-pro 
-		.pro.ss-pd 
+		.pro.ss-pd.pro-slider
 			.container 
 				.re-head.mb-24
 					h1.t24.fw-6 Bất động sản cho thuê tại North Carolina
-				.pro-list.row 
-					- 
-						var proArrThird = [
-							{
-								img: "pro-7.jpg",
-								time: "2 ngày trước",
-								type: "Nhà ở",
-								price: "$1,000",
-								note: [
+				.swiper-container 
+					.swiper.rows
+						.swiper-wrapper 
+							- 
+								var proArrThird = [
 									{
-										name: "2 bed",
-										icon: "ic-pro-bed.svg"
+										img: "pro-7.jpg",
+										time: "2 ngày trước",
+										type: "Nhà ở",
+										price: "$1,000",
+										note: [
+											{
+												name: "2 bed",
+												icon: "ic-pro-bed.svg"
+											},
+											{
+												name: "2 ba",
+												icon: "ic-pro-shower.svg"
+											},
+											{
+												name: "11,300 sqft"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
 									{
-										name: "2 ba",
-										icon: "ic-pro-shower.svg"
+										img: "pro-8.jpg",
+										time: "2 ngày trước",
+										type: "Thương mại",
+										name: "ABC Plaza",
+										note: [
+											{
+												name: "$24.00 - $25.00 SF/YR",
+											},
+											{
+												name: "150 - 2000 sqft",
+											},
+											{
+												name: "Built in 2018"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
 									{
-										name: "11,300 sqft"
-									},
-								],
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-8.jpg",
-								time: "2 ngày trước",
-								type: "Thương mại",
-								name: "ABC Plaza",
-								note: [
-									{
-										name: "$24.00 - $25.00 SF/YR",
-									},
-									{
-										name: "150 - 2000 sqft",
-									},
-									{
-										name: "Built in 2018"
-									},
-								],
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-9.jpg",
-								time: "2 ngày trước",
-								type: "Thương mại",
-								name: "ABC Plaza",
-								note: [
-									{
-										name: "$24.00 - $25.00 SF/YR",
+										img: "pro-9.jpg",
+										time: "2 ngày trước",
+										type: "Thương mại",
+										name: "ABC Plaza",
+										note: [
+											{
+												name: "$24.00 - $25.00 SF/YR",
+											},
+											{
+												name: "150 - 2000 sqft",
+											},
+											{
+												name: "Built in 2018"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
 									{
-										name: "150 - 2000 sqft",
+										img: "pro-12.jpg",
+										time: "2 ngày trước",
+										type: "Thương mại",
+										price: "$1,000",
+										note: [
+											{
+												name: "2 bed",
+												icon: "ic-pro-bed.svg"
+											},
+											{
+												name: "2 ba",
+												icon: "ic-pro-shower.svg"
+											},
+											{
+												name: "11,300 sqft"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
 									{
-										name: "Built in 2018"
-									},
-								],
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-10.jpg",
-								time: "2 ngày trước",
-								type: "Thương mại",
-								price: "$1,000",
-								note: [
-									{
-										name: "2 bed",
-										icon: "ic-pro-bed.svg"
-									},
-									{
-										name: "2 ba",
-										icon: "ic-pro-shower.svg"
-									},
-									{
-										name: "11,300 sqft"
-									},
-								],
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-11.jpg",
-								time: "2 ngày trước",
-								type: "Thương mại",
-								price: "$1,000",
-								note: [
-									{
-										name: "2 bed",
-										icon: "ic-pro-bed.svg"
+										img: "pro-10.jpg",
+										time: "2 ngày trước",
+										type: "Thương mại",
+										price: "$1,000",
+										note: [
+											{
+												name: "2 bed",
+												icon: "ic-pro-bed.svg"
+											},
+											{
+												name: "2 ba",
+												icon: "ic-pro-shower.svg"
+											},
+											{
+												name: "11,300 sqft"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
 									{
-										name: "2 ba",
-										icon: "ic-pro-shower.svg"
+										img: "pro-11.jpg",
+										time: "2 ngày trước",
+										type: "Thương mại",
+										price: "$1,000",
+										note: [
+											{
+												name: "2 bed",
+												icon: "ic-pro-bed.svg"
+											},
+											{
+												name: "2 ba",
+												icon: "ic-pro-shower.svg"
+											},
+											{
+												name: "11,300 sqft"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
 									{
-										name: "11,300 sqft"
+										img: "pro-12.jpg",
+										time: "2 ngày trước",
+										type: "Thương mại",
+										price: "$1,000",
+										note: [
+											{
+												name: "2 bed",
+												icon: "ic-pro-bed.svg"
+											},
+											{
+												name: "2 ba",
+												icon: "ic-pro-shower.svg"
+											},
+											{
+												name: "11,300 sqft"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
-								],
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-12.jpg",
-								time: "2 ngày trước",
-								type: "Thương mại",
-								price: "$1,000",
-								note: [
-									{
-										name: "2 bed",
-										icon: "ic-pro-bed.svg"
-									},
-									{
-										name: "2 ba",
-										icon: "ic-pro-shower.svg"
-									},
-									{
-										name: "11,300 sqft"
-									},
-								],
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-						]
-					each item in proArrThird
-						.pro-item.col.col-4
-							.pro-wr
-								.pro-img 
-									.pro-time #{item.time}
-									.pro-type #{item.type}
-									a(href="#").inner 
-										+img(item.img)
-								.pro-content
-									if item.price
-										h3.pro-name #{item.price}
-											span(style="font-size: .8em").fw-4 /month
-									if item.name
-										h3.pro-name #{item.name}
-									if item.note.length > 0 
-										.pro-note
-											each note in item.note
-												.pro-note-item 
-													if(note.icon)
-														.pro-li.fw-6.c-txt-2 
-															+img(note.icon)
-															span.txt #{note.name}
-													else 
-														span.txt.fw-5.c-txt-2 #{note.name}
-									.pro-des #{item.address}
+								]
+							each item in proArrThird
+								.swiper-slide.col.col-4
+									.pro-wr
+										.pro-img 
+											.pro-time #{item.time}
+											.pro-type #{item.type}
+											a(href="#").inner 
+												+img(item.img)
+										.pro-content
+											if item.price
+												h3.pro-name #{item.price}
+													span(style="font-size: .8em").fw-4 /month
+											if item.name
+												h3.pro-name #{item.name}
+											if item.note.length > 0 
+												.pro-note
+													each note in item.note
+														.pro-note-item 
+															if(note.icon)
+																.pro-li.fw-6.c-txt-2 
+																	+img(note.icon)
+																	span.txt #{note.name}
+															else 
+																span.txt.fw-5.c-txt-2 #{note.name}
+											.pro-des #{item.address}
+							.swiper-slide.col.col-4 
+								a(href="#").pro-btn 
+									span.txt Xem tất cả
 	section.sec-pro 
-		.pro.ss-pd 
+		.pro.ss-pd.pro-slider
 			.container 
 				.re-head.mb-24
 					h1.t24.fw-6 Bất động sản đang bán tại North Carolina
-				.pro-list.row 
-					- 
-						var proArrFour = [
-							{
-								img: "pro-13.jpg",
-								time: "2 ngày trước",
-								type: "Nhà ở",
-								price: "$134,000",
-								note: [
+				.swiper-container 
+					.swiper.rows
+						.swiper-wrapper 
+							- 
+								var proArrFour = [
 									{
-										name: "2 bed",
-										icon: "ic-pro-bed.svg"
+										img: "pro-13.jpg",
+										time: "2 ngày trước",
+										type: "Nhà ở",
+										price: "$134,000",
+										note: [
+											{
+												name: "2 bed",
+												icon: "ic-pro-bed.svg"
+											},
+											{
+												name: "2 ba",
+												icon: "ic-pro-shower.svg"
+											},
+											{
+												name: "11,300 sqft"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
 									{
-										name: "2 ba",
-										icon: "ic-pro-shower.svg"
+										img: "pro-14.jpg",
+										time: "2 ngày trước",
+										type: "Thương mại",
+										name: "ABC Plaza",
+										note: [
+											{
+												name: "$2,500,000",
+											},
+											{
+												name: "20,000 SF",
+											},
+											{
+												name: "Built in 2018"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
 									{
-										name: "11,300 sqft"
-									},
-								],
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-14.jpg",
-								time: "2 ngày trước",
-								type: "Thương mại",
-								name: "ABC Plaza",
-								note: [
-									{
-										name: "$2,500,000",
-									},
-									{
-										name: "20,000 SF",
-									},
-									{
-										name: "Built in 2018"
-									},
-								],
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-15.jpg",
-								time: "2 ngày trước",
-								type: "Thương mại",
-								price: "$231,000",
-								note: [
-									{
-										name: "$2,500,000",
+										img: "pro-15.jpg",
+										time: "2 ngày trước",
+										type: "Thương mại",
+										price: "$231,000",
+										note: [
+											{
+												name: "$2,500,000",
+											},
+											{
+												name: "20,000 SF",
+											},
+											{
+												name: "Built in 2018"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
 									{
-										name: "20,000 SF",
+										img: "pro-18.jpg",
+										time: "2 ngày trước",
+										type: "Thương mại",
+										price: "$1,000",
+										note: [
+											{
+												name: "2 bed",
+												icon: "ic-pro-bed.svg"
+											},
+											{
+												name: "2 ba",
+												icon: "ic-pro-shower.svg"
+											},
+											{
+												name: "11,300 sqft"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
 									{
-										name: "Built in 2018"
-									},
-								],
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-16.jpg",
-								time: "2 ngày trước",
-								type: "Thương mại",
-								price: "$341,000",
-								note: [
-									{
-										name: "2 bed",
-										icon: "ic-pro-bed.svg"
-									},
-									{
-										name: "2 ba",
-										icon: "ic-pro-shower.svg"
-									},
-									{
-										name: "11,300 sqft"
-									},
-								],
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-17.jpg",
-								time: "2 ngày trước",
-								type: "Thương mại",
-								price: "$211,000",
-								note: [
-									{
-										name: "2 bed",
-										icon: "ic-pro-bed.svg"
+										img: "pro-16.jpg",
+										time: "2 ngày trước",
+										type: "Thương mại",
+										price: "$341,000",
+										note: [
+											{
+												name: "2 bed",
+												icon: "ic-pro-bed.svg"
+											},
+											{
+												name: "2 ba",
+												icon: "ic-pro-shower.svg"
+											},
+											{
+												name: "11,300 sqft"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
 									{
-										name: "2 ba",
-										icon: "ic-pro-shower.svg"
+										img: "pro-17.jpg",
+										time: "2 ngày trước",
+										type: "Thương mại",
+										price: "$211,000",
+										note: [
+											{
+												name: "2 bed",
+												icon: "ic-pro-bed.svg"
+											},
+											{
+												name: "2 ba",
+												icon: "ic-pro-shower.svg"
+											},
+											{
+												name: "11,300 sqft"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
 									{
-										name: "11,300 sqft"
+										img: "pro-18.jpg",
+										time: "2 ngày trước",
+										type: "Thương mại",
+										price: "$1,000",
+										note: [
+											{
+												name: "2 bed",
+												icon: "ic-pro-bed.svg"
+											},
+											{
+												name: "2 ba",
+												icon: "ic-pro-shower.svg"
+											},
+											{
+												name: "11,300 sqft"
+											},
+										],
+										address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
 									},
-								],
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-							{
-								img: "pro-18.jpg",
-								time: "2 ngày trước",
-								type: "Thương mại",
-								price: "$1,000",
-								note: [
-									{
-										name: "2 bed",
-										icon: "ic-pro-bed.svg"
-									},
-									{
-										name: "2 ba",
-										icon: "ic-pro-shower.svg"
-									},
-									{
-										name: "11,300 sqft"
-									},
-								],
-								address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-							},
-						]
-					each item in proArrFour
-						.pro-item.col.col-4
-							.pro-wr
-								.pro-img 
-									.pro-time #{item.time}
-									.pro-type #{item.type}
-									a(href="#").inner 
-										+img(item.img)
-								.pro-content
-									if item.price
-										h3.pro-name #{item.price}
-									if item.name
-										h3.pro-name #{item.name}
-									if item.note.length > 0 
-										.pro-note
-											each note in item.note
-												.pro-note-item 
-													if(note.icon)
-														.pro-li.fw-5.c-txt-2 
-															+img(note.icon)
-															span.txt #{note.name}
-													else 
-														span.txt.fw-5.c-txt-2 #{note.name}
-									.pro-des #{item.address}
+								]
+							each item in proArrFour
+								.swiper-slide.col.col-4
+									.pro-wr
+										.pro-img 
+											.pro-time #{item.time}
+											.pro-type #{item.type}
+											a(href="#").inner 
+												+img(item.img)
+										.pro-content
+											if item.price
+												h3.pro-name #{item.price}
+											if item.name
+												h3.pro-name #{item.name}
+											if item.note.length > 0 
+												.pro-note
+													each note in item.note
+														.pro-note-item 
+															if(note.icon)
+																.pro-li.fw-5.c-txt-2 
+																	+img(note.icon)
+																	span.txt #{note.name}
+															else 
+																span.txt.fw-5.c-txt-2 #{note.name}
+											.pro-des #{item.address}
+							.swiper-slide.col.col-4 
+								a(href="#").pro-btn 
+									span.txt Xem tất cả
 	section.sec-pro 
-		.pro.ss-pd
+		.pro.ss-pd.pro-slider-second 
 			.container 
 				.re-head.mb-24
 					h1.t24.fw-6 Rao vặt khác tại North Carolina
-				.pro-grid 
-					.pro-grid-item 
-						.pro-bner 
-							.pro-bner-tag Sponsored
-							.pro-bner-dc
-								+img('pro-bner-dc.png')
-							.pro-bner-img
-								+img('pro-bner-img.jpg')
-							.pro-bner-content 
-								h3.pro-bner-name Chăm sóc người lớn tuổi
-								p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
-								.pro-btn 
-									span.txt Khám phá ngay
-					each item in proArrFour
-						.pro-grid-item 
-							.pro-wr.four 
-								+img("ic-loa.svg")
-								.pro-content 
-									h3.pro-name Chăm sóc người già - Marietta, GA 30062
-									.pro-des Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...
-									.pro-note 
-										.pro-note-item 
-											.pro-li.fw-6.c-txt-2 
-												+img('ic-pro-2.svg')
-												span.txt Marietta 30062
-										.pro-note-item 
-											.pro-li.fw-6.c-txt-2 
-												+img('ic-pro-7.svg')
-												span.txt 2 ngày trước
-										.pro-note-item 
-											.pro-li.fw-6.c-txt-2 
-												+img('ic-pro-4.svg')
-												span.txt 1000
+				.swiper-container 
+					.swiper.rows
+						.swiper-wrapper
+							each item in Array(2)
+								.swiper-slide.col
+									.pro-grid 
+										.pro-grid-item 
+											.pro-bner 
+												.pro-bner-tag Sponsored
+												.pro-bner-dc
+													+img('pro-bner-dc.png')
+												.pro-bner-img
+													+img('pro-bner-img.jpg')
+												.pro-bner-content 
+													h3.pro-bner-name Chăm sóc người lớn tuổi
+													p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
+													.pro-btn 
+														span.txt Khám phá ngay
+										each item in Array(6)
+											.pro-grid-item 
+												.pro-wr.four 
+													+img("ic-loa.svg")
+													.pro-content 
+														h3.pro-name Chăm sóc người già - Marietta, GA 30062
+														.pro-des Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...
+														.pro-note 
+															.pro-note-item 
+																.pro-li.fw-6.c-txt-2 
+																	+img('ic-pro-2.svg')
+																	span.txt Marietta 30062
+															.pro-note-item 
+																.pro-li.fw-6.c-txt-2 
+																	+img('ic-pro-7.svg')
+																	span.txt 2 ngày trước
+															.pro-note-item 
+																.pro-li.fw-6.c-txt-2 
+																	+img('ic-pro-4.svg')
+																	span.txt 1000
 	section.sec-pro
 		.pro.ss-pd
 			.container 
