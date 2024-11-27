@@ -1,13 +1,15 @@
-.--hide-mobile{
+.--hide-mobile {
     @include max($mobile) {
         display: none;
-    }   
+    }
 }
+
 .--hide-desk {
     @include min($mobile-min) {
         display: none;
     }
 }
+
 .pro {}
 
 .pro-list {
@@ -40,7 +42,8 @@
     background-color: white;
     width: 100%;
     transition: .3s ease-in-out;
-    @include hover{
+
+    @include hover {
         box-shadow: 0px 3px 20px -8px rgba(12, 12, 13, 0.4);
     }
 
@@ -209,7 +212,8 @@
 
     @include max($mobile) {
         width: 100%;
-        .pro-qc{
+
+        .pro-qc {
             display: none;
         }
     }
@@ -754,14 +758,34 @@
         gap: 1.6rem;
     }
 }
+
 .pro-slider .swiper,
 .pro-slider .swiper-slide,
 .pro-slider-second .swiper,
 .pro-slider-second .swiper-slide {
-   overflow: visible;
+    overflow: visible;
 }
+
 .pro-slider .swiper-container,
-.pro-slider-second .swiper-container{
+.pro-slider-second .swiper-container {
     padding: 1.2rem !important;
     margin: -1.2rem !important;
+}
+
+.head-sc.mb-48 {
+    @include max($mobile) {
+        margin-bottom: 2.4rem;
+    }
+}
+
+.pro-foot {
+    margin-top: 4.8rem;
+
+    @include max($mobile) {
+        margin-top: 3.2rem;
+    }
+}
+
+.pro.--bg{
+    background-color: #F5F5F5;
 }

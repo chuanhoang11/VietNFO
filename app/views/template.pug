@@ -8,8 +8,9 @@ block container
 	section.sec-pro 
 		.pro.ss-pd.pro-slider
 			.container 
-				.re-head.mb-24
-					h1.t24.fw-6 Việc làm tại North Carolina
+				.head-sc.mb-48
+					+title("Việc làm tại North Carolina", "Việc làm sẵn có tại khu vực của bạn", "dcor")
+					+SwiperControl()
 				.swiper-container
 					.swiper.rows
 						.swiper-wrapper
@@ -111,8 +112,9 @@ block container
 	section.sec-pro 
 		.pro.ss-pd.pro-slider
 			.container 
-				.re-head.mb-24
-					h1.t24.fw-6 Sang nhượng Business tại North Carolina
+				.head-sc.mb-48
+					+title("Sang nhượng Business tại North Carolina", "Nhà hàng, cửa tiệm, business đang rao bán", "dcor")
+					+SwiperControl()
 				.swiper-container 
 					.swiper.rows
 						.swiper-wrapper 
@@ -261,8 +263,10 @@ block container
 	section.sec-pro 
 		.pro.ss-pd 
 			.container
-				.re-head.mb-24
-					h1.t24.fw-6 Việt Event tại North Carolina
+				.head-sc.mb-48
+					+title("Việt Event tại North Carolina", "Sự kiện người Việt sắp diễn ra (event cộng đồng, show diễn, hoạt động hội nhóm...etc)", "dcor")
+					.pro-btn 
+						span.txt Xem tất cả
 				.pro-side.row 
 					.pro-left.col 
 						.pro-bar 
@@ -350,8 +354,9 @@ block container
 	section.sec-pro 
 		.pro.ss-pd.pro-slider
 			.container 
-				.re-head.mb-24
-					h1.t24.fw-6 Bất động sản cho thuê tại North Carolina
+				.head-sc.mb-48
+					+title("Bất động sản cho thuê tại North Carolina", "Nhà/phòng ở - văn phòng người Việt đang sẵn cho thuê", "dcor")
+					+SwiperControl()
 				.swiper-container 
 					.swiper.rows
 						.swiper-wrapper 
@@ -525,8 +530,9 @@ block container
 	section.sec-pro 
 		.pro.ss-pd.pro-slider
 			.container 
-				.re-head.mb-24
-					h1.t24.fw-6 Bất động sản đang bán tại North Carolina
+				.head-sc.mb-48
+					+title("Bất động sản đang bán tại North Carolina", "Nhà ở - văn phòng thương mại đang bán", "dcor")
+					+SwiperControl()
 				.swiper-container 
 					.swiper.rows
 						.swiper-wrapper 
@@ -699,8 +705,9 @@ block container
 	section.sec-pro 
 		.pro.ss-pd.pro-slider-second 
 			.container 
-				.re-head.mb-24
-					h1.t24.fw-6 Rao vặt khác tại North Carolina
+				.head-sc.mb-48
+					+title("Rao vặt khác tại North Carolina", "Dịch vụ và thông tin hoạt động và dịch vụ khác trong cộng đồng", "dcor")
+					+SwiperControl()
 				.swiper-container 
 					.swiper.rows
 						.swiper-wrapper
@@ -740,10 +747,10 @@ block container
 																	+img('ic-pro-4.svg')
 																	span.txt 1000
 	section.sec-pro
-		.pro.ss-pd
+		.pro.ss-pd.--bg
 			.container 
-				.re-head.mb-24
-					h1.t24.fw-6 Góc tài liệu/thông tin cho cộng đồng
+				.head-sc.mb-48
+					+title("Góc tài liệu/thông tin cho cộng đồng", "Tài liệu thông tin miễn phí cho cộng đồng (luật sư, phòng khám Việt, khai thuế, handymen Việt, etc.)", "dcor")
 				.pro-fil
 					.pro-fil-head 
 						span.txt  Tài liệu
@@ -855,3 +862,5 @@ block container
 											a.pro-btn(href="#").second
 												+img('ic-dl.svg')
 												span.txt Tải xuống
+				.pro-foot 
+					+Btn("Xem tất cả", "", "trans m-mid", true)
