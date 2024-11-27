@@ -1,0 +1,13 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-component'
+
+block container 
+   .ss-pd
+      .container
+         .head-sc
+            +title("Việc làm tại North Carolina","Việc làm sẵn có tại khu vực của bạn","dcor")
+            +SwiperControl()
+         +PageNumber()

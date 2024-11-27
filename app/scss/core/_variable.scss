@@ -6,20 +6,44 @@
   --color-text: #667085;
   --color-black: #000;
   --color-white: #fff;
+  --colorefc: #fcfcfd;
+  --colorf5: #f5f5f5;
+  --color29: #292929;
+  --color2c: #2c2c2c;
+  --colore6: #e6edfa;
+  --color1e: #1e1e1e;
+  --color75: #757575;
+  --color23: #232323;
 
   // distance section
-  --pd-sc: 6rem;
+  --pd-sc: 6.8rem;
+
+  //border radius
+  --rs08: 0.8rem;
+  --rs: 1.2rem;
+  --rs16: 1.6rem;
+
+  //border color
+  --border-color: #d0d5dd;
+
+  //boxshadow
+  --shd: 0px 0.5rem 1rem rgba(183, 183, 183, 0.08),
+    0px 0.05rem 0.5rem rgba(183, 183, 183, 0.08);
+  //mb hd sticky
+  --mb-size-hd-sticky: 5.4rem;
 
   @media (max-width: 1200px) {
     --pd-sc: 4rem;
-    --size-hd: 8rem;
+    --size-hd: 7.2rem;
   }
 }
 
 //Responsive
-$res-mobile: 1199px;
-$res-mobile-min: 1200px;
-$mobile: 500px;
+$res-mobile: 1199px; //  cho mobile (≤ 1199px)
+$res-mobile-min: 1200px; //  cho mobile đến tablet (≥ 1200px)
+$mobile: 500px; //  cho mobile nhỏ (≤ 500px)
+$tablet: 768px; //  cho tablet (≤ 768px)
+$tablet-min: 1024px; //  cho tablet lớn (≥ 1024px)
 //Distance
 $radius: 0.6rem;
 // cubic

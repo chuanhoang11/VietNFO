@@ -1,25 +1,32 @@
 .back-to-top {
-  width: 4.8rem;
-  height: 4.8rem;
-  border-radius: 0.6rem;
-  background: var(--color-pri);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  position: fixed;
-  bottom: 6rem;
-  right: 3rem;
-  z-index: 7;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100rem;
+  background: var(--color-white);
+  box-shadow: 0px 0.2rem 1rem rgba(0, 0, 0, 0.1);
   transform: translateX(3rem);
   opacity: 0;
-  transition: 0.5s linear;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
   visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-
+  color: var(--color-pri);
+  @include hover {
+    background: var(--color-pri);
+    color: #fff;
+  }
   @include max(768px) {
-    right: 1.5rem;
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+  .icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    @include mid-flex;
+    font-size: 2rem;
   }
 
   &.active {
@@ -57,6 +64,40 @@
       opacity: 1;
       transform: translateX(0);
       // background-color: $c-yel;
+    }
+  }
+}
+.fixed-side {
+  position: fixed;
+  bottom: 6rem;
+  right: 3rem;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include max(768px) {
+    right: 1.5rem;
+  }
+}
+.fchat {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .i-link {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100rem;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0.2rem 1rem rgba(0, 0, 0, 0.1);
+    @include max(768px) {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+    @include hover {
+      transform: scale(0.9);
     }
   }
 }
