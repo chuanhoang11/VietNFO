@@ -1,56 +1,56 @@
 mixin Btn(text, type, classCustom,icon)
-    if(!classCustom)
-        if(type == "button")
-            button.btn(type="submit",class=classCustom)
-               span.inner #{text}
-               if(icon===true)
-                  i.fa-light.fa-arrow-right.icon
-               else 
-                  i(class=icon)
-        else
-            a.btn(href="",class=classCustom)
-               span.inner #{text}
-               if(icon===true)
-                  i.fa-light.fa-arrow-right.icon
-               else 
-                  i(class=icon)
-    else 
-        if(type == "button")
-            button.btn(type="submit",class=classCustom)
-               span.inner #{text}
-               if(icon===true)
-                  i.fa-light.fa-arrow-right.icon
-               else 
-                  i(class=icon)
-        else
-            a.btn(href="", class=classCustom)
-               span.inner #{text}
-               if(icon===true)
-                  i.fa-light.fa-arrow-right.icon
-               else 
-                  i(class=icon)
+   if(!classCustom)
+      if(type == "button")
+         button.btn(type="submit",class=classCustom)
+            span.inner #{text}
+            if(icon===true)
+               i.fa-light.fa-arrow-right.icon
+            else 
+               i(class=icon)
+      else
+         a.btn(href="",class=classCustom)
+            span.inner #{text}
+            if(icon===true)
+               i.fa-light.fa-arrow-right.icon
+            else 
+               i(class=icon)
+   else 
+      if(type == "button")
+         button.btn(type="submit",class=classCustom)
+            span.inner #{text}
+            if(icon===true)
+               i.fa-light.fa-arrow-right.icon
+            else 
+               i(class=icon)
+      else
+         a.btn(href="", class=classCustom)
+            span.inner #{text}
+            if(icon===true)
+               i.fa-light.fa-arrow-right.icon
+            else 
+               i(class=icon)
 mixin PageNumber 
-    ul.page-numbers
-        li 
-            a.prev.page-numbers(href="")
-                i.fa.fa-angle-left
-        li
-            span.page-numbers.current   
-                | 1
-        li
-            a.page-numbers(href="")   
-                | 2
-        li 
-            span.page-numbers.dot 
-                |...
-        li
-            a.page-numbers(href="")   
-                | 10
-        li 
-            a.next.page-numbers(href="")
-                i.fa.fa-angle-right
+   ul.page-numbers
+      li 
+         a.prev.page-numbers(href="")
+               i.fa.fa-angle-left
+      li
+         span.page-numbers.current   
+               | 1
+      li
+         a.page-numbers(href="")   
+               | 2
+      li 
+         span.page-numbers.dot 
+               |...
+      li
+         a.page-numbers(href="")   
+               | 10
+      li 
+         a.next.page-numbers(href="")
+               i.fa.fa-angle-right
 mixin breadCrumb(arr)
-  .breadcrumb 
+   .breadcrumb 
       ul.breadcrumb-list
          li.breadcrumb-item(data-aos="fade-right")
             a.breadcrumb-link(href="")
@@ -59,46 +59,46 @@ mixin breadCrumb(arr)
             li.breadcrumb-item(data-aos="fade-right")
                a.breadcrumb-link(href="") #{txt}
 mixin pagination(classCustom)
-    .swiper-pagination(class=classCustom)
+   .swiper-pagination(class=classCustom)
 
 mixin CountDown(time,customClass)
-    .cdw(data-time= time, class= customClass)
+   .cdw(data-time= time, class= customClass)
       .cdw-list 
-          .cdw-item(style="display: none")
-              .cdw-inner 
+            .cdw-item(style="display: none")
+               .cdw-inner 
                   .number.date
-          .cdw-item 
-              .cdw-inner 
+            .cdw-item 
+               .cdw-inner 
                   .number.hour
-          .cdw-item 
-              .cdw-inner 
+            .cdw-item 
+               .cdw-inner 
                   .number.minute
-          .cdw-item 
-              .cdw-inner 
+            .cdw-item 
+               .cdw-inner 
                   .number.second
 mixin SwiperControl(customClass)
-    .swiper-control(class= customClass) 
+   .swiper-control(class= customClass) 
       .swiper-control-btn.swiper-prev 
-          i.fa-light.fa-chevron-left
+            i.fa-light.fa-chevron-left
       .swiper-control-btn.swiper-next 
-          i.fa-light.fa-chevron-right
+            i.fa-light.fa-chevron-right
 mixin Swiper(customClass)
    .swiper-container 
       .swiper.rows 
          .swiper-wrapper 
             block
 mixin Count()
-    .count 
-        .count-btn.count-minus 
-            i.fas.fa-minus.icon
-        input(type="text", class="count-input", max="999", min="0", value="1", hidden)
-        p.count-number 
-        .count-btn.count-plus 
-            i.fas.fa-plus.icon
+   .count 
+      .count-btn.count-minus 
+         i.fas.fa-minus.icon
+      input(type="text", class="count-input", max="999", min="0", value="1", hidden)
+      p.count-number 
+      .count-btn.count-plus 
+         i.fas.fa-plus.icon
 mixin img(name)
-  img(src="./assets/images/" + name, alt="")
+   img(src="./assets/images/" + name, alt="")
 mixin popup(classCustom="",id="")
-   .popup(data-popup-id= id)
+   .popup(data-popup-id= id).open
       .popup-overlay
       .popup-main
          .popup-main-wrapper(class=classCustom)
@@ -107,7 +107,23 @@ mixin popup(classCustom="",id="")
                   block
          .popup-close
             i.fas.fa-times.icon
-mixin title(text,des, classCustom)
+mixin popupDt(classCustom="",id="")
+   .popup(data-popup-id= id).open
+      .popup-overlay
+      .popup-main
+         .popup-main-wrapper(class=classCustom)
+            .heads 
+               .container 
+                  .heads-wrap 
+                     a(href="").heads-logo
+                        +img("popdt-logo.svg")
+                     .popup-close
+                        i.fas.fa-times.icon
+            .popup-over
+               .popup-wrapper
+                  block
+         
+mixin title(text, classCustom)
    if(!classCustom)
       .head
          h2.t-title 
@@ -118,5 +134,152 @@ mixin title(text,des, classCustom)
       .head(class=classCustom)
          h2.t-title 
             | #{text}
-         p.t-des 
-            | #{des}
+mixin Checker(type,shape,text,classCustom,num,name)
+   if(num == "has")
+      if (shape == "circle")
+         label.checker(class=classCustom) 
+            input(type=type, name=name)
+            span.circle 
+            span.txt #{text}
+            span.num 12
+      else 
+         label.checker(class=classCustom) 
+            input(type=type , name=name)
+            span.sqr 
+            span.txt #{text}
+            span.num 12
+   else
+      if (shape == "circle")
+         label.checker(class=classCustom) 
+            input(type=type, name=name)
+            span.circle 
+            span.txt #{text}
+      else 
+         label.checker(class=classCustom) 
+            input(type=type , name=name)
+            span.sqr 
+            span.txt #{text}
+mixin comment()
+   .lib-cmt
+      .lib-cmt-wr  
+         .lib-cmt-box.cmtJS 
+            ul.lib-cmt-list
+               li.lib-cmt-item
+                  .wrap 
+                     .ava 
+                        +img("minicircel.png")
+                     .ctn 
+                        p.ctn-name 
+                           |Anonymous
+                           span.ctn-name-small 20h
+                        p.ctn-des Ultricies ultricies interdum dolor sodales. Vitae feugiat vitae vitae quis id consectetur. Aenean urna, lectus enim suscipit eget. Tristique bibendum nibh enim dui.
+                        .lib-cmt-rep 
+                           .wrap 
+                                 span.ctn-like.repJS
+                                    span.ctn-like-txt Reply
+                           .lib-cmt-f 
+                                 form(action="")
+                                    .lib-cmt-f-flex
+                                       input(type="text")
+                                       button
+                                             i.fa-solid.fa-paper-plane
+                        .replies-txt.repTxtJs 
+                           +img("arrow-down.svg")
+                           span.txt 
+                              span.num 11 
+                              |Replies
+                  ul.lib-cmt-list.replies-drop.repDropJs
+                     li.lib-cmt-item 
+                        .wrap 
+                           .ava 
+                              +img("mini1.jpg")
+                           .ctn 
+                              p.ctn-name 
+                                 |Sara
+                                 span.ctn-name-small 20h
+                              p.ctn-des Ultricies ultricies interdum dolor sodales. Vitae feugiat vitae vitae quis id consectetur. Aenean urna, lectus enim suscipit eget. Tristique bibendum nibh enim dui.
+                              .lib-cmt-rep 
+                                 .wrap 
+                                    span.ctn-like.repJS
+                                          span.ctn-like-txt Reply
+                                 .lib-cmt-f 
+                                    form(action="")
+                                          .lib-cmt-f-flex
+                                             input(type="text")
+                                             button
+                                                i.fa-solid.fa-paper-plane
+                     li.lib-cmt-item 
+                        .wrap 
+                           .ava 
+                              +img("mini2.jpg")
+                           .ctn 
+                              p.ctn-name 
+                                 |Sara
+                                 span.ctn-name-small 20h
+                              p.ctn-des Ultricies ultricies interdum dolor sodales. Vitae feugiat vitae vitae quis id consectetur. Aenean urna, lectus enim suscipit eget. Tristique bibendum nibh enim dui.
+                              .lib-cmt-rep 
+                                 .wrap 
+                                    span.ctn-like.repJS
+                                          span.ctn-like-txt Reply
+                                 .lib-cmt-f 
+                                    form(action="")
+                                          .lib-cmt-f-flex
+                                             input(type="text")
+                                             button
+                                                i.fa-solid.fa-paper-plane
+               li.lib-cmt-item
+                  .wrap 
+                     .ava 
+                        +img("mini1.jpg")
+                     .ctn 
+                        p.ctn-name 
+                           |Courtney Henry
+                           span.ctn-name-small 20h
+                        p.ctn-des Ultricies ultricies interdum dolor sodales. Vitae feugiat vitae vitae quis id consectetur. Aenean urna, lectus enim suscipit eget. Tristique bibendum nibh enim dui.
+                        .lib-cmt-rep 
+                           .wrap 
+                                 span.ctn-like.repJS
+                                    span.ctn-like-txt Reply
+                           .lib-cmt-f 
+                                 form(action="")
+                                    .lib-cmt-f-flex
+                                       input(type="text")
+                                       button
+                                             i.fa-solid.fa-paper-plane
+                        .replies-txt.repTxtJs 
+                           +img("arrow-down.svg")
+                           span.txt 
+                              span.num 11 
+                              |Replies
+                  ul.lib-cmt-list.repDropJs
+                     li.lib-cmt-item 
+                        .wrap 
+                           .ava 
+                              +img("mini2.jpg")
+                           .ctn 
+                              p.ctn-name 
+                                 |Courtney Henry
+                                 span.ctn-name-small 20h
+                              p.ctn-des Ultricies ultricies interdum dolor sodales. Vitae feugiat vitae vitae quis id consectetur. Aenean urna, lectus enim suscipit eget. Tristique bibendum nibh enim dui.
+                              .lib-cmt-rep 
+                                 .wrap 
+                                    span.ctn-like.repJS
+                                          span.ctn-like-txt Reply
+                                 .lib-cmt-f 
+                                    form(action="")
+                                          .lib-cmt-f-flex
+                                             input(type="text")
+                                             button
+                                                i.fa-solid.fa-paper-plane
+      .lib-cmt-send 
+         .form-list.row 
+            .form-ip.col 
+               p.text Tên
+               input(type="text" placeholder="Nhập tên của bạn")
+            .form-ip.col 
+               +Checker("checkbox","","Comment Anonymously")
+            .form-ip.col 
+               p.text Comment
+               textarea(name="" placeholder="Nhập nội dung") 
+            .form-ip.col 
+               +Btn("Comment","button")
