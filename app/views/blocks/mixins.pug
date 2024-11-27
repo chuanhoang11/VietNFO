@@ -128,14 +128,16 @@ mixin title(text,des, classCustom)
       .head
          h2.t-title 
             | #{text}
-         p.t-des 
-            | #{des}
+         if(des)
+            p.t-des 
+               | #{des}
    else 
       .head(class=classCustom)
          h2.t-title 
             | #{text}
-         p.t-des 
-            | #{des}
+         if(des)
+            p.t-des 
+               | #{des}
 mixin Checker(type,shape,text,classCustom,num,name)
    if(num == "has")
       if (shape == "circle")

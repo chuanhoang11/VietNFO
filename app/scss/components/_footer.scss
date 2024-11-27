@@ -91,7 +91,7 @@
     .social-link {
       background: var(--color-pri);
       img {
-        filter: brightness(0) invert(-1);
+        filter: brightness(0) invert(1);
       }
     }
   }
@@ -217,40 +217,53 @@
   }
 }
 body.page-result {
-  .ft {
-    &-wrap {
-      gap: 1.6rem;
-    }
-    &-head {
-      gap: 1.6rem;
-
-      ~ .ft-nav {
-        .menu {
-          gap: 0;
-          row-gap: 2.4rem;
-          margin: 0 -1.2rem;
-          > li {
-            width: 50%;
-            padding: 0 1.2rem;
-            text-align: center;
-            &:last-child {
-              display: none;
-            }
-            > a {
+  .ft{
+    display: none;
+  }
+  .sear{
+    .ft {
+      display: block;
+        &-wrap {
+          gap: 1.6rem;
+        }
+    
+        &-head {
+          gap: 1.6rem;
+    
+          ~.ft-nav {
+            .menu {
+              gap: 0;
+              row-gap: 2.4rem;
+              margin: 0 -1.2rem;
+    
+              >li {
+                width: 50%;
+                padding: 0 1.2rem;
+                text-align: center;
+    
+                &:last-child {
+                  display: none;
+                }
+    
+                >a {}
+              }
             }
           }
         }
+    
+        &-list {
+          --rg: 1.6rem;
+    
+          >.col {
+            width: 100%;
+          }
+        }
+    
+        &-bot {
+          flex-direction: column;
+          align-items: center;
+        }
       }
-    }
-    &-list {
-      --rg: 1.6rem;
-      > .col {
-        width: 100%;
-      }
-    }
-    &-bot {
-      flex-direction: column;
-      align-items: center;
-    }
   }
+  
 }
