@@ -1,0 +1,93 @@
+header.hd 
+   .container 
+      .hd-wrap 
+         .hd-top
+            .b-gr 
+               .hd-logo 
+                  a(href="").custom-logo-link
+                     +img("logo.svg")
+               .hd-noti.t-slogan
+                  span.t-text 
+                     | Cổng thông tin 
+                     span.fw-7.c-pri 
+                        | MIỄN PHÍ 
+                     | dành cho cộng đồng người Việt tại Mỹ
+               .hd-ctr 
+                  .hd-lang 
+                     span.i-ar
+                        i.fa-light.fa-chevron-down
+                     span.t-text 
+                        | VN 
+                     .lang-pos 
+                        a(href="").t-text
+                           | ENG 
+                  +Btn("Đăng tin miễn phí")
+                  .hd-burger#hamburger 
+                     .burger 
+                        .hamburger  
+                           .line 
+                           .line
+                           .line
+         .hd-bot
+            .b-gr 
+               .hd-nav
+                  .menu-nav 
+                     ul.menu-list
+                        li.menu-item 
+                           a(href="").menu-link
+                              | Việc làm
+                        li.menu-item 
+                           a(href="").menu-link
+                              | Mua cửa tiệm
+                        li.menu-item 
+                           a(href="").menu-link
+                              | Việt Event
+                        li.menu-item 
+                           a(href="").menu-link
+                              | Thuê nhà
+                        li.menu-item 
+                           a(href="").menu-link
+                              | Mua nhà
+                        li.menu-item 
+                           a(href="").menu-link
+                              | Rao vặt
+               a(href="").btn-noti 
+                  span.icon 
+                     +img("icon-noti.svg")
+                  span.t-text 
+                     | Quảng cáo trên VietInfo
+   .mobile-overlay
+   .mobile
+      .mobile-con
+         .mobile-wr
+            .mobile-nav
+               .menu-nav
+                  ul.menu-list
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Việc làm
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Mua cửa tiệm
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Việt Event
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Thuê nhà
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Mua nhà
+            .mobile-content
+               a(href="").btn-noti 
+                  span.icon 
+                     +img("icon-noti.svg")
+                  span.t-text 
+                     | Quảng cáo trên VietInfo
+               +Btn("Đăng tin miễn phí","","full")
+               .hd-noti 
+                  span.t-text 
+                     | Cổng thông tin 
+                     span.fw-7.c-pri 
+                        | MIỄN PHÍ 
+                     | dành cho cộng đồng người Việt tại Mỹ
