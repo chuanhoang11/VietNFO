@@ -40,6 +40,35 @@ export default function SwiperModule() {
     loop: false,
     effect: "slide",
   });
+  if(window.innerWidth > 700){
+    functionSlider(".pro-slider", {
+      centeredSlides: false,
+      loop: false,
+      effect: "slide",
+      grid: {
+        rows: 2,
+      },
+      slidesPerView: 3,
+      breakpoints: {
+        0:{
+          slidesPerView: 1,
+        },
+        700: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+    functionSlider(".pro-slider-second", {
+      centeredSlides: false,
+      loop: false,
+      effect: "slide",
+      slidesPerView: "auto",
+      
+    });
+  }
 
   //   const prodt_silder = document.querySelectorAll(".prdsSlider");
   //   if (prodt_silder) {
