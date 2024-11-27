@@ -4,7 +4,7 @@
     border: 0.1rem solid var(--border-color);
   }
   &-form {
-    width: 50%;
+    width: 55%;
     .row {
       flex: 1;
       --cg: 0.8rem;
@@ -25,11 +25,12 @@
   border: 0.1rem solid var(--border-color);
   border-radius: 0.5rem;
   align-items: center;
+  height: 5rem;
   .icon {
     width: 5rem;
-    height: 5rem;
     @include mid-flex;
     flex-shrink: 0;
+    height: 100%;
   }
   input {
     width: 100%;
@@ -37,5 +38,10 @@
     outline: unset;
     margin: unset;
     height: 100%;
+    font-weight: 500;
+    background: unset;
+    &::placeholder {
+      color: #b3b3b3;
+    }
   }
 }
