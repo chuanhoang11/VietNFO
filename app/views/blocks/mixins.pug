@@ -283,3 +283,16 @@ mixin comment()
                textarea(name="" placeholder="Nhập nội dung") 
             .form-ip.col 
                +Btn("Comment","button")
+      .lib-cmt-send 
+         .lib-cmt-send-avt 
+            .ava 
+               +img("mini1.jpg")
+            p.name Ryan Nguyen
+         .form-list.row 
+            .form-ip.col 
+               +Checker("checkbox","","Comment Anonymously")
+            .form-ip.col 
+               p.text Comment
+               textarea(name="" placeholder="Nhập nội dung") 
+            .form-ip.col 
+               +Btn("Comment","button")
