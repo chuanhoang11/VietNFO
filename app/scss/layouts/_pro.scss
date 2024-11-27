@@ -39,6 +39,10 @@
     --pd-content: 1.1em;
     background-color: white;
     width: 100%;
+    transition: .3s ease-in-out;
+    @include hover{
+        box-shadow: 0px 3px 20px -8px rgba(12, 12, 13, 0.4);
+    }
 
     @include max($res-mobile) {
         font-size: 1.2vw;
@@ -749,4 +753,15 @@
         flex-direction: column;
         gap: 1.6rem;
     }
+}
+.pro-slider .swiper,
+.pro-slider .swiper-slide,
+.pro-slider-second .swiper,
+.pro-slider-second .swiper-slide {
+   overflow: visible;
+}
+.pro-slider .swiper-container,
+.pro-slider-second .swiper-container{
+    padding: 1.2rem !important;
+    margin: -1.2rem !important;
 }
