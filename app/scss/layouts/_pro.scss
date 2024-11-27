@@ -887,6 +887,10 @@
         @include max($res-mobile) {
             font-size: 1.4vw;
         }
+
+        @include max($mobile) {
+            font-size: 1.4rem;
+        }
     }
 
     .sear-panel .pro-item.col-third {
@@ -903,8 +907,6 @@
         width: 100%;
     }
 
-   
-
     .sear-row>.col-7 {
         position: sticky;
         top: 5.4rem;
@@ -913,5 +915,34 @@
 
     .sear-map {
         height: 30vh;
+    }
+}
+
+.pro-select {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+
+    .select2.select2-container {
+        width: 12rem !important;
+    }
+
+    .select2-container,
+    .select2-container--default .select2-selection--single {
+        height: unset;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        left: unset;
+        right: 0;
+    }
+
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        padding-left: 0;
+    }
+
+    .select2-container--default .select2-selection--single {
+        border: none;
     }
 }
