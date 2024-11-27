@@ -51,10 +51,16 @@ block container
                      p.tt Chi tiết
                      input(type="checkbox" id="more")
                      .des
-                        p.des-txt Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng 
-                     label(for="#more").link  
+                        p.des-txt 
+                           |Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng 
+                           |Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng 
+                           |Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng 
+                           |Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng 
+                     label(for="more").link 
                         +img("arrow-down.svg")
-                        span.txt Show more
+                        span.link-wrap 
+                           span.txt Show more
+                           span.txt Show less
                      .popdt-time 
                         .popdt-time-it
                            +img("ic-clock.svg")
@@ -100,7 +106,7 @@ block container
                                  p.val-item 
                                     |Distance: 
                                     span.bold 3.5 mi
-                  .popdt-detail.popdt-block 
+                  .popdt-cmt.popdt-block 
                      p.tt Comments
                      +comment()
             .popdt-side.col 
