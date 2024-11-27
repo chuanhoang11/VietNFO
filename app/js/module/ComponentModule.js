@@ -76,9 +76,8 @@ export default function ComponentModule() {
     if (cir.classList.contains("cir-2")) {
       const translateX = Math.floor(Math.random() * x);
       const translateY = Math.floor(Math.random() * y);
-      cir.style.transform = `translate(${
-        translateX + "%" + "," + translateY + "%"
-      })`;
+      cir.style.transform = `translate(${translateX + "%" + "," + translateY + "%"
+        })`;
     } else {
       // const translateX = Math.floor(Math.random() * 10);
       const translateY = Math.floor(Math.random() * y);
@@ -103,19 +102,19 @@ export default function ComponentModule() {
         const cmtForm = $(this).find(".lib-cmt-f");
         const cmtChild = $(this).find(".lib-cmt-child");
         const repDrop = $(this).find(".repDropJs")
-        const repItem =$(this).find(".repDropJs .lib-cmt-item")
-        const repTxt =$(this).find(".repTxtJs")
+        const repItem = $(this).find(".repDropJs .lib-cmt-item")
+        const repTxt = $(this).find(".repTxtJs")
 
         cmtForm.slideUp(500);
-        
-        
-        const repTxtNum = $(repTxt).find(".num")
-        repTxtNum.text(repItem.length) 
 
-        if(repItem.length > 1) {
+
+        const repTxtNum = $(repTxt).find(".num")
+        repTxtNum.text(repItem.length)
+
+        if (repItem.length > 1) {
           repDrop.slideUp(500);
-        }else {
-          $(repDrop).closest(".lib-cmt-item").find(".repTxtJs").css("display","none")
+        } else {
+          $(repDrop).closest(".lib-cmt-item").find(".repTxtJs").css("display", "none")
         }
       });
 
@@ -138,7 +137,7 @@ export default function ComponentModule() {
       repTxt.each(function () {
         const repTxtItem = $(this);
         const repDrop = repTxtItem.closest(".lib-cmt-item").find(".repDropJs")
-        repTxtItem.on("click", ()=> {
+        repTxtItem.on("click", () => {
           if (repDrop.css("display") === "none") {
             this.querySelector("img").style.transform = "rotate(-180deg)"
             repDrop.slideDown(500);
@@ -150,4 +149,45 @@ export default function ComponentModule() {
       })
     }
   });
+
+
+  const selectJS = document.querySelectorAll(".selectJS");
+  if (selectJS) {
+    selectJS.forEach(item => {
+      const selectJSHead = item.querySelector(".selectJSHead");
+      const selectJSTxt = item.querySelector(".selectJSTxt");
+      const selectJSItem = item.querySelectorAll(".selectJSItem");
+      if (selectJSItem) {
+        selectJSHead.addEventListener("click", () => {
+          item.classList.toggle("active");
+        })
+      };
+
+      if (selectJSItem) {
+        selectJSItem.forEach(item => {
+          if(item.classList.contains("active")){
+            selectJSTxt.innerHTML = item.innerHTML;
+          }
+          item.addEventListener("click", () => {
+            selectJSItem.forEach(item => {
+              item.classList.remove("active");
+            });
+            item.classList.add("active");
+            selectJSTxt.innerHTML = item.innerHTML;
+            item.closest(".selectJS").classList.remove("active");
+          })
+        })
+      }
+    });
+    window.addEventListener("click", (e) => {
+      if (!e.target.closest(".selectJS")) {
+        const selectJS = document.querySelectorAll(".selectJS");
+        if (selectJS) {
+          selectJS.forEach(item => {
+            item.classList.remove("active");
+          });
+        }
+      }
+    });
+  }
 }

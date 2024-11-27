@@ -31,7 +31,6 @@
     @include mid-flex;
     flex-shrink: 0;
     font-weight: 500;
-    color: var(--color-white);
     transition: 0.3s ease-in-out;
   }
   &.invert {

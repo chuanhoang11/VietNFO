@@ -272,7 +272,7 @@
 }
 
 .pro-bar {
-
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: .8em;
@@ -307,7 +307,7 @@
     position: relative;
 
     @include min($mobile-min) {
-        max-height: 35rem;
+        max-height: 43rem;
         overflow: hidden auto;
         width: calc(100% + .8em);
         margin-left: -.4em;
@@ -561,6 +561,12 @@
     display: flex;
     align-items: center;
     gap: .4em;
+    transition: .3s ease-in-out;
+
+    @include hover {
+        background-color: #E6EDFA;
+        color: var(--color-pri);
+    }
 
     >img {
         width: 1em;
@@ -571,6 +577,14 @@
     &.second {
         background-color: #E6EDFA;
         color: var(--color-pri);
+
+        @include hover {
+            background-color: var(--color-pri);
+            color: white;
+            img{
+                filter:brightness(0) invert(1);
+            }
+        }
     }
 }
 
@@ -748,6 +762,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include max($mobile) {
+        .btn {
+            width: 100%;
+        }
+    }
 }
 
 .pro-slider-second .swiper-wrapper {
@@ -783,9 +803,37 @@
 
     @include max($mobile) {
         margin-top: 3.2rem;
+
+        .btn {
+            width: 100%;
+        }
     }
 }
 
-.pro.--bg{
+.--bg {
     background-color: #F5F5F5;
+}
+
+.home-solve .head-sc {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70.6rem;
+    max-width: 100%;
+}
+
+.home-hero.ss-pd.--bg {
+    @include max($mobile) {
+        background-color: white;
+    }
+}
+
+.selectJS.active .selectJSBody{
+    display: flex;
+}
+
+.selectJS .selectJSHead i{
+    transition: .3s ease-in-out;
+}
+.selectJS.active .selectJSHead i{
+    transform: rotate(180deg);
 }
