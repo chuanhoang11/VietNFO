@@ -13,19 +13,19 @@ ul.page-numbers {
       margin-left: 8px;
     }
     & > .page-numbers {
-      width: 3.6rem;
-      height: 3.6rem;
-      // border-radius: 100rem;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100rem;
       @include mid-flex;
       background-color: #fff;
       cursor: pointer;
       position: relative;
       overflow: hidden;
       color: var(--color-text);
-      font-size: 1.6rem;
-      font-weight: 700;
+      font-size: 1.4rem;
+      font-weight: 500;
       // line-height: 100%;
-      @include affter(var(--color-pri));
+      @include affter(#eaecf5);
       @include max(1200px) {
         width: 3.2rem;
         height: 3.2rem;
@@ -36,7 +36,8 @@ ul.page-numbers {
       }
       @include hover {
         &:not(.dot) {
-          color: white;
+          color: var(--color-pri);
+
           &::after {
             left: 0;
             width: 100%;
@@ -44,7 +45,7 @@ ul.page-numbers {
         }
       }
       &.current {
-        color: white;
+        color: var(--color-pri);
         &::after {
           left: 0;
           width: 100%;
@@ -52,6 +53,10 @@ ul.page-numbers {
       }
       &.dot {
         background-color: transparent;
+      }
+      &.next,
+      &.prev {
+        border: 0.1rem solid var(--border-color);
       }
       i {
         font-weight: 400;

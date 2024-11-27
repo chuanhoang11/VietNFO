@@ -28,7 +28,6 @@ export default function MobileModule() {
     burgerBtn.classList.remove("active");
     mobile.classList.remove("open");
     mobileOverLay.classList.remove("open");
-    header.classList.remove("sticky");
     body.classList.remove("no-scroll");
   }
 

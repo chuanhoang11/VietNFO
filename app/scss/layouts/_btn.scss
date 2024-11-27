@@ -10,9 +10,11 @@
   background: var(--color-pri);
   gap: 0.8rem;
   color: #fff;
-  font-size: 1.6rem;
+  @include fz-18;
   font-weight: 500;
   @include font-second;
+  min-width: 20rem;
+  border-radius: var(--rs08);
   @include max(600px) {
     font-size: 1.4rem;
     padding: 0.8rem 1.6rem;
@@ -43,37 +45,6 @@
   }
   &.center {
     margin: 0 auto;
-  }
-  &.none-icon {
-    .icon {
-      display: none;
-    }
-  }
-  &.second {
-    background: #f2794d;
-    @include hover {
-      color: #f2794d;
-    }
-  }
-  &.three {
-    background: transparent;
-    color: #000;
-    padding: unset;
-    min-width: unset;
-    overflow: unset;
-    &::after {
-      display: none;
-    }
-    @include hover {
-      color: var(--color-pri);
-      .icon {
-        transform: translateX(0.4rem);
-      }
-    }
-    .icon {
-      display: flex;
-      font-size: 1.2rem;
-    }
   }
   &.trans {
     background: transparent;
@@ -108,22 +79,36 @@
       color: var(--color-white);
     }
   }
-  &__center {
-    margin: 0 auto;
+}
+.btn-noti {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.6rem 1.2rem;
+  transition: 0.3s ease-in-out;
+  border-radius: var(--rs08);
+  overflow: hidden;
+  @include hover {
+    background: var(--colore6);
+    .icon {
+      background: #fff;
+    }
   }
-  &__cir {
-    width: 4rem;
-    height: 4rem;
-    padding: unset;
+  .icon {
+    @include mid-flex;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 100rem;
+    background: var(--colore6);
+    flex-shrink: 0;
+    transition: 0.3s ease-in-out;
+    img {
+      border-radius: unset;
+    }
   }
-  &.four {
-    background: #fff;
+  .t-text {
+    @include fz-16;
+    font-weight: 700;
     color: var(--color-pri);
-    @include hover {
-      color: #fff;
-    }
-    &::after {
-      background: var(--color-pri);
-    }
   }
 }

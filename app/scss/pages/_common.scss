@@ -1,0 +1,41 @@
+.sear {
+  &-head {
+    padding: 1rem 2rem;
+    border: 0.1rem solid var(--border-color);
+  }
+  &-form {
+    width: 50%;
+    .row {
+      flex: 1;
+      --cg: 0.8rem;
+      --rg: 0rem;
+    }
+    .b-form-gr {
+      display: flex;
+      gap: 1.6rem;
+      .btn {
+        flex-shrink: 0;
+        min-width: unset;
+      }
+    }
+  }
+}
+.b-ip-search {
+  display: flex;
+  border: 0.1rem solid var(--border-color);
+  border-radius: 0.5rem;
+  align-items: center;
+  .icon {
+    width: 5rem;
+    height: 5rem;
+    @include mid-flex;
+    flex-shrink: 0;
+  }
+  input {
+    width: 100%;
+    border: unset;
+    outline: unset;
+    margin: unset;
+    height: 100%;
+  }
+}
