@@ -94,4 +94,60 @@ export default function ComponentModule() {
       randomXY(cirs[i], x, y);
     }, time);
   }
+
+  $(document).ready(function () {
+    const cmt = $(".cmtJS");
+    if (cmt.length) {
+      const cmtItem = cmt.find(".lib-cmt-item");
+      cmtItem.each(function () {
+        const cmtForm = $(this).find(".lib-cmt-f");
+        const cmtChild = $(this).find(".lib-cmt-child");
+        const repDrop = $(this).find(".repDropJs")
+        const repItem =$(this).find(".repDropJs .lib-cmt-item")
+        const repTxt =$(this).find(".repTxtJs")
+
+        cmtForm.slideUp(500);
+        
+        
+        const repTxtNum = $(repTxt).find(".num")
+        repTxtNum.text(repItem.length) 
+
+        if(repItem.length > 1) {
+          repDrop.slideUp(500);
+        }else {
+          $(repDrop).closest(".lib-cmt-item").find(".repTxtJs").css("display","none")
+        }
+      });
+
+      const repJs = $(".repJS");
+      const repTxt = $(".repTxtJs")
+
+      repJs.each(function () {
+        const repItem = $(this);
+        const repForm = repItem.closest(".lib-cmt-rep").find(".lib-cmt-f");
+        repItem.on("click", () => {
+          $(".lib-cmt-f").slideUp(500);
+          if (repForm.css("display") === "none") {
+            repForm.slideDown(500);
+          } else {
+            repForm.slideUp(500);
+          }
+        });
+      });
+
+      repTxt.each(function () {
+        const repTxtItem = $(this);
+        const repDrop = repTxtItem.closest(".lib-cmt-item").find(".repDropJs")
+        repTxtItem.on("click", ()=> {
+          if (repDrop.css("display") === "none") {
+            this.querySelector("img").style.transform = "rotate(-180deg)"
+            repDrop.slideDown(500);
+          } else {
+            repDrop.slideUp(500);
+            this.querySelector("img").style.transform = "rotate(0deg)"
+          }
+        })
+      })
+    }
+  });
 }
