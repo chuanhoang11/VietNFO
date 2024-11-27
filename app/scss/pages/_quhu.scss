@@ -307,6 +307,16 @@
             .ip {
                padding: 0;
             }
+            .sl {
+               .select2-container .select2-selection--single .select2-selection__rendered {
+                  font-size: 1.4rem;
+               }
+            }
+            .ip {
+               input {
+                  font-size: 1.4rem;
+               }
+            }
 
             .ip-wrap {
                >img {
