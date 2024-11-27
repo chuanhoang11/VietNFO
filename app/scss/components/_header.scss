@@ -28,6 +28,18 @@
         visibility: hidden;
       }
     }
+    .home-bn-srch {
+      opacity: 1;
+      visibility: visible;
+    }
+    @include max(768px) {
+      .hd-logo,
+      .hd-lang,
+      .hd-burger {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
   }
 
   &-wrap {
@@ -95,6 +107,9 @@
   }
   &-logo {
     width: 19rem;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
     .custom-logo-link {
       @include mid-flex;
     }
@@ -184,6 +199,43 @@
     text-align: center;
     @include max(1200px) {
       display: none;
+    }
+  }
+  .home-bn-srch {
+    position: absolute;
+    width: 50%;
+    @include mid();
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    @include max(768px) {
+      width: 100%;
+    }
+    .ip input {
+      height: 2.4rem;
+    }
+    .ip-icon {
+      display: flex;
+      width: 3rem;
+      height: 3rem;
+      flex-shrink: 0;
+      cursor: pointer;
+      img {
+        width: 2rem;
+      }
+    }
+    .ip {
+      padding: 0.6rem;
+    }
+  }
+  .home-bn-srch-box {
+    --rs16: 0.8rem;
+    width: 100%;
+    max-width: unset;
+    margin: 0 auto;
+    --w: 20rem;
+    @include max(500px) {
+      --w: 18rem;
     }
   }
 }
