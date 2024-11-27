@@ -1,5 +1,5 @@
 .select2-container {
-  height: 5.2rem;
+  height: 5rem;
   background-color: transparent;
   //   border-radius: 15rem;
 }
@@ -14,11 +14,11 @@
 
 .select2-container--default .select2-selection--single {
   border: none;
-  border-radius: unset !important;
+  border-radius: 0.5rem !important;
   color: var(--color-white);
-  height: 5.2rem;
+  height: 5rem;
   background-color: transparent;
-  border: 0.1rem solid #ebebeb;
+  border: 0.1rem solid var(--border-color);
   @include flex;
   flex-direction: column;
   justify-content: center;
@@ -33,9 +33,9 @@
 .select2-container .select2-selection--single .select2-selection__rendered {
   background-color: transparent;
   border: 1px solid transparent;
-  color: var(--color-black);
-  font-size: 1.4rem;
-  font-weight: 400;
+  color: #1d2939;
+  font-size: 1.6rem;
+  font-weight: 600;
   display: inline !important;
   @include lc(1);
   width: 100%;
@@ -51,7 +51,7 @@
 
 .select2-container .select2-dropdown {
   background: transparent;
-  border: none;
+  border: 0.1rem solid var(--border-color);
 }
 
 .select2-container .select2-dropdown .select2-search {
@@ -68,7 +68,7 @@
 }
 
 .select2-container .select2-dropdown .select2-results ul {
-  background: #e6eeed;
+  background: var(--color-white);
   color: var(--color-black);
 }
 
@@ -77,14 +77,14 @@
   .select2-results
   ul
   .select2-results__option--highlighted[aria-selected] {
-  background-color: var(--color-black);
-  font-size: 1.4rem;
+  background-color: var(--color-pri);
+  font-size: 1.6rem;
 }
 
 .select2-container--default .select2-results__option--selected {
-  background-color: #e6eeed;
-  color: var(--color-black);
-  font-size: 1.4rem;
+  background-color: var(--color-pri);
+  color: var(--color-white);
+  font-size: 1.6rem;
 }
 
 .select2-container--default
@@ -114,10 +114,10 @@
 }
 
 .select2-container .select2-selection--single .select2-selection__rendered {
-  padding-left: 1.4rem;
-  font-weight: 500;
-  color: var(--color-text);
-  padding-right: 3rem;
+  //   padding-right: 1.6rem;
+  font-weight: 600;
+  color: #1d2939;
+  padding-left: 3rem;
 }
 
 .select2-container--default
@@ -130,9 +130,15 @@
   .select2-selection--single
   .select2-selection__arrow
   b {
-  margin-left: -1.2rem;
+  margin-right: -1.2rem;
 }
-
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  left: 0;
+  right: unset;
+  width: 30px;
+}
 .select2-container
   .select2-dropdown
   .select2-results
