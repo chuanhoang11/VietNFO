@@ -2,6 +2,21 @@ header.hd
    .container 
       .hd-wrap 
          .hd-top
+            .home-bn-srch
+               form(action="")
+                  .home-bn-srch-box
+                     .sl 
+                        select(name="" class="re-select-main" data-placeholder="Danh mục") 
+                           option(value="")  Danh mục
+                           option(value="1")  Danh mục 1
+                           option(value="2")  Danh mục 2
+                           option(value="3")  Danh mục 3
+                     .ip 
+                        .ip-wrap
+                           +img("ic-pin.svg")
+                           input(type="text" placeholder="State, city, ZIP code")
+                        button.ip-icon
+                           +img("ic-srch.svg")
             .b-gr 
                .hd-logo 
                   a(href="").custom-logo-link

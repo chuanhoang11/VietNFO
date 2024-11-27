@@ -1,6 +1,6 @@
 .hd-burger {
   padding: 0.7rem;
-
+  transition: 0.3s ease-in-out;
   @include min(1201px) {
     display: none;
   }
