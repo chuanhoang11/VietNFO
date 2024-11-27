@@ -18,10 +18,10 @@ html(lang="en")
 		link(rel='stylesheet' href='./css/style.css')
 		link(rel='stylesheet' href='./css/backdoor.css')
 		link(rel='icon' type='image/png' href='./assets/images/mona.png')
-	body
+	body(class=bodyClass)
 		block header
 			include ../blocks/header
-		main.main(class=bodyClass)
+		main.main
 			block container
 		block footer
 			include ../blocks/footer
