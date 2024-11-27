@@ -65,7 +65,7 @@
 .swiper-control {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1.2rem;
   --size: 4.8rem;
   @include max(1200px) {
     --size: 3.2rem;
@@ -73,9 +73,9 @@
   &-btn {
     width: var(--size);
     height: var(--size);
-    //  border-radius: 100rem;
-    background-color: #f0f0f0;
-    //  border: 0.1rem solid $color-pri;
+    border-radius: 100rem;
+    background-color: var(--color-white);
+    border: 0.1rem solid #98a2b3;
     @include mid-flex;
     cursor: pointer;
     @include transitionRe;
@@ -84,16 +84,20 @@
     overflow: hidden;
     font-size: 1.6rem;
     @include affter(var(--color-pri));
-    color: #0a0a0a;
+    color: #101828;
+    box-shadow: 0px 0.1rem 0.4rem rgba(12, 12, 13, 0.05);
+    @include max(1200px) {
+      font-size: 1.4rem;
+    }
     > * {
       position: relative;
       z-index: 2;
     }
 
     &.swiper-button-disabled {
-      background-color: #eee;
+      border-color: #d0d5dd;
+      color: #d0d5dd;
       cursor: default;
-      box-shadow: none;
     }
 
     i {
@@ -102,7 +106,7 @@
     @include hover {
       &:not(.swiper-button-disabled) {
         color: white !important;
-
+        border-color: var(--color-pri);
         &::after {
           left: 0;
           width: 100%;

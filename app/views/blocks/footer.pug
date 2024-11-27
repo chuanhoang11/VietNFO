@@ -1,0 +1,106 @@
+footer.ft 
+   .container 
+      .ft-wrap 
+         .ft-head 
+            .ft-logo 
+               a(href="").custom-logo-link
+                  +img("logo.svg")
+            .t-slogan
+               span.t-text 
+                  | Cổng thông tin 
+                  span.fw-7.c-pri 
+                     | MIỄN PHÍ 
+                  | dành cho cộng đồng người Việt tại Mỹ
+         .ft-nav
+            ul.menu 
+               -
+                  var arrs = [
+                     {
+                        txt:"VIỆC LÀM",
+                     },
+                     {
+                        txt:"MUA CỬA TIỆM",
+                     },
+                     {
+                        txt:"VIỆT EVENTS",
+                     },
+                     {
+                        txt:"THUÊ NHÀ",
+                     },
+                     {
+                        txt:"MUA NHÀ",
+                     },
+                     {
+                        txt:"RAO VẶT",
+                     },
+                     {
+                        txt:"LIÊN HỆ QUẢNG CÁO",
+                     },
+                  ]
+               each i,index in arrs
+                  li
+                     a(href="")
+                        | #{i.txt}
+         .ft-sc 
+            .social 
+               .social-list 
+                  a(href="").social-link 
+                     +img("ic-fb.svg") 
+                  a(href="").social-link 
+                     +img("ic-yt.svg") 
+                  a(href="").social-link 
+                     +img("ic-ins.svg") 
+                  a(href="").social-link 
+                     +img("ic-x.svg")
+         .ft-panel 
+            .ft-list.row 
+               -
+                  var arrs = [
+                     {
+                        tt:"LIÊN HỆ HỢP TÁC",
+                        mail:"contact@vietinfo.us",
+                        phone:"678 408 2288",
+                     },
+                     {
+                        tt:"LIÊN HỆ QUẢNG CÁO",
+                        mail:"ads@vietinfo.us",
+                        phone:"678 408 2288",
+                     },
+                     {
+                        tt:"HỖ TRỢ KỸ THUẬT",
+                        mail:"admin@vietinfo.us",
+                        phone:"678 408 2288",
+                     },
+                  ]
+               each i,index in arrs
+                  .col.col-4
+                     .ft-box 
+                        .b-inner 
+                           span.t-text 
+                              | #{i.tt}
+                           .b-gr 
+                              a(href="").t-link
+                                 | Email:#{i.mail} 
+                              a(href="").t-link
+                                 | Phone:#{i.phone} 
+         .ft-bank 
+            .i-list
+               each i,index in Array(8)
+                  a(href="").i-link
+                     +img(`icon-bank (${index+1}).svg`)
+         .ft-bot
+            .ft-nav 
+               ul.menu
+                  li 
+                     a(href="")
+                        | Privacy Policy
+                  li 
+                     a(href="")
+                        | Terms of Service 
+                  li 
+                     a(href="")
+                        | Ads Service Agreement
+            span.t-text 
+               |  Designed by Qixtech - Web Design & Digital Marketing
+            span.t-text 
+               | Copyright © 2024. VietInfo LLC. All Right Reserved. 

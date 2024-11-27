@@ -4,9 +4,39 @@
   font-weight: 600;
   text-wrap: pretty;
   position: relative;
+  @include max(500px) {
+    font-size: 1.5rem;
+  }
 }
 .head {
-  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  @include max(500px) {
+    gap: 0.8rem;
+  }
+  .t-des {
+    @include fz-16;
+    color: #344054;
+    @include max(500px) {
+      font-size: 1.4rem;
+    }
+  }
+  &.dcor {
+    .t-title {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      &::before {
+        content: "";
+        width: 2.8rem;
+        height: 2.8rem;
+        flex-shrink: 0;
+        background: url(../assets/images/icon-title.svg) no-repeat
+          center/contain;
+      }
+    }
+  }
 }
 .t-center {
   text-align: center;
@@ -123,4 +153,16 @@
 }
 .c-text {
   color: var(--color-text);
+}
+.head-sc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  .swiper-control {
+    @include max(500px) {
+      display: none;
+    }
+  }
 }
