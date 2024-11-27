@@ -45,6 +45,7 @@
 
     @include hover {
         box-shadow: 0px 3px 20px -8px rgba(12, 12, 13, 0.4);
+        background-color: #F3FAFF;
     }
 
     @include max($res-mobile) {
@@ -562,6 +563,7 @@
     align-items: center;
     gap: .4em;
     transition: .3s ease-in-out;
+    cursor: pointer;
 
     @include hover {
         background-color: #E6EDFA;
@@ -581,8 +583,9 @@
         @include hover {
             background-color: var(--color-pri);
             color: white;
-            img{
-                filter:brightness(0) invert(1);
+
+            img {
+                filter: brightness(0) invert(1);
             }
         }
     }
@@ -827,13 +830,88 @@
     }
 }
 
-.selectJS.active .selectJSBody{
+.selectJS.active .selectJSBody {
     display: flex;
 }
 
-.selectJS .selectJSHead i{
+.selectJS .selectJSHead i {
     transition: .3s ease-in-out;
 }
-.selectJS.active .selectJSHead i{
+
+.selectJS.active .selectJSHead i {
     transform: rotate(180deg);
+}
+
+.sear-block {
+    overflow: visible;
+}
+
+.sear-panel {
+    padding: 1rem 0;
+}
+
+.sear-map {
+    position: sticky;
+    height: calc(100vh - 7.8rem);
+    top: 7.8rem;
+
+    @include max($res-mobile) {
+        height: calc(100vh - 5.4rem);
+        top: 5.4rem;
+    }
+}
+
+.pro-item.col-6 {
+    @include max($res-mobile) {
+        width: 100%;
+    }
+
+    .pro-bner-name {
+        font-size: 1.2em;
+    }
+
+    .pro-bner-des {
+        font-size: .8em;
+    }
+
+    .pro-bner-content {
+        padding: 1em;
+    }
+
+    .pro-bner,
+    .pro-wr {
+        @include max(1600px) {
+            font-size: .8vw;
+        }
+
+        @include max($res-mobile) {
+            font-size: 1.4vw;
+        }
+    }
+
+    .sear-panel .pro-item.col-third {
+        @include max($res-tablet) {
+            width: 100%;
+        }
+    }
+}
+
+@include max($mobile) {
+
+    .sear-row>.col-5,
+    .sear-row>.col-7 {
+        width: 100%;
+    }
+
+   
+
+    .sear-row>.col-7 {
+        position: sticky;
+        top: 5.4rem;
+        z-index: 10;
+    }
+
+    .sear-map {
+        height: 30vh;
+    }
 }
