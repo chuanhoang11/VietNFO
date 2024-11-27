@@ -15,6 +15,8 @@
   --color75: #757575;
   --color23: #232323;
 
+  --color-text-2: #344054;
+
   // distance section
   --pd-sc: 6.8rem;
 
@@ -39,9 +41,13 @@
 }
 
 //Responsive
+
+$res-tablet: 1024px;
+$res-tablet-min: 1025px;
+$mobile-min: 701px;
 $res-mobile: 1199px; //  cho mobile (≤ 1199px)
 $res-mobile-min: 1200px; //  cho mobile đến tablet (≥ 1200px)
-$mobile: 500px; //  cho mobile nhỏ (≤ 500px)
+$mobile: 700px; //  cho mobile nhỏ (≤ 500px)
 $tablet: 768px; //  cho tablet (≤ 768px)
 $tablet-min: 1024px; //  cho tablet lớn (≥ 1024px)
 //Distance
