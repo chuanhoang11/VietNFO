@@ -76,6 +76,38 @@ block container
                   .popdt-cmt.popdt-block 
                      p.tt Comments
                      +comment()
+                  .popdt-block.popdt-slider.slider-mate
+                     .head-sc
+                        +title("Rao vặt khác trong khu vực")
+                        +SwiperControl()
+                     .swiper.rows 
+                        .swiper-wrapper
+                           each val,index in Array(2)
+                              .swiper-slide.col 
+                                 .wrapper 
+                                    .row
+                                       each vals,index in Array(3)
+                                          .pro-grid-item.col
+                                             .pro-wr.four 
+                                                +img("ic-loa.svg")
+                                                .pro-content 
+                                                   h3.pro-name Chăm sóc người già - Marietta, GA 30062
+                                                   .pro-des Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...
+                                                   .pro-note 
+                                                      .pro-note-item 
+                                                         .pro-li.fw-6.c-txt-2 
+                                                            +img('ic-pro-2.svg')
+                                                            span.txt Marietta 30062
+                                                      .pro-note-item 
+                                                         .pro-li.fw-6.c-txt-2 
+                                                            +img('ic-pro-7.svg')
+                                                            span.txt 2 ngày trước
+                                                      .pro-note-item 
+                                                         .pro-li.fw-6.c-txt-2 
+                                                            +img('ic-pro-4.svg')
+                                                            span.txt 1000
+                     +pagination
+                     
             .popdt-side.col 
                .wrapper 
                   .popdt-contact 
@@ -107,3 +139,13 @@ block container
                               +img("ic-fb.svg") 
                            a(href="").social-link
                               +img("ic-x.svg") 
+                  .pro-bner 
+                     .pro-bner-dc
+                        +img('pro-bner-dc.png')
+                     .pro-bner-img
+                        +img('pro-bner-img.jpg')
+                     .pro-bner-content 
+                        h3.pro-bner-name Chăm sóc người lớn tuổi
+                        p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
+                        .pro-btn 
+                           span.txt Khám phá ngay

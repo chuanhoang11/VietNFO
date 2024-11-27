@@ -85,6 +85,43 @@ block container
                   .popdt-cmt.popdt-block 
                      p.tt Comments
                      +comment()
+                  .popdt-block.popdt-slider.slider-event
+                     .head-sc
+                        +title("Các event khác trong khu vực")
+                        +SwiperControl()
+                     .swiper-container 
+                        .swiper.rows 
+                           .swiper-wrapper
+                              each val,index in Array(2)
+                                 .swiper-slide.col 
+                                    .wrapper 
+                                       .row
+                                          each vals,index in Array(3)
+                                             .pro-item.col
+                                                .pro-wr.third
+                                                   .pro-img 
+                                                      .inner 
+                                                         +img("pro-1-1.jpg")
+                                                   .pro-content 
+                                                      h3.pro-name Hội chợ mùa thu
+                                                      p.pro-des Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Ma
+                                                      ul.pro-ul 
+                                                         li 
+                                                            .pro-li.fw-5
+                                                               +img('ic-pro-2.svg')
+                                                               span.txt 9185 Old Southwick Pass, Johns Creek, GA (Nhà thờ Việt Nam)
+                                                         li 
+                                                            .pro-note 
+                                                               .pro-note-item 
+                                                                  .pro-li.fw-5
+                                                                     +img('ic-pro-6.svg')
+                                                                     span.txt Sept 14 – 16, 2024
+                                                               .pro-note-item 
+                                                                  .pro-li.fw-5
+                                                                     +img('ic-pro-4.svg')
+                                                                     span.txt 1000
+                        +pagination
+                     
             .popdt-side.col 
                .wrapper 
                   .popdt-thumbnail 
@@ -120,3 +157,13 @@ block container
                               +img("ic-fb.svg") 
                            a(href="").social-link
                               +img("ic-x.svg") 
+                  .pro-bner 
+                     .pro-bner-dc
+                        +img('pro-bner-dc.png')
+                     .pro-bner-img
+                        +img('pro-bner-img.jpg')
+                     .pro-bner-content 
+                        h3.pro-bner-name Chăm sóc người lớn tuổi
+                        p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
+                        .pro-btn 
+                           span.txt Khám phá ngay

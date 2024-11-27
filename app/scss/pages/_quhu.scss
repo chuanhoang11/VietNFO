@@ -529,6 +529,7 @@
          }
 
          @include hover {
+            background-color: #F3FAFF;
             box-shadow: 0px 16px 32px -8px rgba(12, 12, 13, 0.4);
          }
       }
@@ -627,6 +628,7 @@
          }
 
          @include hover {
+            background-color: #F3FAFF;
             box-shadow: 0px 16px 32px -8px rgba(12, 12, 13, 0.4);
          }
       }
@@ -941,7 +943,9 @@
 
       .info {
          color: #2A2A33;
-
+         &:has(.pro-btn) {
+            width: 100%;
+         }
          .tt {
             @include fz-32;
             font-weight: 700;
@@ -950,6 +954,17 @@
                align-items: center;
                flex-wrap: wrap;
                gap: 1rem;
+            }
+            &:has(.pro-btn) {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               flex-wrap: wrap;
+               gap: 1rem;
+               width: 100%;
+               .pro-btn {
+                  font-size: 1.5rem;
+               }
             }
 
             &-sub {
@@ -1673,6 +1688,70 @@
       }
    }
 }
+.popdt-slider {
+   .head-sc {
+      margin-bottom: 1rem;
+   }
+   .swiper {
+      padding-bottom: 1rem;
+      &-pagination {
+         margin-top: 0;
+      }
+      &-control {
+         &-btn {
+            width: 3.6rem;
+            height: 3.6rem;
+         }
+      }
+      @include max(1024px) {
+         &-control {
+            display: none;
+         }
+      }
+   }
+   .row {
+      .col {
+         margin-bottom: 1.2rem;
+      }
+   }
+   .btn {
+      margin-top: 2.4rem;
+   }
+   &.slider-event {
+      @include min-max(500px,1024px) {
+         .swiper-slide {
+            .pro-item {
+               .pro-wr {
+                  flex-direction: row;
+               }
+               .pro-img {
+                  width: 30%;
+               }
+            }
+         }
+      }
+   }
+   &.slider-three {
+      .pro-wr {
+         .pro-des {
+            @include lc(1);
+         }
+      }
+      .swiper {
+         --cg:.8rem;
+         --rg:.8rem;
+      }
+      .swiper-slide {
+         width: calc(100% / 3);
+         @include max(1024px) {
+            width: 50%;
+         }
+         @include max(500px) {
+            width: 100%;
+         }
+      }
+   }
+}
 
 
 @include max(768px) {
@@ -1686,4 +1765,23 @@
 
 .hd {
    display: none;
+}
+
+.popdt-side {
+   .pro-bner  {
+      &-name {
+         @include fz-24;
+      }
+      &-des {
+         font-size: 1.4rem;
+      }
+      &-content {
+         padding: 1rem;
+         width: 65%;
+      }
+      .pro-btn {
+         font-size: 1.4rem;
+         padding: .8 1.2rem;
+      }
+   }
 }

@@ -109,6 +109,38 @@ block container
                   .popdt-cmt.popdt-block 
                      p.tt Comments
                      +comment()
+                  .popdt-block.popdt-slider.slider-three 
+                     .head-sc
+                        +title("Nhà - phòng đang cho thuê khác trong khu vực")
+                        +SwiperControl()
+                     .swiper-container 
+                        .swiper.rows
+                           .swiper-wrapper 
+                              each val,index in Array((5))
+                                 .swiper-slide.col
+                                    .pro-wr
+                                       .pro-img 
+                                          .pro-time 2 ngày trước
+                                          .pro-type Nhà ở
+                                          a(href="#").inner 
+                                             +img("pro-7.jpg")
+                                       .pro-content
+                                          h3.pro-name $123,000/tháng
+                                             span(style="font-size: .8em").fw-4 /month
+                                          .pro-note
+                                             .pro-note-item 
+                                                .pro-li.fw-6.c-txt-2 
+                                                   +img("ic-pro-bed.svg")
+                                                   span.txt 2 bed
+                                             .pro-note-item 
+                                                .pro-li.fw-6.c-txt-2 
+                                                   +img("ic-pro-shower.svg")
+                                                   span.txt 1 ba
+                                             .pro-note-item 
+                                                .pro-li.fw-6.c-txt-2 
+                                                   span.txt 11,300 sqft
+                                          .pro-des 471 Tam Oshanter Dr SE, Marietta, GA, 30067
+                     +pagination
             .popdt-side.col 
                .wrapper 
                   .popdt-contact 
@@ -140,3 +172,13 @@ block container
                               +img("ic-fb.svg") 
                            a(href="").social-link
                               +img("ic-x.svg") 
+                  .pro-bner 
+                     .pro-bner-dc
+                        +img('pro-bner-dc.png')
+                     .pro-bner-img
+                        +img('pro-bner-img.jpg')
+                     .pro-bner-content 
+                        h3.pro-bner-name Chăm sóc người lớn tuổi
+                        p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
+                        .pro-btn 
+                           span.txt Khám phá ngay
