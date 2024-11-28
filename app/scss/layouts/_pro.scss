@@ -855,7 +855,17 @@
 }
 
 .sear-panel {
-    padding: 1rem;
+    padding: 2.4rem 1.6rem;
+
+    @include max($mobile) {
+        padding: 1rem;
+    }
+
+    .pro-list {
+        --cg: .8rem;
+        --rg: .8rem;
+
+    }
 }
 
 .sear-map {
