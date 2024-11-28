@@ -855,7 +855,7 @@
 }
 
 .sear-panel {
-    padding: 1rem 0;
+    padding: 1rem;
 }
 
 .sear-map {
@@ -866,6 +866,18 @@
     @include max($res-mobile) {
         height: calc(100vh - 5.4rem);
         top: 5.4rem;
+    }
+}
+
+.pro-item.col-third {
+    @include min($mobile) {
+        .pro-bner {
+            min-height: unset;
+        }
+
+        .pro-bner-content {
+            padding: 1.4em;
+        }
     }
 }
 
@@ -884,6 +896,11 @@
 
     .pro-bner-content {
         padding: 1em;
+        gap: .4em;
+    }
+
+    .pro-bner {
+        min-height: unset;
     }
 
     .pro-bner,
@@ -933,7 +950,7 @@
     gap: 1rem;
 
     .select2.select2-container {
-        width: 12rem !important;
+        width: fit-content !important;
     }
 
     .select2-container,
@@ -948,6 +965,7 @@
 
     .select2-container .select2-selection--single .select2-selection__rendered {
         padding-left: 0;
+        padding-right: 3.2rem !important;
     }
 
     .select2-container--default .select2-selection--single {

@@ -2,36 +2,45 @@
   &-head {
     padding: 1rem 2rem;
     border: 0.1rem solid var(--border-color);
+
     @include max(1200px) {
       padding: 0.6rem;
     }
   }
+
   &-form {
     max-width: 104rem;
+
     .row {
       flex: 1;
       --cg: 0.8rem;
       --rg: 0rem;
+
       @include max(920px) {
         --rg: 0.8rem;
       }
-      > .col-4 {
+
+      >.col-4 {
         @include max(920px) {
           width: 100%;
         }
       }
-      > .col-3 {
+
+      >.col-3 {
         @include max(920px) {
           width: 40%;
         }
+
         @include max(500px) {
           width: 50%;
         }
       }
-      > .col-2 {
+
+      >.col-2 {
         @include max(920px) {
           width: 20%;
         }
+
         @include max(500px) {
           width: 35%;
           margin: 0 auto;
@@ -39,6 +48,7 @@
         }
       }
     }
+
     .btn {
       flex-shrink: 0;
       min-width: unset;
@@ -49,18 +59,21 @@
     }
   }
 }
+
 .b-ip-search {
   display: flex;
   border: 0.1rem solid var(--border-color);
   border-radius: 0.5rem;
   align-items: center;
   height: 5rem;
+
   .icon {
     width: 5rem;
     @include mid-flex;
     flex-shrink: 0;
     height: 100%;
   }
+
   input {
     width: 100%;
     border: unset;
@@ -70,24 +83,30 @@
     font-weight: 500;
     background: unset;
     padding: 0;
+
     &::placeholder {
       color: #b3b3b3;
     }
   }
 }
+
 .sear {
   &-wrap {
     display: flex;
     flex-direction: column;
   }
+
   &-row {
-    --cg: 1.2rem;
-    --rg: 0;
+    --cg: 0rem;
+    --rg: 0rem;
   }
+
   &-block {
     height: 100%;
   }
+
   &-map {
+
     img,
     iframe {
       width: 100%;
