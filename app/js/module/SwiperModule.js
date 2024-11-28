@@ -40,7 +40,7 @@ export default function SwiperModule() {
     loop: false,
     effect: "slide",
   });
-  if(window.innerWidth > 700){
+  if (window.innerWidth > 700) {
     functionSlider(".pro-slider", {
       centeredSlides: false,
       loop: false,
@@ -50,7 +50,7 @@ export default function SwiperModule() {
       },
       slidesPerView: 3,
       breakpoints: {
-        0:{
+        0: {
           slidesPerView: 1,
         },
         700: {
@@ -66,7 +66,14 @@ export default function SwiperModule() {
       loop: false,
       effect: "slide",
       slidesPerView: "auto",
-      
+
+    });
+    functionSlider(".pro-slider-third", {
+      centeredSlides: false,
+      loop: false,
+      effect: "slide",
+      slidesPerView: "auto",
+
     });
   }
 

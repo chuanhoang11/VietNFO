@@ -954,3 +954,16 @@
         border: none;
     }
 }
+
+@include max($mobile) {
+    .pro-slider-third .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        flex-wrap: wrap;
+    }
+
+    .pro-slider-third .swiper-slide {
+        width: 100%;
+    }
+}
