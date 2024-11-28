@@ -83,9 +83,29 @@
     font-weight: 500;
     background: unset;
     padding: 0;
+    padding-left: 1.2rem;
 
     &::placeholder {
       color: #b3b3b3;
+    }
+  }
+
+  .icon-remove {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    @include mid-flex;
+    background: #fff;
+    border: 0.1rem solid #28303f;
+    border-radius: 0.4rem;
+    color: #28303f;
+    font-size: 1.4rem;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    @include hover {
+      background: #28303f;
+      color: #fff;
     }
   }
 }
@@ -115,4 +135,14 @@
       display: block;
     }
   }
+}
+
+.home-bn-srch-box {
+  .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #1d2939;
+  }
+}
+
+.t-slogan {
+  color: var(--color29);
 }
