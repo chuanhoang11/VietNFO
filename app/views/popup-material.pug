@@ -1,0 +1,158 @@
+extends layout/layout
+
+block vars
+   -title = 'Pop material'
+   -bodyClass = 'page-home'
+
+block container 
+   +popupDt("popdt","dt")
+      .container
+         .popdt-flex.row 
+            .popdt-main.col 
+               .wrapper 
+                  .popdt-info.popdt-block
+                     .popdt-info-top
+                        .info 
+                           p.tt Bộ 5000 câu hỏi trắc nghiệm về Nail
+                              a.pro-btn(href="#").second
+                                 +img('ic-dl.svg')
+                                 span.txt Tải xuống
+                     .popdt-info-bot 
+                        .fea 
+                           .fea-item 
+                              +img("ic-download.svg")
+                              span.txt 1,212 downloads
+                  .popdt-detail.popdt-block 
+                     p.tt Chi tiết
+                     input(type="checkbox" id="more")
+                     .des
+                        p.des-txt 
+                           |Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng 
+                           |Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng 
+                           |Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng 
+                           |Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng 
+                     label(for="more").link 
+                        +img("arrow-down.svg")
+                        span.link-wrap 
+                           span.txt Show more
+                           span.txt Show less
+                     .popdt-time 
+                        .popdt-time-it
+                           +img("ic-clock.svg")
+                           span.txt 2 days
+                              span.txt-sub on Vietinfo
+                        .popdt-time-it
+                           +img("ic-eyes.svg")
+                           span.txt 10,758
+                              span.txt-sub views
+                  .popdt-school.popdt-block 
+                     p.tt Trường học
+                     .popdt-schools
+                        .popdt-school-item 
+                           +img("710.svg")
+                           .ctn 
+                              p.name Thomas L Marsalis Elementary School
+                              .val
+                                 p.val-item 
+                                    |Grades: 
+                                    span.bold PK-5
+                                 p.val-item 
+                                    |Distance: 
+                                    span.bold 2 mi
+                        .popdt-school-item 
+                           +img("510.svg")
+                           .ctn 
+                              p.name Boude Storey Middle School
+                              .val
+                                 p.val-item 
+                                    |Grades: 
+                                    span.bold 6-8
+                                 p.val-item 
+                                    |Distance: 
+                                    span.bold 4 mi
+                        .popdt-school-item 
+                           +img("210.svg")
+                           .ctn 
+                              p.name South Oak Cliff High School
+                              .val
+                                 p.val-item 
+                                    |Grades: 
+                                    span.bold 9-12
+                                 p.val-item 
+                                    |Distance: 
+                                    span.bold 3.5 mi
+                  .popdt-cmt.popdt-block 
+                     p.tt Comments
+                     +comment()
+                  .popdt-block.popdt-slider.slider-mate
+                     .head-sc
+                        +title("Các event khác trong khu vực")
+                        +SwiperControl()
+                     .swiper.rows 
+                        .swiper-wrapper
+                           each val,index in Array(2)
+                              .swiper-slide.col 
+                                 .wrapper 
+                                    .row
+                                       each vals,index in Array(3)
+                                          .pro-item.col 
+                                             .pro-wr.five 
+                                                .pro-content 
+                                                   .pro-li 
+                                                      +img('ic-pro-4.svg')
+                                                      span.txt 1000
+                                                   h3.pro-name Bộ 5000 câu hỏi trắc nghiệm về Nail - Cẩm nang
+                                                   p.pro-des Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai, TP Hà Nội) với nhiều hoạt động hấp dẫn; là một trong những sự kiện quan trọng của quận Hoàng Mai hướng tới chào mừng kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10-10-1954 / 10-10-2024). Hội chợ được tổ chức nhằm thúc đẩy hoạt động xúc tiến thương mại, giao lưu kinh tế, tạo điểm sinh hoạt văn hóa, vui chơi giải trí, mua sắm cho nhân dân trong dịp kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10/10).
+                                                   .pro-control 
+                                                      a.pro-btn(href="#")
+                                                         span.txt Xem chi tiết
+                                                      a.pro-btn(href="#").second
+                                                         +img('ic-dl.svg')
+                                                         span.txt Tải xuống
+                     +pagination
+
+            .popdt-side.col 
+               .wrapper 
+                  .popdt-thumbnail 
+                     .img 
+                        .img-inner 
+                           +img("popdt-thumbnail.jpg")
+                  .popdt-contact 
+                     p.tt Liên hệ:
+                     p.des Darynda Jenkins
+                     .popdt-address 
+                        a(href="").link 
+                           +img("ic-send.svg") 
+                           span.txt keller@gmail.com
+                        a(href="").link 
+                           +img("ic-phone.svg") 
+                           span.txt 012345667
+                  .popdt-map 
+                     .iframe 
+                        iframe(
+                        referrerpolicy="no-referrer-when-downgrade" 
+                        loading="lazy" 
+                        allowfullscreen="" 
+                        style="border:0;" 
+                        height="450" 
+                        width="600" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2654293242267!2d106.6535495758385!3d10.790971358923679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed189fa855d%3A0xf63e15bfce46baef!2sC%C3%B4ng%20ty%20TNHH%20-%20MONA%20MEDIA!5e0!3m2!1svi!2s!4v1732719275356!5m2!1svi!2s"
+                        )
+                  .popdt-share 
+                     span.txt Share this listing:
+                     .social 
+                        .social-list 
+                           a(href="").social-link
+                              +img("ic-fb.svg") 
+                           a(href="").social-link
+                              +img("ic-x.svg") 
+                  .pro-bner 
+                     .pro-bner-dc
+                        +img('pro-bner-dc.png')
+                     .pro-bner-img
+                        +img('pro-bner-img.jpg')
+                     .pro-bner-content 
+                        h3.pro-bner-name Chăm sóc người lớn tuổi
+                        p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
+                        .pro-btn 
+                           span.txt Khám phá ngay

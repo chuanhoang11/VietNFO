@@ -112,4 +112,15 @@ export default function SwiperModule() {
   //     });
   //     //
   //   }
+  functionSlider(".popdt-slider", {
+    speed: 1200,
+    slidesPerView:"auto",
+    autoplay: {
+      delay: 2600,
+    },
+    initialSlide: 0,
+    centeredSlides: false,
+    loop: false,
+    effect: "slide",
+  });
 }
