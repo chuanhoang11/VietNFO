@@ -1,8 +1,8 @@
 extends layout/layout
 
 block vars
-    -title = ''
-    -bodyClass = 'page-search'
+   -title = ''
+   -bodyClass = 'page-search page-result'
 
 block container 
    section.sec-sear 
@@ -43,10 +43,12 @@ block container
                         +img("map-img.jpg")
                   .col.col-5
                      .sear-panel 
+                        .head-sc.mb-10
+                           +title("Việc làm tại North Carolina", "","dcor")
                         .head-sc.mb-10 
                            span.txt 107 kết quả
                            .pro-select 
-                              span.txt Sắp sếp
+                              span.txt Sắp sếp:
                               select.re-select-main
                                  option(value="")  Cộng đồng
                                  option(value="")  Tin mới nhất
@@ -180,34 +182,8 @@ block container
                                     income: "$1,000,000",
                                     address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
                                  },
-                                  {
-                                    img: "pro-5.jpg",
-                                    time: "2 ngày trước",
-                                    type: "Kinh doanh khác",
-                                    price: "$500,000",
-                                    note: [
-                                       "Xưởng sửa chữa ô tô Đại Việt",
-                                       "11,300 sqft"
-                                    ],
-                                    rent: "$1,500",
-                                    income: "$1,000,000",
-                                    address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-                                 }
                               ]
                            each item, index in proArr
-                              if(index == 2)
-                                 .pro-item.col.col-6
-                                    .pro-bner 
-                                       .pro-bner-tag Sponsored
-                                       .pro-bner-dc
-                                          +img('pro-bner-dc.png')
-                                       .pro-bner-img
-                                          +img('pro-bner-img.jpg')
-                                       .pro-bner-content 
-                                          h3.pro-bner-name Chăm sóc người lớn tuổi
-                                          p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
-                                          .pro-btn 
-                                             span.txt Khám phá ngay
                               .pro-item.col.col-6
                                  .pro-wr 
                                     .pro-img 
@@ -335,3 +311,110 @@ block container
                                              .pro-li.fw-6.c-txt-2 
                                                 +img('ic-pro-4.svg')
                                                 span.txt 1000
+                        +PageNumber()
+                     footer.ft 
+                        .container 
+                           .ft-wrap 
+                              .ft-head 
+                                 .ft-logo 
+                                    a(href="").custom-logo-link
+                                       +img("logo.svg")
+                                 .t-slogan
+                                    span.t-text 
+                                       | Cổng thông tin 
+                                       span.fw-7.c-pri 
+                                          | MIỄN PHÍ 
+                                       | dành cho cộng đồng người Việt tại Mỹ
+                              .ft-nav
+                                 ul.menu 
+                                    -
+                                       var arrs = [
+                                          {
+                                             txt:"VIỆC LÀM",
+                                          },
+                                          {
+                                             txt:"MUA CỬA TIỆM",
+                                          },
+                                          {
+                                             txt:"VIỆT EVENTS",
+                                          },
+                                          {
+                                             txt:"THUÊ NHÀ",
+                                          },
+                                          {
+                                             txt:"MUA NHÀ",
+                                          },
+                                          {
+                                             txt:"RAO VẶT",
+                                          },
+                                          {
+                                             txt:"LIÊN HỆ QUẢNG CÁO",
+                                          },
+                                       ]
+                                    each i,index in arrs
+                                       li
+                                          a(href="")
+                                             | #{i.txt}
+                              .ft-sc 
+                                 .social 
+                                    .social-list 
+                                       a(href="").social-link 
+                                          +img("ic-fb.svg") 
+                                       a(href="").social-link 
+                                          +img("ic-yt.svg") 
+                                       a(href="").social-link 
+                                          +img("ic-ins.svg") 
+                                       a(href="").social-link 
+                                          +img("ic-x.svg")
+                              .ft-panel 
+                                 .ft-list.row 
+                                    -
+                                       var arrs = [
+                                          {
+                                             tt:"LIÊN HỆ HỢP TÁC",
+                                             mail:"contact@vietinfo.us",
+                                             phone:"678 408 2288",
+                                          },
+                                          {
+                                             tt:"LIÊN HỆ QUẢNG CÁO",
+                                             mail:"ads@vietinfo.us",
+                                             phone:"678 408 2288",
+                                          },
+                                          {
+                                             tt:"HỖ TRỢ KỸ THUẬT",
+                                             mail:"admin@vietinfo.us",
+                                             phone:"678 408 2288",
+                                          },
+                                       ]
+                                    each i,index in arrs
+                                       .col.col-4
+                                          .ft-box 
+                                             .b-inner 
+                                                span.t-text 
+                                                   | #{i.tt}
+                                                .b-gr 
+                                                   a(href="").t-link
+                                                      | Email:#{i.mail} 
+                                                   a(href="").t-link
+                                                      | Phone:#{i.phone} 
+                              .ft-bank 
+                                 .i-list
+                                    each i,index in Array(8)
+                                       a(href="").i-link
+                                          +img(`icon-bank (${index+1}).svg`)
+                              .ft-bot
+                                 .ft-nav 
+                                    ul.menu
+                                       li 
+                                          a(href="")
+                                             | Privacy Policy
+                                       li 
+                                          a(href="")
+                                             | Terms of Service 
+                                       li 
+                                          a(href="")
+                                             | Ads Service Agreement
+                                 span.t-text 
+                                    |  Designed by Qixtech - Web Design & Digital Marketing
+                                 span.t-text 
+                                    | Copyright © 2024. VietInfo LLC. All Right Reserved. 

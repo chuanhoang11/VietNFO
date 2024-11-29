@@ -150,44 +150,45 @@ export default function ComponentModule() {
     }
   });
 
+  if (window.innerWidth < 700) {
+    const selectJS = document.querySelectorAll(".selectJS");
+    if (selectJS) {
+      selectJS.forEach(item => {
+        const selectJSHead = item.querySelector(".selectJSHead");
+        const selectJSTxt = item.querySelector(".selectJSTxt");
+        const selectJSItem = item.querySelectorAll(".selectJSItem");
+        if (selectJSItem) {
+          selectJSHead.addEventListener("click", () => {
+            item.classList.toggle("active");
+          })
+        };
 
-  const selectJS = document.querySelectorAll(".selectJS");
-  if (selectJS) {
-    selectJS.forEach(item => {
-      const selectJSHead = item.querySelector(".selectJSHead");
-      const selectJSTxt = item.querySelector(".selectJSTxt");
-      const selectJSItem = item.querySelectorAll(".selectJSItem");
-      if (selectJSItem) {
-        selectJSHead.addEventListener("click", () => {
-          item.classList.toggle("active");
-        })
-      };
-
-      if (selectJSItem) {
-        selectJSItem.forEach(item => {
-          if(item.classList.contains("active")){
-            selectJSTxt.innerHTML = item.innerHTML;
-          }
-          item.addEventListener("click", () => {
-            selectJSItem.forEach(item => {
+        if (selectJSItem) {
+          selectJSItem.forEach(item => {
+            if (item.classList.contains("active")) {
+              selectJSTxt.innerHTML = item.innerHTML;
+            }
+            item.addEventListener("click", () => {
+              selectJSItem.forEach(item => {
+                item.classList.remove("active");
+              });
+              item.classList.add("active");
+              selectJSTxt.innerHTML = item.innerHTML;
+              item.closest(".selectJS").classList.remove("active");
+            })
+          })
+        }
+      });
+      window.addEventListener("click", (e) => {
+        if (!e.target.closest(".selectJS")) {
+          const selectJS = document.querySelectorAll(".selectJS");
+          if (selectJS) {
+            selectJS.forEach(item => {
               item.classList.remove("active");
             });
-            item.classList.add("active");
-            selectJSTxt.innerHTML = item.innerHTML;
-            item.closest(".selectJS").classList.remove("active");
-          })
-        })
-      }
-    });
-    window.addEventListener("click", (e) => {
-      if (!e.target.closest(".selectJS")) {
-        const selectJS = document.querySelectorAll(".selectJS");
-        if (selectJS) {
-          selectJS.forEach(item => {
-            item.classList.remove("active");
-          });
+          }
         }
-      }
-    });
+      });
+    }
   }
 }

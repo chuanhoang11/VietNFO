@@ -70,7 +70,15 @@
 
     img {
         @include imgCover;
+        transition: .3s ease-in-out;
     }
+
+    @include hover {
+        img {
+            transform: scale(1.05) translate(-50%, -50%);
+        }
+    }
+
 }
 
 .pro-time {
@@ -847,7 +855,17 @@
 }
 
 .sear-panel {
-    padding: 1rem 0;
+    padding: 2.4rem 1.6rem;
+
+    @include max($mobile) {
+        padding: 1rem;
+    }
+
+    .pro-list {
+        --cg: .8rem;
+        --rg: .8rem;
+
+    }
 }
 
 .sear-map {
@@ -858,6 +876,18 @@
     @include max($res-mobile) {
         height: calc(100vh - 5.4rem);
         top: 5.4rem;
+    }
+}
+
+.pro-item.col-third {
+    @include min($mobile) {
+        .pro-bner {
+            min-height: unset;
+        }
+
+        .pro-bner-content {
+            padding: 1.4em;
+        }
     }
 }
 
@@ -876,6 +906,11 @@
 
     .pro-bner-content {
         padding: 1em;
+        gap: .4em;
+    }
+
+    .pro-bner {
+        min-height: unset;
     }
 
     .pro-bner,
@@ -925,7 +960,7 @@
     gap: 1rem;
 
     .select2.select2-container {
-        width: 12rem !important;
+        width: fit-content !important;
     }
 
     .select2-container,
@@ -940,9 +975,23 @@
 
     .select2-container .select2-selection--single .select2-selection__rendered {
         padding-left: 0;
+        padding-right: 3.2rem !important;
     }
 
     .select2-container--default .select2-selection--single {
         border: none;
+    }
+}
+
+@include max($mobile) {
+    .pro-slider-third .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        flex-wrap: wrap;
+    }
+
+    .pro-slider-third .swiper-slide {
+        width: 100%;
     }
 }

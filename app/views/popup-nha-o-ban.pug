@@ -7,14 +7,14 @@ block vars
 block container 
    +popupDt("popdt","dt")
       .container
-         .popdt-img 
-            .popdt-img-all
+         .popdt-img.gallery-container
+            .popdt-img-all.open-gallery 
                +img("ic-seeall.svg") 
                span.txt See all 33 photos
-            .popdt-img-grid 
+            .popdt-img-grid.gallery 
                each val,index in Array(5)
                   .popdt-image
-                     a(href=`./assets/images/popdt-img${index+1}.jpg`).img(data-fancybox="gallery") 
+                     a(href=`./assets/images/popdt-img${index+1}.jpg`).img(data-fancybox="gallery").gItem.img 
                         .tag Cho thuê
                         +img(`popdt-img${index+1}.jpg`)
          .popdt-flex.row 
@@ -139,8 +139,6 @@ block container
                                                 .pro-li.fw-6.c-txt-2 
                                                    span.txt 11,300 sqft
                                           .pro-des 471 Tam Oshanter Dr SE, Marietta, GA, 30067
-                     +pagination
-
             .popdt-side.col 
                .wrapper 
                   .popdt-contact 

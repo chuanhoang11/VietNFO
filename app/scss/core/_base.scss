@@ -58,11 +58,11 @@ textarea {
   min-height: 68vh;
   //   background: #f3f3f3;
   position: relative;
-  z-index: 1;
 
   &.page-home {
     overflow: hidden;
   }
+
   padding-top: var(--size-hd);
 }
 
