@@ -391,11 +391,25 @@ block container
             .mb-24 
                .pro-select 
                   span.txt Sắp sếp
-                  select.re-select-main
-                     option(value="")  Cộng đồng
-                     option(value="")  Cộng đồng
-                     option(value="")  Cộng đồng
-                     option(value="")  Cộng đồng
+                  .b-ip-select
+                     .selectCus
+                        .selectCusValue
+                           input(type="text", hidden)
+                           .txt Loại sự kiện
+                        .selectCusOptions
+                           label.selectCusAll 
+                              input(type="checkbox")
+                              span.txt Cộng đồng
+                           label.selectCusOption 
+                              input(type="checkbox")
+                              span.txt Hội nhóm
+                           label.selectCusOption 
+                              input(type="checkbox")
+                              span.txt Giải trí
+                           label.selectCusOption 
+                              input(type="checkbox")
+                              span.txt Thể thao
+                           .selectCusApply Áp dụng
             .pro-side.row 
                .pro-left.col 
                   .pro-bar 

@@ -22,17 +22,75 @@ block container
                                  input(type="search" placeholder="Marietta")
                            .col.col-sl-md  
                               .b-ip-select
-                                 select(name="").re-select-main
-                                    option(value="") Loại bất động sản
-                                    option(value="") Nhà ở
-                                    option(value="") Thương mại
+                                 .selectCus
+                                    .selectCusValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Loại bất động sản
+                                    .selectCusOptions
+                                       label.selectCusAll 
+                                          input(type="checkbox")
+                                          span.txt Chọn tất cả
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Nhà ở
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Thương mại
+                                       .selectCusApply Áp dụng
                            .col.col-sl-md  
                               .b-ip-select
-                                 select(name="").re-select-main
-                                    option(value="") Phòng ngủ - tắm
-                                    option(value="") 1
-                                    option(value="") 2
-                                    option(value="") 3
+                                 .selectTwo
+                                    .selectTwoValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Phòng ngủ - tắm
+                                    .selectTwoOptions
+                                       .selectTwoGr
+                                          p.txt Phòng ngủ
+                                          .selectTwoGrFlex
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo")
+                                                span.txt any
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo")
+                                                span.txt 1
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo")
+                                                span.txt 2
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo")
+                                                span.txt 3
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo")
+                                                span.txt 4
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo")
+                                                span.txt 5
+                                       .selectTwoGr
+                                          p.txt Phòng Tắm
+                                          .selectTwoGrFlex
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo2")
+                                                span.txt any
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo2")
+                                                span.txt 1
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo2")
+                                                span.txt 2
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo2")
+                                                span.txt 3
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo2")
+                                                span.txt 4
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo2")
+                                                span.txt 5
+                                       .selectTwoApply Áp dụng
                            .col.col-sl-sm
                               .b-ip-select
                                  select(name="").re-select-main
@@ -46,7 +104,13 @@ block container
                .sear-row.row 
                   .col.col-7 
                      .sear-map 
-                        +img("map-img.jpg")
+                        .inner
+                           +img("map-img.jpg")
+                           .btn-del 
+                              span.t-text 
+                                 | Remove boundary
+                              span.icon 
+                                 i.fa-light.fa-xmark.fw-7
                   .col.col-5
                      .sear-panel 
                         .head-sc.mb-10

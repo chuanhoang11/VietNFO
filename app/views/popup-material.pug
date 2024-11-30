@@ -22,24 +22,50 @@ block container
                                  input(type="search" placeholder="Marietta")
                            .col.col-sl-md  
                               .b-ip-select
-                                 select(name="").re-select-main
-                                    option(value="") Loại sự kiện
-                                    option(value="") Cộng đồng
-                                    option(value="") Hội nhóm
-                                    option(value="") Giải trí
-                                    option(value="") Thể thao
+                                 .selectCus
+                                    .selectCusValue
+                                       input(type="text", hidden)
+                                       .txt Loại sự kiện
+                                    .selectCusOptions
+                                       label.selectCusAll 
+                                          input(type="checkbox")
+                                          span.txt Cộng đồng
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Hội nhóm
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Giải trí
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Thể thao
+                                       .selectCusApply Áp dụng
                            .col.col-sl-md  
                               .b-ip-select
-                                 select(name="").re-select-main
-                                    option(value="") Chưa diễn ra
-                                    option(value="") Đã diễn ra
+                                 .selectCus
+                                    .selectCusValue
+                                       input(type="text", hidden)
+                                       .txt Chưa diễn ra
+                                    .selectCusOptions
+                                       label.selectCusAll 
+                                          input(type="checkbox")
+                                          span.txt Chưa diễn ra
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Đã diễn ra
                            .col.col-btn
                               +Btn("Tìm kiếm")
             .sear-block 
                .sear-row.row 
                   .col.col-7 
                      .sear-map 
-                        +img("map-img.jpg")
+                        .inner
+                           +img("map-img.jpg")
+                           .btn-del 
+                              span.t-text 
+                                 | Remove boundary
+                              span.icon 
+                                 i.fa-light.fa-xmark.fw-7
                   .col.col-5
                      .sear-panel 
                         .head-sc.mb-10
