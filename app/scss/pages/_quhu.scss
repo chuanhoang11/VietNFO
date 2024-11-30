@@ -151,7 +151,11 @@
       @include pseudo;
       height: 100%;
       width: 100%;
-      background: linear-gradient(0deg, rgba(4, 18, 41, 0.414), rgba(10, 10, 10, 0.486));
+      background: linear-gradient(
+        0deg,
+        rgba(4, 18, 41, 0.414),
+        rgba(10, 10, 10, 0.486)
+      );
       top: 0;
       left: 0;
     }
@@ -204,12 +208,16 @@
           border: none;
         }
 
-        .select2-container--default .select2-selection--single .select2-selection__arrow {
+        .select2-container--default
+          .select2-selection--single
+          .select2-selection__arrow {
           right: unset;
           left: 0;
         }
 
-        .select2-container .select2-selection--single .select2-selection__rendered {
+        .select2-container
+          .select2-selection--single
+          .select2-selection__rendered {
           padding-left: 5rem;
           padding-right: 1rem;
           font-size: 1.6rem;
@@ -315,7 +323,9 @@
         }
 
         .sl {
-          .select2-container .select2-selection--single .select2-selection__rendered {
+          .select2-container
+            .select2-selection--single
+            .select2-selection__rendered {
             font-size: 1.4rem;
             padding-left: 4rem;
           }
@@ -710,6 +720,11 @@
   .popup-over {
     max-height: calc(100vh - 9rem);
   }
+  .container {
+    @include min(1201px) {
+      padding: 0 3.2rem;
+    }
+  }
 
   .popup-wrapper {
     padding: 0;
@@ -758,7 +773,7 @@
       background-color: #344054;
       border-radius: 0.8rem;
       right: 0;
-
+      margin-right: 0.8rem;
       i {
         color: white;
         font-size: 1.6rem;
@@ -923,7 +938,7 @@
 }
 
 .popdt-flex {
-  --w-side: 32rem;
+  --w-side: 35.2rem;
   margin-top: 2.4rem;
 }
 
@@ -1607,10 +1622,6 @@
 
         @include hover {
           background-color: var(--color-second);
-
-          i {
-            color: var(--color-pri);
-          }
         }
 
         i {

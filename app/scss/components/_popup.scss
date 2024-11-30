@@ -24,7 +24,7 @@
 
   &-overlay {
     position: absolute;
-    background-color: rgba($color: var(--color-black), $alpha: 0.8);
+    background-color: rgba(0, 0, 0, 0.2);
     @include full;
     z-index: 1;
     @include transitionRe;
@@ -223,9 +223,11 @@
       @include flex;
       flex-direction: column;
       justify-content: center;
-      background: linear-gradient(180deg,
+      background: linear-gradient(
+          180deg,
           #fffef9 12.65%,
-          rgba(255, 249, 249, 0) 98.81%),
+          rgba(255, 249, 249, 0) 98.81%
+        ),
         #fed7d7;
     }
 

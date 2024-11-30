@@ -1,10 +1,20 @@
+body.page-search {
+  .hd {
+    box-shadow: unset;
+  }
+}
 .sear {
   &-head {
     padding: 1rem 2rem;
     border: 0.1rem solid var(--border-color);
-
+    background: #fff;
+    position: sticky;
+    top: 7.8rem;
+    z-index: 20;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     @include max(1200px) {
       padding: 0.6rem;
+      position: static;
     }
   }
 
@@ -20,13 +30,13 @@
         --rg: 0.8rem;
       }
 
-      >.col-4 {
+      > .col-4 {
         @include max(920px) {
           width: 100%;
         }
       }
 
-      >.col-3 {
+      > .col-3 {
         @include max(920px) {
           width: 40%;
         }
@@ -36,7 +46,7 @@
         }
       }
 
-      >.col-2 {
+      > .col-2 {
         @include max(920px) {
           width: 20%;
         }
@@ -56,6 +66,16 @@
       border-radius: 0.5rem;
       width: 100%;
       padding: 0.6rem;
+    }
+  }
+  &-row {
+    .col-7 {
+      flex: 1;
+    }
+    .col-5 {
+      @include min(701px) {
+        width: 79rem;
+      }
     }
   }
 }
@@ -126,7 +146,6 @@
   }
 
   &-map {
-
     img,
     iframe {
       width: 100%;
@@ -138,11 +157,37 @@
 }
 
 .home-bn-srch-box {
-  .select2-container--default .select2-selection--single .select2-selection__placeholder {
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__placeholder {
     color: #1d2939;
   }
 }
 
 .t-slogan {
   color: var(--color29);
+}
+.pro-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .box-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+}
+.pro-grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.popup {
+  .ft {
+    display: block !important;
+  }
+  .ft-panel {
+    max-width: 100% !important;
+  }
 }
