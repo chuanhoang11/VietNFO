@@ -1,6 +1,15 @@
 export default function Select2Module() {
   $(document).ready(function () {
-    $(".re-select-main").select2();
+    var maxWidth = 0;
+    $(".re-select-main option").each(function () {
+      var optionWidth = $(this).text().length * 8;
+      if (optionWidth > maxWidth) {
+        maxWidth = optionWidth;
+      }
+    });
+    $(".re-select-main").select2({
+      width: maxWidth,
+    });
   });
 
   $(window).on("scroll", function () {
@@ -67,21 +76,23 @@ export default function Select2Module() {
       });
 
       // Xử lý nút Áp dụng
-      applyButton.addEventListener("click", () => {
-        const selectedOptions = Array.from(optionCheckboxes)
-          .filter((option) => option.checked)
-          .map(
-            (option) => option.parentElement.querySelector(".txt").innerText
-          );
+      if (applyButton) {
+        applyButton.addEventListener("click", () => {
+          const selectedOptions = Array.from(optionCheckboxes)
+            .filter((option) => option.checked)
+            .map(
+              (option) => option.parentElement.querySelector(".txt").innerText
+            );
 
-        selectCusValueTxt.innerText = selectedOptions.length
-          ? selectedOptions.join(", ")
-          : "Loại việc làm";
-        hiddenInput.value = selectedOptions.join(", ");
+          selectCusValueTxt.innerText = selectedOptions.length
+            ? selectedOptions.join(", ")
+            : "Loại việc làm";
+          hiddenInput.value = selectedOptions.join(", ");
 
-        // Ẩn menu sau khi áp dụng
-        selectCusOptions.classList.remove("show");
-      });
+          // Ẩn menu sau khi áp dụng
+          selectCusOptions.classList.remove("show");
+        });
+      }
     });
 
     // ===========================
@@ -117,32 +128,33 @@ export default function Select2Module() {
           selectTwoOptions.classList.remove("show");
         }
       });
+      if (applyButton) {
+        // Xử lý khi nhấn nút "Áp dụng"
+        applyButton.addEventListener("click", () => {
+          // Tạo một object để lưu giá trị được chọn trong mỗi nhóm
+          const selectedValues = {};
 
-      // Xử lý khi nhấn nút "Áp dụng"
-      applyButton.addEventListener("click", () => {
-        // Tạo một object để lưu giá trị được chọn trong mỗi nhóm
-        const selectedValues = {};
+          // Duyệt qua các radio button để kiểm tra cái nào được chọn
+          radioGroups.forEach((radio) => {
+            if (radio.checked) {
+              const groupName = radio.name; // Lấy tên nhóm radio
+              const valueText =
+                radio.parentElement.querySelector(".txt").innerText; // Lấy giá trị
+              selectedValues[groupName] = valueText; // Lưu giá trị vào object
+            }
+          });
 
-        // Duyệt qua các radio button để kiểm tra cái nào được chọn
-        radioGroups.forEach((radio) => {
-          if (radio.checked) {
-            const groupName = radio.name; // Lấy tên nhóm radio
-            const valueText =
-              radio.parentElement.querySelector(".txt").innerText; // Lấy giá trị
-            selectedValues[groupName] = valueText; // Lưu giá trị vào object
-          }
+          // Nối các giá trị thành chuỗi với dấu gạch nối
+          const finalValue = Object.values(selectedValues).join(" - ");
+
+          // Cập nhật giá trị hiển thị và input ẩn
+          selectTwoValueTxt.innerText = finalValue || "Loại việc làm";
+          hiddenInput.value = finalValue;
+
+          // Ẩn menu sau khi áp dụng
+          selectTwoOptions.classList.remove("show");
         });
-
-        // Nối các giá trị thành chuỗi với dấu gạch nối
-        const finalValue = Object.values(selectedValues).join(" - ");
-
-        // Cập nhật giá trị hiển thị và input ẩn
-        selectTwoValueTxt.innerText = finalValue || "Loại việc làm";
-        hiddenInput.value = finalValue;
-
-        // Ẩn menu sau khi áp dụng
-        selectTwoOptions.classList.remove("show");
-      });
+      }
     }
   }
 }

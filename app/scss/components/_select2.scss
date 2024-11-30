@@ -34,7 +34,7 @@
   background-color: transparent;
   border: 1px solid transparent;
   color: #1d2939;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
   display: inline !important;
   @include lc(1);
@@ -70,6 +70,7 @@
 .select2-container .select2-dropdown .select2-results ul {
   background: var(--color-white);
   color: var(--color-black);
+  max-height: 202px;
 }
 
 .select2-container
@@ -78,13 +79,13 @@
   ul
   .select2-results__option--highlighted[aria-selected] {
   background-color: var(--color-pri);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .select2-container--default .select2-results__option--selected {
   background-color: var(--color-pri);
   color: var(--color-white);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .select2-container--default
@@ -99,7 +100,7 @@
 }
 
 .select2-results__option {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .select2-results {
@@ -161,5 +162,5 @@
   .select2-results
   ul
   .select2-results__option--highlighted[aria-selected] {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }

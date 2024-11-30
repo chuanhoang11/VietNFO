@@ -91,13 +91,34 @@ block container
                                                 input(type="radio", name="rdo2")
                                                 span.txt 5
                                        .selectTwoApply Áp dụng
-                           .col.col-sl-sm
+                           .col.col-sl-md
                               .b-ip-select
-                                 select(name="").re-select-main
-                                    option(value="") Giá tiền
-                                    option(value="") 1
-                                    option(value="") 2
-                                    option(value="") 3
+                                 .b-range 
+                                    .range-wrap
+                                       .range-head 
+                                          input(type="number" hidden).rangeValue
+                                          span.icon-arrow 
+                                             i.fa-light.fa-chevron-down
+                                          span.t-txt.rangeTextValue Giá tiền
+                                       .range-panel 
+                                          .range
+                                             .range-flex
+                                                .range-item.min
+                                                   span.price 
+                                                      | $500
+                                                .range-item
+                                                   span.price 
+                                                      | $500,000
+                                             .range-slider
+                                                .progress
+                                             .range-input 
+                                                input(type="range" name="price_min" step="100" min="500" max="500000" value="0").range-min
+                                                input(type="range" name="price_max" step="100" min="500" max="500000" value="500000").range-max
+                                             .range-item.max.fw-6
+                                                   span.price 
+                                                      | $500,000
+                                                   span.txt /tháng
+                                             .range-apply.btn-text Áp dụng  
                            .col.col-btn
                               +Btn("Tìm kiếm")
             .sear-block 
