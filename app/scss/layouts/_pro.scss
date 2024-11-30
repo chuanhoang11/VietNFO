@@ -149,7 +149,8 @@
 .pro-note {
   --gap: 0.4em;
   display: flex;
-  flex-wrap: wrap;
+  //   flex-wrap: wrap;
+  white-space: nowrap;
 }
 
 .pro-note-item {
@@ -513,7 +514,7 @@
 
 .pro-bner-content {
   padding: 2em;
-  width: 55%;
+  width: 56%;
   height: 100%;
   display: flex;
   flex-direction: column;

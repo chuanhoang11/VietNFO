@@ -1,10 +1,103 @@
 extends layout/layout
 
 block vars
-   -title = 'Pop viec lam'
-   -bodyClass = 'page-home'
+   -title = 'Việc làm'
+   -bodyClass = 'page-search page-result'
 
 block container 
+   section.sec-sear 
+      .sear
+         .sear-wrap 
+            .sear-head 
+               .sear-form 
+                  form(action="")
+                     .b-form-gr
+                        .form-list.row 
+                           .col.form-ip.col-search 
+                              .b-ip-search
+                                 span.icon
+                                    +img("icon-search.svg")
+                                 span.icon-remove 
+                                    i.fa-light.fa-xmark.fw-7
+                                 input(type="search" placeholder="Marietta")
+                           .col.col-sl-md
+                              .b-ip-select
+                                 select(name="").re-select-main
+                                    option(value="") Việc nhà hàng
+                                    option(value="") Nhà ở
+                                    option(value="") Mua nhà
+                                    option(value="") Mua cửa tiệm
+                           .col.col-sl-md
+                              .b-ip-select
+                                 select(name="").re-select-main
+                                    option(value="") Đăng tuần này
+                                    option(value="") Đăng tháng này
+                                    option(value="") 3 tuần trước
+                                    option(value="") 1 tháng trước
+                           .col.col-btn
+                              +Btn("Tìm kiếm")
+            .sear-block 
+               .sear-row.row 
+                  .col.col-7 
+                     .sear-map 
+                        +img("map-img.jpg")
+                  .col.col-5
+                     .sear-panel 
+                        .head-sc.mb-10
+                           +title("Việc làm tại North Carolina", "","dcor")
+                        .head-sc.mb-10 
+                           span.txt 107 kết quả
+                           .pro-select 
+                              span.txt Sắp sếp:
+                              select.re-select-main
+                                 option(value="")  Mới đăng
+                                 option(value="")  Tiền lương (cao tới thấp)
+                                 option(value="")  Tiền lương (thấp tới cao)
+                                 option(value="")  Lượt xem (cao tới thấp)
+                                 option(value="")  Lượt xem (thấp tới cao)
+                                 option(value="" selected)  Mặc định
+                        .pro-list.row 
+                           each item, index in Array(21)
+                              if(index == 2)
+                                 .pro-item.col.col-6
+                                    .pro-bner 
+                                       .pro-bner-tag Sponsored
+                                       .pro-bner-dc
+                                          +img('pro-bner-dc.png')
+                                       .pro-bner-img
+                                          +img('pro-bner-img.jpg')
+                                       .pro-bner-content 
+                                          h3.pro-bner-name Chăm sóc người lớn tuổi
+                                          p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
+                                          .pro-btn 
+                                             span.txt Khám phá ngay
+                              .pro-item.col.col-6
+                                 .pro-wr.second
+                                    .pro-content 
+                                       .pro-flex 
+                                          .pro-time Nhà hàng
+                                          .pro-type Nhà hàng
+                                       h3.pro-name Tuyển phục vụ nhà hàng Việt Nam
+                                       ul.pro-ul 
+                                          li 
+                                             .pro-li
+                                                +img('ic-pro-1.svg')
+                                                span.txt Pho Dai Viet Restaurant
+                                          li 
+                                             .pro-li
+                                                +img('ic-pro-2.svg')
+                                                span.txt 471 Tam Oshanter Dr SE, Marietta, GA, 30067
+                                       .pro-flex
+                                          .pro-li
+                                             +img('ic-pro-3.svg')
+                                             span.txt 
+                                                span(style="font-size: 1.1em").c-pri.fw-6 25 - 40
+                                                span /hour
+                                          .pro-li
+                                             +img('ic-pro-4.svg')
+                                             span.txt 500 Views Views
+                        +PageNumber()
+                     +footer()
    +popupDt("popdt","dt")
       .container
          .popdt-flex.row 

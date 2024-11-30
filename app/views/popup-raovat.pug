@@ -1,10 +1,89 @@
 extends layout/layout
 
 block vars
-   -title = 'Pop rao vat'
-   -bodyClass = 'page-home'
+   -title = 'Rao vặt'
+   -bodyClass = 'page-search page-result'
 
 block container 
+   section.sec-sear 
+      .sear
+         .sear-wrap 
+            .sear-head 
+               .sear-form 
+                  form(action="")
+                     .b-form-gr
+                        .form-list.row 
+                           .col.col-search.form-ip 
+                              .b-ip-search
+                                 span.icon
+                                    +img("icon-search.svg")
+                                 span.icon-remove 
+                                    i.fa-light.fa-xmark.fw-7
+                                 input(type="search" placeholder="Marietta")
+                           .col.col-sl-md  
+                              .b-ip-select
+                                 select(name="").re-select-main
+                                    option(value="") Thời gian đăng
+                                    option(value="") Tuần này
+                                    option(value="") Một tuần trước
+                                    option(value="") Một tháng trước
+                                    option(value="") Lâu hơn
+                           .col.col-btn
+                              +Btn("Tìm kiếm")
+            .sear-block 
+               .sear-row.row 
+                  .col.col-7 
+                     .sear-map 
+                        +img("map-img.jpg")
+                  .col.col-5
+                     .sear-panel 
+                        .head-sc.mb-10
+                           +title("Rao vặt tại North Carolina", "","dcor")
+                        .head-sc.mb-10 
+                           span.txt 107 kết quả
+                           .pro-select 
+                              span.txt Sắp sếp:
+                              select.re-select-main
+                                 option(value="")  Mới đăng
+                                 option(value="")  Lượt xem (cao tới thấp)
+                                 option(value="")  Lượt xem (thấp tới cao)
+                                 option(value="" selected)  Mặc định
+                        .pro-list.row 
+                           each item,index in Array(4)
+                              if(index == 2)
+                                 .pro-item.col
+                                    .pro-bner 
+                                       .pro-bner-tag Sponsored
+                                       .pro-bner-dc
+                                          +img('pro-bner-dc.png')
+                                       .pro-bner-img
+                                          +img('pro-bner-img.jpg')
+                                       .pro-bner-content 
+                                          h3.pro-bner-name Chăm sóc người lớn tuổi
+                                          p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
+                                          .pro-btn 
+                                             span.txt Khám phá ngay
+                              .pro-item.col
+                                 .pro-wr.four 
+                                    +img("ic-loa.svg")
+                                    .pro-content 
+                                       h3.pro-name Chăm sóc người già - Marietta, GA 30062
+                                       .pro-des Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...
+                                       .pro-note 
+                                          .pro-note-item 
+                                             .pro-li.fw-6.c-txt-2 
+                                                +img('ic-pro-2.svg')
+                                                span.txt Marietta 30062
+                                          .pro-note-item 
+                                             .pro-li.fw-6.c-txt-2 
+                                                +img('ic-pro-7.svg')
+                                                span.txt 2 ngày trước
+                                          .pro-note-item 
+                                             .pro-li.fw-6.c-txt-2 
+                                                +img('ic-pro-4.svg')
+                                                span.txt 1000
+                        +PageNumber()   
+                     +footer()
    +popupDt("popdt","dt")
       .container
          .popdt-flex.row 

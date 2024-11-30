@@ -76,8 +76,9 @@ export default function ComponentModule() {
     if (cir.classList.contains("cir-2")) {
       const translateX = Math.floor(Math.random() * x);
       const translateY = Math.floor(Math.random() * y);
-      cir.style.transform = `translate(${translateX + "%" + "," + translateY + "%"
-        })`;
+      cir.style.transform = `translate(${
+        translateX + "%" + "," + translateY + "%"
+      })`;
     } else {
       // const translateX = Math.floor(Math.random() * 10);
       const translateY = Math.floor(Math.random() * y);
@@ -101,25 +102,27 @@ export default function ComponentModule() {
       cmtItem.each(function () {
         const cmtForm = $(this).find(".lib-cmt-f");
         const cmtChild = $(this).find(".lib-cmt-child");
-        const repDrop = $(this).find(".repDropJs")
-        const repItem = $(this).find(".repDropJs .lib-cmt-item")
-        const repTxt = $(this).find(".repTxtJs")
+        const repDrop = $(this).find(".repDropJs");
+        const repItem = $(this).find(".repDropJs .lib-cmt-item");
+        const repTxt = $(this).find(".repTxtJs");
 
         cmtForm.slideUp(500);
 
-
-        const repTxtNum = $(repTxt).find(".num")
-        repTxtNum.text(repItem.length)
+        const repTxtNum = $(repTxt).find(".num");
+        repTxtNum.text(repItem.length);
 
         if (repItem.length > 1) {
           repDrop.slideUp(500);
         } else {
-          $(repDrop).closest(".lib-cmt-item").find(".repTxtJs").css("display", "none")
+          $(repDrop)
+            .closest(".lib-cmt-item")
+            .find(".repTxtJs")
+            .css("display", "none");
         }
       });
 
       const repJs = $(".repJS");
-      const repTxt = $(".repTxtJs")
+      const repTxt = $(".repTxtJs");
 
       repJs.each(function () {
         const repItem = $(this);
@@ -136,54 +139,54 @@ export default function ComponentModule() {
 
       repTxt.each(function () {
         const repTxtItem = $(this);
-        const repDrop = repTxtItem.closest(".lib-cmt-item").find(".repDropJs")
+        const repDrop = repTxtItem.closest(".lib-cmt-item").find(".repDropJs");
         repTxtItem.on("click", () => {
           if (repDrop.css("display") === "none") {
-            this.querySelector("img").style.transform = "rotate(-180deg)"
+            this.querySelector("img").style.transform = "rotate(-180deg)";
             repDrop.slideDown(500);
           } else {
             repDrop.slideUp(500);
-            this.querySelector("img").style.transform = "rotate(0deg)"
+            this.querySelector("img").style.transform = "rotate(0deg)";
           }
-        })
-      })
+        });
+      });
     }
   });
 
   if (window.innerWidth < 700) {
     const selectJS = document.querySelectorAll(".selectJS");
     if (selectJS) {
-      selectJS.forEach(item => {
+      selectJS.forEach((item) => {
         const selectJSHead = item.querySelector(".selectJSHead");
         const selectJSTxt = item.querySelector(".selectJSTxt");
         const selectJSItem = item.querySelectorAll(".selectJSItem");
         if (selectJSItem) {
           selectJSHead.addEventListener("click", () => {
             item.classList.toggle("active");
-          })
-        };
+          });
+        }
 
         if (selectJSItem) {
-          selectJSItem.forEach(item => {
+          selectJSItem.forEach((item) => {
             if (item.classList.contains("active")) {
               selectJSTxt.innerHTML = item.innerHTML;
             }
             item.addEventListener("click", () => {
-              selectJSItem.forEach(item => {
+              selectJSItem.forEach((item) => {
                 item.classList.remove("active");
               });
               item.classList.add("active");
               selectJSTxt.innerHTML = item.innerHTML;
               item.closest(".selectJS").classList.remove("active");
-            })
-          })
+            });
+          });
         }
       });
       window.addEventListener("click", (e) => {
         if (!e.target.closest(".selectJS")) {
           const selectJS = document.querySelectorAll(".selectJS");
           if (selectJS) {
-            selectJS.forEach(item => {
+            selectJS.forEach((item) => {
               item.classList.remove("active");
             });
           }
@@ -191,35 +194,36 @@ export default function ComponentModule() {
       });
     }
   }
-
-
-  function scrollToActiveItem() {
-    const container = document.querySelector(".selectJSBody");
-    const activeItem = container.querySelector(".selectJSItem.active");
-    if (activeItem) {
-      activeItem.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "nearest"
-      });
+  const selectJS = document.querySelector(".selectJS");
+  if (selectJS) {
+    function scrollToActiveItem() {
+      const container = document.querySelector(".selectJSBody");
+      const activeItem = container.querySelector(".selectJSItem.active");
+      if (activeItem) {
+        activeItem.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+          inline: "nearest",
+        });
+      }
     }
-  }
-  scrollToActiveItem();
-
-  // tạo function  từ đoạn code được comment ở trên
-  function handleSelectMonth() {
-    const container = document.querySelector(".selectJSBody");
-    const listItems = container.querySelectorAll(".selectJSItem");
-    listItems.forEach(item => {
-      item.addEventListener("click", () => {
-        container.querySelector(".selectJSItem.active")?.classList.remove("active");
-        item.classList.add("active");
-        scrollToActiveItem();
-      });
-    });
     scrollToActiveItem();
+
+    // tạo function  từ đoạn code được comment ở trên
+    function handleSelectMonth() {
+      const container = document.querySelector(".selectJSBody");
+      const listItems = container.querySelectorAll(".selectJSItem");
+      listItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          container
+            .querySelector(".selectJSItem.active")
+            ?.classList.remove("active");
+          item.classList.add("active");
+          scrollToActiveItem();
+        });
+      });
+      scrollToActiveItem();
+    }
+    handleSelectMonth();
   }
-  handleSelectMonth();
-
-
 }

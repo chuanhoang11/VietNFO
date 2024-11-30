@@ -19,12 +19,12 @@ body.page-search {
   }
 
   &-form {
-    max-width: 104rem;
+    //  max-width: 104rem;
 
     .row {
       flex: 1;
       --cg: 0.8rem;
-      --rg: 0rem;
+      --rg: 0.8rem;
 
       @include max(920px) {
         --rg: 0.8rem;
@@ -135,6 +135,44 @@ body.page-search {
     display: flex;
     flex-direction: column;
   }
+  &-form {
+    .form-list {
+      .col-search {
+        width: calc(36rem + var(--cg));
+        @include max(920px) {
+          width: 100%;
+        }
+      }
+      .col-sl-md {
+        width: calc(24rem + var(--cg));
+        @include max(920px) {
+          width: 40%;
+        }
+
+        @include max(500px) {
+          width: 50%;
+        }
+      }
+      .col-sl-sm {
+        width: calc(13rem + var(--cg));
+        @include max(500px) {
+          width: 50%;
+        }
+      }
+      .col-btn {
+        width: calc(13rem + var(--cg));
+        @include max(920px) {
+          width: 20%;
+        }
+
+        @include max(500px) {
+          width: 50%;
+          margin: 0 auto;
+          margin-bottom: var(--rg);
+        }
+      }
+    }
+  }
 
   &-row {
     --cg: 0rem;
@@ -155,7 +193,18 @@ body.page-search {
     }
   }
 }
-
+body.page-result {
+  .hd.sticky {
+    @include hover {
+      height: var(--size-hd);
+      .hd-bot {
+        transform: translateX(-50%);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
 .home-bn-srch-box {
   .select2-container--default
     .select2-selection--single
@@ -189,5 +238,69 @@ body.page-search {
   }
   .ft-panel {
     max-width: 100% !important;
+    width: 100%;
   }
+}
+.custom-select-container {
+  position: relative;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.select-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  display: none;
+  z-index: 10;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.select-options label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.select-options .actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.select-options .actions button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.select-options .actions button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.select-options.show {
+  display: block;
 }
