@@ -1,32 +1,94 @@
+body.page-search {
+  .hd {
+    box-shadow: unset;
+    &.sticky {
+      ~ .main {
+        .sear-map {
+          @include min(1201px) {
+            height: calc(100vh - 7.2rem - 7.8rem);
+            top: calc(7.2rem + 7.8rem);
+          }
+        }
+      }
+    }
+  }
+}
 .sear {
+  &-map {
+    .inner {
+      position: relative;
+      height: 100%;
+    }
+    .btn-del {
+      position: absolute;
+      @include mid-flex;
+      width: max-content;
+      padding: 0.8rem 1.4rem;
+      background: #eff8ff;
+      border-radius: 0.5rem;
+      border: 0.1rem solid var(--color-pri);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #344054;
+      gap: 0.2rem;
+      z-index: 1;
+      top: 2rem;
+      right: 2rem;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      @include hover {
+        background: var(--color-pri);
+        color: #fff;
+      }
+      @include max(1200px) {
+        top: 0.6rem;
+        right: 0.6rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 1.3rem;
+      }
+      .icon {
+        width: 2rem;
+        height: 2rem;
+        @include mid-flex;
+        flex-shrink: 0;
+        position: relative;
+        top: 0.1rem;
+      }
+    }
+  }
   &-head {
     padding: 1rem 2rem;
     border: 0.1rem solid var(--border-color);
-
+    background: #fff;
+    position: sticky;
+    top: 7.8rem;
+    z-index: 20;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     @include max(1200px) {
       padding: 0.6rem;
+      position: static;
     }
   }
 
   &-form {
-    max-width: 104rem;
+    //  max-width: 104rem;
 
     .row {
       flex: 1;
       --cg: 0.8rem;
-      --rg: 0rem;
+      --rg: 0.8rem;
 
       @include max(920px) {
         --rg: 0.8rem;
       }
 
-      >.col-4 {
+      > .col-4 {
         @include max(920px) {
           width: 100%;
         }
       }
 
-      >.col-3 {
+      > .col-3 {
         @include max(920px) {
           width: 40%;
         }
@@ -36,7 +98,7 @@
         }
       }
 
-      >.col-2 {
+      > .col-2 {
         @include max(920px) {
           width: 20%;
         }
@@ -56,6 +118,38 @@
       border-radius: 0.5rem;
       width: 100%;
       padding: 0.6rem;
+    }
+  }
+  &-row {
+    .col-7 {
+      @include min(1201px) {
+        flex: 1;
+      }
+      @include max(1200px) {
+        width: 100%;
+      }
+    }
+    .col-5 {
+      @include min(1201px) {
+        width: 79rem;
+      }
+      @include max(1200px) {
+        width: 100%;
+      }
+    }
+  }
+  &-panel {
+    .sear-form {
+      flex: 1;
+      input {
+        padding-left: 0;
+      }
+    }
+    .head-sc {
+      @include max(600px) {
+        flex-direction: column;
+        align-items: unset;
+      }
     }
   }
 }
@@ -115,6 +209,44 @@
     display: flex;
     flex-direction: column;
   }
+  &-form {
+    .form-list {
+      .col-search {
+        width: calc(36rem + var(--cg));
+        @include max(920px) {
+          width: 100%;
+        }
+      }
+      .col-sl-md {
+        width: calc(24rem + var(--cg));
+        @include max(920px) {
+          width: 40%;
+        }
+
+        @include max(500px) {
+          width: 50%;
+        }
+      }
+      .col-sl-sm {
+        width: calc(13rem + var(--cg));
+        @include max(500px) {
+          width: 50%;
+        }
+      }
+      .col-btn {
+        width: calc(13rem + var(--cg));
+        @include max(920px) {
+          width: 20%;
+        }
+
+        @include max(500px) {
+          width: 50%;
+          margin: 0 auto;
+          margin-bottom: var(--rg);
+        }
+      }
+    }
+  }
 
   &-row {
     --cg: 0rem;
@@ -126,7 +258,6 @@
   }
 
   &-map {
-
     img,
     iframe {
       width: 100%;
@@ -136,13 +267,93 @@
     }
   }
 }
-
+body.page-result {
+  .hd.sticky {
+    @include hover {
+      height: var(--size-hd);
+      .hd-bot {
+        transform: translateX(-50%);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
 .home-bn-srch-box {
-  .select2-container--default .select2-selection--single .select2-selection__placeholder {
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__placeholder {
     color: #1d2939;
   }
 }
 
 .t-slogan {
   color: var(--color29);
+}
+.pro-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .box-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+}
+.pro-grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .btn {
+    @include max(700px) {
+      display: none;
+    }
+  }
+}
+.pro-panel {
+  .swiper-container {
+    ~ .box-btn {
+      @include max(500px) {
+        display: none;
+      }
+    }
+  }
+}
+.popup {
+  .ft {
+    display: block !important;
+  }
+  .ft-panel {
+    max-width: 100% !important;
+    width: 100%;
+  }
+}
+.selectCusValue,
+.selectTwoValue {
+  .icon-arrow {
+    width: 2.4rem;
+    height: 2.4rem;
+    @include mid-flex;
+    flex-shrink: 0;
+    color: var(--color-pri);
+    i {
+      font-weight: 700;
+    }
+  }
+  .txt {
+    color: #1d2939;
+    font-weight: 600;
+    @include fz-16;
+  }
+}
+.sear-panel {
+  .pro-item.col-6 {
+    .pro-bner-img {
+      width: 80%;
+    }
+  }
+  .pro-item.col-6 .pro-bner-name {
+    @include fz-24;
+  }
 }

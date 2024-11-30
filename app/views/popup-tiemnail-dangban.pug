@@ -1,10 +1,260 @@
 extends layout/layout
 
 block vars
-   -title = 'Pop tiem nail dang ban'
-   -bodyClass = 'page-home'
+   -title = 'Mua cửa tiệm'
+   -bodyClass = 'page-search page-result'
 
 block container 
+   section.sec-sear 
+      .sear
+         .sear-wrap 
+            .sear-head 
+               .sear-form 
+                  form(action="")
+                     .b-form-gr
+                        .form-list.row 
+                           .col.form-ip.col-search 
+                              .b-ip-search
+                                 span.icon
+                                    +img("icon-search.svg")
+                                 span.icon-remove 
+                                    i.fa-light.fa-xmark.fw-7
+                                 input(type="search" placeholder="Marietta")
+                           .col.col-sl-md  
+                              .b-ip-select
+                                 .selectCus
+                                    .selectCusValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Loại bất động sản
+                                    .selectCusOptions
+                                       label.selectCusAll 
+                                          input(type="checkbox")
+                                          span.txt Chọn tất cả
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Nhà ở
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Thương mại
+                                       .selectCusApply Áp dụng
+                           .col.col-sl-md  
+                              .b-ip-select
+                                 .selectTwo
+                                    .selectTwoValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Phòng ngủ - tắm
+                                    .selectTwoOptions
+                                       .selectTwoGr
+                                          p.txt Phòng ngủ
+                                          .selectTwoGrFlex
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo")
+                                                span.txt any
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo")
+                                                span.txt 1
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo")
+                                                span.txt 2
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo")
+                                                span.txt 3
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo")
+                                                span.txt 4
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo")
+                                                span.txt 5
+                                       .selectTwoGr
+                                          p.txt Phòng Tắm
+                                          .selectTwoGrFlex
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo2")
+                                                span.txt any
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo2")
+                                                span.txt 1
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo2")
+                                                span.txt 2
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo2")
+                                                span.txt 3
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo2")
+                                                span.txt 4
+                                             label.selectTwoOption 
+                                                input(type="radio", name="rdo2")
+                                                span.txt 5
+                                       .selectTwoApply Áp dụng
+                           .col.col-sl-sm
+                              .b-ip-select
+                                 select(name="").re-select-main
+                                    option(value="") Giá tiền
+                                    option(value="") 1
+                                    option(value="") 2
+                                    option(value="") 3
+                           .col.col-btn
+                              +Btn("Tìm kiếm")
+            .sear-block 
+               .sear-row.row 
+                  .col.col-7 
+                     .sear-map 
+                        .inner
+                           +img("map-img.jpg")
+                           .btn-del 
+                              span.t-text 
+                                 | Remove boundary
+                              span.icon 
+                                 i.fa-light.fa-xmark.fw-7
+                  .col.col-5
+                     .sear-panel 
+                        .head-sc.mb-10
+                           +title("Sang nhượng Business tại North Carolina", "","dcor")
+                        .head-sc.mb-10 
+                           span.txt 107 kết quả
+                           .pro-select 
+                              span.txt Sắp sếp:
+                              select.re-select-main
+                                 option(value="")  Mới đăng
+                                 option(value="")  Giá tiền (thấp tới cao)
+                                 option(value="")  Giá tiền (cao tới thấp)
+                                 option(value="")  Số phòng ngủ
+                                 option(value="")  Số phòng tắm
+                                 option(value="" selected)  Mặc định
+                        .pro-list.row 
+                           - 
+                              var proArr = [
+                                 {
+                                    img: "pro-1.jpg",
+                                    time: "2 ngày trước",
+                                    type: "Tiệm nail",
+                                    price: "$500,000",
+                                    tag: "Thương lượng",
+                                    note: [
+                                       "6 tables",
+                                       "6 chairs",
+                                       "11,300 sqft"
+                                    ],
+                                    rent: "$1,500",
+                                    income: "$1,000,000",
+                                    address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                 },
+                                 {
+                                    img: "pro-2.jpg",
+                                    time: "2 ngày trước",
+                                    type: "Nhà hàng",
+                                    price: "$500,000",
+                                    tag: "Thương lượng",
+                                    note: [
+                                       "Nam Phuong Restaurant",
+                                       "36 seats",
+                                       "11,300 sqft"
+                                    ],
+                                    rent: "$1,500",
+                                    income: "$1,000,000",
+                                    address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                 },
+                                 {
+                                    img: "pro-3.jpg",
+                                    time: "2 ngày trước",
+                                    type: "Kinh doanh khác",
+                                    price: "$500,000",
+                                    note: [
+                                       "Xưởng sửa chữa ô tô Đại Việt",
+                                       "11,300 sqft"
+                                    ],
+                                    rent: "$1,500",
+                                    income: "$1,000,000",
+                                    address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                 },
+                                  {
+                                    img: "pro-4.jpg",
+                                    time: "2 ngày trước",
+                                    type: "Kinh doanh khác",
+                                    price: "$500,000",
+                                    note: [
+                                       "Xưởng sửa chữa ô tô Đại Việt",
+                                       "11,300 sqft"
+                                    ],
+                                    rent: "$1,500",
+                                    income: "$1,000,000",
+                                    address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                 },
+                                   {
+                                    img: "pro-2.jpg",
+                                    time: "2 ngày trước",
+                                    type: "Nhà hàng",
+                                    price: "$500,000",
+                                    tag: "Thương lượng",
+                                    note: [
+                                       "Nam Phuong Restaurant",
+                                       "36 seats",
+                                       "11,300 sqft"
+                                    ],
+                                    rent: "$1,500",
+                                    income: "$1,000,000",
+                                    address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                 },
+                              ]
+                           each item, index in proArr
+                              if(index == 2)
+                                 .pro-item.col.col-6
+                                    .pro-bner 
+                                       .pro-bner-tag Sponsored
+                                       .pro-bner-dc
+                                          +img('pro-bner-dc.png')
+                                       .pro-bner-img
+                                          +img('pro-bner-img.jpg')
+                                       .pro-bner-content 
+                                          h3.pro-bner-name
+                                             |Chăm sóc
+                                             br
+                                             |người lớn tuổi
+                                          p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
+                                          .pro-btn 
+                                             span.txt Khám phá ngay
+                              .pro-item.col.col-6
+                                 .pro-wr 
+                                    .pro-img 
+                                       .pro-time #{item.time}
+                                       .pro-type #{item.type}
+                                       a(href="#").inner 
+                                          +img(item.img)
+                                    .pro-content
+                                       if item.tag
+                                          .pro-top 
+                                             h3.pro-name #{item.price}
+                                             if item.tag
+                                                .pro-tag #{item.tag}
+                                       else 
+                                          h3.pro-name #{item.price}
+                                       if item.name
+                                          h3.pro-name #{item.name}
+                                       if item.note.length > 0 
+                                          .pro-note
+                                             each note in item.note
+                                                .pro-note-item 
+                                                   span.txt.fw-5.c-txt-2 #{note}
+                                       if item.rent || item.income
+                                          .pro-note
+                                             if item.rent
+                                                .pro-note-item 
+                                                   span.txt.fw-5 Rent: 
+                                                      span.fw-6.c-txt-3 #{item.rent}
+                                                      span(style="font-size: .8em") /month
+                                             if item.income
+                                                .pro-note-item 
+                                                   span.txt.fw-5 Income: 
+                                                      span.fw-6.c-txt-3 #{item.income}
+                                                      span(style="font-size: .8em") /year
+                                       .pro-des #{item.address}
+                        +PageNumber()
+                     +footer()
    +popupDt("popdt","dt")
       .container
          .popdt-img.gallery-container 
@@ -135,7 +385,7 @@ block container
                                        .pro-content
                                           .pro-top 
                                              h3.pro-name $500,000
-                                                .pro-tag Thương lượng
+                                             .pro-tag Thương lượng
                                           .pro-note
                                              .pro-note-item 
                                                    span.txt.fw-5.c-txt-2 6 tables
@@ -190,7 +440,11 @@ block container
                      .pro-bner-img
                         +img('pro-bner-img.jpg')
                      .pro-bner-content 
-                        h3.pro-bner-name Chăm sóc người lớn tuổi
+                        h3.pro-bner-name 
+                           |Chăm sóc
+                           br
+                           |người lớn tuổi
                         p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
                         .pro-btn 
                            span.txt Khám phá ngay
+      +footer()

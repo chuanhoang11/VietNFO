@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
-
+  display: none;
   @include max(1200px) {
     margin-top: 2.4rem;
   }
@@ -98,7 +98,7 @@
       font-size: 1.4rem;
     }
 
-    >* {
+    > * {
       position: relative;
       z-index: 2;
     }
@@ -109,7 +109,8 @@
       cursor: default;
     }
 
-    i {}
+    i {
+    }
 
     @include hover {
       &:not(.swiper-button-disabled) {
