@@ -76,9 +76,8 @@ export default function ComponentModule() {
     if (cir.classList.contains("cir-2")) {
       const translateX = Math.floor(Math.random() * x);
       const translateY = Math.floor(Math.random() * y);
-      cir.style.transform = `translate(${
-        translateX + "%" + "," + translateY + "%"
-      })`;
+      cir.style.transform = `translate(${translateX + "%" + "," + translateY + "%"
+        })`;
     } else {
       // const translateX = Math.floor(Math.random() * 10);
       const translateY = Math.floor(Math.random() * y);
@@ -197,17 +196,48 @@ export default function ComponentModule() {
   const selectJS = document.querySelector(".selectJS");
   if (selectJS) {
     function scrollToActiveItem() {
-      const container = document.querySelector(".selectJSBody");
+      const container = document.querySelector(".pro-calendar.selectJS");
       const activeItem = container.querySelector(".selectJSItem.active");
       if (activeItem) {
-        activeItem.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-          inline: "nearest",
-        });
+        // Tính toán vị trí của phần tử active
+        const containerRect = container.getBoundingClientRect();
+        const activeRect = activeItem.getBoundingClientRect();
+
+        // Tính khoảng cách cần cuộn để đưa activeItem vào giữa container
+        const offset =
+          activeRect.top - containerRect.top - container.clientHeight / 2 + activeItem.clientHeight / 2;
+
+        // Cuộn container đến vị trí
+        smoothScroll(container, container.scrollTop + offset, 500); // 500ms là thời gian cuộn
       }
     }
     scrollToActiveItem();
+
+    // Hàm cuộn mượt
+    function smoothScroll(element, target, duration) {
+      const start = element.scrollTop; // Vị trí hiện tại
+      const distance = target - start; // Khoảng cách cần cuộn
+      let startTime = null;
+
+      function step(currentTime) {
+        if (!startTime) startTime = currentTime; // Gán thời điểm bắt đầu
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1); // Tiến trình (từ 0 đến 1)
+
+        element.scrollTop = start + distance * easeInOutQuad(progress); // Cập nhật vị trí scroll
+
+        if (progress < 1) {
+          requestAnimationFrame(step); // Tiếp tục cuộn nếu chưa xong
+        }
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    // Hàm easing (mượt mà hơn)
+    function easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+    }
 
     // tạo function  từ đoạn code được comment ở trên
     function handleSelectMonth() {
