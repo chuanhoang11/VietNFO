@@ -191,4 +191,35 @@ export default function ComponentModule() {
       });
     }
   }
+
+
+  function scrollToActiveItem() {
+    const container = document.querySelector(".selectJSBody");
+    const activeItem = container.querySelector(".selectJSItem.active");
+    if (activeItem) {
+      activeItem.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest"
+      });
+    }
+  }
+  scrollToActiveItem();
+
+  // tạo function  từ đoạn code được comment ở trên
+  function handleSelectMonth() {
+    const container = document.querySelector(".selectJSBody");
+    const listItems = container.querySelectorAll(".selectJSItem");
+    listItems.forEach(item => {
+      item.addEventListener("click", () => {
+        container.querySelector(".selectJSItem.active")?.classList.remove("active");
+        item.classList.add("active");
+        scrollToActiveItem();
+      });
+    });
+    scrollToActiveItem();
+  }
+  handleSelectMonth();
+
+
 }
