@@ -22,17 +22,43 @@ block container
                                  input(type="search" placeholder="Marietta")
                            .col.col-sl-md  
                               .b-ip-select
-                                 select(name="").re-select-main
-                                    option(value="") Loại sự kiện
-                                    option(value="") Cộng đồng
-                                    option(value="") Hội nhóm
-                                    option(value="") Giải trí
-                                    option(value="") Thể thao
+                                 .selectCus
+                                    .selectCusValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Loại sự kiện
+                                    .selectCusOptions
+                                       label.selectCusAll 
+                                          input(type="checkbox")
+                                          span.txt Cộng đồng
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Hội nhóm
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Giải trí
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Thể thao
+                                       .selectCusApply Áp dụng
                            .col.col-sl-md  
                               .b-ip-select
-                                 select(name="").re-select-main
-                                    option(value="") Chưa diễn ra
-                                    option(value="") Đã diễn ra
+                                 .selectTwo
+                                    .selectTwoValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Chưa diễn ra
+                                    .selectTwoOptions
+                                       .selectTwoGr
+                                          label.selectCusOption 
+                                             input(type="radio" name="checktime")
+                                             span.txt Chưa diễn ra
+                                          label.selectCusOption
+                                             input(type="radio" name="checktime")
+                                             span.txt Đã diễn ra
+                                       .selectTwoApply Áp dụng
                            .col.col-btn
                               +Btn("Tìm kiếm")
             .sear-block 

@@ -22,12 +22,29 @@ block container
                                  input(type="search" placeholder="Marietta")
                            .col.col-sl-md  
                               .b-ip-select
-                                 select(name="").re-select-main
-                                    option(value="") Thời gian đăng
-                                    option(value="") Tuần này
-                                    option(value="") Một tuần trước
-                                    option(value="") Một tháng trước
-                                    option(value="") Lâu hơn
+                                 .selectCus
+                                    .selectCusValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Thời gian đăng
+                                    .selectCusOptions
+                                       label.selectCusAll 
+                                          input(type="checkbox")
+                                          span.txt Chọn tất cả
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Tuần này
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Một tuần trước
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Một tháng trước
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Lâu hơn
+                                       .selectCusApply Áp dụng
                            .col.col-btn
                               +Btn("Tìm kiếm")
             .sear-block 

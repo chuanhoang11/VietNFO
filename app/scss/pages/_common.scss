@@ -329,6 +329,24 @@ body.page-result {
     width: 100%;
   }
 }
+.selectCusValue,
+.selectTwoValue {
+  .icon-arrow {
+    width: 2.4rem;
+    height: 2.4rem;
+    @include mid-flex;
+    flex-shrink: 0;
+    color: var(--color-pri);
+    i {
+      font-weight: 700;
+    }
+  }
+  .txt {
+    color: #1d2939;
+    font-weight: 600;
+    @include fz-16;
+  }
+}
 .sear-panel {
   .pro-item.col-6 {
     .pro-bner-img {
