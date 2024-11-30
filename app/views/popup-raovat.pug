@@ -34,11 +34,23 @@ block container
                .sear-row.row 
                   .col.col-7 
                      .sear-map 
-                        +img("map-img.jpg")
+                        .inner
+                           +img("map-img.jpg")
+                           .btn-del 
+                              span.t-text 
+                                 | Remove boundary
+                              span.icon 
+                                 i.fa-light.fa-xmark.fw-7
                   .col.col-5
                      .sear-panel 
                         .head-sc.mb-10
                            +title("Rao vặt tại North Carolina", "","dcor")
+                           .sear-form 
+                              .form-ip 
+                                 .b-ip-search
+                                    span.icon
+                                       +img("icon-search.svg")
+                                    input(type="search" placeholder="Nhập tên rao vặt (ví dụ: làm bánh)")
                         .head-sc.mb-10 
                            span.txt 107 kết quả
                            .pro-select 

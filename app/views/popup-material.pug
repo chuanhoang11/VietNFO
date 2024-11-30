@@ -39,7 +39,13 @@ block container
                .sear-row.row 
                   .col.col-7 
                      .sear-map 
-                        +img("map-img.jpg")
+                        .inner
+                           +img("map-img.jpg")
+                           .btn-del 
+                              span.t-text 
+                                 | Remove boundary
+                              span.icon 
+                                 i.fa-light.fa-xmark.fw-7
                   .col.col-5
                      .sear-panel 
                         .head-sc.mb-10
