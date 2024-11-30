@@ -4,17 +4,32 @@ export default function HeaderModule() {
   const mobileOverlay = document.querySelector(".mobile-overlay");
   const search = document.querySelector(".search-mona");
   const body = document.getElementsByTagName("body")[0];
-
+  const banner = document.querySelector(".home-bn");
   function HandleHeader() {
     if (header && mobile && mobileOverlay) {
-      if (window.scrollY > 0) {
-        header.classList.add("sticky");
-        mobile.classList.add("sticky");
-        mobileOverlay.classList.add("sticky");
+      if (banner) {
+        const bannerRect = banner.getBoundingClientRect();
+        const headerRect = banner.getBoundingClientRect();
+
+        if (window.scrollY > bannerRect.bottom + headerRect.bottom) {
+          header.classList.add("sticky");
+          mobile.classList.add("sticky");
+          mobileOverlay.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+          mobile.classList.remove("sticky");
+          mobileOverlay.classList.remove("sticky");
+        }
       } else {
-        header.classList.remove("sticky");
-        mobile.classList.remove("sticky");
-        mobileOverlay.classList.remove("sticky");
+        if (window.scrollY > 0) {
+          header.classList.add("sticky");
+          mobile.classList.add("sticky");
+          mobileOverlay.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+          mobile.classList.remove("sticky");
+          mobileOverlay.classList.remove("sticky");
+        }
       }
     }
   }

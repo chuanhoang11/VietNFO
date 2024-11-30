@@ -33,6 +33,27 @@ block container
                                  select(name="").re-select-main
                                     option(value="") Chưa diễn ra
                                     option(value="") Đã diễn ra
+                           .col.col-sl-md 
+                              .custom-select-container
+                                 .custom-select
+                                    .select-top
+                                       #select-btn.select-btn Chọn lựa chọn
+                                    #select-options.select-options
+                                       #select-all Chọn tất cả
+                                       label
+                                          input.option(type='checkbox' value='Option 1')
+                                          |  Lựa chọn 1
+                                       label
+                                          input.option(type='checkbox' value='Option 2')
+                                          |  Lựa chọn 2
+                                       label
+                                          input.option(type='checkbox' value='Option 3')
+                                          | Lựa chọn 3
+                                       label
+                                          input.option(type='checkbox' value='Option 4')
+                                          |  Lựa chọn 4
+                                       .actions
+                                          button#apply-btn Áp dụng
                            .col.col-btn
                               +Btn("Tìm kiếm")
             .sear-block 
