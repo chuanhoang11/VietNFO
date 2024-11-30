@@ -118,6 +118,7 @@ export default function Select2Module() {
 
   // ===========================
   const selectTwoContainer = document.querySelector('.selectTwo');
+  if (!selectTwoContainer) return;
   const selectTwoValue = selectTwoContainer.querySelector('.selectTwoValue');
   const selectTwoOptions = selectTwoContainer.querySelector('.selectTwoOptions');
   const applyButton = selectTwoContainer.querySelector('.selectTwoApply');
@@ -125,11 +126,12 @@ export default function Select2Module() {
   const hiddenInput = selectTwoContainer.querySelector('.selectTwoValue input[type="text"]');
   const radioGroups = selectTwoContainer.querySelectorAll('.selectTwoGr input[type="radio"]');
 
-  // Hiển thị/ẩn options khi click vào selectTwoValue
+
   selectTwoValue.addEventListener('click', (event) => {
     selectTwoOptions.classList.toggle('show');
     event.stopPropagation(); // Ngăn chặn sự kiện click lan ra ngoài
   });
+
 
   // Ẩn options khi click ra ngoài
   document.addEventListener('click', (event) => {

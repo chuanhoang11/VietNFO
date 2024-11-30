@@ -140,10 +140,12 @@
   font-weight: 700;
   color: #1d2939;
   font-size: 2rem;
+  @include lc(1);
 }
 
 .pro-des {
   color: #5a5a5a;
+  @include lc(4);
 }
 
 .pro-note {
@@ -310,6 +312,10 @@
     flex-direction: column;
     gap: 0.4rem;
     display: none;
+  }
+  @include max($mobile) {
+    max-height: 30rem;
+    overflow-y: auto;
   }
 }
 
@@ -967,9 +973,7 @@
     height: unset;
   }
 
-  .select2-container--default
-    .select2-selection--single
-    .select2-selection__arrow {
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
     left: unset;
     right: 0;
   }
