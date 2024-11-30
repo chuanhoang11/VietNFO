@@ -13,28 +13,28 @@ block container
                   form(action="")
                      .b-form-gr
                         .form-list.row 
-                           .col.col-4.form-ip 
+                           .col.form-ip.col-search 
                               .b-ip-search
                                  span.icon
                                     +img("icon-search.svg")
                                  span.icon-remove 
                                     i.fa-light.fa-xmark.fw-7
                                  input(type="search" placeholder="Marietta")
-                           .col.col-3 
+                           .col.col-sl-md
                               .b-ip-select
                                  select(name="").re-select-main
                                     option(value="") Việc nhà hàng
                                     option(value="") Nhà ở
                                     option(value="") Mua nhà
                                     option(value="") Mua cửa tiệm
-                           .col.col-3 
+                           .col.col-sl-md
                               .b-ip-select
                                  select(name="").re-select-main
                                     option(value="") Đăng tuần này
                                     option(value="") Đăng tháng này
                                     option(value="") 3 tuần trước
                                     option(value="") 1 tháng trước
-                           .col.col-2.col-btn
+                           .col.col-btn
                               +Btn("Tìm kiếm")
             .sear-block 
                .sear-row.row 
@@ -50,6 +50,7 @@ block container
                            .pro-select 
                               span.txt Sắp sếp:
                               select.re-select-main
+                                 option(value="")  Cộng đồng
                                  option(value="")  Tin mới nhất
                                  option(value="")  Cộng đồng
                                  option(value="")  Cộng đồng

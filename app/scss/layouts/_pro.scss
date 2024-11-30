@@ -149,7 +149,8 @@
 .pro-note {
   --gap: 0.4em;
   display: flex;
-  flex-wrap: wrap;
+  //   flex-wrap: wrap;
+  white-space: nowrap;
 }
 
 .pro-note-item {

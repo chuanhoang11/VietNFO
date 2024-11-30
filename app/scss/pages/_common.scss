@@ -19,12 +19,12 @@ body.page-search {
   }
 
   &-form {
-    max-width: 104rem;
+    //  max-width: 104rem;
 
     .row {
       flex: 1;
       --cg: 0.8rem;
-      --rg: 0rem;
+      --rg: 0.8rem;
 
       @include max(920px) {
         --rg: 0.8rem;
@@ -135,6 +135,44 @@ body.page-search {
     display: flex;
     flex-direction: column;
   }
+  &-form {
+    .form-list {
+      .col-search {
+        width: calc(36rem + var(--cg));
+        @include max(920px) {
+          width: 100%;
+        }
+      }
+      .col-sl-md {
+        width: calc(24rem + var(--cg));
+        @include max(920px) {
+          width: 40%;
+        }
+
+        @include max(500px) {
+          width: 50%;
+        }
+      }
+      .col-sl-sm {
+        width: calc(13rem + var(--cg));
+        @include max(500px) {
+          width: 50%;
+        }
+      }
+      .col-btn {
+        width: calc(13rem + var(--cg));
+        @include max(920px) {
+          width: 20%;
+        }
+
+        @include max(500px) {
+          width: 50%;
+          margin: 0 auto;
+          margin-bottom: var(--rg);
+        }
+      }
+    }
+  }
 
   &-row {
     --cg: 0rem;
@@ -189,5 +227,6 @@ body.page-search {
   }
   .ft-panel {
     max-width: 100% !important;
+    width: 100%;
   }
 }
