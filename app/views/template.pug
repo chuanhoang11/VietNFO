@@ -78,10 +78,10 @@ block container
                               views: "500"
                            },
                            {
-                              name: "Tuyển phục vụ nhà hàng Việt Nam",
+                              name: "Tuyển thợ làm nail",
                               time: "59 phút trước",
-                              type: "Nhà hàng",
-                              name_location: "Pho Dai Viet Restaurant",
+                              type: "Tiệm nail",
+                              name_location: "Nail King Salon",
                               name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
                               price: "25 - 40",
                               views: "500"
@@ -96,9 +96,9 @@ block container
                               views: "500"
                            },
                            {
-                              name: "Tuyển quản lý nhà hàng Nhật",
+                              name: "Tuyển nhân viên cắt tóc",
                               time: "59 phút trước",
-                              type: "Nhà hàng",
+                              type: "Việc khác",
                               name_location: "Japanese Restaurant",
                               name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
                               price: "25 - 40",
@@ -850,9 +850,12 @@ block container
                                     .pro-bner-img
                                        +img('pro-bner-img.jpg')
                                     .pro-bner-content 
-                                       h3.pro-bner-name Chăm sóc người lớn tuổi
+                                       h3.pro-bner-name 
+                                          |Chăm sóc
+                                          br
+                                          |người lớn tuổi
                                        p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
-                                       .pro-btn 
+                                       .pro-btn  
                                           span.txt Khám phá ngay
                               each item in Array(5)
                                  .pro-grid-item 
