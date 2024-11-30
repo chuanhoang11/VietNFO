@@ -151,11 +151,7 @@
       @include pseudo;
       height: 100%;
       width: 100%;
-      background: linear-gradient(
-        0deg,
-        rgba(4, 18, 41, 0.414),
-        rgba(10, 10, 10, 0.486)
-      );
+      background: linear-gradient(0deg, rgba(4, 18, 41, 0.414), rgba(10, 10, 10, 0.486));
       top: 0;
       left: 0;
     }
@@ -208,16 +204,12 @@
           border: none;
         }
 
-        .select2-container--default
-          .select2-selection--single
-          .select2-selection__arrow {
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
           right: unset;
           left: 0;
         }
 
-        .select2-container
-          .select2-selection--single
-          .select2-selection__rendered {
+        .select2-container .select2-selection--single .select2-selection__rendered {
           padding-left: 5rem;
           padding-right: 1rem;
           font-size: 1.6rem;
@@ -323,9 +315,7 @@
         }
 
         .sl {
-          .select2-container
-            .select2-selection--single
-            .select2-selection__rendered {
+          .select2-container .select2-selection--single .select2-selection__rendered {
             font-size: 1.4rem;
             padding-left: 4rem;
           }
@@ -1622,6 +1612,9 @@
 
         @include hover {
           background-color: var(--color-second);
+          i {
+            color: var(--color-pri);
+          }
         }
 
         i {
