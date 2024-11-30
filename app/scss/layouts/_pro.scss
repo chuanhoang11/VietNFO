@@ -196,14 +196,17 @@
 
 .pro-li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.4em;
 
   > img {
-    width: 1.1em;
+    width: 2rem;
+    height: 2rem;
     position: relative;
-    top: 0.3em;
     flex-shrink: 0;
+  }
+  > .txt {
+    @include lc(1);
   }
 }
 

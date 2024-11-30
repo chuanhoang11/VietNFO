@@ -405,14 +405,25 @@ block container
                               +img('ic-calendar-white.svg')
                               span.txt.selectJSTxt 
                            i.fas.fa-angle-down
+                           -
+                              const months = [
+                                    { name: "May 2024", active: false },
+                                    { name: "June 2024", active: false },
+                                    { name: "July 2024", active: false },
+                                    { name: "August 2024", active: false },
+                                    { name: "September 2024", active: false },
+                                    { name: "October 2024", active: false },
+                                    { name: "November 2024", active: true },
+                                    { name: "December 2024", active: false },
+                                    { name: "January 2025", active: false },
+                                    { name: "February 2025", active: false },
+                                    { name: "March 2025", active: false },
+                                    { name: "April 2025", active: false },
+                                    { name: "May 2025", active: false }
+                                    ];
                         ul.selectJSBody 
-                           li.selectJSItem January 2025
-                           li.selectJSItem December 2024
-                           li.selectJSItem.active November 2024
-                           li.selectJSItem October 2024
-                           li.selectJSItem September 2024
-                           li.selectJSItem August 2024
-                           li.selectJSItem July 2024
+                           each li in months
+                              li.selectJSItem(class=li.active ? 'active' : '') #{li.name}
                      .--hide-mobile
                         +Btn("Xem tất cả", "", "trans full", true)
                      .pro-qc 
