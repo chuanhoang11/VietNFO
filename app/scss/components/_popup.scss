@@ -24,7 +24,7 @@
 
   &-overlay {
     position: absolute;
-    background-color: rgba($color: var(--color-black), $alpha: 0.8);
+    background-color: rgba(0, 0, 0, 0.2);
     @include full;
     z-index: 1;
     @include transitionRe;
@@ -48,7 +48,7 @@
   }
 
   &-over {
-    overflow-y: auto;
+    overflow: hidden auto;
     min-height: 40vh;
     max-height: 80vh;
   }
@@ -127,17 +127,19 @@
       margin-right: -0.8rem;
       padding-right: 0.8rem;
       flex: 1;
-      overflow-y: auto;
+      overflow: hidden auto;
 
       &::-webkit-scrollbar {
         width: 0.2rem;
       }
     }
   }
+
   &-printf {
     .popup-over {
       max-height: 95vh;
     }
+
     .popup-main {
       width: 100%;
       max-width: 100%;
@@ -150,58 +152,72 @@
         margin: 0 auto;
       }
     }
+
     .popup-wrapper {
       padding: 4rem 1.5rem;
     }
+
     &-row {
       @include max(900px) {
         flex-direction: column-reverse;
+
         .col {
           width: 100%;
         }
       }
     }
+
     &-ctr {
       margin-top: 4.5rem;
+
       .igr {
         @include mid-flex;
         gap: 1.6rem;
       }
     }
+
     &-check {
       @include mid-flex;
     }
+
     &-wrap {
       margin-top: 8rem;
+
       @include max(900px) {
         margin-top: 4rem;
       }
     }
+
     &-image {
       .inner {
         @include imgPd(498, 588);
         border-radius: 2rem;
+
         img {
           @include imgCover;
         }
       }
     }
   }
+
   &-fill {
     .popup-main {
       width: 84rem;
     }
+
     &-dcor {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 26%;
       z-index: 1;
+
       img {
         width: 100%;
         display: block;
       }
     }
+
     .popup-wrapper {
       min-height: 50vh;
       @include flex;
@@ -214,25 +230,31 @@
         ),
         #fed7d7;
     }
+
     &-wrapper {
       width: 50rem;
       max-width: 100%;
       margin: 0 auto 4rem;
     }
+
     &-flex {
       @include flex;
       margin: 0 -5rem;
+
       @include max(768px) {
         margin: 0 -1.2rem;
       }
     }
+
     &-col {
       padding: 0 5rem;
       width: 50%;
+
       @include max(768px) {
         padding: 0 1.2rem;
       }
     }
+
     &-box {
       .t-text {
         @include fz-24;
@@ -240,16 +262,19 @@
         color: var(--color-text);
       }
     }
+
     &-options {
       margin-top: 1.4rem;
       @include flex;
       flex-direction: column;
       row-gap: 2.4rem;
     }
+
     &-item {
       .recheck-item {
         justify-content: space-between;
       }
+
       .recheck-text {
         margin-left: 0;
       }

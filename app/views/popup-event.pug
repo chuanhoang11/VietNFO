@@ -1,0 +1,330 @@
+extends layout/layout
+
+block vars
+   -title = 'Event'
+   -bodyClass = 'page-search page-result'
+
+block container 
+   section.sec-sear 
+      .sear
+         .sear-wrap 
+            .sear-head 
+               .sear-form 
+                  form(action="")
+                     .b-form-gr
+                        .form-list.row 
+                           .col.form-ip.col-search 
+                              .b-ip-search
+                                 span.icon
+                                    +img("icon-search.svg")
+                                 span.icon-remove 
+                                    i.fa-light.fa-xmark.fw-7
+                                 input(type="search" placeholder="Marietta")
+                           .col.col-sl-md  
+                              .b-ip-select
+                                 .selectCus
+                                    .selectCusValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Loại sự kiện
+                                    .selectCusOptions
+                                       label.selectCusAll 
+                                          input(type="checkbox")
+                                          span.txt Cộng đồng
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Hội nhóm
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Giải trí
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Thể thao
+                                       .selectCusApply Áp dụng
+                           .col.col-sl-md  
+                              .b-ip-select
+                                 .selectTwo
+                                    .selectTwoValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Chưa diễn ra
+                                    .selectTwoOptions
+                                       .selectTwoGr
+                                          label.selectCusOption 
+                                             input(type="radio" name="checktime")
+                                             span.txt Chưa diễn ra
+                                          label.selectCusOption
+                                             input(type="radio" name="checktime")
+                                             span.txt Đã diễn ra
+                                       .selectTwoApply Áp dụng
+                           .col.col-btn
+                              +Btn("Tìm kiếm")
+            .sear-block 
+               .sear-row.row 
+                  .col.col-7 
+                     .sear-map 
+                        .inner
+                           +img("map-img.jpg")
+                           .btn-del 
+                              span.t-text 
+                                 | Remove boundary
+                              span.icon 
+                                 i.fa-light.fa-xmark.fw-7
+                  .col.col-5
+                     .sear-panel 
+                        .head-sc.mb-10
+                           +title("Việt Event tại North Carolina", "","dcor")
+                        .head-sc.mb-10 
+                           span.txt 107 kết quả
+                           .pro-select 
+                              span.txt Sắp sếp:
+                              select.re-select-main
+                                 option(value="")  Mới đăng
+                                 option(value="")  Thời gian diễn ra
+                                 option(value="" selected)  Mặc định
+                        .pro-list.row 
+                           - 
+                              var proArrFive = [
+                                 {
+                                    img: "pro-1-1.jpg",
+                                    name: "Giải pickeball",
+                                    des: "Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai)",
+                                    address: "9185 Old Southwick Pass, Johns Creek, GA 30067 (Nhà thờ Việt Nam)",
+                                    time: "Sept 14 – 16, 2024",
+                                    views: "1000"
+                                 },
+                                 {
+                                    img: "pro-1-2.jpg",
+                                    name: "Giải pickeball",
+                                    des: "Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai)",
+                                    address: "9185 Old Southwick Pass, Johns Creek, GA 30067 (Nhà thờ Việt Nam)",
+                                    time: "Sept 14 – 16, 2024",
+                                    views: "1000"
+                                 },
+                                 {
+                                    img: "pro-1-3.jpg",
+                                    name: "Gặp mặt đồng hương Đà Nẵng",
+                                    des: "Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai)",
+                                    address: "9185 Old Southwick Pass, Johns Creek, GA 30067 (Nhà thờ Việt Nam)",
+                                    time: "Sept 14 – 16, 2024",
+                                    views: "1000"
+                                 },
+                                 {
+                                    img: "pro-1-4.jpg",
+                                    name: "Gặp mặt hội Sài Gòn Ơi",
+                                    des: "Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai)",
+                                    address: "9185 Old Southwick Pass, Johns Creek, GA 30067 (Nhà thờ Việt Nam)",
+                                    time: "Sept 14 – 16, 2024",
+                                    views: "1000"
+                                 }
+                              ]
+                           each item, index in proArrFive
+                              if(index == 2)
+                                 .pro-item.col.col-third 
+                                    .pro-bner 
+                                       .pro-bner-tag Sponsored
+                                       .pro-bner-dc
+                                          +img('pro-bner-dc.png')
+                                       .pro-bner-img
+                                          +img('pro-bner-img.jpg')
+                                       .pro-bner-content 
+                                          h3.pro-bner-name 
+                                             |Chăm sóc
+                                             br
+                                             |người lớn tuổi
+                                          p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
+                                          .pro-btn 
+                                             span.txt Khám phá ngay
+                              .pro-item.col.col-third
+                                 .pro-wr.third
+                                    .pro-img 
+                                       .inner 
+                                          +img(item.img)
+                                    .pro-content 
+                                       h3.pro-name #{item.name}
+                                       p.pro-des #{item.des}
+                                       ul.pro-ul 
+                                          li 
+                                             .pro-li.fw-5
+                                                +img('ic-pro-2.svg')
+                                                span.txt #{item.address}
+                                          li 
+                                             .pro-note 
+                                                .pro-note-item 
+                                                   .pro-li.fw-5
+                                                      +img('ic-pro-6.svg')
+                                                      span.txt #{item.time}
+                                                .pro-note-item 
+                                                   .pro-li.fw-5
+                                                      +img('ic-pro-4.svg')
+                                                      span.txt #{item.views}
+                        +PageNumber()
+                     +footer()                              
+   +popupDt("popdt","dt")
+      .container
+         .popdt-flex.row 
+            .popdt-main.col 
+               .wrapper 
+                  .popdt-info.popdt-block
+                     .popdt-info-top
+                        .info 
+                           p.tt Hội chợ mùa thu
+                           p.des 9185 Old Southwick Pass, Johns Creek, GA 30067 (Nhà thờ Việt Nam)
+                     .popdt-info-bot 
+                        .fea 
+                           .fea-item 
+                              +img("ic-date.svg")
+                              span.txt Sept 14 – 16, 2024
+                           .fea-item 
+                              +img("ic-star.svg")
+                              span.txt Cộng đồng
+                  .popdt-detail.popdt-block 
+                     p.tt Chi tiết
+                     input(type="checkbox" id="more")
+                     .des
+                        p.des-txt 
+                           |Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng 
+                           |Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng 
+                           |Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng 
+                           |Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng Kong...Cho thuê nhà riêng cho gia đình cạnh chợ Hồng 
+                     label(for="more").link 
+                        +img("arrow-down.svg")
+                        span.link-wrap 
+                           span.txt Show more
+                           span.txt Show less
+                     .popdt-time 
+                        .popdt-time-it
+                           +img("ic-clock.svg")
+                           span.txt 2 days
+                              span.txt-sub on Vietinfo
+                        .popdt-time-it
+                           +img("ic-eyes.svg")
+                           span.txt 10,758
+                              span.txt-sub views
+                  .popdt-school.popdt-block 
+                     p.tt Trường học
+                     .popdt-schools
+                        .popdt-school-item 
+                           +img("710.svg")
+                           .ctn 
+                              p.name Thomas L Marsalis Elementary School
+                              .val
+                                 p.val-item 
+                                    |Grades: 
+                                    span.bold PK-5
+                                 p.val-item 
+                                    |Distance: 
+                                    span.bold 2 mi
+                        .popdt-school-item 
+                           +img("510.svg")
+                           .ctn 
+                              p.name Boude Storey Middle School
+                              .val
+                                 p.val-item 
+                                    |Grades: 
+                                    span.bold 6-8
+                                 p.val-item 
+                                    |Distance: 
+                                    span.bold 4 mi
+                        .popdt-school-item 
+                           +img("210.svg")
+                           .ctn 
+                              p.name South Oak Cliff High School
+                              .val
+                                 p.val-item 
+                                    |Grades: 
+                                    span.bold 9-12
+                                 p.val-item 
+                                    |Distance: 
+                                    span.bold 3.5 mi
+                  .popdt-cmt.popdt-block 
+                     p.tt Comments
+                     +comment()
+                  .popdt-block.popdt-slider.slider-event
+                     .head-sc
+                        +title("Các event khác trong khu vực")
+                        +SwiperControl()
+                     .swiper-container 
+                        .swiper.rows 
+                           .swiper-wrapper
+                              each val,index in Array(2)
+                                 .swiper-slide.col 
+                                    .wrapper 
+                                       .row
+                                          each vals,index in Array(3)
+                                             .pro-item.col
+                                                .pro-wr.third
+                                                   .pro-img 
+                                                      .inner 
+                                                         +img("pro-1-1.jpg")
+                                                   .pro-content 
+                                                      h3.pro-name Hội chợ mùa thu
+                                                      p.pro-des Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Ma
+                                                      ul.pro-ul 
+                                                         li 
+                                                            .pro-li.fw-5
+                                                               +img('ic-pro-2.svg')
+                                                               span.txt 9185 Old Southwick Pass, Johns Creek, GA (Nhà thờ Việt Nam)
+                                                         li 
+                                                            .pro-note 
+                                                               .pro-note-item 
+                                                                  .pro-li.fw-5
+                                                                     +img('ic-pro-6.svg')
+                                                                     span.txt Sept 14 – 16, 2024
+                                                               .pro-note-item 
+                                                                  .pro-li.fw-5
+                                                                     +img('ic-pro-4.svg')
+                                                                     span.txt 1000
+                        +pagination
+                     
+            .popdt-side.col 
+               .wrapper 
+                  .popdt-thumbnail 
+                     .img 
+                        .img-inner 
+                           +img("popdt-thumbnail.jpg")
+                  .popdt-contact 
+                     p.tt Liên hệ:
+                     p.des Darynda Jenkins
+                     .popdt-address 
+                        a(href="").link 
+                           +img("ic-send.svg") 
+                           span.txt keller@gmail.com
+                        a(href="").link 
+                           +img("ic-phone.svg") 
+                           span.txt 012345667
+                  .popdt-map 
+                     .iframe 
+                        iframe(
+                        referrerpolicy="no-referrer-when-downgrade" 
+                        loading="lazy" 
+                        allowfullscreen="" 
+                        style="border:0;" 
+                        height="450" 
+                        width="600" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2654293242267!2d106.6535495758385!3d10.790971358923679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed189fa855d%3A0xf63e15bfce46baef!2sC%C3%B4ng%20ty%20TNHH%20-%20MONA%20MEDIA!5e0!3m2!1svi!2s!4v1732719275356!5m2!1svi!2s"
+                        )
+                  .popdt-share 
+                     span.txt Share this listing:
+                     .social 
+                        .social-list 
+                           a(href="").social-link
+                              +img("ic-fb.svg") 
+                           a(href="").social-link
+                              +img("ic-x.svg") 
+                  .pro-bner 
+                     .pro-bner-dc
+                        +img('pro-bner-dc.png')
+                     .pro-bner-img
+                        +img('pro-bner-img.jpg')
+                     .pro-bner-content 
+                        h3.pro-bner-name 
+                           |Chăm sóc
+                           br
+                           |người lớn tuổi
+                        p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
+                        .pro-btn 
+                           span.txt Khám phá ngay
+      +footer()
