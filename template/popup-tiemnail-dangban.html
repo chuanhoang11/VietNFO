@@ -200,14 +200,35 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col col-sl-sm">
+                      <div class="col col-sl-md">
                         <div class="b-ip-select">
-                          <select class="re-select-main" name="">
-                            <option value="">Giá tiền</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                          </select>
+                          <div class="b-range"> 
+                            <div class="range-wrap">
+                              <div class="range-head"> 
+                                <input class="rangeValue" type="number" hidden><span class="icon-arrow"> <i class="fa-light fa-chevron-down"></i></span><span class="t-txt rangeTextValue">Giá tiền</span>
+                              </div>
+                              <div class="range-panel"> 
+                                <div class="range">
+                                  <div class="range-flex">
+                                    <div class="range-item min"><span class="price">
+                                         $500</span></div>
+                                    <div class="range-item"><span class="price">
+                                         $500,000</span></div>
+                                  </div>
+                                  <div class="range-slider">
+                                    <div class="progress"></div>
+                                  </div>
+                                  <div class="range-input"> 
+                                    <input class="range-min" type="range" name="price_min" step="100" min="500" max="500000" value="0">
+                                    <input class="range-max" type="range" name="price_max" step="100" min="500" max="500000" value="500000">
+                                  </div>
+                                  <div class="range-item max fw-6"><span class="price">
+                                       $500,000</span><span class="txt">/tháng</span></div>
+                                  <div class="range-apply btn-text">Áp dụng  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="col col-btn"><a class="btn" href=""><span class="inner">Tìm kiếm</span><i></i></a>

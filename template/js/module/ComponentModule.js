@@ -76,8 +76,9 @@ export default function ComponentModule() {
     if (cir.classList.contains("cir-2")) {
       const translateX = Math.floor(Math.random() * x);
       const translateY = Math.floor(Math.random() * y);
-      cir.style.transform = `translate(${translateX + "%" + "," + translateY + "%"
-        })`;
+      cir.style.transform = `translate(${
+        translateX + "%" + "," + translateY + "%"
+      })`;
     } else {
       // const translateX = Math.floor(Math.random() * 10);
       const translateY = Math.floor(Math.random() * y);
@@ -205,7 +206,10 @@ export default function ComponentModule() {
 
         // Tính khoảng cách cần cuộn để đưa activeItem vào giữa container
         const offset =
-          activeRect.top - containerRect.top - container.clientHeight / 2 + activeItem.clientHeight / 2;
+          activeRect.top -
+          containerRect.top -
+          container.clientHeight / 2 +
+          activeItem.clientHeight / 2;
 
         // Cuộn container đến vị trí
         smoothScroll(container, container.scrollTop + offset, 500); // 500ms là thời gian cuộn
@@ -255,5 +259,92 @@ export default function ComponentModule() {
       scrollToActiveItem();
     }
     handleSelectMonth();
+  }
+  const rangeInputs = document.querySelectorAll(".range-input input");
+  const progress = document.querySelector(".range-slider .progress");
+  const priceMin = document.querySelector(".range-item.min .price");
+  const priceMax = document.querySelector(".range-item.max .price");
+  const rangeApplyButton = document.querySelector(".range-apply");
+  const rangeValueInput = document.querySelector(".rangeValue");
+  const textValueElement = document.querySelector(".rangeTextValue");
+  const rangePanel = document.querySelector(".range-panel");
+  const rangeHead = document.querySelector(".range-head");
+
+  let priceGap = 0;
+
+  function formatCurrency(value) {
+    return value
+      .toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD",
+      })
+      .replace(/\.00$/, "");
+  }
+
+  if (rangeInputs && progress) {
+    let minVal = parseInt(rangeInputs[0].value);
+    let maxVal = parseInt(rangeInputs[1].value);
+
+    priceMin.innerHTML = formatCurrency(minVal);
+    priceMax.innerHTML = formatCurrency(maxVal);
+
+    progress.style.left = (minVal / rangeInputs[0].max) * 100 + "%";
+    progress.style.right = 100 - (maxVal / rangeInputs[1].max) * 100 + "%";
+
+    rangeInputs.forEach((item) => {
+      item.addEventListener("input", (e) => {
+        let minVal = parseInt(rangeInputs[0].value);
+        let maxVal = parseInt(rangeInputs[1].value);
+        if (maxVal - minVal < priceGap) {
+          if (e.target.className === "range-min") {
+            rangeInputs[0].value = maxVal - priceGap;
+          } else {
+            rangeInputs[1].value = minVal + priceGap;
+          }
+        } else {
+          progress.style.left = (minVal / rangeInputs[0].max) * 100 + "%";
+          progress.style.right =
+            100 - (maxVal / rangeInputs[1].max) * 100 + "%";
+        }
+      });
+    });
+
+    rangeInputs[0].addEventListener("input", () => {
+      let minVal = parseInt(rangeInputs[0].value);
+
+      priceMin.innerHTML = formatCurrency(minVal);
+    });
+
+    rangeInputs[1].addEventListener("input", () => {
+      let maxVal = parseInt(rangeInputs[1].value);
+
+      priceMax.innerHTML = formatCurrency(maxVal);
+    });
+
+    if (rangeApplyButton && rangeValueInput && textValueElement) {
+      rangeApplyButton.addEventListener("click", () => {
+        let minVal = parseInt(rangeInputs[0].value);
+        let maxVal = parseInt(rangeInputs[1].value);
+
+        rangeValueInput.value = `${minVal} - ${maxVal}`;
+
+        textValueElement.innerHTML = `${formatCurrency(
+          minVal
+        )} - ${formatCurrency(maxVal)}`;
+
+        rangePanel.classList.remove("show");
+      });
+    }
+
+    if (rangeHead) {
+      rangeHead.addEventListener("click", () => {
+        rangePanel.classList.toggle("show");
+      });
+    }
+    document.addEventListener("click", (e) => {
+      if (!rangePanel.contains(e.target) && !rangeHead.contains(e.target)) {
+        rangePanel.classList.remove("show");
+      }
+    });
   }
 }
