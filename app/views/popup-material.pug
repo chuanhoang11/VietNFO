@@ -25,6 +25,8 @@ block container
                                  .selectCus
                                     .selectCusValue
                                        input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
                                        .txt Loại sự kiện
                                     .selectCusOptions
                                        label.selectCusAll 
@@ -42,17 +44,21 @@ block container
                                        .selectCusApply Áp dụng
                            .col.col-sl-md  
                               .b-ip-select
-                                 .selectCus
-                                    .selectCusValue
+                                 .selectTwo
+                                    .selectTwoValue
                                        input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
                                        .txt Chưa diễn ra
-                                    .selectCusOptions
-                                       label.selectCusAll 
-                                          input(type="checkbox")
-                                          span.txt Chưa diễn ra
-                                       label.selectCusOption 
-                                          input(type="checkbox")
-                                          span.txt Đã diễn ra
+                                    .selectTwoOptions
+                                       .selectTwoGr
+                                          label.selectCusOption 
+                                             input(type="radio" name="checktime")
+                                             span.txt Chưa diễn ra
+                                          label.selectCusOption
+                                             input(type="radio" name="checktime")
+                                             span.txt Đã diễn ra
+                                       .selectTwoApply Áp dụng
                            .col.col-btn
                               +Btn("Tìm kiếm")
             .sear-block 
