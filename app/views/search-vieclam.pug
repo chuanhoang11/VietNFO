@@ -22,18 +22,53 @@ block container
                                  input(type="search" placeholder="Marietta")
                            .col.col-sl-md
                               .b-ip-select
-                                 select(name="").re-select-main
-                                    option(value="") Việc nhà hàng
-                                    option(value="") Nhà ở
-                                    option(value="") Mua nhà
-                                    option(value="") Mua cửa tiệm
+                                 .selectCus
+                                    .selectCusValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Loại việc làm
+                                    .selectCusOptions
+                                       .text-head Loại việc làm
+                                       label.selectCusAll 
+                                          input(type="checkbox")
+                                          span.txt Chọn tất cả
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Làm nail
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Nhà hàng
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Văn phòng
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Việc khác
+                                       .selectCusApply Áp dụng
                            .col.col-sl-md
                               .b-ip-select
-                                 select(name="").re-select-main
-                                    option(value="") Đăng tuần này
-                                    option(value="") Đăng tháng này
-                                    option(value="") 3 tuần trước
-                                    option(value="") 1 tháng trước
+                                 .selectCus
+                                    .selectCusValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Thời gian đăng tin
+                                    .selectCusOptions
+                                       .text-head Thời gian đăng tin
+                                       label.selectCusAll 
+                                          input(type="checkbox")
+                                          span.txt Chọn tất cả
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Một tuần trước
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Một tháng trước
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Lâu hơn
+                                       .selectCusApply Áp dụng
                            .col.col-btn
                               +Btn("Tìm kiếm")
             .sear-block 
@@ -53,13 +88,7 @@ block container
                            +title("Việc làm tại North Carolina", "","dcor")
                         .head-sc.mb-10 
                            span.txt 107 kết quả
-                           .pro-select 
-                              span.txt Sắp sếp:
-                              select.re-select-main
-                                 option(value="")  Cộng đồng
-                                 option(value="")  Tin mới nhất
-                                 option(value="")  Cộng đồng
-                                 option(value="")  Cộng đồng
+                           +selectPong("Mặc định",['Mới đăng Tiền lương (cao tới thấp)','Tiền lương (thấp tới cao)','Lượt xem (cao tới thấp)', 'Lượt xem (thấp tới cao)','Mặc định'])
                         .pro-list.row 
                            - 
                               var proArrSecond = [

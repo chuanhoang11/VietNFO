@@ -29,6 +29,7 @@ block container
                                           i.fa-light.fa-chevron-down
                                        .txt Loại việc làm
                                     .selectCusOptions
+                                       .text-head Loại việc làm
                                        label.selectCusAll 
                                           input(type="checkbox")
                                           span.txt Chọn tất cả
@@ -54,6 +55,7 @@ block container
                                           i.fa-light.fa-chevron-down
                                        .txt Thời gian đăng tin
                                     .selectCusOptions
+                                       .text-head Thời gian đăng tin
                                        label.selectCusAll 
                                           input(type="checkbox")
                                           span.txt Chọn tất cả
@@ -86,15 +88,7 @@ block container
                            +title("Việc làm tại North Carolina", "","dcor")
                         .head-sc.mb-10 
                            span.txt 107 kết quả
-                           .pro-select 
-                              span.txt Sắp sếp:
-                              select.re-select-main
-                                 option(value="")  Mới đăng
-                                 option(value="")  Tiền lương (cao tới thấp)
-                                 option(value="")  Tiền lương (thấp tới cao)
-                                 option(value="")  Lượt xem (cao tới thấp)
-                                 option(value="")  Lượt xem (thấp tới cao)
-                                 option(value="" selected)  Mặc định
+                           +selectPong("Mặc định",['Mới đăng Tiền lương (cao tới thấp)','Tiền lương (thấp tới cao)','Lượt xem (cao tới thấp)', 'Lượt xem (thấp tới cao)','Mặc định'])
                         .pro-list.row 
                            each item, index in Array(21)
                               if(index == 2)

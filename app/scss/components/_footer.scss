@@ -90,8 +90,12 @@
     }
     .social-link {
       background: var(--color-pri);
+      width: 3.2rem;
+      height: 3.2rem;
       img {
         filter: brightness(0) invert(1);
+        width: 1.6rem;
+        height: 1.6rem;
       }
       @include hover {
         transform: unset;
@@ -187,7 +191,7 @@
         width: 100%;
       }
       .menu {
-        margin: 0 -0.4rem;
+        margin: 0 -0.6rem;
         gap: unset;
         li {
           width: fit-content;
@@ -206,7 +210,7 @@
           }
 
           a {
-            padding: 0 0.4rem;
+            padding: 0 0.6rem;
             font-weight: 400;
             @include max(500px) {
               font-size: 1.2rem;
