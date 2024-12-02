@@ -113,6 +113,24 @@ block container
                               price: "25 - 40",
                               views: "500"
                            },
+                           {
+                              name: "Tuyển nhân viên cắt tóc",
+                              time: "59 phút trước",
+                              type: "Văn phòng",
+                              name_location: "United Lawyer Firm",
+                              name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
+                              price: "25 - 40",
+                              views: "500"
+                           },
+                           {
+                              name: "Tuyển nhân viên cắt tóc",
+                              time: "59 phút trước",
+                              type: "Văn phòng",
+                              name_location: "United Lawyer Firm",
+                              name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
+                              price: "25 - 40",
+                              views: "500"
+                           },
                         ]
                      each item in proArrSecond
                         .swiper-slide.col.col-4
@@ -251,7 +269,7 @@ block container
                               income: "$1,000,000",
                               address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
                            },
-                              {
+                           {
                               img: "pro-6.jpg",
                               time: "2 ngày trước",
                               type: "Tiệm nail",
@@ -279,6 +297,35 @@ block container
                               income: "$1,000,000",
                               address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
                            },
+                           {
+                              img: "pro-5.jpg",
+                              time: "2 ngày trước",
+                              type: "Tiệm nail",
+                              price: "$500,000",
+                              note: [
+                                 "6 tables",
+                                 "6 chairs",
+                                 "11,300 sqft"
+                              ],
+                              rent: "$1,500",
+                              income: "$1,000,000",
+                              address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                           },
+                           {
+                              img: "pro-6.jpg",
+                              time: "2 ngày trước",
+                              type: "Tiệm nail",
+                              price: "$500,000",
+                              note: [
+                                 "6 tables",
+                                 "6 chairs",
+                                 "11,300 sqft"
+                              ],
+                              rent: "$1,500",
+                              income: "$1,000,000",
+                              address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                           },
+                           
                         ]
                      each item in proArr
                         .swiper-slide.col.col-4
@@ -307,12 +354,12 @@ block container
                                     .pro-note
                                        if item.rent
                                           .pro-note-item 
-                                             span.txt.fw-5 Rent: 
+                                             span.txt Rent: 
                                                 span.fw-6.c-txt-3 #{item.rent}
                                                 span(style="font-size: .8em") /month
                                        if item.income
                                           .pro-note-item 
-                                             span.txt.fw-5 Income: 
+                                             span.txt Income: 
                                                 span.fw-6.c-txt-3 #{item.income}
                                                 span(style="font-size: .8em") /year
                                  .pro-des #{item.address}
@@ -638,7 +685,7 @@ block container
                                        each note in item.note
                                           .pro-note-item 
                                              if(note.icon)
-                                                .pro-li.fw-6.c-txt-2 
+                                                .pro-li.fw-5.c-txt-2 
                                                    +img(note.icon)
                                                    span.txt #{note.name}
                                              else 

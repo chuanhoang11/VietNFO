@@ -7733,9 +7733,9 @@ ul.page-numbers {
   font-weight: 500; }
 
 .pro-type {
-  font-size: 1.15em;
+  font-size: calc(16/14 * 1em);
   font-weight: 600;
-  padding: 0.6em 1.1em;
+  padding: calc(8/16 * 1em) calc(24/16 * 1em);
   background: #e9effe;
   color: #6b686a;
   width: -webkit-fit-content;
@@ -7770,7 +7770,8 @@ ul.page-numbers {
   position: absolute;
   top: 1em;
   left: 1em;
-  z-index: 1; }
+  z-index: 1;
+  font-weight: 500; }
 
 .pro-content {
   display: -webkit-box;
@@ -7780,16 +7781,16 @@ ul.page-numbers {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.85em;
+  gap: calc(12/14 * 1em);
   padding: var(--pd-content);
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1; }
 
 .pro-name {
-  font-weight: 700;
+  font-weight: 600;
   color: #1d2939;
-  font-size: 2rem;
+  font-size: calc(20/14 * 1em);
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -7851,7 +7852,8 @@ ul.page-numbers {
   width: fit-content;
   display: inline-block;
   -webkit-font-feature-settings: "liga" off;
-  font-feature-settings: "liga" off; }
+  font-feature-settings: "liga" off;
+  font-size: calc(16/14 * 1em); }
 
 .pro-ul li:not(:last-child) {
   margin-bottom: 0.4em; }
@@ -7877,7 +7879,8 @@ ul.page-numbers {
     overflow: hidden; }
 
 .pro-wr.second {
-  --pd-content: 0.8em; }
+  --pd-content: 0.8em;
+  background-color: #FCFCFD; }
 
 .pro-side {
   --rg: 1.6rem;

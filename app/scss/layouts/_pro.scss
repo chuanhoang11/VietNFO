@@ -91,9 +91,9 @@
 }
 
 .pro-type {
-  font-size: 1.15em;
+  font-size: calc(16/14 * 1em);
   font-weight: 600;
-  padding: 0.6em 1.1em;
+  padding: calc(8/16 * 1em) calc(24/16 * 1em);
   background: #e9effe;
   color: #6b686a;
   width: fit-content;
@@ -125,20 +125,21 @@
   top: 1em;
   left: 1em;
   z-index: 1;
+  font-weight: 500;
 }
 
 .pro-content {
   display: flex;
   flex-direction: column;
-  gap: 0.85em;
+  gap: calc(12/14 * 1em);
   padding: var(--pd-content);
   flex: 1;
 }
 
 .pro-name {
-  font-weight: 700;
+  font-weight: 600;
   color: #1d2939;
-  font-size: 2rem;
+  font-size: calc(20/14 * 1em);
   @include lc(1);
 }
 
@@ -188,6 +189,7 @@
   width: fit-content;
   display: inline-block;
   font-feature-settings: "liga" off;
+  font-size: calc(16/14 * 1em);
 }
 
 .pro-ul li {
@@ -215,6 +217,7 @@
 
 .pro-wr.second {
   --pd-content: 0.8em;
+  background-color: #FCFCFD;
 }
 
 .pro-side {
