@@ -17,6 +17,9 @@ body.page-search {
 
 .sear {
   &-map {
+    @include max($mobile){
+      height: 30vh;
+    }
     .inner {
       position: relative;
       height: 100%;
@@ -142,6 +145,9 @@ body.page-search {
       @include max($mobile) {
         width: 100%;
         flex: unset;
+        position: sticky;
+        top: var(--mb-size-hd-sticky);
+        z-index: 5;
       }
     }
 
@@ -417,7 +423,7 @@ body.page-search {
       width: 80%;
     }
   }
-
+  
   .pro-item.col-6 .pro-bner-name {
     @include fz-24;
   }

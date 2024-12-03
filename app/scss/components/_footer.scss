@@ -206,7 +206,7 @@
           }
 
           a {
-            padding: 0 0.4rem;
+            padding: 0 0.6rem;
             font-weight: 400;
             @include max(500px) {
               font-size: 1.2rem;
@@ -278,4 +278,10 @@ body.page-result {
       }
     }
   }
+}
+
+
+.ft .social-link{
+  width: 3.2rem;
+  height: 3.2rem;
 }
