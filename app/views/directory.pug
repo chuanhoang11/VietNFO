@@ -1,0 +1,108 @@
+extends layout/layout
+
+block vars
+   -title = 'Directory'
+   -bodyClass = 'page-dir'
+
+block container 
+   +breadCrumb(["Luật sư Việt"])
+   section.sec-home-hero 
+      .home-hero.ss-pd
+         .container 
+            .home-hero 
+               .home-hero-tags 
+                  span.home-hero-tag Sponsored
+               .home-hero-left
+                  .bg   
+                     +img("hero-dec.png")
+                  .home-hero-ctn    
+                     h3.home-hero-tt Trải nghiệm xứng tầm
+                     p.home-hero-des Nhà phát triển bất động sản hàng hiệu
+                     .home-hero-bot 
+                        +Btn("Khám phá ngay","")
+                        .social 
+                           .social-list 
+                              a(href="").social-link 
+                                 +img("ic-fb.svg") 
+                              a(href="").social-link 
+                                 +img("ic-yt.svg") 
+                              a(href="").social-link 
+                                 +img("ic-ins.svg") 
+                              a(href="").social-link 
+                                 +img("ic-x.svg")
+               .home-hero-right
+                  +img("hero-img.jpg")
+   section.sec-direc-data 
+      .direc-data.ss-pd
+         .container 
+            .head-sc.mb-48
+               +title("Văn phòng luật sư Việt tại Georgia", "Directory văn phòng luật sư Việt", "dcor")
+            .direc-table-wrapper 
+               .sear-form 
+                  form(action="")
+                     .b-form-gr
+                        .form-list.row 
+                           .col.form-ip.col-search 
+                              .b-ip-search
+                                 span.icon
+                                    +img("icon-search.svg")
+                                 span.icon-remove 
+                                    i.fa-light.fa-xmark.fw-7
+                                 input(type="search" placeholder="Marietta")
+                           .col.col-sl-md
+                              .b-ip-select
+                                 .selectCus
+                                    .selectCusValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Lĩnh vực
+                                    .selectCusOptions
+                                       label.selectCusAll 
+                                          input(type="checkbox")
+                                          span.txt Tai nạn xe
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Gia đình
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Di trú
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Lĩnh vực khác
+                                       .selectCusApply Áp dụng
+                           .col.col-btn
+                              +Btn("Save search")
+               .direc-table 
+                  .table-container
+                     .table-header
+                        .header-cell 
+                           |Tên văn phòng
+                           +img("arrow-table.svg")
+                        .header-cell 
+                           |Lĩnh vực hoạt động
+                           +img("arrow-table.svg")
+                        .header-cell Email
+                        .header-cell Phone
+                        .header-cell Address
+                     .table-row
+                        .cell(data-text="Tên văn phòng")
+                           a(href="#") ABC lawyer firm
+                           +img("arrow-table-cl.svg")
+                        .cell(data-text="Lĩnh vực hoạt động")
+                           span.des 
+                              | Tai nạn xe cộ, di trú, li hôn,
+                              strong +5
+                        .cell(data-text="Email") olivia@untitled.com
+                        .cell(data-text="Phone") 0123456789
+                        .cell(data-text="Address") 139 Triumph Ave, Ste. 81, Dallas, TX 75241
+                     each val,index in Array(6)
+                        .table-row
+                           .cell(data-text="Tên văn phòng")
+                              a(href="#") ABC lawyer firm
+                              +img("arrow-table-cl.svg")
+                           .cell(data-text="Lĩnh vực hoạt động") Li hôn, nhà đất
+                           .cell(data-text="Email") olivia@untitled.com
+                           .cell(data-text="Phone") 0123456789
+                           .cell(data-text="Address") 139 Triumph Rd, Dallas, TX 75241
+

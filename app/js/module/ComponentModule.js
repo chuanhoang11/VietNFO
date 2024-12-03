@@ -347,4 +347,42 @@ export default function ComponentModule() {
       }
     });
   }
+
+  //  JS Table
+
+  $(document).ready(function() {
+    function applyResponsiveCollapse() {
+      if ($(window).width() <= 600) {
+        $('.table-row').each(function() {
+          if (!$(this).find('.cell').first().hasClass('cl-head')) {
+            const firstCell = $(this).find('.cell').first();
+            firstCell.addClass('cl-head');
+            const otherCells = $(this).find('.cell').not(':first');
+            otherCells.wrapAll('<div class="cl-body"></div>');
+          }
+        });
+      } else {
+        // Xóa các class khi màn hình lớn hơn 600px
+        $('.cl-head').removeClass('cl-head');
+        $('.cl-body').children().unwrap();
+        $('.table-row').removeClass('active'); // Remove 'active' class
+      }
+    }
+
+    applyResponsiveCollapse(); // Gọi hàm khi load trang
+
+    $(window).resize(function() {
+      applyResponsiveCollapse(); // Gọi hàm khi thay đổi kích thước cửa sổ
+    });
+
+    // Toggle collapse-body khi nhấn vào collapse-head
+    $(document).on('click', '.cl-head', function() {
+      const $row = $(this).closest('.table-row'); // Lấy table-row chứa collapse-head
+      $row.toggleClass('active'); // Thêm/loại bỏ class active
+
+      // Toggle collapse-body
+      $(this).next('.cl-body').slideToggle();
+    });
+  });
+  
 }

@@ -67,6 +67,7 @@ export default function Select2Module() {
       );
       const applyButton = container.querySelector(".selectCusApply");
       const selectCusValueTxt = container.querySelector(".selectCusValue .txt");
+      const selectCusValueTxtFirst = selectCusValueTxt.innerText;
       const hiddenInput = container.querySelector(
         '.selectCusValue input[type="text"]'
       );
@@ -120,7 +121,7 @@ export default function Select2Module() {
 
           selectCusValueTxt.innerText = selectedOptions.length
             ? selectedOptions.join(", ")
-            : "Loại việc làm";
+            : selectCusValueTxtFirst;
           hiddenInput.value = selectedOptions.join(", ");
 
           // Ẩn menu sau khi áp dụng
@@ -140,6 +141,7 @@ export default function Select2Module() {
       const selectTwoValueTxt = selectTwoContainer.querySelector(
         ".selectTwoValue .txt"
       );
+      const selectTwoValueTxtFirst = selectTwoValueTxt.innerText
       const hiddenInput = selectTwoContainer.querySelector(
         '.selectTwoValue input[type="text"]'
       );
@@ -182,7 +184,7 @@ export default function Select2Module() {
           const finalValue = Object.values(selectedValues).join(" - ");
 
           // Cập nhật giá trị hiển thị và input ẩn
-          selectTwoValueTxt.innerText = finalValue || "Loại việc làm";
+          selectTwoValueTxt.innerText = finalValue || selectTwoValueTxtFirst;
           hiddenInput.value = finalValue;
 
           // Ẩn menu sau khi áp dụng
