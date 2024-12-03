@@ -1,11 +1,11 @@
 extends layout/layout
 
 block vars
-   -title = 'Directory'
+   -title = 'Directory Thợ Việt'
    -bodyClass = 'page-dir'
 
 block container 
-   +breadCrumb(["Luật sư Việt"])
+   +breadCrumb(["Thợ nhà - vườn người Việt"])
    section.sec-home-hero 
       .home-hero.ss-pd
          .container 
@@ -36,7 +36,7 @@ block container
       .direc-data.ss-pd
          .container 
             .head-sc.mb-48
-               +title("Văn phòng luật sư Việt tại Georgia", "Directory văn phòng luật sư Việt", "dcor")
+               +title("Thợ sửa nhà - làm vườn người Việt", "Directory handymen người Việt", "dcor")
             .direc-table-wrapper 
                .sear-form 
                   form(action="")
@@ -48,7 +48,7 @@ block container
                                     +img("icon-search.svg")
                                  span.icon-remove 
                                     i.fa-light.fa-xmark.fw-7
-                                 input(type="search" placeholder="Marietta")
+                                 input(type="search" placeholder="Enter the firm name or expertise")
                            .col.col-sl-md
                               .b-ip-select
                                  .selectCus
@@ -56,11 +56,11 @@ block container
                                        input(type="text", hidden)
                                        span.icon-arrow 
                                           i.fa-light.fa-chevron-down
-                                       .txt Lĩnh vực
+                                       .txt Dịch vụ
                                     .selectCusOptions
                                        label.selectCusAll 
                                           input(type="checkbox")
-                                          span.txt Tai nạn xe
+                                          span.txt Sửa nhà
                                        label.selectCusOption 
                                           input(type="checkbox")
                                           span.txt Gia đình
@@ -77,31 +77,28 @@ block container
                   .table-container
                      .table-header
                         .header-cell 
-                           |Tên văn phòng
+                           |Tên thợ
                            +img("arrow-table.svg")
                         .header-cell 
-                           |Lĩnh vực hoạt động
+                           |Service offering
                            +img("arrow-table.svg")
                         .header-cell Email
                         .header-cell Phone
                         .header-cell Address
                      .table-row
                         .cell(data-text="Tên văn phòng")
-                           a(href="#") ABC lawyer firm
+                           a(href="#") Tu Nguyen
                            +img("arrow-table-cl.svg")
-                        .cell(data-text="Lĩnh vực hoạt động")
-                           span.des 
-                              | Tai nạn xe cộ, di trú, li hôn,
-                              strong +5
+                        .cell(data-text="Lĩnh vực hoạt động") sửa nhà, làm vườn
                         .cell(data-text="Email") olivia@untitled.com
                         .cell(data-text="Phone") 0123456789
                         .cell(data-text="Address") 139 Triumph Ave, Ste. 81, Dallas, TX 75241
                      each val,index in Array(6)
                         .table-row
                            .cell(data-text="Tên văn phòng")
-                              a(href="#") ABC lawyer firm
+                              a(href="#") Tu Nguyen
                               +img("arrow-table-cl.svg")
-                           .cell(data-text="Lĩnh vực hoạt động") Li hôn, nhà đất
+                           .cell(data-text="Lĩnh vực hoạt động") sửa nhà, làm vườn
                            .cell(data-text="Email") olivia@untitled.com
                            .cell(data-text="Phone") 0123456789
                            .cell(data-text="Address") 139 Triumph Rd, Dallas, TX 75241
@@ -123,16 +120,11 @@ block container
                            option(value="3") Bất động sản
                            option(value="3") Việc nhà
                      .form-ip.col.per3  
-                        p.text Business name
-                        input(type="text" placeholder="Enter your business name")
-                     .form-ip.col.per3.sl-multi 
-                        p.text Expertise
-                        select(name="" class="js-select2" multiple="multiple" data-placeholder="Expertise")
-                           option(value="") Expertise 
-                           option(value="01" data-badge="") Di trú 
-                           option(value="02" data-badge="") Tai nạn xe cộ 
-                           option(value="03" data-badge="") Li hôn
-                           option(value="04" data-badge="") Nhà đất
+                        p.text Your name
+                        input(type="text" placeholder="Enter your name")
+                     .form-ip.col.per3  
+                        p.text Service offering
+                        input(type="text" placeholder="Enter your expertise (e.g., điện, nước, làm vườn)")
                      .form-ip.col.per3  
                         p.text Email
                         input(type="text" placeholder="Enter your email")
