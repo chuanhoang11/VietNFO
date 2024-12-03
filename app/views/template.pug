@@ -34,29 +34,7 @@ block container
    section.sec-home-hero
       .home-hero.ss-pd-t
          .container
-            .home-hero
-               .home-hero-tags
-                  span.home-hero-tag Sponsored
-               .home-hero-left
-                  .bg
-                     +img("hero-dec.png")
-                  .home-hero-ctn
-                     h3.home-hero-tt Trải nghiệm xứng tầm
-                     p.home-hero-des Nhà phát triển bất động sản hàng hiệu
-                     .home-hero-bot 
-                        +Btn("Khám phá ngay","")
-                        .social 
-                           .social-list 
-                              a(href="").social-link 
-                                 +img("ic-fb.svg") 
-                              a(href="").social-link 
-                                 +img("ic-yt.svg") 
-                              a(href="").social-link 
-                                 +img("ic-ins.svg")
-                              a(href="").social-link 
-                                 +img("ic-x.svg")
-               .home-hero-right
-                  +img("hero-img.jpg")
+            +HomeHero()
    section.sec-pro 
       .pro.ss-pd.pro-slider
          .container 
@@ -113,33 +91,28 @@ block container
                               price: "25 - 40",
                               views: "500"
                            },
+                           {
+                              name: "Tuyển nhân viên cắt tóc",
+                              time: "59 phút trước",
+                              type: "Văn phòng",
+                              name_location: "United Lawyer Firm",
+                              name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
+                              price: "25 - 40",
+                              views: "500"
+                           },
+                           {
+                              name: "Tuyển nhân viên cắt tóc",
+                              time: "59 phút trước",
+                              type: "Văn phòng",
+                              name_location: "United Lawyer Firm",
+                              name_address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067",
+                              price: "25 - 40",
+                              views: "500"
+                           },
                         ]
                      each item in proArrSecond
                         .swiper-slide.col.col-4
-                           .pro-wr.second
-                              .pro-content 
-                                 .pro-flex 
-                                    .pro-time #{item.time}
-                                    .pro-type #{item.type}
-                                 h3.pro-name #{item.name}
-                                 ul.pro-ul 
-                                    li 
-                                       .pro-li
-                                          +img('ic-pro-1.svg')
-                                          span.txt #{item.name_location}
-                                    li 
-                                       .pro-li
-                                          +img('ic-pro-2.svg')
-                                          span.txt #{item.name_address}
-                                 .pro-flex
-                                    .pro-li
-                                       +img('ic-pro-3.svg')
-                                       span.txt 
-                                          span(style="font-size: 1.1em").c-pri.fw-6 #{item.price}
-                                          span /hour
-                                    .pro-li
-                                       +img('ic-pro-4.svg')
-                                       span.txt #{item.views} Views
+                           +proItemSecond(item)
                      .swiper-slide.col.col-4
                         +Btn("Xem tất cả", "", "trans m-mid", true)
    section.sec-home-number 
@@ -251,7 +224,7 @@ block container
                               income: "$1,000,000",
                               address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
                            },
-                              {
+                           {
                               img: "pro-6.jpg",
                               time: "2 ngày trước",
                               type: "Tiệm nail",
@@ -279,43 +252,39 @@ block container
                               income: "$1,000,000",
                               address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
                            },
+                           {
+                              img: "pro-5.jpg",
+                              time: "2 ngày trước",
+                              type: "Tiệm nail",
+                              price: "$500,000",
+                              note: [
+                                 "6 tables",
+                                 "6 chairs",
+                                 "11,300 sqft"
+                              ],
+                              rent: "$1,500",
+                              income: "$1,000,000",
+                              address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                           },
+                           {
+                              img: "pro-6.jpg",
+                              time: "2 ngày trước",
+                              type: "Tiệm nail",
+                              price: "$500,000",
+                              note: [
+                                 "6 tables",
+                                 "6 chairs",
+                                 "11,300 sqft"
+                              ],
+                              rent: "$1,500",
+                              income: "$1,000,000",
+                              address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                           },
+                           
                         ]
                      each item in proArr
                         .swiper-slide.col.col-4
-                           .pro-wr 
-                              .pro-img 
-                                 .pro-time #{item.time}
-                                 .pro-type #{item.type}
-                                 a(href="#").inner 
-                                    +img(item.img)
-                              .pro-content
-                                 if item.tag
-                                    .pro-top 
-                                       h3.pro-name #{item.price}
-                                       if item.tag
-                                          .pro-tag #{item.tag}
-                                 else 
-                                    h3.pro-name #{item.price}
-                                 if item.name
-                                    h3.pro-name #{item.name}
-                                 if item.note.length > 0 
-                                    .pro-note
-                                       each note in item.note
-                                          .pro-note-item 
-                                             span.txt.fw-5.c-txt-2 #{note}
-                                 if item.rent || item.income
-                                    .pro-note
-                                       if item.rent
-                                          .pro-note-item 
-                                             span.txt.fw-5 Rent: 
-                                                span.fw-6.c-txt-3 #{item.rent}
-                                                span(style="font-size: .8em") /month
-                                       if item.income
-                                          .pro-note-item 
-                                             span.txt.fw-5 Income: 
-                                                span.fw-6.c-txt-3 #{item.income}
-                                                span(style="font-size: .8em") /year
-                                 .pro-des #{item.address}
+                           +proItem(item)
                      .swiper-slide.col.col-4 
                         +Btn("Xem tất cả", "", "trans m-mid", true)
    section.sec-home-solve 
@@ -359,29 +328,7 @@ block container
    section.sec-home-hero
       .home-hero.ss-pd-t
          .container
-            .home-hero
-               .home-hero-tags
-                  span.home-hero-tag Sponsored
-               .home-hero-left
-                  .bg
-                     +img("hero-dec.png")
-                  .home-hero-ctn
-                     h3.home-hero-tt Trải nghiệm xứng tầm
-                     p.home-hero-des Nhà phát triển bất động sản hàng hiệu
-                     .home-hero-bot 
-                        +Btn("Khám phá ngay","")
-                        .social 
-                           .social-list 
-                              a(href="").social-link 
-                                 +img("ic-fb.svg") 
-                              a(href="").social-link 
-                                 +img("ic-yt.svg") 
-                              a(href="").social-link 
-                                 +img("ic-ins.svg")
-                              a(href="").social-link 
-                                 +img("ic-x.svg")
-               .home-hero-right
-                  +img("hero-img.jpg")
+            +HomeHero()
    section.sec-pro 
       .pro.ss-pd.pro-slider-third
          .container
@@ -390,14 +337,13 @@ block container
                +SwiperControl()
             .mb-24 
                .pro-select 
-                  span.txt Sắp sếp
                   .b-ip-select
                      .selectCus
                         .selectCusValue
                            input(type="text", hidden)
+                           .txt Loại sự kiện
                            span.icon-arrow 
                               i.fa-light.fa-chevron-down
-                           .txt Loại sự kiện
                         .selectCusOptions
                            label.selectCusAll 
                               input(type="checkbox")
@@ -415,31 +361,32 @@ block container
             .pro-side.row 
                .pro-left.col 
                   .pro-bar 
-                     .pro-calendar.selectJS
-                        .pro-calendar-head.selectJSHead
-                           span.pro-li 
-                              +img('ic-calendar-white.svg')
-                              span.txt.selectJSTxt 
-                           i.fas.fa-angle-down
-                           -
-                              const months = [
-                                    { name: "May 2024", active: false },
-                                    { name: "June 2024", active: false },
-                                    { name: "July 2024", active: false },
-                                    { name: "August 2024", active: false },
-                                    { name: "September 2024", active: false },
-                                    { name: "October 2024", active: false },
-                                    { name: "November 2024", active: true },
-                                    { name: "December 2024", active: false },
-                                    { name: "January 2025", active: false },
-                                    { name: "February 2025", active: false },
-                                    { name: "March 2025", active: false },
-                                    { name: "April 2025", active: false },
-                                    { name: "May 2025", active: false }
-                                    ];
-                        ul.selectJSBody 
-                           each li in months
-                              li.selectJSItem(class=li.active ? 'active' : '') #{li.name}
+                     .pro-calendar-out
+                        .pro-calendar.selectJS
+                           .pro-calendar-head.selectJSHead
+                              span.pro-li 
+                                 +img('ic-calendar-white.svg')
+                                 span.txt.selectJSTxt 
+                              i.fas.fa-angle-down
+                              -
+                                 const months = [
+                                       { name: "May 2024", active: false },
+                                       { name: "June 2024", active: false },
+                                       { name: "July 2024", active: false },
+                                       { name: "August 2024", active: false },
+                                       { name: "September 2024", active: false },
+                                       { name: "October 2024", active: false },
+                                       { name: "November 2024", active: true },
+                                       { name: "December 2024", active: false },
+                                       { name: "January 2025", active: false },
+                                       { name: "February 2025", active: false },
+                                       { name: "March 2025", active: false },
+                                       { name: "April 2025", active: false },
+                                       { name: "May 2025", active: false }
+                                       ];
+                           ul.selectJSBody 
+                              each li in months
+                                 li.selectJSItem(class=li.active ? 'active' : '') #{li.name}
                      .--hide-mobile
                         +Btn("Xem tất cả", "", "trans full", true)
                      .pro-qc 
@@ -449,7 +396,7 @@ block container
                      .swiper-container 
                         .swiper.rows
                            .swiper-wrapper 
-                              each item in Array(1)
+                              each item in Array(2)
                                  .swiper-slide.col
                                        .pro-list.row 
                                           - 
@@ -477,6 +424,14 @@ block container
                                                    address: "9185 Old Southwick Pass, Johns Creek, GA 30067 (Nhà thờ Việt Nam)",
                                                    time: "Sept 14 – 16, 2024",
                                                    views: "1000"
+                                                },
+                                                {
+                                                   img: "pro-1-4.jpg",
+                                                   name: "Gặp mặt đồng hương Đà Nẵng",
+                                                   des: "Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai)",
+                                                   address: "9185 Old Southwick Pass, Johns Creek, GA 30067 (Nhà thờ Việt Nam)",
+                                                   time: "Sept 14 – 16, 2024",
+                                                   views: "1000"
                                                 }
                                              ]
                                           each item, index in proArrFive
@@ -485,30 +440,7 @@ block container
                                                    .pro-qc 
                                                       +img('pro-qc.jpg')
                                              .pro-item.col.col-third
-                                                .pro-wr.third
-                                                   .pro-img 
-                                                      .inner 
-                                                         +img(item.img)
-                                                   .pro-content 
-                                                      h3.pro-name #{item.name}
-                                                      p.pro-des #{item.des}
-                                                      ul.pro-ul 
-                                                         li 
-                                                            .pro-li.fw-5
-                                                               +img('ic-pro-2.svg')
-                                                               span.txt #{item.address}
-                                                         li 
-                                                            .pro-note 
-                                                               .pro-note-item 
-                                                                  .pro-li.fw-5
-                                                                     +img('ic-pro-6.svg')
-                                                                     span.txt #{item.time}
-                                                               .pro-note-item 
-                                                                  .pro-li.fw-5
-                                                                     +img('ic-pro-4.svg')
-                                                                     span.txt #{item.views}
-                     .box-btn
-                        +Btn("Xem tất cả", "", "trans m-mid", true)   
+                                                +proItemThird(item)
             .pro-foot.--hide-desk 
                +Btn("Xem tất cả", "", "trans m-mid", true)
    section.sec-pro 
@@ -581,7 +513,7 @@ block container
                            {
                               img: "pro-12.jpg",
                               time: "2 ngày trước",
-                              type: "Thương mại",
+                              type: "Nhà ở",
                               price: "$1,000",
                               note: [
                                  {
@@ -601,7 +533,47 @@ block container
                            {
                               img: "pro-10.jpg",
                               time: "2 ngày trước",
-                              type: "Thương mại",
+                              type: "Nhà ở",
+                              price: "$1,000",
+                              note: [
+                                 {
+                                    name: "2 bed",
+                                    icon: "ic-pro-bed.svg"
+                                 },
+                                 {
+                                    name: "2 ba",
+                                    icon: "ic-pro-shower.svg"
+                                 },
+                                 {
+                                    name: "11,300 sqft"
+                                 },
+                              ],
+                              address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                           },
+                           {
+                              img: "pro-11.jpg",
+                              time: "2 ngày trước",
+                              type: "Nhà ở",
+                              price: "$1,000",
+                              note: [
+                                 {
+                                    name: "2 bed",
+                                    icon: "ic-pro-bed.svg"
+                                 },
+                                 {
+                                    name: "2 ba",
+                                    icon: "ic-pro-shower.svg"
+                                 },
+                                 {
+                                    name: "11,300 sqft"
+                                 },
+                              ],
+                              address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                           },
+                           {
+                              img: "pro-12.jpg",
+                              time: "2 ngày trước",
+                              type: "Nhà ở",
                               price: "$1,000",
                               note: [
                                  {
@@ -621,29 +593,7 @@ block container
                         ]
                      each item in proArrThird
                         .swiper-slide.col.col-4
-                           .pro-wr
-                              .pro-img 
-                                 .pro-time #{item.time}
-                                 .pro-type #{item.type}
-                                 a(href="#").inner 
-                                    +img(item.img)
-                              .pro-content
-                                 if item.price
-                                    h3.pro-name #{item.price}
-                                       span(style="font-size: .8em").fw-4 /month
-                                 if item.name
-                                    h3.pro-name #{item.name}
-                                 if item.note.length > 0 
-                                    .pro-note
-                                       each note in item.note
-                                          .pro-note-item 
-                                             if(note.icon)
-                                                .pro-li.fw-6.c-txt-2 
-                                                   +img(note.icon)
-                                                   span.txt #{note.name}
-                                             else 
-                                                span.txt.fw-5.c-txt-2 #{note.name}
-                                 .pro-des #{item.address}
+                           +proItem2(item)
                      .swiper-slide.col.col-4 
                         +Btn("Xem tất cả", "", "trans m-mid", true)
    section.sec-home-hero
@@ -725,7 +675,7 @@ block container
                               img: "pro-15.jpg",
                               time: "2 ngày trước",
                               type: "Thương mại",
-                              price: "$231,000",
+                              name: "ABC Plaza",
                               note: [
                                  {
                                     name: "$2,500,000",
@@ -742,8 +692,8 @@ block container
                            {
                               img: "pro-18.jpg",
                               time: "2 ngày trước",
-                              type: "Thương mại",
-                              price: "$1,000",
+                              type: "Nhà ở",
+                              price: "$211,000",
                               note: [
                                  {
                                     name: "2 bed",
@@ -762,8 +712,48 @@ block container
                            {
                               img: "pro-16.jpg",
                               time: "2 ngày trước",
-                              type: "Thương mại",
+                              type: "Nhà ở",
                               price: "$341,000",
+                              note: [
+                                 {
+                                    name: "2 bed",
+                                    icon: "ic-pro-bed.svg"
+                                 },
+                                 {
+                                    name: "2 ba",
+                                    icon: "ic-pro-shower.svg"
+                                 },
+                                 {
+                                    name: "11,300 sqft"
+                                 },
+                              ],
+                              address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                           },
+                            {
+                              img: "pro-17.jpg",
+                              time: "2 ngày trước",
+                              type: "Nhà ở",
+                              price: "$341,000",
+                              note: [
+                                 {
+                                    name: "2 bed",
+                                    icon: "ic-pro-bed.svg"
+                                 },
+                                 {
+                                    name: "2 ba",
+                                    icon: "ic-pro-shower.svg"
+                                 },
+                                 {
+                                    name: "11,300 sqft"
+                                 },
+                              ],
+                              address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                           },
+                           {
+                              img: "pro-18.jpg",
+                              time: "2 ngày trước",
+                              type: "Nhà ở",
+                              price: "$211,000",
                               note: [
                                  {
                                     name: "2 bed",
@@ -782,28 +772,7 @@ block container
                         ]
                      each item in proArrFour
                         .swiper-slide.col.col-4
-                           .pro-wr
-                              .pro-img 
-                                 .pro-time #{item.time}
-                                 .pro-type #{item.type}
-                                 a(href="#").inner 
-                                    +img(item.img)
-                              .pro-content
-                                 if item.price
-                                    h3.pro-name #{item.price}
-                                 if item.name
-                                    h3.pro-name #{item.name}
-                                 if item.note.length > 0 
-                                    .pro-note
-                                       each note in item.note
-                                          .pro-note-item 
-                                             if(note.icon)
-                                                .pro-li.fw-5.c-txt-2 
-                                                   +img(note.icon)
-                                                   span.txt #{note.name}
-                                             else 
-                                                span.txt.fw-5.c-txt-2 #{note.name}
-                                 .pro-des #{item.address}
+                           +proItem3(item)
                      .swiper-slide.col.col-4 
                         +Btn("Xem tất cả", "", "trans m-mid", true)
    section.sec-home-hero
@@ -841,46 +810,14 @@ block container
             .swiper-container 
                .swiper.rows
                   .swiper-wrapper
-                     each item in Array(1)
+                     each item in Array(2)
                         .swiper-slide.col
                            .pro-grid 
                               .pro-grid-item 
-                                 .pro-bner 
-                                    .pro-bner-tag Sponsored
-                                    .pro-bner-dc
-                                       +img('pro-bner-dc.png')
-                                    .pro-bner-img
-                                       +img('pro-bner-img.jpg')
-                                    .pro-bner-content 
-                                       h3.pro-bner-name 
-                                          |Chăm sóc
-                                          br
-                                          |người lớn tuổi
-                                       p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
-                                       .pro-btn  
-                                          span.txt Khám phá ngay
-                              each item in Array(5)
+                                 +proBanner()
+                              each item in Array(6)
                                  .pro-grid-item 
-                                    .pro-wr.four 
-                                       +img("ic-loa.svg")
-                                       .pro-content 
-                                          h3.pro-name Chăm sóc người già - Marietta, GA 30062
-                                          .pro-des Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...
-                                          .pro-note 
-                                             .pro-note-item 
-                                                .pro-li.fw-6.c-txt-2 
-                                                   +img('ic-pro-2.svg')
-                                                   span.txt Marietta 30062
-                                             .pro-note-item 
-                                                .pro-li.fw-6.c-txt-2 
-                                                   +img('ic-pro-7.svg')
-                                                   span.txt 2 ngày trước
-                                             .pro-note-item 
-                                                .pro-li.fw-6.c-txt-2 
-                                                   +img('ic-pro-4.svg')
-                                                   span.txt 1000
-                              .pro-grid-item 
-                                 +Btn("Xem tất cả", "", "trans m-mid", true)                 
+                                    +proItemFourth(item)
             .pro-foot.--hide-desk 
                +Btn("Xem tất cả", "", "trans m-mid", true)
    section.sec-pro
@@ -911,120 +848,23 @@ block container
                .pro-col.col 
                   .pro-list.row 
                      .pro-item.col 
-                        .pro-wr.five 
-                           .pro-out
-                              .inner
-                                 +img('pro-out.jpg')
-                           .pro-content 
-                              .pro-li 
-                                 +img('ic-pro-4.svg')
-                                 span.txt 1000
-                              h3.pro-name Bộ 5000 câu hỏi trắc nghiệm về Nail - Cẩm nang
-                              p.pro-des Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai, TP Hà Nội) với nhiều hoạt động hấp dẫn; là một trong những sự kiện quan trọng của quận Hoàng Mai hướng tới chào mừng kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10-10-1954 / 10-10-2024). Hội chợ được tổ chức nhằm thúc đẩy hoạt động xúc tiến thương mại, giao lưu kinh tế, tạo điểm sinh hoạt văn hóa, vui chơi giải trí, mua sắm cho nhân dân trong dịp kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10/10).
-                              .pro-control 
-                                 a.pro-btn(href="#")
-                                    span.txt Xem chi tiết
-                                 a.pro-btn(href="#").second
-                                    +img('ic-dl.svg')
-                                    span.txt Tải xuống
+                        +proItemFive_First()
                      .pro-item.col 
-                        .pro-wr.five 
-                           .pro-content 
-                              .pro-li 
-                                 +img('ic-pro-4.svg')
-                                 span.txt 1000
-                              h3.pro-name Bộ 5000 câu hỏi trắc nghiệm về Nail - Cẩm nang
-                              p.pro-des Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai, TP Hà Nội) với nhiều hoạt động hấp dẫn; là một trong những sự kiện quan trọng của quận Hoàng Mai hướng tới chào mừng kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10-10-1954 / 10-10-2024). Hội chợ được tổ chức nhằm thúc đẩy hoạt động xúc tiến thương mại, giao lưu kinh tế, tạo điểm sinh hoạt văn hóa, vui chơi giải trí, mua sắm cho nhân dân trong dịp kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10/10).
-                              .pro-control 
-                                 a.pro-btn(href="#")
-                                    span.txt Xem chi tiết
-                                 a.pro-btn(href="#").second
-                                    +img('ic-dl.svg')
-                                    span.txt Tải xuống
+                        +proItemFive()
                      .pro-item.col 
-                        .pro-wr.five 
-                           .pro-content 
-                              .pro-li 
-                                 +img('ic-pro-4.svg')
-                                 span.txt 1000
-                              h3.pro-name Bộ 5000 câu hỏi trắc nghiệm về Nail - Cẩm nang
-                              p.pro-des Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai, TP Hà Nội) với nhiều hoạt động hấp dẫn; là một trong những sự kiện quan trọng của quận Hoàng Mai hướng tới chào mừng kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10-10-1954 / 10-10-2024). Hội chợ được tổ chức nhằm thúc đẩy hoạt động xúc tiến thương mại, giao lưu kinh tế, tạo điểm sinh hoạt văn hóa, vui chơi giải trí, mua sắm cho nhân dân trong dịp kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10/10).
-                              .pro-control 
-                                 a.pro-btn(href="#")
-                                    span.txt Xem chi tiết
-                                 a.pro-btn(href="#").second
-                                    +img('ic-dl.svg')
-                                    span.txt Tải xuống
+                        +proItemFive()
                .pro-col.col
                   .pro-list.row 
                      .pro-item.col 
-                        .pro-wr.five 
-                           .pro-content 
-                              .pro-li 
-                                 +img('ic-pro-4.svg')
-                                 span.txt 1000
-                              h3.pro-name Bộ 5000 câu hỏi về Nail - Cẩm nang
-                              p.pro-des Bộ các câu hỏi chuyên sâu phục vụ bài thi xét duyệt thi chứng chỉ làm móng
-                              .pro-control 
-                                 a.pro-btn(href="#")
-                                    span.txt Xem chi tiết
-                                 a.pro-btn(href="#").second
-                                    +img('ic-dl.svg')
-                                    span.txt Tải xuống
+                        +proItemFive()
                      .pro-item.col 
-                        .pro-wr.five 
-                           .pro-content 
-                              .pro-li 
-                                 +img('ic-pro-4.svg')
-                                 span.txt 1000
-                              h3.pro-name Bộ 5000 câu hỏi về Nail - Cẩm nang
-                              p.pro-des Bộ các câu hỏi chuyên sâu phục vụ bài thi xét duyệt thi chứng chỉ làm móng
-                              .pro-control 
-                                 a.pro-btn(href="#")
-                                    span.txt Xem chi tiết
-                                 a.pro-btn(href="#").second
-                                    +img('ic-dl.svg')
-                                    span.txt Tải xuống
+                        +proItemFive()
                      .pro-item.col 
-                        .pro-wr.five 
-                           .pro-content 
-                              .pro-li 
-                                 +img('ic-pro-4.svg')
-                                 span.txt 1000
-                              h3.pro-name Bộ 5000 câu hỏi về Nail - Cẩm nang
-                              p.pro-des Bộ các câu hỏi chuyên sâu phục vụ bài thi xét duyệt thi chứng chỉ làm móng
-                              .pro-control 
-                                 a.pro-btn(href="#")
-                                    span.txt Xem chi tiết
-                                 a.pro-btn(href="#").second
-                                    +img('ic-dl.svg')
-                                    span.txt Tải xuống
+                        +proItemFive()
             .pro-foot 
                +Btn("Xem tất cả", "", "trans m-mid", true)
    section.sec-home-hero
       .home-hero.ss-pd.--bg
          .container
-            .home-hero
-               .home-hero-tags
-                  span.home-hero-tag Sponsored
-               .home-hero-left
-                  .bg
-                     +img("hero-dec.png")
-                  .home-hero-ctn
-                     h3.home-hero-tt Trải nghiệm xứng tầm
-                     p.home-hero-des Nhà phát triển bất động sản hàng hiệu
-                     .home-hero-bot 
-                        +Btn("Khám phá ngay","")
-                        .social 
-                           .social-list 
-                              a(href="").social-link 
-                                 +img("ft-icon (1).svg") 
-                              a(href="").social-link 
-                                 +img("ft-icon (2).svg") 
-                              a(href="").social-link 
-                                 +img("ft-icon (3).svg")
-                              a(href="").social-link 
-                                 +img("ft-icon (4).svg")
-               .home-hero-right
-                  +img("hero-img.jpg")
+            +HomeHero()
                

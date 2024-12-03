@@ -407,3 +407,223 @@ mixin footer
                   |  Designed by Qixtech - Web Design & Digital Marketing
                span.t-text 
                   | Copyright © 2024. VietInfo LLC. All Right Reserved. 
+mixin proItem(item)
+   .pro-wr 
+      .pro-img 
+         .pro-time #{item.time}
+         .pro-type #{item.type}
+         a(href="#").inner 
+            +img(item.img)
+      .pro-content
+         if item.tag
+            .pro-top 
+               h3.pro-name #{item.price}
+               if item.tag
+                  .pro-tag #{item.tag}
+         else 
+            h3.pro-name #{item.price}
+         if item.name
+            h3.pro-name #{item.name}
+         if item.note.length > 0 
+            .pro-note
+               each note in item.note
+                  .pro-note-item 
+                     span.txt.fw-5.c-txt-2 #{note}
+         if item.rent || item.income
+            .pro-note
+               if item.rent
+                  .pro-note-item 
+                     span.txt Rent: 
+                        span.fw-6.c-txt-3 #{item.rent}
+                        span(style="font-size: .8em") /month
+               if item.income
+                  .pro-note-item 
+                     span.txt Income: 
+                        span.fw-6.c-txt-3 #{item.income}
+                        span(style="font-size: .8em") /year
+         .pro-des #{item.address}
+mixin proItem2(item)
+   .pro-wr
+      .pro-img 
+         .pro-time #{item.time}
+         .pro-type #{item.type}
+         a(href="#").inner 
+            +img(item.img)
+      .pro-content
+         if item.price
+            h3.pro-name #{item.price}
+               span(style="font-size: .8em").fw-4 /month
+         if item.name
+            h3.pro-name #{item.name}
+         if item.note.length > 0 
+            .pro-note
+               each note in item.note
+                  .pro-note-item 
+                     if(note.icon)
+                        .pro-li.fw-5.c-txt-2 
+                           +img(note.icon)
+                           span.txt #{note.name}
+                     else 
+                        span.txt.fw-5.c-txt-2 #{note.name}
+                                 .pro-des #{item.address}
+mixin proItem3(item)
+   .pro-wr
+      .pro-img 
+         .pro-time #{item.time}
+         .pro-type #{item.type}
+         a(href="#").inner 
+            +img(item.img)
+      .pro-content
+         if item.price
+            h3.pro-name #{item.price}
+         if item.name
+            h3.pro-name #{item.name}
+         if item.note.length > 0 
+            .pro-note
+               each note in item.note
+                  .pro-note-item 
+                     if(note.icon)
+                        .pro-li.fw-5.c-txt-2 
+                           +img(note.icon)
+                           span.txt #{note.name}
+                     else 
+                        span.txt.fw-5.c-txt-2 #{note.name}
+         .pro-des #{item.address}
+mixin proItemSecond(item)
+   .pro-wr.second 
+      .pro-content 
+         .pro-flex 
+            .pro-time #{item.time}
+            .pro-type #{item.type}
+         h3.pro-name #{item.name}
+         ul.pro-ul 
+            li 
+               .pro-li
+                  +img('ic-pro-1.svg')
+                  span.txt #{item.name_location}
+            li 
+               .pro-li
+                  +img('ic-pro-2.svg')
+                  span.txt #{item.name_address}
+         .pro-flex
+            .pro-li
+               +img('ic-pro-3.svg')
+               span.txt 
+                  span(style="font-size: 1.1em").c-pri.fw-6 #{item.price}
+                  span /hour
+            .pro-li
+               +img('ic-pro-4.svg')
+               span.txt #{item.views} Views
+mixin proItemThird(item)
+   .pro-wr.third
+      .pro-img 
+         .inner 
+            +img(item.img)
+      .pro-content 
+         h3.pro-name #{item.name}
+         p.pro-des #{item.des}
+         ul.pro-ul 
+            li 
+               .pro-li.fw-5
+                  +img('ic-pro-2.svg')
+                  span.txt #{item.address}
+            li 
+               .pro-note 
+                  .pro-note-item 
+                     .pro-li.fw-5
+                        +img('ic-pro-6.svg')
+                        span.txt #{item.time}
+                  .pro-note-item 
+                     .pro-li.fw-5
+                        +img('ic-pro-4.svg')
+                        span.txt #{item.views}
+mixin proItemFourth(item)
+   .pro-wr.four 
+      +img("ic-loa.svg")
+      .pro-content 
+         h3.pro-name Chăm sóc người già - Marietta, GA 30062
+         .pro-des Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...
+         .pro-note 
+            .pro-note-item 
+               .pro-li.fw-6.c-txt-2 
+                  +img('ic-pro-2.svg')
+                  span.txt Marietta 30062
+            .pro-note-item 
+               .pro-li.fw-6.c-txt-2 
+                  +img('ic-pro-7.svg')
+                  span.txt 2 ngày trước
+            .pro-note-item 
+               .pro-li.fw-6.c-txt-2 
+                  +img('ic-pro-4.svg')
+                  span.txt 1000
+mixin proItemFive_First()
+   .pro-wr.five 
+      .pro-out
+         .inner
+            +img('pro-out.jpg')
+      .pro-content 
+         .pro-li 
+            +img('ic-pro-4.svg')
+            span.txt 1000
+         h3.pro-name Bộ 5000 câu hỏi trắc nghiệm về Nail - Cẩm nang
+         p.pro-des Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai, TP Hà Nội) với nhiều hoạt động hấp dẫn; là một trong những sự kiện quan trọng của quận Hoàng Mai hướng tới chào mừng kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10-10-1954 / 10-10-2024). Hội chợ được tổ chức nhằm thúc đẩy hoạt động xúc tiến thương mại, giao lưu kinh tế, tạo điểm sinh hoạt văn hóa, vui chơi giải trí, mua sắm cho nhân dân trong dịp kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10/10).
+         .pro-control 
+            a.pro-btn(href="#")
+               span.txt Xem chi tiết
+            a.pro-btn(href="#").second
+               +img('ic-dl.svg')
+               span.txt Tải xuống
+mixin proItemFive()
+   .pro-wr.five 
+      .pro-content 
+         .pro-li 
+            +img('ic-pro-4.svg')
+            span.txt 1000
+         h3.pro-name Bộ 5000 câu hỏi trắc nghiệm về Nail - Cẩm nang
+         p.pro-des Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai, TP Hà Nội) với nhiều hoạt động hấp dẫn; là một trong những sự kiện quan trọng của quận Hoàng Mai hướng tới chào mừng kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10-10-1954 / 10-10-2024). Hội chợ được tổ chức nhằm thúc đẩy hoạt động xúc tiến thương mại, giao lưu kinh tế, tạo điểm sinh hoạt văn hóa, vui chơi giải trí, mua sắm cho nhân dân trong dịp kỷ niệm 70 năm Ngày Giải phóng Thủ đô (10/10).
+         .pro-control 
+            a.pro-btn(href="#")
+               span.txt Xem chi tiết
+            a.pro-btn(href="#").second
+               +img('ic-dl.svg')
+               span.txt Tải xuống
+mixin proBanner()
+   .pro-bner 
+      .pro-bner-tag Sponsored
+      .pro-bner-dc
+         +img('pro-bner-dc.png')
+      .pro-bner-img
+         +img('pro-bner-img.jpg')
+      .pro-bner-content 
+         h3.pro-bner-name 
+            |Chăm sóc
+            br
+            |người lớn tuổi
+         p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
+         .pro-btn  
+            span.txt Khám phá ngay
+mixin HomeHero()
+   .home-hero
+      .home-hero-tags
+         span.home-hero-tag Sponsored
+      .home-hero-left
+         .bg
+            +img("hero-dec.png")
+         .home-hero-ctn
+            h3.home-hero-tt Trải nghiệm xứng tầm
+            p.home-hero-des Nhà phát triển bất động sản hàng hiệu
+            .home-hero-bot 
+               +Btn("Khám phá ngay","")
+               .social 
+                  .social-list 
+                     a(href="").social-link 
+                        +img("ft-icon (1).svg") 
+                     a(href="").social-link 
+                        +img("ft-icon (2).svg") 
+                     a(href="").social-link 
+                        +img("ft-icon (3).svg")
+                     a(href="").social-link 
+                        +img("ft-icon (4).svg")
+      .home-hero-right
+         +img("hero-img.jpg")
+

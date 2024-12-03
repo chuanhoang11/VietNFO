@@ -94,45 +94,9 @@ block container
                            each item, index in proArrSecond
                               if(index == 2)
                                  .pro-item.col.col-6
-                                    .pro-bner 
-                                       .pro-bner-tag Sponsored
-                                       .pro-bner-dc
-                                          +img('pro-bner-dc.png')
-                                       .pro-bner-img
-                                          +img('pro-bner-img.jpg')
-                                       .pro-bner-content 
-                                          h3.pro-bner-name 
-                                             |Chăm sóc
-                                             br
-                                             |người lớn tuổi
-                                          p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
-                                          .pro-btn 
-                                             span.txt Khám phá ngay
+                                    +proBanner()
                               .pro-item.col.col-6
-                                 .pro-wr.second
-                                    .pro-content 
-                                       .pro-flex 
-                                          .pro-time #{item.time}
-                                          .pro-type #{item.type}
-                                       h3.pro-name #{item.name}
-                                       ul.pro-ul 
-                                          li 
-                                             .pro-li
-                                                +img('ic-pro-1.svg')
-                                                span.txt #{item.name_location}
-                                          li 
-                                             .pro-li
-                                                +img('ic-pro-2.svg')
-                                                span.txt #{item.name_address}
-                                       .pro-flex
-                                          .pro-li
-                                             +img('ic-pro-3.svg')
-                                             span.txt 
-                                                span(style="font-size: 1.1em").c-pri.fw-6 #{item.price}
-                                                span /hour
-                                          .pro-li
-                                             +img('ic-pro-4.svg')
-                                             span.txt #{item.views} Views
+                                 +proItemSecond(item)
                            - 
                               var proArr = [
                                  {
@@ -194,40 +158,7 @@ block container
                               ]
                            each item, index in proArr
                               .pro-item.col.col-6
-                                 .pro-wr 
-                                    .pro-img 
-                                       .pro-time #{item.time}
-                                       .pro-type #{item.type}
-                                       a(href="#").inner 
-                                          +img(item.img)
-                                    .pro-content
-                                       if item.tag
-                                          .pro-top 
-                                             h3.pro-name #{item.price}
-                                             if item.tag
-                                                .pro-tag #{item.tag}
-                                       else 
-                                          h3.pro-name #{item.price}
-                                       if item.name
-                                          h3.pro-name #{item.name}
-                                       if item.note.length > 0 
-                                          .pro-note
-                                             each note in item.note
-                                                .pro-note-item 
-                                                   span.txt.fw-5.c-txt-2 #{note}
-                                       if item.rent || item.income
-                                          .pro-note
-                                             if item.rent
-                                                .pro-note-item 
-                                                   span.txt.fw-5 Rent: 
-                                                      span.fw-6.c-txt-3 #{item.rent}
-                                                      span(style="font-size: .8em") /month
-                                             if item.income
-                                                .pro-note-item 
-                                                   span.txt.fw-5 Income: 
-                                                      span.fw-6.c-txt-3 #{item.income}
-                                                      span(style="font-size: .8em") /year
-                                       .pro-des #{item.address}
+                                 +proItem(item)
                            - 
                               var proArrFive = [
                                  {
@@ -266,63 +197,12 @@ block container
                            each item, index in proArrFive
                               if(index == 2)
                                  .pro-item.col.col-third 
-                                    .pro-bner 
-                                       .pro-bner-tag Sponsored
-                                       .pro-bner-dc
-                                          +img('pro-bner-dc.png')
-                                       .pro-bner-img
-                                          +img('pro-bner-img.jpg')
-                                       .pro-bner-content 
-                                          h3.pro-bner-name 
-                                             |Chăm sóc
-                                             br
-                                             |người lớn tuổi
-                                          p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
-                                          .pro-btn 
-                                             span.txt Khám phá ngay
+                                    +proBanner()
                               .pro-item.col.col-third
-                                 .pro-wr.third
-                                    .pro-img 
-                                       .inner 
-                                          +img(item.img)
-                                    .pro-content 
-                                       h3.pro-name #{item.name}
-                                       p.pro-des #{item.des}
-                                       ul.pro-ul 
-                                          li 
-                                             .pro-li.fw-5
-                                                +img('ic-pro-2.svg')
-                                                span.txt #{item.address}
-                                          li 
-                                             .pro-note 
-                                                .pro-note-item 
-                                                   .pro-li.fw-5
-                                                      +img('ic-pro-6.svg')
-                                                      span.txt #{item.time}
-                                                .pro-note-item 
-                                                   .pro-li.fw-5
-                                                      +img('ic-pro-4.svg')
-                                                      span.txt #{item.views}
+                                 +proItemThird(item)
                            each item in Array(4)
                               .pro-item.col
-                                 .pro-wr.four 
-                                    +img("ic-loa.svg")
-                                    .pro-content 
-                                       h3.pro-name Chăm sóc người già - Marietta, GA 30062
-                                       .pro-des Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...
-                                       .pro-note 
-                                          .pro-note-item 
-                                             .pro-li.fw-6.c-txt-2 
-                                                +img('ic-pro-2.svg')
-                                                span.txt Marietta 30062
-                                          .pro-note-item 
-                                             .pro-li.fw-6.c-txt-2 
-                                                +img('ic-pro-7.svg')
-                                                span.txt 2 ngày trước
-                                          .pro-note-item 
-                                             .pro-li.fw-6.c-txt-2 
-                                                +img('ic-pro-4.svg')
-                                                span.txt 1000
+                                 +proItemFourth(item)
                         +PageNumber()
                      footer.ft 
                         .container 
