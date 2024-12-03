@@ -1,6 +1,7 @@
 body.page-search {
   .hd {
     box-shadow: unset;
+
     &.sticky {
       ~ .main {
         .sear-map {
@@ -13,12 +14,14 @@ body.page-search {
     }
   }
 }
+
 .sear {
   &-map {
     .inner {
       position: relative;
       height: 100%;
     }
+
     .btn-del {
       position: absolute;
       @include mid-flex;
@@ -36,16 +39,19 @@ body.page-search {
       right: 2rem;
       transition: 0.3s ease-in-out;
       cursor: pointer;
+
       @include hover {
         background: var(--color-pri);
         color: #fff;
       }
+
       @include max(1200px) {
         top: 0.6rem;
         right: 0.6rem;
         padding: 0.4rem 0.8rem;
         font-size: 1.3rem;
       }
+
       .icon {
         width: 2rem;
         height: 2rem;
@@ -56,6 +62,7 @@ body.page-search {
       }
     }
   }
+
   &-head {
     padding: 1rem;
     background: #fff;
@@ -63,14 +70,16 @@ body.page-search {
     top: 7.8rem;
     z-index: 20;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    &::before {
+    <<<<<<< HEAD &::before {
       content: "";
       position: absolute;
       @include full;
       pointer-events: none;
       border: 0.1rem solid var(--border-color);
     }
-    @include max(1200px) {
+    =======>>>>>>>aa93726b1844d1d3723fbdf44b5edf01a5a78cff
+      @include
+      max(1200px) {
       padding: 0.6rem;
       position: static;
     }
@@ -126,31 +135,47 @@ body.page-search {
       padding: 0.6rem;
     }
   }
+
   &-row {
     .col-7 {
       @include min(1201px) {
         flex: 1;
       }
+
       @include max(1200px) {
+        flex: 1;
+      }
+
+      @include max($mobile) {
         width: 100%;
+        flex: unset;
       }
     }
+
     .col-5 {
       @include min(1201px) {
         width: 79rem;
       }
+
       @include max(1200px) {
+        width: 39rem;
+      }
+
+      @include max($mobile) {
         width: 100%;
       }
     }
   }
+
   &-panel {
     .sear-form {
       flex: 1;
+
       input {
         padding-left: 0;
       }
     }
+
     .head-sc {
       @include max(600px) {
         flex-direction: column;
@@ -215,16 +240,20 @@ body.page-search {
     display: flex;
     flex-direction: column;
   }
+
   &-form {
     .form-list {
       .col-search {
         width: calc(36rem + var(--cg));
+
         @include max(920px) {
           width: 100%;
         }
       }
+
       .col-sl-md {
         width: calc(24rem + var(--cg));
+
         @include max(920px) {
           width: 40%;
         }
@@ -233,14 +262,18 @@ body.page-search {
           width: 50%;
         }
       }
+
       .col-sl-sm {
         width: calc(13rem + var(--cg));
+
         @include max(500px) {
           width: 50%;
         }
       }
+
       .col-btn {
         width: calc(13rem + var(--cg));
+
         @include max(920px) {
           width: 20%;
         }
@@ -342,13 +375,16 @@ body.page-search {
     width: 16rem;
   }
 }
+
 .t-slogan {
   color: var(--color29);
 }
+
 .pro-panel {
   height: 100%;
   display: flex;
   flex-direction: column;
+
   .box-btn {
     display: flex;
     flex-direction: column;
@@ -356,16 +392,19 @@ body.page-search {
     flex: 1;
   }
 }
+
 .pro-grid-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   .btn {
     @include max(700px) {
       display: none;
     }
   }
 }
+
 .pro-panel {
   .swiper-container {
     ~ .box-btn {
@@ -375,15 +414,18 @@ body.page-search {
     }
   }
 }
+
 .popup {
   .ft {
     display: block !important;
   }
+
   .ft-panel {
     max-width: 100% !important;
     width: 100%;
   }
 }
+
 .selectCusValue,
 .selectTwoValue {
   .icon-arrow {
@@ -392,29 +434,35 @@ body.page-search {
     @include mid-flex;
     flex-shrink: 0;
     color: var(--color-pri);
+
     i {
       font-weight: 700;
     }
   }
+
   .txt {
     color: #1d2939;
     font-weight: 600;
     @include fz-16;
+
     @include max(500px) {
       font-size: 1.4rem;
     }
   }
 }
+
 .sear-panel {
   .pro-item.col-6 {
     .pro-bner-img {
       width: 80%;
     }
   }
+
   .pro-item.col-6 .pro-bner-name {
     @include fz-24;
   }
 }
+
 .range-head {
   border: 0.1rem solid var(--border);
   padding: 1rem;
@@ -430,15 +478,18 @@ body.page-search {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+
   .t-txt {
     color: #1d2939;
     font-weight: 600;
     font-size: 1.6rem;
     @include lc(1);
+
     @include max(500px) {
       font-size: 1.4rem;
     }
   }
+
   .icon-arrow {
     width: 2.4rem;
     height: 2.4rem;
@@ -460,18 +511,22 @@ body.page-search {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     color: var(--color-pri);
+
     i {
       font-weight: 700;
     }
   }
 }
+
 .range-wrap {
   position: relative;
 }
+
 .range {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+
   .btn-text {
     display: block;
     padding: 0.5rem 1rem;
@@ -483,11 +538,13 @@ body.page-search {
     border-radius: 0.5rem;
     -webkit-transition: 0.4s;
     transition: 0.4s;
+
     @include hover {
       background: var(--color-sec);
     }
   }
 }
+
 .range-panel {
   border: 0.1rem solid var(--border);
   padding: 1rem;
@@ -500,15 +557,18 @@ body.page-search {
   border-radius: 0.5rem;
   border-top: none;
   display: none;
+
   &.show {
     display: block;
   }
 }
+
 .range-slider {
   height: 0.2rem;
   width: 100%;
   background-color: #d9d9d9;
   position: relative;
+
   .progress {
     position: absolute;
     height: 0.2rem;
@@ -516,9 +576,11 @@ body.page-search {
     background-color: var(--color-pri);
   }
 }
+
 .range-input {
   position: relative;
   margin-top: -1.2rem;
+
   input {
     position: absolute;
     top: -0.1rem;
@@ -530,11 +592,13 @@ body.page-search {
     -webkit-appearance: none;
     margin: 0;
     cursor: pointer;
+
     &:first-child::-webkit-slider-thumb {
       height: 1.6rem;
       width: 1.6rem;
       display: none;
     }
+
     &::-webkit-slider-thumb {
       height: 1.6rem;
       width: 1.6rem;
@@ -544,6 +608,7 @@ body.page-search {
       background-color: var(--color-pri);
       border: 0.3rem solid var(--color-pri);
     }
+
     &::-moz-slider-thumb {
       height: 1.6rem;
       width: 1.6rem;
@@ -557,12 +622,14 @@ body.page-search {
     }
   }
 }
+
 .text {
   margin-top: 1.6rem;
   font-size: 1.6rem;
   color: #444444;
   margin-bottom: 0.8rem;
 }
+
 .range-flex {
   display: -webkit-flex;
   display: -moz-flex;
@@ -572,6 +639,7 @@ body.page-search {
   align-items: center;
   justify-content: space-between;
 }
+
 .range-item {
   font-size: 1.4rem;
   color: #848484;
