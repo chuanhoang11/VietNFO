@@ -407,6 +407,9 @@ table {
     }
 
     // config
+    &.per25 {
+      width: 25%;
+    }
     &.per3 {
       width: calc(100% / 3);
     }
@@ -417,6 +420,12 @@ table {
       @include max(500px) {
         width: 100%;
       }
+    }
+    &.per6 {
+      width: calc(100% - (100% / 3));
+    }
+    &.per75 {
+      width: 75%;
     }
 
     .input-dashed {

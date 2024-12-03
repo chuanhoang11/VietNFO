@@ -76,9 +76,8 @@ export default function ComponentModule() {
     if (cir.classList.contains("cir-2")) {
       const translateX = Math.floor(Math.random() * x);
       const translateY = Math.floor(Math.random() * y);
-      cir.style.transform = `translate(${
-        translateX + "%" + "," + translateY + "%"
-      })`;
+      cir.style.transform = `translate(${translateX + "%" + "," + translateY + "%"
+        })`;
     } else {
       // const translateX = Math.floor(Math.random() * 10);
       const translateY = Math.floor(Math.random() * y);
@@ -346,5 +345,80 @@ export default function ComponentModule() {
         rangePanel.classList.remove("show");
       }
     });
+  }
+
+  //  JS Table
+
+  $(document).ready(function () {
+    function applyResponsiveCollapse() {
+      if ($(window).width() <= 950) {
+        $('.table-row').each(function () {
+          if (!$(this).find('.cell').first().hasClass('cl-head')) {
+            const firstCell = $(this).find('.cell').first();
+            firstCell.addClass('cl-head');
+            const otherCells = $(this).find('.cell').not(':first');
+            otherCells.wrapAll('<div class="cl-body"></div>');
+          }
+        });
+      } else {
+        // Xóa các class khi màn hình lớn hơn 600px
+        $('.cl-head').removeClass('cl-head');
+        $('.cl-body').children().unwrap();
+        $('.table-row').removeClass('active'); // Remove 'active' class
+      }
+    }
+
+    applyResponsiveCollapse(); // Gọi hàm khi load trang
+
+    $(window).resize(function () {
+      applyResponsiveCollapse(); // Gọi hàm khi thay đổi kích thước cửa sổ
+    });
+
+    // Toggle collapse-body khi nhấn vào collapse-head
+    $(document).on('click', '.cl-head', function () {
+      const $row = $(this).closest('.table-row'); // Lấy table-row chứa collapse-head
+      $row.toggleClass('active'); // Thêm/loại bỏ class active
+
+      // Toggle collapse-body
+      $(this).next('.cl-body').slideToggle();
+    });
+  });
+
+  // ================= JS Drop File
+  const fileInput = document.getElementById('fileInput');
+  const dropArea = document.getElementById('dropArea');
+  const fileList = document.getElementById('fileList');
+  if (fileInput && dropArea && fileList) {
+    // Mở cửa sổ chọn file khi nhấn vào "chọn file"
+
+    // Xử lý sự kiện khi chọn file từ input
+    fileInput.addEventListener('change', (e) => handleFiles(e.target.files));
+
+    // Kéo file vào drop area
+    dropArea.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropArea.classList.add('drag-over');
+    });
+
+    dropArea.addEventListener('dragleave', () => {
+      dropArea.classList.remove('drag-over');
+    });
+
+    // Xử lý khi thả file
+    dropArea.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropArea.classList.remove('drag-over');
+      handleFiles(e.dataTransfer.files);
+    });
+
+    // Hàm xử lý file
+    function handleFiles(files) {
+      fileList.innerHTML = ''; // Xóa danh sách cũ
+      Array.from(files).forEach(file => {
+        const li = document.createElement('li');
+        li.textContent = file.name;
+        fileList.appendChild(li);
+      });
+    }
   }
 }

@@ -159,4 +159,13 @@ export default function Select2Module() {
       }
     }
   }
+
+  $(".js-select2").select2({
+    closeOnSelect : false,
+    placeholder : "Placeholder",
+    allowHtml: true,
+    allowClear: true,
+    tags: true,
+    dropdownCssClass: "multi-dropdown",
+  });
 }
