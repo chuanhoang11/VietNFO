@@ -70,16 +70,15 @@ body.page-search {
     top: 7.8rem;
     z-index: 20;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    <<<<<<< HEAD &::before {
+    &::before {
       content: "";
       position: absolute;
       @include full;
       pointer-events: none;
       border: 0.1rem solid var(--border-color);
     }
-    =======>>>>>>>aa93726b1844d1d3723fbdf44b5edf01a5a78cff
-      @include
-      max(1200px) {
+
+    @include max(1200px) {
       padding: 0.6rem;
       position: static;
     }
@@ -373,6 +372,7 @@ body.page-search {
   .selectCusOptions,
   .selectTwoOptions {
     width: 16rem;
+    right: 0;
   }
 }
 

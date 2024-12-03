@@ -7,6 +7,7 @@ export default function Select2Module() {
         maxWidth = optionWidth;
       }
     });
+
     $(".re-select-main").select2({
       width: maxWidth,
     });
