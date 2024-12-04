@@ -4,46 +4,55 @@
   font-weight: 600;
   text-wrap: pretty;
   position: relative;
+
   @include max($mobile) {
     font-size: 4.2vw;
   }
 }
+
 .head {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+
   @include max($mobile) {
     gap: 0.8rem;
   }
+
   .t-des {
     @include fz-16;
     color: #344054;
+
     @include max(500px) {
       font-size: 1.4rem;
     }
   }
+
   &.dcor {
     .t-title {
       display: flex;
       align-items: center;
       gap: 0.8rem;
+
       &::before {
         content: "";
         width: .9em;
         height: .9em;
         flex-shrink: 0;
-        background: url(../assets/images/icon-title.svg) no-repeat
-          center/contain;
+        background: url(../assets/images/icon-title.svg) no-repeat center/contain;
       }
     }
   }
 }
+
 .t-center {
   text-align: center;
 }
+
 .c-tt {
   color: var(--color-tt);
 }
+
 .fw-1 {
   font-weight: 100;
 }
@@ -55,6 +64,7 @@
 .fw-3 {
   font-weight: 300;
 }
+
 .fw-4 {
   font-weight: 400;
 }
@@ -98,6 +108,7 @@
 .t12 {
   @include fz-12;
 }
+
 .t13 {
   @include fz-13;
 }
@@ -121,9 +132,11 @@
 .t24 {
   @include fz-24;
 }
+
 .t36 {
   @include fz-36;
 }
+
 .t96 {
   @include fz-96;
 }
@@ -151,15 +164,18 @@
 .t72 {
   @include fz-72;
 }
+
 .c-text {
   color: var(--color-text);
 }
+
 .head-sc {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.2rem;
-  flex-wrap: wrap;
+
+  // flex-wrap: wrap;
   .swiper-control {
     @include max($mobile) {
       display: none;

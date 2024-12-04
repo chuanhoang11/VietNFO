@@ -374,19 +374,19 @@ block container
                               i.fas.fa-angle-down
                               -
                                  const months = [
-                                       { name: "May 2024", active: false },
-                                       { name: "June 2024", active: false },
-                                       { name: "July 2024", active: false },
-                                       { name: "August 2024", active: false },
-                                       { name: "September 2024", active: false },
-                                       { name: "October 2024", active: false },
-                                       { name: "November 2024", active: true },
-                                       { name: "December 2024", active: false },
-                                       { name: "January 2025", active: false },
-                                       { name: "February 2025", active: false },
-                                       { name: "March 2025", active: false },
+                                       { name: "May 2025", active: false },
                                        { name: "April 2025", active: false },
-                                       { name: "May 2025", active: false }
+                                       { name: "March 2025", active: false },
+                                       { name: "February 2025", active: false },
+                                       { name: "January 2025", active: false },
+                                       { name: "December 2024", active: false },
+                                       { name: "November 2024", active: true },
+                                       { name: "October 2024", active: false },
+                                       { name: "September 2024", active: false },
+                                       { name: "August 2024", active: false },
+                                       { name: "July 2024", active: false },
+                                       { name: "June 2024", active: false },
+                                       { name: "May 2024", active: false }
                                        ];
                            ul.selectJSBody 
                               each li in months
@@ -400,7 +400,7 @@ block container
                      .swiper-container 
                         .swiper.rows
                            .swiper-wrapper 
-                              each item in Array(2)
+                              each item,indexOut in Array(2)
                                  .swiper-slide.col
                                        .pro-list.row 
                                           - 
@@ -439,7 +439,7 @@ block container
                                                 }
                                              ]
                                           each item, index in proArrFive
-                                             if(index == 2)
+                                             if(index == 2 && indexOut == 0)
                                                 .pro-item.col.col-third.--hide-desk
                                                    .pro-qc 
                                                       +img('pro-qc.jpg')
