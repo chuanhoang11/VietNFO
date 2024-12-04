@@ -421,4 +421,29 @@ export default function ComponentModule() {
       });
     }
   }
+  // ================== JS PW
+  const signPws = document.querySelectorAll(".signPW")
+  console.log(signPws.innerHTML);
+  
+  if (signPws) {
+    signPws.forEach(signPw => {
+      let clicked = false
+      document.addEventListener("click", (e) => {
+        if (signPw.contains(e.target)) {
+          const signIp = signPw.closest(".form-ip").querySelector("input")
+
+          if (clicked == false) {
+            signPw.classList.add("clicked")
+            signIp.setAttribute("type", "text")
+            clicked = true
+          }
+          else {
+            signPw.classList.remove("clicked")
+            signIp.setAttribute("type", "password")
+            clicked = false;
+          }
+        }
+      })
+    })
+  }
 }
