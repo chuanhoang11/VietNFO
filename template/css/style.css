@@ -10486,6 +10486,7 @@ body.page-search {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    gap: .4rem;
     cursor: pointer; }
   .pro-select .txt {
     font-weight: 500;

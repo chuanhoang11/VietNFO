@@ -303,9 +303,9 @@ mixin comment()
 mixin selectPong(defaultText, buttonTexts)
   .pro-select.selectJS
     .t-head.toggleSelect
-      span.txt Sắp xếp:
+      span.txt Sắp xếp: #{" "}
       .t-gr
-        span.t-name.displayName= defaultText
+        span.t-name.displayName #{defaultText}
         span.icon
           i.fa-light.fa-chevron-down.fw-7
     .b-pos.boxPanel
