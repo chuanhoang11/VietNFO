@@ -300,6 +300,18 @@ mixin comment()
                textarea(name="" placeholder="Nhập nội dung") 
             .form-ip.col 
                +Btn("Comment","button")
+mixin selectPong(defaultText, buttonTexts)
+  .pro-select.selectJS
+    .t-head.toggleSelect
+      span.txt Sắp xếp: #{" "}
+      .t-gr
+        span.t-name.displayName #{defaultText}
+        span.icon
+          i.fa-light.fa-chevron-down.fw-7
+    .b-pos.boxPanel
+      .b-inner
+        each text in buttonTexts
+          button.t-link.getValue= text
 mixin footer 
    .ft 
       .container 
@@ -465,7 +477,7 @@ mixin proItem2(item)
                            span.txt #{note.name}
                      else 
                         span.txt.fw-5.c-txt-2 #{note.name}
-                                 .pro-des #{item.address}
+         .pro-des #{item.address}
 mixin proItem3(item)
    .pro-wr
       .pro-img 

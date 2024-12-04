@@ -23,7 +23,7 @@
     width: 50%;
   }
 
-  @include max($mobile) {
+  @include max(500px) {
     width: 100%;
   }
 }
@@ -155,7 +155,7 @@
 .pro-note {
   --gap: 0.4em;
   display: flex;
-  //   flex-wrap: wrap;
+  flex-wrap: wrap;
   white-space: nowrap;
 }
 
@@ -298,7 +298,6 @@
 .pro-wr.third .pro-img .inner {
   padding-top: calc(3 / 4 * 100%);
   border-radius: calc(var(--rs) / 2);
-  height: 100%;
 }
 
 .pro-wr.third .pro-ul {
@@ -308,8 +307,8 @@
 .pro-wr.third .pro-des {
   font-size: calc(15/14 * 1em);
   color: #667085;
-  font-feature-settings: 'liga' off;
   -webkit-line-clamp: 3;
+  margin-bottom: .4em;
 }
 
 .pro-bar {
@@ -477,12 +476,12 @@
   grid-auto-rows: auto;
   gap: 1.6rem;
 
-  @include max($res-tablet) {
+  @include max(767px) {
     grid-template-columns: 1fr;
   }
 }
 
-@include min($res-tablet-min) {
+@include min(768px) {
   .pro-grid-item:nth-child(1) {
     grid-column: 1;
     grid-row: span 2;
@@ -549,13 +548,13 @@
   display: flex;
   flex-direction: column;
 
-  @include max($res-mobile) {
-    font-size: 1.2vw;
-  }
+  // @include max($res-mobile) {
+  //   font-size: 1.2vw;
+  // }
 
-  @include max($res-tablet) {
-    font-size: 1.4vw;
-  }
+  // @include max($res-tablet) {
+  //   font-size: 1.4vw;
+  // }
 
   @include max($mobile) {
     font-size: 1.4rem;
@@ -613,7 +612,7 @@
 }
 
 .pro-bner-name {
-  font-size: 2em;
+  font-size: calc(32/16 * 1em);
   font-weight: 600;
 
   @include max($mobile) {
@@ -639,7 +638,13 @@
   z-index: 2;
   margin-top: 1em;
   margin-left: 1em;
-  font-size: 0.7em;
+  font-size: calc(10/16 * 1em);
+}
+
+.pro-bner .pro-btn {
+  font-size: calc(15/16 * 1em);
+  padding: calc(8/16 * 1em) calc(12/16 * 1em);
+  border-radius: .6rem;
 }
 
 .pro-btn {
@@ -973,6 +978,23 @@
   }
 }
 
+.pro-item.col-third {
+  @include max($res-mobile) {
+    .pro-bner-name {
+      font-size: 1.2em;
+    }
+
+    .pro-bner-des {
+      font-size: 0.8em;
+    }
+
+    .pro-bner-content {
+      padding: 1em;
+      gap: 0.4em;
+    }
+  }
+}
+
 .pro-item.col-6 {
   @include max($res-mobile) {
     width: 100%;
@@ -995,20 +1017,6 @@
     min-height: unset;
   }
 
-  // .pro-bner,
-  // .pro-wr {
-  //   @include max(1600px) {
-  //     font-size: 1vw;
-  //   }
-
-  //   @include max($res-mobile) {
-  //     font-size: 1.4vw;
-  //   }
-
-  //   @include max($mobile) {
-  //     font-size: 1.4rem;
-  //   }
-  // }
 
   .sear-panel .pro-item.col-third {
     @include max($res-tablet) {
@@ -1032,11 +1040,7 @@
 
 // }
 
-@include max(767px) {
-  .sear-map {
-    height: 30vh;
-  }
-}
+
 
 @include min-max($mobile, $res-mobile) {
   .sear-panel .pro-img {
@@ -1084,5 +1088,26 @@
 
   .pro-slider-third .swiper-slide {
     width: 100%;
+  }
+}
+
+.sear-panel .head-sc .t-title {
+  @include max($res-mobile) {
+    font-size: 2vw;
+  }
+
+  @include max(800px) {
+    font-size: 3vw;
+  }
+
+  @include max($mobile) {
+    font-size: 4.2vw;
+  }
+}
+
+.pro-item.col-6,
+.pro-item.col-third {
+  @include min-max(500px, $mobile) {
+    width: 50%;
   }
 }

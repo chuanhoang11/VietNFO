@@ -17,6 +17,10 @@ body.page-search {
 
 .sear {
   &-map {
+    @include max($mobile) {
+      height: 30vh;
+    }
+
     .inner {
       position: relative;
       height: 100%;
@@ -64,13 +68,20 @@ body.page-search {
   }
 
   &-head {
-    padding: 1rem 2rem;
-    border: 0.1rem solid var(--border-color);
+    padding: 1rem;
     background: #fff;
     position: sticky;
     top: 7.8rem;
     z-index: 20;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      @include full;
+      pointer-events: none;
+      border: 0.1rem solid var(--border-color);
+    }
 
     @include max(1200px) {
       padding: 0.6rem;
@@ -142,6 +153,9 @@ body.page-search {
       @include max($mobile) {
         width: 100%;
         flex: unset;
+        position: sticky;
+        top: var(--mb-size-hd-sticky);
+        z-index: 5;
       }
     }
 
@@ -301,15 +315,60 @@ body.page-search {
   }
 }
 
-.hd.sticky {
-  @include hover {
-    height: var(--size-hd);
+body.page-search {
+  --size-hd: 7.8rem;
 
-    .hd-bot {
-      transform: translateX(-50%);
-      opacity: 1;
-      visibility: visible;
+  .hd {
+    --size-hd-t: 7.8rem;
+    height: var(--size-hd-t);
+
+    @include hover {
+      --size-hd: 14rem;
+      height: var(--size-hd);
+
+      .hd-bot {
+        transform: translateX(-50%);
+        opacity: 1;
+        visibility: visible;
+      }
     }
+
+    &.sticky {
+      .home-bn-srch {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .hd-top .hd-lang {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .hd-bot {
+    -webkit-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .home-bn-srch {
+    display: none;
+
+    @include max(1200px) {
+      display: block;
+    }
+  }
+
+  .hd-top .t-slogan {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .hd-top .hd-lang {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -319,10 +378,6 @@ body.page-search {
   }
 }
 
-.pro-select .select2.select2-container {
-  width: 17rem !important;
-}
-
 .pro-select {
 
   .selectCusValue,
@@ -330,9 +385,44 @@ body.page-search {
     border: unset;
     height: auto;
     padding: unset;
-    width: 16rem;
-    flex-direction: row-reverse;
+    width: auto;
     justify-content: space-between;
+
+  }
+
+  .selectCusOptions,
+  .selectTwoOptions {
+    right: 0;
+    min-width: 20rem;
+    top: 100%;
+    border-radius: 0.5rem;
+    border: none;
+    overflow: hidden;
+
+    .text-head {
+      margin: -1rem;
+      padding: 1rem;
+      background: #eff8ff;
+      font-weight: 500;
+      color: #1d2939;
+      font-size: 1.6rem;
+    }
+  }
+
+  .selectCusValue .txt {
+    font-weight: 500;
+    // max-width: 15rem;
+    // @include lc(1);
+  }
+
+  .selectCusOptions {
+    width: fit-content;
+  }
+
+  .selectCusOptions,
+  .selectTwoOptions {
+    width: 16rem;
+    right: 0;
   }
 }
 
@@ -603,4 +693,88 @@ body.page-search {
 .range-item {
   font-size: 1.4rem;
   color: #848484;
+}
+
+.pro-select {
+  position: relative;
+
+  .t-head {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    cursor: pointer;
+  }
+
+  .txt {
+    font-weight: 500;
+    color: #1e1e1e;
+    font-size: 1.6rem;
+  }
+
+  .t-gr {
+    @include mid-flex;
+    gap: 0.8rem;
+
+    .t-name {
+      font-weight: 500;
+      color: #1e1e1e;
+      font-size: 1.6rem;
+    }
+
+    .icon {
+      @include mid-flex;
+      width: 2.4rem;
+      height: 2.4rem;
+      flex-shrink: 0;
+      color: var(--color-pri);
+    }
+  }
+
+  .b-pos {
+    position: absolute;
+    top: 100%;
+    width: max-content;
+    right: 0;
+    background: #fff;
+    box-shadow: 0px 0.4rem 1.2rem rgba(0, 0, 0, 0.12);
+    border-radius: 1.2rem;
+    z-index: 10;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    .b-inner {
+      padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      align-items: flex-start;
+
+      .t-link {
+        display: inline-block;
+        padding: 0.8rem 0;
+        color: #2c2c2c;
+        @include fz-14;
+        transition: 0.3s ease-in-out;
+
+        @include hover {
+          color: var(--color-pri);
+        }
+      }
+    }
+  }
+}
+
+.selectCusOptions,
+.selectTwoOptions {
+  .text-head {
+    margin: -1rem;
+    padding: 1rem;
+    background: #eff8ff;
+    font-weight: 600;
+    color: #1d2939;
+    font-size: 1.6rem;
+  }
 }

@@ -29,6 +29,7 @@ block container
                                           i.fa-light.fa-chevron-down
                                        .txt Thời gian đăng
                                     .selectCusOptions
+                                       .text-head Thời gian đăng
                                        label.selectCusAll 
                                           input(type="checkbox")
                                           span.txt Chọn tất cả
@@ -70,13 +71,7 @@ block container
                                     input(type="search" placeholder="Nhập tên rao vặt (ví dụ: làm bánh)")
                         .head-sc.mb-10 
                            span.txt 107 kết quả
-                           .pro-select 
-                              span.txt Sắp sếp:
-                              select.re-select-main
-                                 option(value="")  Mới đăng
-                                 option(value="")  Lượt xem (cao tới thấp)
-                                 option(value="")  Lượt xem (thấp tới cao)
-                                 option(value="" selected)  Mặc định
+                           +selectPong("Mặc định",['Mới đăng','Lượt xem (cao tới thấp)','Lượt xem (thấp tới cao)','Mặc định'])
                         .pro-list.row 
                            each item,index in Array(4)
                               if(index == 2)

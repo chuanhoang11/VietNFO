@@ -29,6 +29,7 @@ block container
                                           i.fa-light.fa-chevron-down
                                        .txt Loại bất động sản
                                     .selectCusOptions
+                                       .text-head Loại bất động sản
                                        label.selectCusAll 
                                           input(type="checkbox")
                                           span.txt Chọn tất cả
@@ -138,15 +139,7 @@ block container
                            +title("Sang nhượng Business tại North Carolina", "","dcor")
                         .head-sc.mb-10 
                            span.txt 107 kết quả
-                           .pro-select 
-                              span.txt Sắp sếp:
-                              select.re-select-main
-                                 option(value="")  Mới đăng
-                                 option(value="")  Giá tiền (thấp tới cao)
-                                 option(value="")  Giá tiền (cao tới thấp)
-                                 option(value="")  Số phòng ngủ
-                                 option(value="")  Số phòng tắm
-                                 option(value="" selected)  Mặc định
+                           +selectPong("Mặc định",['Giá tiền (thấp tới cao)','Giá tiền (cao tới thấp)','Income (thấp tới cao)', 'Income (cao tới thấp)','Mặc định'])
                         .pro-list.row 
                            - 
                               var proArr = [

@@ -29,6 +29,7 @@ block container
                                           i.fa-light.fa-chevron-down
                                        .txt Loại sự kiện
                                     .selectCusOptions
+                                       .text-head Loại sự kiện
                                        label.selectCusAll 
                                           input(type="checkbox")
                                           span.txt Cộng đồng
@@ -78,12 +79,7 @@ block container
                            +title("Việt Event tại North Carolina", "","dcor")
                         .head-sc.mb-10 
                            span.txt 107 kết quả
-                           .pro-select 
-                              span.txt Sắp sếp:
-                              select.re-select-main
-                                 option(value="")  Mới đăng
-                                 option(value="")  Thời gian diễn ra
-                                 option(value="" selected)  Mặc định
+                           +selectPong("Mặc định",['Mới đăng','Thời gian diễn ra','Mặc định'])
                         .pro-list.row 
                            - 
                               var proArrFive = [
