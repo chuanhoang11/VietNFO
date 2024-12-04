@@ -626,4 +626,25 @@ mixin HomeHero()
                         +img("ft-icon (4).svg")
       .home-hero-right
          +img("hero-img.jpg")
-
+mixin PageNumberCus 
+   ul.page-numbers.page-navigation
+      li 
+         a.prev.page-numbers(href="")
+            i.fa-solid.fa-arrow-left
+            span.txt Previous
+      li
+         span.page-numbers.current   
+               | 1
+      li
+         a.page-numbers(href="")   
+               | 2
+      li 
+         span.page-numbers.dot 
+               |...
+      li
+         a.page-numbers(href="")   
+               | 10
+      li 
+         a.next.page-numbers(href="")
+            span.txt Next
+            i.fa-solid.fa-arrow-right
