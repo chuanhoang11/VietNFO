@@ -1104,3 +1104,10 @@
     font-size: 4.2vw;
   }
 }
+
+.pro-item.col-6,
+.pro-item.col-third {
+  @include min-max(500px, $mobile) {
+    width: 50%;
+  }
+}

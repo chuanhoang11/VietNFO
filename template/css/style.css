@@ -8682,6 +8682,11 @@ ul.page-numbers {
   .sear-panel .head-sc .t-title {
     font-size: 4.2vw; } }
 
+@media (min-width: 500px) and (max-width: 700px) {
+  .pro-item.col-6,
+  .pro-item.col-third {
+    width: 50%; } }
+
 .t-title {
   font-size: 3rem;
   color: var(--color-tt);
@@ -10134,7 +10139,9 @@ body.page-search .hd {
   border: unset;
   height: auto;
   padding: unset;
-  width: 16rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -ms-flex-direction: row-reverse;
@@ -10142,6 +10149,31 @@ body.page-search .hd {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+
+.pro-select .selectCusOptions,
+.pro-select .selectTwoOptions {
+  right: 0;
+  min-width: 20rem;
+  top: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  overflow: hidden; }
+  .pro-select .selectCusOptions .text-head,
+  .pro-select .selectTwoOptions .text-head {
+    margin: -1rem;
+    padding: 1rem;
+    background: #eff8ff;
+    font-weight: 500;
+    color: #1d2939;
+    font-size: 1.6rem; }
+
+.pro-select .selectCusValue .txt {
+  font-weight: 500; }
+
+.pro-select .selectCusOptions {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
 
 .t-slogan {
   color: var(--color29); }

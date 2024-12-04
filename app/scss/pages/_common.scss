@@ -17,9 +17,10 @@ body.page-search {
 
 .sear {
   &-map {
-    @include max($mobile){
+    @include max($mobile) {
       height: 30vh;
     }
+
     .inner {
       position: relative;
       height: 100%;
@@ -336,9 +337,39 @@ body.page-search {
     border: unset;
     height: auto;
     padding: unset;
-    width: 16rem;
+    width: fit-content;
     flex-direction: row-reverse;
     justify-content: space-between;
+
+  }
+
+  .selectCusOptions,
+  .selectTwoOptions {
+    right: 0;
+    min-width: 20rem;
+    top: 100%;
+    border-radius: 0.5rem;
+    border: none;
+    overflow: hidden;
+
+    .text-head {
+      margin: -1rem;
+      padding: 1rem;
+      background: #eff8ff;
+      font-weight: 500;
+      color: #1d2939;
+      font-size: 1.6rem;
+    }
+  }
+
+  .selectCusValue .txt {
+    font-weight: 500;
+    // max-width: 15rem;
+    // @include lc(1);
+  }
+
+  .selectCusOptions {
+    width: fit-content;
   }
 }
 
@@ -423,7 +454,7 @@ body.page-search {
       width: 80%;
     }
   }
-  
+
   .pro-item.col-6 .pro-bner-name {
     @include fz-24;
   }
