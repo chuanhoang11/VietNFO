@@ -171,21 +171,11 @@ block container
                                     income: "$1,000,000",
                                     address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
                                  },
-                                  {
-                                    img: "pro-4.jpg",
-                                    time: "2 ngày trước",
-                                    type: "Kinh doanh khác",
-                                    price: "$500,000",
-                                    note: [
-                                       "Xưởng sửa chữa ô tô Đại Việt",
-                                       "11,300 sqft"
-                                    ],
-                                    rent: "$1,500",
-                                    income: "$1,000,000",
-                                    address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
-                                 },
                               ]
                            each item, index in proArr
+                              if(index == 2)
+                                 .pro-item.col.col-6
+                                    +proBanner()
                               .pro-item.col.col-6
                                  +proItem(item)
                            - 

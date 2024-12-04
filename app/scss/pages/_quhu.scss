@@ -346,7 +346,7 @@
     justify-content: center;
     gap: 4rem;
 
-    @include min(1200px) {
+    @include min($mobile-min) {
       padding-left: 6.8rem;
     }
 
@@ -2113,37 +2113,46 @@ $table-spacing: 1rem; // 10px
   grid-template-columns: repeat(5, 1fr);
   border-bottom: 0.1rem solid #e0e0e0; // 1px -> 0.1rem
 }
+
 .table-pagi {
   padding: $table-spacing;
   display: flex;
   justify-content: space-between;
   gap: 1rem 2rem;
+
   >.page-numbers {
     margin-top: 0;
   }
+
   .select2-container {
     height: 4rem;
   }
+
   .select2-container--default .select2-selection--single {
     height: 4rem;
     border-radius: .8rem !important;
   }
+
   @include max(1200px) {
     .select2-container {
       height: 3.2rem;
     }
+
     .select2-container--default .select2-selection--single {
       height: 3.2rem;
     }
   }
-  
+
   @include max(768px) {
     justify-content: center;
     margin-top: 2rem;
+
     .form-ip {
       display: none;
     }
-    .prev,.next {
+
+    .prev,
+    .next {
       .txt {
         display: none;
       }
@@ -2207,6 +2216,7 @@ $table-spacing: 1rem; // 10px
       }
     }
   }
+
   @include min(1201px) {
     min-height: 7.2rem;
   }
@@ -2325,9 +2335,11 @@ $table-spacing: 1rem; // 10px
   background-color: white;
   padding: 2.4rem;
   border-radius: 1.2rem;
+
   @include max(600px) {
     padding: 1.6rem;
   }
+
   .form-list {}
 
   .form-ip {
@@ -2340,6 +2352,7 @@ $table-spacing: 1rem; // 10px
     .select2-container {
       height: 4.8rem;
     }
+
     .select2-container--default .select2-selection--single {
       height: 4.8rem;
     }
@@ -2397,11 +2410,13 @@ $table-spacing: 1rem; // 10px
         min-height: unset;
       }
     }
+
     &.sl-multi {
       .select2-container {
         height: auto;
       }
     }
+
     .btn {
       margin-left: auto;
     }
@@ -2410,17 +2425,21 @@ $table-spacing: 1rem; // 10px
       &:nth-child(3) {
         width: 100% !important;
       }
+
       &.per3 {
         width: 50%;
       }
+
       &.per6 {
         width: 50%;
       }
     }
+
     @include max(600px) {
       &:nth-child(n + 1) {
         width: 100%;
       }
+
       .btn {
         width: 100%;
         height: 5.6rem;
@@ -2445,18 +2464,21 @@ $table-spacing: 1rem; // 10px
       display: none;
     }
   }
+
   #fileList {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 1rem;
+
     &:has(li) {
       &::before {
         content: "File của bạn:";
         display: block;
       }
     }
+
     li {
       padding: .5rem 1rem;
       background-color: #EFF8FF;
@@ -2467,6 +2489,7 @@ $table-spacing: 1rem; // 10px
       flex-shrink: 0;
     }
   }
+
   .drop-area {
     &-icon {
       width: 2rem;
@@ -2474,7 +2497,9 @@ $table-spacing: 1rem; // 10px
       position: relative;
       z-index: 2;
       margin: 1.6rem 0;
-      &::after,&::before {
+
+      &::after,
+      &::before {
         @include pseudo;
         width: 4rem;
         height: 4rem;
@@ -2482,9 +2507,10 @@ $table-spacing: 1rem; // 10px
         border-radius: 100rem;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         z-index: -2;
       }
+
       &::before {
         width: 3rem;
         height: 3rem;
@@ -2492,18 +2518,22 @@ $table-spacing: 1rem; // 10px
         background-color: #F2F4F7;
       }
     }
+
     &-text {
       max-width: 74.2rem;
       margin: 0 auto;
       text-align: center;
       font-size: 1.5rem;
+
       strong {
         font-weight: 500;
       }
+
       .blue {
         margin: 0 .3rem;
         color: var(--color-pri);
       }
+
       @include max(840px) {
         br {
           display: none;
@@ -2531,81 +2561,104 @@ $table-spacing: 1rem; // 10px
 
 .popdt-side {
   .wrapper {
-    @include min-max(540px,768px) {
+    @include min-max(540px, 768px) {
       flex-direction: row;
       flex-wrap: wrap;
+
       &:not(:has(.popdt-thumbnail)) {
-        .popdt-thumbnail,.popdt-map,.pro-bner {
+
+        .popdt-thumbnail,
+        .popdt-map,
+        .pro-bner {
           width: calc(50% - 0.8rem);
+
           .iframe {
             min-height: unset;
             height: 100%;
             border-radius: var(--rs12);
           }
         }
+
         .pro-bner {
           height: unset;
         }
+
         .popdt-contact {
           border-radius: var(--rs12);
           width: 100%;
-          order:3;
+          order: 3;
         }
+
         .popdt-share {
-          order:4;
+          order: 4;
           width: 100%;
         }
       }
+
       &:has(.popdt-thumbnail) {
-        .popdt-thumbnail, .popdt-contact,.popdt-map,.pro-bner {
+
+        .popdt-thumbnail,
+        .popdt-contact,
+        .popdt-map,
+        .pro-bner {
           width: calc(50% - 0.8rem);
+
           .iframe {
             min-height: unset;
             height: 100%;
             border-radius: var(--rs12);
           }
         }
+
         .pro-bner {
           height: unset;
         }
+
         .popdt-contact {
           border-radius: var(--rs12);
         }
+
         .popdt-share {
-          order:4;
+          order: 4;
           width: 100%;
         }
       }
     }
   }
 }
+
 .popdt-main {
   .popdt-slider .swiper {
     padding-bottom: 0;
   }
 }
+
 @include min(1201px) {
   .popdt .container {
     padding: 0 1.5rem;
   }
 }
+
 @include max(1200px) {
   .popdt-slider.slider-three {
     .swiper-slide {
       width: 50%;
     }
+
     .swiper-control {
       display: none;
     }
   }
 }
+
 @include max(900px) {
   .popdt-slider.slider-three .swiper-slide {
     // width: calc(100% / 1.5);
     width: 100%;
   }
 }
-@include min-max(560px,768px) {
+
+@include min-max(560px, 768px) {
   .popdt-slider.slider-three .swiper-slide {
     // width: calc(100% / 1.5);
     width: 50%;
@@ -2620,7 +2673,9 @@ $table-spacing: 1rem; // 10px
 
 .page-navigation {
   li {
-    .prev,.next {
+
+    .prev,
+    .next {
       width: fit-content;
       padding: .8rem 1.4rem;
       border-radius: .8rem;
@@ -2630,23 +2685,29 @@ $table-spacing: 1rem; // 10px
     }
   }
 }
+
 // ========================== Sign
 
 .page-sign {
   background-color: #F2F4F7;
 }
+
 .sign {
-  --spacing:4rem;
+  --spacing: 4rem;
+
   @include max(1200px) {
-    --spacing:2rem;
+    --spacing: 2rem;
   }
 }
+
 .sign-logo {
   width: 19rem;
   margin: 0 auto;
   margin-bottom: var(--spacing);
+
   .logo-link {
     width: 100%;
+
     img {
       width: 100%;
       height: 100%;
@@ -2654,6 +2715,7 @@ $table-spacing: 1rem; // 10px
     }
   }
 }
+
 .sign-box {
   max-width: 63.2rem;
   margin: 0 auto;
@@ -2663,16 +2725,19 @@ $table-spacing: 1rem; // 10px
   padding: var(--spacing);
   box-shadow: 0px 16px 16px -8px rgba(12, 12, 13, 0.1), 0px 4px 4px -4px rgba(12, 12, 13, 0.05);
 }
+
 .sign-ctrl {
   display: flex;
   gap: 2.4rem;
   margin-bottom: 2.4rem;
+
   &-it {
     font-size: 2.4rem;
     border-bottom: 0.1rem solid var(--border);
     color: #333333;
     transition: 0.4s;
     cursor: pointer;
+
     &.active {
       border-color: var(--color-pri);
       color: var(--color-pri);
@@ -2680,27 +2745,33 @@ $table-spacing: 1rem; // 10px
     }
   }
 }
+
 .sign-note {
   text-align: center;
   margin-top: 1rem;
   color: #1F2237;
+
   a {
     color: var(--color-pri);
     transition: 0.4s;
+
     @include hover {
       text-decoration: underline;
       text-underline-position: under;
     }
   }
 }
+
 .sign-check {
   margin-top: 0.4rem;
 }
+
 .sign-with {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+
   .tt {
     text-align: center;
     font-weight: 500;
@@ -2708,6 +2779,7 @@ $table-spacing: 1rem; // 10px
     color: #373A51;
     margin-bottom: 2rem;
   }
+
   &-btn {
     display: flex;
     justify-content: center;
@@ -2717,26 +2789,31 @@ $table-spacing: 1rem; // 10px
     width: 100%;
     border: 0.1rem solid var(--border);
     border-radius: .8rem;
+
     &:not(:last-child) {
       margin-bottom: 1rem;
     }
+
     @include hover {
       border-color: var(--color-pri);
       outline: 0.3rem solid rgba(40, 83, 255, 0.3);
     }
   }
 }
+
 .sign-forgot {
   color: var(--color-pri);
   width: fit-content;
   margin-left: auto;
   margin-top: 1rem;
   display: block;
+
   @include hover {
     text-decoration: underline;
     text-underline-position: under;
   }
 }
+
 .tabPanel {
   display: none;
 }

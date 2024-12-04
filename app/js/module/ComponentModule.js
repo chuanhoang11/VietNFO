@@ -197,8 +197,9 @@ export default function ComponentModule() {
   if (selectJS) {
     function scrollToActiveItem() {
       const container = document.querySelector(".pro-calendar.selectJS");
-      const activeItem = container.querySelector(".selectJSItem.active");
-      if (activeItem) {
+      if (container) {
+        const activeItem = container.querySelector(".selectJSItem.active");
+        if (!activeItem) return;
         // Tính toán vị trí của phần tử active
         const containerRect = container.getBoundingClientRect();
         const activeRect = activeItem.getBoundingClientRect();
@@ -245,6 +246,7 @@ export default function ComponentModule() {
     // tạo function  từ đoạn code được comment ở trên
     function handleSelectMonth() {
       const container = document.querySelector(".selectJSBody");
+      if (!container) return;
       const listItems = container.querySelectorAll(".selectJSItem");
       listItems.forEach((item) => {
         item.addEventListener("click", () => {
@@ -424,7 +426,7 @@ export default function ComponentModule() {
   // ================== JS PW
   const signPws = document.querySelectorAll(".signPW")
   console.log(signPws.innerHTML);
-  
+
   if (signPws) {
     signPws.forEach(signPw => {
       let clicked = false

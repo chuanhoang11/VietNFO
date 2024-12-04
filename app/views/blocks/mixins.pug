@@ -422,8 +422,10 @@ mixin footer
 mixin proItem(item)
    .pro-wr 
       .pro-img 
-         .pro-time #{item.time}
-         .pro-type #{item.type}
+         .pro-time 
+            span.txt #{item.time}
+         .pro-type 
+            span.txt #{item.type}
          a(href="#").inner 
             +img(item.img)
       .pro-content
@@ -445,20 +447,24 @@ mixin proItem(item)
             .pro-note
                if item.rent
                   .pro-note-item 
-                     span.txt Rent: 
+                     span.txt 
+                        span.txt-hidden Rent: 
                         span.fw-6.c-txt-3 #{item.rent}
                         span(style="font-size: .8em") /month
                if item.income
                   .pro-note-item 
-                     span.txt Income: 
+                     span.txt 
+                        span.txt-hidden Income: 
                         span.fw-6.c-txt-3 #{item.income}
                         span(style="font-size: .8em") /year
          .pro-des #{item.address}
 mixin proItem2(item)
    .pro-wr
       .pro-img 
-         .pro-time #{item.time}
-         .pro-type #{item.type}
+         .pro-time 
+            span.txt #{item.time}
+         .pro-type 
+            span.txt #{item.type}
          a(href="#").inner 
             +img(item.img)
       .pro-content
@@ -481,8 +487,10 @@ mixin proItem2(item)
 mixin proItem3(item)
    .pro-wr
       .pro-img 
-         .pro-time #{item.time}
-         .pro-type #{item.type}
+         .pro-time 
+            span.txt #{item.time}
+         .pro-type 
+            span.txt #{item.type}
          a(href="#").inner 
             +img(item.img)
       .pro-content
@@ -505,8 +513,10 @@ mixin proItemSecond(item)
    .pro-wr.second 
       .pro-content 
          .pro-flex 
-            .pro-time #{item.time}
-            .pro-type #{item.type}
+            .pro-time 
+               span.txt #{item.time}
+            .pro-type 
+               span.txt #{item.type}
          h3.pro-name #{item.name}
          ul.pro-ul 
             li 

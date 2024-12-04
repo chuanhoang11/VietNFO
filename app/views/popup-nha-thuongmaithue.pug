@@ -235,8 +235,10 @@ block container
                               .pro-item.col.col-6
                                  .pro-wr 
                                     .pro-img 
-                                       .pro-time #{item.time}
-                                       .pro-type #{item.type}
+                                       .pro-time
+                                          span.txt #{item.time}
+                                       .pro-type
+                                          span.txt #{item.type}
                                        a(href="#").inner 
                                           +img(item.img)
                                     .pro-content
@@ -383,8 +385,10 @@ block container
                                  .swiper-slide.col
                                     .pro-wr
                                        .pro-img 
-                                          .pro-time 2 ngày trước
-                                          .pro-type Nhà ở
+                                          .pro-time
+                                             span.txt 2 ngày trước
+                                          .pro-type
+                                             span.txt Nhà ở
                                           a(href="#").inner 
                                              +img("pro-9.jpg")
                                        .pro-content
