@@ -15,7 +15,6 @@
     }
     box-shadow: rgba(149, 157, 165, 0.2) 0px 0.8rem 2.4rem;
     @include min(1023px) {
-      --size-hd-t: 7.8rem;
       height: var(--size-hd-t);
       .t-slogan,
       .hd-lang {
@@ -195,12 +194,12 @@
   &-noti {
     position: absolute;
     @include mid;
-    width: 50%;
+    width: 65%;
     text-align: center;
     @include min-max(1024px, 1200px) {
       left: 47%;
     }
-    @include max(1024px) {
+    @include max(800px) {
       display: none;
     }
   }
