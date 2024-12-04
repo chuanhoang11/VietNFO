@@ -7,18 +7,52 @@ export default function Select2Module() {
         maxWidth = optionWidth;
       }
     });
+
     $(".re-select-main").select2({
       width: maxWidth,
     });
   });
+  //   select Custom
+  $(document).ready(function () {
+    const selectJS = document.querySelector(".selectJS");
+    if (selectJS) {
+      $(".getValue").click(function () {
+        var newName = $(this).text();
+        $(".displayName").text(newName);
+      });
+    }
+    const toggleSelect = document.querySelector(".toggleSelect");
+    const dropdownPanel = document.querySelector(".boxPanel");
 
-  $(window).on("scroll", function () {
-    $(".re-select-main").each(function () {
-      if ($(this).data("select2").isOpen()) {
-        $(this).select2("close");
+    if (toggleSelect) {
+      $(toggleSelect).click(function (e) {
+        e.preventDefault();
+        $(dropdownPanel).toggleClass("active");
+      });
+    }
+    $(document).click(function (e) {
+      if (!$(e.target).closest(toggleSelect).length) {
+        $(dropdownPanel).removeClass("active");
       }
     });
   });
+  //   $(".re-select-main").on("select2:open", function () {
+  //     // Lấy chiều rộng của dropdown
+  //     var dropdownWidth = $(this).data("select2").dropdown.$dropdown.outerWidth();
+
+  //     // Lưu chiều rộng vào biến CSS --width-select2
+  //     $(":root").css("--width-select2", dropdownWidth + "px");
+
+  //     // (Tùy chọn) In ra console để kiểm tra chiều rộng
+  //     console.log("Dropdown width:", dropdownWidth);
+  //   });
+  //   $(window).on("scroll", function () {
+  //     $(".re-select-main").each(function () {
+  //       if ($(this).data("select2").isOpen()) {
+  //         $(this).select2("close");
+  //       }
+  //     });
+  //   });
 
   const selectCusContainers = document.querySelectorAll(".selectCus");
   if (selectCusContainers) {
