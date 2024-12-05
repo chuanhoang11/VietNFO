@@ -2,21 +2,24 @@ body.page-search {
   .hd {
     box-shadow: unset;
 
-    ~ .main {
+    ~.main {
       .sear-map {
         @include min(1025px) {
           height: calc(100vh - 7.2rem - 7.8rem);
           top: calc(7.2rem + 7.8rem);
         }
+
         @include max(1024px) {
           height: calc(100vh - 7.8rem);
           top: 7.8rem;
         }
+
         @include max(700px) {
           height: 30vh;
         }
       }
     }
+
     .mobile.sticky {
       top: 7.8rem;
     }
@@ -109,13 +112,13 @@ body.page-search {
         --rg: 0.8rem;
       }
 
-      > .col-4 {
+      >.col-4 {
         @include max(920px) {
           width: 100%;
         }
       }
 
-      > .col-3 {
+      >.col-3 {
         @include max(920px) {
           width: 40%;
         }
@@ -125,7 +128,7 @@ body.page-search {
         }
       }
 
-      > .col-2 {
+      >.col-2 {
         @include max(920px) {
           width: 20%;
         }
@@ -188,6 +191,7 @@ body.page-search {
         font-size: 2.4rem;
       }
     }
+
     .sear-form {
       flex: 1;
 
@@ -300,6 +304,7 @@ body.page-search {
           width: fit-content;
           margin: 0 auto;
           margin-bottom: var(--rg);
+
           .btn {
             padding: 1.2rem 2.4rem;
           }
@@ -318,6 +323,7 @@ body.page-search {
   }
 
   &-map {
+
     img,
     iframe {
       width: 100%;
@@ -378,6 +384,7 @@ body.page-search {
     opacity: 1;
     visibility: visible;
   }
+
   .hd.sticky .hd-logo,
   .hd.sticky .hd-lang,
   .hd.sticky .hd-burger {
@@ -387,14 +394,13 @@ body.page-search {
 }
 
 .home-bn-srch-box {
-  .select2-container--default
-    .select2-selection--single
-    .select2-selection__placeholder {
+  .select2-container--default .select2-selection--single .select2-selection__placeholder {
     color: #1d2939;
   }
 }
 
 .pro-select {
+
   .selectCusValue,
   .selectTwoValue {
     border: unset;
@@ -471,7 +477,7 @@ body.page-search {
 
 .pro-panel {
   .swiper-container {
-    ~ .box-btn {
+    ~.box-btn {
       @include max(500px) {
         display: none;
       }
@@ -521,10 +527,6 @@ body.page-search {
       width: 80%;
     }
   }
-
-  .pro-item.col-6 .pro-bner-name {
-    @include fz-24;
-  }
 }
 
 .range-head {
@@ -543,6 +545,7 @@ body.page-search {
   -ms-flex-align: center;
   align-items: center;
   gap: 0.8rem;
+
   .t-txt {
     color: #1d2939;
     font-weight: 600;
@@ -792,6 +795,7 @@ body.page-search {
     font-size: 1.6rem;
   }
 }
+
 .selectCusValue,
 .selectTwoValue {
   gap: 0.8rem;

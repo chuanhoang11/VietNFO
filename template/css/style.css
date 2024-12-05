@@ -8622,8 +8622,6 @@ ul.page-numbers {
       top: 5.4rem; } }
 
 @media screen and (min-width: 700px) {
-  .pro-item.col-third .pro-bner {
-    min-height: unset; }
   .pro-item.col-third .pro-bner-content {
     padding: 1.4em; } }
 
@@ -8724,6 +8722,48 @@ ul.page-numbers {
   .pro-slider-second .swiper-slide:nth-child(2),
   .pro-slider-third .swiper-slide:nth-child(2) {
     display: none; } }
+
+@media screen and (max-width: 1330px) {
+  .pro-item.col-third .pro-wr.third {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .pro-item.col-third .pro-wr.third .pro-img {
+    width: 100%; } }
+
+.pro-bner.--modifier {
+  min-height: 19.22rem; }
+  @media screen and (max-width: 500px) {
+    .pro-bner.--modifier {
+      font-size: 1.6rem; } }
+
+.pro-bner.--modifier .pro-bner-name {
+  line-height: 1.2; }
+
+.pro-bner.--modifier .pro-bner-content {
+  padding: calc(18/16 * 1em);
+  padding-left: calc(25/16 * 1em);
+  gap: calc(12/16 * 1em); }
+
+.pro-bner.--modifier .pro-bner-des {
+  margin-bottom: calc(12/16 * 1em); }
+  @media screen and (max-width: 500px) {
+    .pro-bner.--modifier .pro-bner-des {
+      font-size: 1em; } }
+
+.pro-bner.--modifier.--third .pro-bner-name,
+.pro-bner.--modifier.--first .pro-bner-name {
+  font-size: calc(24/16 * 1em); }
+
+.pro-bner.--modifier.--third .pro-bner-des,
+.pro-bner.--modifier.--first .pro-bner-des {
+  font-size: calc(14/16 * 1em); }
+
+@media screen and (min-width: 1331px) {
+  .pro-bner.--modifier.--third .pro-bner-content {
+    padding: calc(11/16 * 1em);
+    padding-left: calc(50/16 * 1em); } }
 
 .t-title {
   font-size: 3rem;
@@ -10249,9 +10289,7 @@ body.page-search {
     opacity: 1;
     visibility: visible; }
 
-.home-bn-srch-box .select2-container--default
-.select2-selection--single
-.select2-selection__placeholder {
+.home-bn-srch-box .select2-container--default .select2-selection--single .select2-selection__placeholder {
   color: #1d2939; }
 
 .pro-select .selectCusValue,
@@ -10385,15 +10423,6 @@ body.page-search {
 
 .sear-panel .pro-item.col-6 .pro-bner-img {
   width: 80%; }
-
-.sear-panel .pro-item.col-6 .pro-bner-name {
-  font-size: 2.4rem; }
-  @media only screen and (max-width: 1200px) {
-    .sear-panel .pro-item.col-6 .pro-bner-name {
-      font-size: 2rem; } }
-  @media only screen and (max-width: 800px) {
-    .sear-panel .pro-item.col-6 .pro-bner-name {
-      font-size: 1.7rem; } }
 
 .range-head {
   border: 0.1rem solid var(--border);

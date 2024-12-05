@@ -606,6 +606,7 @@
   }
 }
 
+
 .pro-bner-dc {
   position: absolute;
   top: 0;
@@ -1009,9 +1010,6 @@
 
 .pro-item.col-third {
   @include min($mobile) {
-    .pro-bner {
-      min-height: unset;
-    }
 
     .pro-bner-content {
       padding: 1.4em;
@@ -1157,5 +1155,59 @@
 .pro-slider-third .swiper-slide:nth-child(2) {
   @include max($mobile) {
     display: none;
+  }
+}
+
+@include max(1330px) {
+  .pro-item.col-third .pro-wr.third {
+    flex-direction: column;
+  }
+
+  .pro-item.col-third .pro-wr.third .pro-img {
+    width: 100%;
+  }
+}
+
+.pro-bner.--modifier {
+  min-height: 19.22rem;
+
+  @include max(500px) {
+    font-size: 1.6rem;
+  }
+}
+
+.pro-bner.--modifier .pro-bner-name {
+  line-height: 1.2;
+}
+
+.pro-bner.--modifier .pro-bner-content {
+  padding: calc(18/16 * 1em);
+  padding-left: calc(25/16 * 1em);
+  gap: calc(12/16 * 1em);
+}
+
+.pro-bner.--modifier .pro-bner-des {
+  margin-bottom: calc(12/16 * 1em);
+
+  @include max(500px) {
+    font-size: 1em;
+  }
+}
+
+.pro-bner.--modifier.--third .pro-bner-name,
+.pro-bner.--modifier.--first .pro-bner-name {
+  font-size: calc(24/16 * 1em);
+}
+
+.pro-bner.--modifier.--third .pro-bner-des,
+.pro-bner.--modifier.--first .pro-bner-des {
+  font-size: calc(14/16 * 1em);
+}
+
+.pro-bner.--modifier.--third .pro-bner-content {
+
+  @include min(1331px) {
+    padding: calc(11/16 * 1em);
+    padding-left: calc(50/16 * 1em);
   }
 }
