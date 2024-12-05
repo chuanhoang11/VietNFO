@@ -25,8 +25,11 @@ block container
                                  .selectCus
                                     .selectCusValue
                                        input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
                                        .txt Loại sự kiện
                                     .selectCusOptions
+                                       .text-head Loại sự kiện
                                        label.selectCusAll 
                                           input(type="checkbox")
                                           span.txt Cộng đồng
@@ -42,17 +45,21 @@ block container
                                        .selectCusApply Áp dụng
                            .col.col-sl-md  
                               .b-ip-select
-                                 .selectCus
-                                    .selectCusValue
+                                 .selectTwo
+                                    .selectTwoValue
                                        input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
                                        .txt Chưa diễn ra
-                                    .selectCusOptions
-                                       label.selectCusAll 
-                                          input(type="checkbox")
-                                          span.txt Chưa diễn ra
-                                       label.selectCusOption 
-                                          input(type="checkbox")
-                                          span.txt Đã diễn ra
+                                    .selectTwoOptions
+                                       .selectTwoGr
+                                          label.selectCusOption 
+                                             input(type="radio" name="checktime")
+                                             span.txt Chưa diễn ra
+                                          label.selectCusOption
+                                             input(type="radio" name="checktime")
+                                             span.txt Đã diễn ra
+                                       .selectTwoApply Áp dụng
                            .col.col-btn
                               +Btn("Tìm kiếm")
             .sear-block 
@@ -72,12 +79,7 @@ block container
                            +title("Việt Event tại North Carolina", "","dcor")
                         .head-sc.mb-10 
                            span.txt 107 kết quả
-                           .pro-select 
-                              span.txt Sắp sếp:
-                              select.re-select-main
-                                 option(value="")  Mới đăng
-                                 option(value="")  Thời gian diễn ra
-                                 option(value="" selected)  Mặc định
+                           +selectPong("Mặc định",['Mới đăng','Thời gian diễn ra','Mặc định'])
                         .pro-list.row 
                            - 
                               var proArrFive = [

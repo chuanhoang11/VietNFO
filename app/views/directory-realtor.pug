@@ -1,0 +1,168 @@
+extends layout/layout
+
+block vars
+   -title = 'Directory Realtor'
+   -bodyClass = 'page-dir'
+
+block container 
+   +breadCrumb(["Luật sư Việt"])
+   section.sec-home-hero 
+      .home-hero.ss-pd
+         .container 
+            .home-hero 
+               .home-hero-tags 
+                  span.home-hero-tag Sponsored
+               .home-hero-left
+                  .bg   
+                     +img("hero-dec.png")
+                  .home-hero-ctn    
+                     h3.home-hero-tt Trải nghiệm xứng tầm
+                     p.home-hero-des Nhà phát triển bất động sản hàng hiệu
+                     .home-hero-bot 
+                        +Btn("Khám phá ngay","")
+                        .social 
+                           .social-list 
+                              a(href="").social-link 
+                                 +img("ic-fb.svg") 
+                              a(href="").social-link 
+                                 +img("ic-yt.svg") 
+                              a(href="").social-link 
+                                 +img("ic-ins.svg") 
+                              a(href="").social-link 
+                                 +img("ic-x.svg")
+               .home-hero-right
+                  +img("hero-img.jpg")
+   section.sec-direc-data 
+      .direc-data.ss-pd
+         .container 
+            .head-sc.mb-48
+               +title("Realtor - chuyên gia bất động sản", "Directory Realtor người Việt", "dcor")
+            .direc-table-wrapper 
+               .sear-form 
+                  form(action="")
+                     .b-form-gr
+                        .form-list.row 
+                           .col.form-ip.col-search 
+                              .b-ip-search
+                                 span.icon
+                                    +img("icon-search.svg")
+                                 span.icon-remove 
+                                    i.fa-light.fa-xmark.fw-7
+                                 input(type="search" placeholder="Enter the firm name or expertise")
+                           .col.col-btn
+                              +Btn("Save search")
+               .direc-table 
+                  .table-container
+                     .table-header
+                        .header-cell 
+                           |Tên Realtor
+                           +img("arrow-table.svg")
+                        .header-cell 
+                           |Organization name
+                           +img("arrow-table.svg")
+                        .header-cell Email
+                        .header-cell Phone
+                        .header-cell Address
+                     .table-row
+                        .cell(data-text="Tên văn phòng")
+                           a(href="#") Tu Nguyen
+                           +img("arrow-table-cl.svg")
+                        .cell(data-text="Lĩnh vực hoạt động") NDIMAXIM management
+                        .cell(data-text="Email") olivia@untitled.com
+                        .cell(data-text="Phone") 0123456789
+                        .cell(data-text="Address") 139 Triumph Ave, Ste. 81, Dallas, TX 75241
+                     each val,index in Array(6)
+                        .table-row
+                           .cell(data-text="Tên văn phòng")
+                              a(href="#") Tu Nguyen
+                              +img("arrow-table-cl.svg")
+                           .cell(data-text="Lĩnh vực hoạt động") NDIMAXIM management@olivia
+                           .cell(data-text="Email") olivia@untitled.com
+                           .cell(data-text="Phone") 0123456789
+                           .cell(data-text="Address") 139 Triumph Rd, Dallas, TX 75241
+                     .table-pagi 
+                        .form-ip 
+                           select(name="" class="re-select-main")
+                              option(value="1")  10 items/page 
+                              option(value="1")  20 items/page 
+                              option(value="1")  30 items/page 
+                        +PageNumberCus()
+   section.sec-dir-business 
+      .dir-business.bg-gray.ss-pd 
+         .container 
+            .head-sc.mb-48
+               +title("Chưa có business của bạn?", "Điền form để đăng tải thông tin về business của bạn", "dcor")
+            .dir-business-wrapper 
+               .dir-form 
+                  .form-list.row 
+                     .form-ip.col.per3  
+                        p.text Business type
+                        select(name="" class="re-select-main" data-placeholder="Select business type") 
+                           option(value="") Select business type
+                           option(value="1") Y tế
+                           option(value="2") Kế toán - CPA
+                           option(value="3") Văn phòng luật
+                           option(value="3") Bất động sản
+                           option(value="3") Việc nhà
+                     .form-ip.col.per3  
+                        p.text Your name
+                        input(type="text" placeholder="Enter your name")
+                     .form-ip.col.per3  
+                        p.text Organization name (optional)
+                        input(type="text" placeholder="Enter your organization name")
+                     .form-ip.col.per3  
+                        p.text Email
+                        input(type="text" placeholder="Enter your email")
+                     .form-ip.col.per3  
+                        p.text Phone number
+                        input(type="text" placeholder="Enter your phone number")
+                     .form-ip.col.per3  
+                        p.text Website (optional)
+                        input(type="text" placeholder="Enter URL")
+                     .form-ip.col.per3  
+                        p.text Address 1 
+                        input(type="text" placeholder="Stress adress")
+                     .form-ip.col.per6
+                        p.text Address 2 (optional)
+                        input(type="text" placeholder="Apt, suite, unit, building, floor, etc.")
+                     .form-ip.col.per3  
+                        p.text City
+                        input(type="text" placeholder="Texas")
+                     .form-ip.col.per3  
+                        p.text State
+                        select(name="" class="re-select-main" data-placeholder="Choose state") 
+                           option(value="") Choose state
+                           option(value="1") State 1
+                           option(value="2") State 2
+                           option(value="3") State 3
+                           option(value="3") State 4
+                           option(value="3") State 5
+                     .form-ip.col.per3  
+                        p.text Zip code
+                        input(type="text" placeholder="Zip code")
+                     .form-ip.col 
+                        p.text Proof Document
+                        label.upload-container
+                           input#fileInput(
+                              hidden="" 
+                              type="file"
+                              )
+                           #dropArea.drop-area
+                              .drop-area-icon 
+                                 +img("ic-upload-cloud.svg")
+                              p.drop-area-text
+                                 strong 
+                                    span.blue Chọn và tải lên
+                                 |hoặc kéo thả tài liệu
+                                 br
+                                 |chứng thực business của bạn (e.g license, đăng ký kinh doanh). VietINFO cam kết bảo mật thông tin 
+                                 br
+                                 |người dùng. Xem 
+                                 a(href="").blue chính sách bảo mật 
+                                 |của chúng tôi để biết thêm chi tiết.
+                              ul#fileList
+                     .form-ip.col 
+                        +Btn("Submit for review","button")
+
+
+

@@ -121,22 +121,57 @@
                       </div>
                       <div class="col col-sl-md">
                         <div class="b-ip-select">
-                          <select class="re-select-main" name="">
-                            <option value="">Việc nhà hàng</option>
-                            <option value="">Nhà ở</option>
-                            <option value="">Mua nhà</option>
-                            <option value="">Mua cửa tiệm</option>
-                          </select>
+                          <div class="selectCus">
+                            <div class="selectCusValue">
+                              <input type="text" hidden><span class="icon-arrow"> <i class="fa-light fa-chevron-down"></i></span>
+                              <div class="txt">Loại việc làm</div>
+                            </div>
+                            <div class="selectCusOptions">
+                              <div class="text-head">Loại việc làm</div>
+                              <label class="selectCusAll"> 
+                                <input type="checkbox"><span class="txt">Chọn tất cả</span>
+                              </label>
+                              <label class="selectCusOption"> 
+                                <input type="checkbox"><span class="txt">Làm nail</span>
+                              </label>
+                              <label class="selectCusOption"> 
+                                <input type="checkbox"><span class="txt">Nhà hàng</span>
+                              </label>
+                              <label class="selectCusOption"> 
+                                <input type="checkbox"><span class="txt">Văn phòng</span>
+                              </label>
+                              <label class="selectCusOption"> 
+                                <input type="checkbox"><span class="txt">Việc khác</span>
+                              </label>
+                              <div class="selectCusApply">Áp dụng</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="col col-sl-md">
                         <div class="b-ip-select">
-                          <select class="re-select-main" name="">
-                            <option value="">Đăng tuần này</option>
-                            <option value="">Đăng tháng này</option>
-                            <option value="">3 tuần trước</option>
-                            <option value="">1 tháng trước</option>
-                          </select>
+                          <div class="selectCus">
+                            <div class="selectCusValue">
+                              <input type="text" hidden><span class="icon-arrow"> <i class="fa-light fa-chevron-down"></i></span>
+                              <div class="txt">Thời gian đăng tin</div>
+                            </div>
+                            <div class="selectCusOptions">
+                              <div class="text-head">Thời gian đăng tin</div>
+                              <label class="selectCusAll"> 
+                                <input type="checkbox"><span class="txt">Chọn tất cả</span>
+                              </label>
+                              <label class="selectCusOption"> 
+                                <input type="checkbox"><span class="txt">Một tuần trước</span>
+                              </label>
+                              <label class="selectCusOption"> 
+                                <input type="checkbox"><span class="txt">Một tháng trước</span>
+                              </label>
+                              <label class="selectCusOption"> 
+                                <input type="checkbox"><span class="txt">Lâu hơn</span>
+                              </label>
+                              <div class="selectCusApply">Áp dụng</div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="col col-btn"><a class="btn" href=""><span class="inner">Tìm kiếm</span><i></i></a>
@@ -164,22 +199,28 @@
                       </div>
                     </div>
                     <div class="head-sc mb-10"> <span class="txt">107 kết quả</span>
-                      <div class="pro-select"> <span class="txt">Sắp sếp:</span>
-                        <select class="re-select-main">
-                          <option value=""> Cộng đồng</option>
-                          <option value=""> Tin mới nhất</option>
-                          <option value=""> Cộng đồng</option>
-                          <option value=""> Cộng đồng</option>
-                        </select>
+                      <div class="pro-select selectJS">
+                        <div class="t-head toggleSelect"><span class="txt">Sắp xếp:  </span>
+                          <div class="t-gr"><span class="t-name displayName">Mặc định</span><span class="icon"><i class="fa-light fa-chevron-down fw-7"></i></span></div>
+                        </div>
+                        <div class="b-pos boxPanel">
+                          <div class="b-inner">
+                            <button class="t-link getValue">Mới đăng Tiền lương (cao tới thấp)</button>
+                            <button class="t-link getValue">Tiền lương (thấp tới cao)</button>
+                            <button class="t-link getValue">Lượt xem (cao tới thấp)</button>
+                            <button class="t-link getValue">Lượt xem (thấp tới cao)</button>
+                            <button class="t-link getValue">Mặc định</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="pro-list row"> 
                       <div class="pro-item col col-6">
-                        <div class="pro-wr second">
+                        <div class="pro-wr second"> 
                           <div class="pro-content"> 
                             <div class="pro-flex"> 
-                              <div class="pro-time">59 phút trước</div>
-                              <div class="pro-type">Nhà hàng</div>
+                              <div class="pro-time"> <span class="txt">59 phút trước</span></div>
+                              <div class="pro-type"> <span class="txt">Nhà hàng</span></div>
                             </div>
                             <h3 class="pro-name">Tuyển phục vụ nhà hàng Việt Nam</h3>
                             <ul class="pro-ul"> 
@@ -202,11 +243,11 @@
                         </div>
                       </div>
                       <div class="pro-item col col-6">
-                        <div class="pro-wr second">
+                        <div class="pro-wr second"> 
                           <div class="pro-content"> 
                             <div class="pro-flex"> 
-                              <div class="pro-time">59 phút trước</div>
-                              <div class="pro-type">Nhà hàng</div>
+                              <div class="pro-time"> <span class="txt">59 phút trước</span></div>
+                              <div class="pro-type"> <span class="txt">Nhà hàng</span></div>
                             </div>
                             <h3 class="pro-name">Tuyển quản lý nhà hàng Nhật</h3>
                             <ul class="pro-ul"> 
@@ -229,26 +270,25 @@
                         </div>
                       </div>
                       <div class="pro-item col col-6">
-                        <div class="pro-bner"> 
-                          <div class="pro-bner-tag">Sponsored</div>
+                        <div class="pro-bner --modifier">
                           <div class="pro-bner-dc"><img src="./assets/images/pro-bner-dc.png" alt=""/>
                           </div>
                           <div class="pro-bner-img"><img src="./assets/images/pro-bner-img.jpg" alt=""/>
                           </div>
                           <div class="pro-bner-content"> 
                             <h3 class="pro-bner-name">
-                               Chăm sóc<br>người lớn tuổi</h3>
+                               Chăm sóc<br/>người lớn tuổi</h3>
                             <p class="pro-bner-des">Dịch vụ tận tình, nhân viên chu đáo</p>
                             <div class="pro-btn"> <span class="txt">Khám phá ngay</span></div>
                           </div>
                         </div>
                       </div>
                       <div class="pro-item col col-6">
-                        <div class="pro-wr second">
+                        <div class="pro-wr second"> 
                           <div class="pro-content"> 
                             <div class="pro-flex"> 
-                              <div class="pro-time">59 phút trước</div>
-                              <div class="pro-type">Văn phòng</div>
+                              <div class="pro-time"> <span class="txt">59 phút trước</span></div>
+                              <div class="pro-type"> <span class="txt">Văn phòng</span></div>
                             </div>
                             <h3 class="pro-name">Tuyển trợ lý luật sư</h3>
                             <ul class="pro-ul"> 
@@ -271,10 +311,98 @@
                         </div>
                       </div>
                       <div class="pro-item col col-6">
+                        <div class="pro-wr">
+                          <div class="pro-img"> 
+                            <div class="pro-time"> <span class="txt">2 ngày trước</span></div>
+                            <div class="pro-type"> <span class="txt">Thương mại</span></div><a class="inner" href="#"> <img src="./assets/images/pro-9.jpg" alt=""/></a>
+                          </div>
+                          <div class="pro-content">
+                            <h3 class="pro-name">ABC Plaza</h3>
+                            <div>
+                              <div class="pro-note">
+                                <div class="pro-note-item"> <span class="txt fw-5 c-txt-2">$24.00 - $25.00 SF/YR</span>
+                                </div>
+                                <div class="pro-note-item"> <span class="txt fw-5 c-txt-2">150 - 2000 sqft</span>
+                                </div>
+                                <div class="pro-note-item"> <span class="txt fw-5 c-txt-2">Built in 2018</span>
+                                </div>
+                              </div>
+                              <div class="pro-des">471 Tam Oshanter Dr SE, Marietta, GA, 30067</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pro-item col col-6">
+                        <div class="pro-wr">
+                          <div class="pro-img"> 
+                            <div class="pro-time"> <span class="txt">2 ngày trước</span></div>
+                            <div class="pro-type"> <span class="txt">Nhà ở</span></div><a class="inner" href="#"> <img src="./assets/images/pro-12.jpg" alt=""/></a>
+                          </div>
+                          <div class="pro-content">
+                            <h3 class="pro-name">$1,000<span class="fw-4" style="font-size: .8em">/month</span></h3>
+                            <div>
+                              <div class="pro-note">
+                                <div class="pro-note-item"> 
+                                  <div class="pro-li fw-5 c-txt-2"> <img src="./assets/images/ic-pro-bed.svg" alt=""/><span class="txt">2 bed</span>
+                                  </div>
+                                </div>
+                                <div class="pro-note-item"> 
+                                  <div class="pro-li fw-5 c-txt-2"> <img src="./assets/images/ic-pro-shower.svg" alt=""/><span class="txt">2 ba</span>
+                                  </div>
+                                </div>
+                                <div class="pro-note-item"> <span class="txt fw-5 c-txt-2">11,300 sqft</span>
+                                </div>
+                              </div>
+                              <div class="pro-des">471 Tam Oshanter Dr SE, Marietta, GA, 30067</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pro-item col col-6">
+                        <div class="pro-bner --modifier --first">
+                          <div class="pro-bner-dc"><img src="./assets/images/pro-bner-dc.png" alt=""/>
+                          </div>
+                          <div class="pro-bner-img"><img src="./assets/images/pro-bner-img.jpg" alt=""/>
+                          </div>
+                          <div class="pro-bner-content"> 
+                            <h3 class="pro-bner-name">
+                               Chăm sóc<br/>người lớn tuổi</h3>
+                            <p class="pro-bner-des">Dịch vụ tận tình, nhân viên chu đáo</p>
+                            <div class="pro-btn"> <span class="txt">Khám phá ngay</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pro-item col col-6">
+                        <div class="pro-wr">
+                          <div class="pro-img"> 
+                            <div class="pro-time"> <span class="txt">2 ngày trước</span></div>
+                            <div class="pro-type"> <span class="txt">Nhà ở</span></div><a class="inner" href="#"> <img src="./assets/images/pro-10.jpg" alt=""/></a>
+                          </div>
+                          <div class="pro-content">
+                            <h3 class="pro-name">$1,000<span class="fw-4" style="font-size: .8em">/month</span></h3>
+                            <div>
+                              <div class="pro-note">
+                                <div class="pro-note-item"> 
+                                  <div class="pro-li fw-5 c-txt-2"> <img src="./assets/images/ic-pro-bed.svg" alt=""/><span class="txt">2 bed</span>
+                                  </div>
+                                </div>
+                                <div class="pro-note-item"> 
+                                  <div class="pro-li fw-5 c-txt-2"> <img src="./assets/images/ic-pro-shower.svg" alt=""/><span class="txt">2 ba</span>
+                                  </div>
+                                </div>
+                                <div class="pro-note-item"> <span class="txt fw-5 c-txt-2">11,300 sqft</span>
+                                </div>
+                              </div>
+                              <div class="pro-des">471 Tam Oshanter Dr SE, Marietta, GA, 30067</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pro-item col col-6">
                         <div class="pro-wr"> 
                           <div class="pro-img"> 
-                            <div class="pro-time">2 ngày trước</div>
-                            <div class="pro-type">Tiệm nail</div><a class="inner" href="#"> <img src="./assets/images/pro-1.jpg" alt=""/></a>
+                            <div class="pro-time"> <span class="txt">2 ngày trước</span></div>
+                            <div class="pro-type"> <span class="txt">Tiệm nail</span></div><a class="inner" href="#"> <img src="./assets/images/pro-1.jpg" alt=""/></a>
                           </div>
                           <div class="pro-content">
                             <div class="pro-top"> 
@@ -287,8 +415,8 @@
                               <div class="pro-note-item"> <span class="txt fw-5 c-txt-2">11,300 sqft</span></div>
                             </div>
                             <div class="pro-note">
-                              <div class="pro-note-item"> <span class="txt fw-5">Rent: <span class="fw-6 c-txt-3">$1,500</span><span style="font-size: .8em">/month</span></span></div>
-                              <div class="pro-note-item"> <span class="txt fw-5">Income: <span class="fw-6 c-txt-3">$1,000,000</span><span style="font-size: .8em">/year</span></span></div>
+                              <div class="pro-note-item"> <span class="txt"> <span class="txt-hidden">Rent: </span><span class="fw-6 c-txt-3">$1,500</span><span style="font-size: .8em">/month</span></span></div>
+                              <div class="pro-note-item"> <span class="txt"> <span class="txt-hidden">Income: </span><span class="fw-6 c-txt-3">$1,000,000</span><span style="font-size: .8em">/year</span></span></div>
                             </div>
                             <div class="pro-des">471 Tam Oshanter Dr SE, Marietta, GA, 30067</div>
                           </div>
@@ -297,8 +425,8 @@
                       <div class="pro-item col col-6">
                         <div class="pro-wr"> 
                           <div class="pro-img"> 
-                            <div class="pro-time">2 ngày trước</div>
-                            <div class="pro-type">Nhà hàng</div><a class="inner" href="#"> <img src="./assets/images/pro-2.jpg" alt=""/></a>
+                            <div class="pro-time"> <span class="txt">2 ngày trước</span></div>
+                            <div class="pro-type"> <span class="txt">Nhà hàng</span></div><a class="inner" href="#"> <img src="./assets/images/pro-2.jpg" alt=""/></a>
                           </div>
                           <div class="pro-content">
                             <div class="pro-top"> 
@@ -311,18 +439,32 @@
                               <div class="pro-note-item"> <span class="txt fw-5 c-txt-2">11,300 sqft</span></div>
                             </div>
                             <div class="pro-note">
-                              <div class="pro-note-item"> <span class="txt fw-5">Rent: <span class="fw-6 c-txt-3">$1,500</span><span style="font-size: .8em">/month</span></span></div>
-                              <div class="pro-note-item"> <span class="txt fw-5">Income: <span class="fw-6 c-txt-3">$1,000,000</span><span style="font-size: .8em">/year</span></span></div>
+                              <div class="pro-note-item"> <span class="txt"> <span class="txt-hidden">Rent: </span><span class="fw-6 c-txt-3">$1,500</span><span style="font-size: .8em">/month</span></span></div>
+                              <div class="pro-note-item"> <span class="txt"> <span class="txt-hidden">Income: </span><span class="fw-6 c-txt-3">$1,000,000</span><span style="font-size: .8em">/year</span></span></div>
                             </div>
                             <div class="pro-des">471 Tam Oshanter Dr SE, Marietta, GA, 30067</div>
                           </div>
                         </div>
                       </div>
                       <div class="pro-item col col-6">
+                        <div class="pro-bner --modifier --first">
+                          <div class="pro-bner-dc"><img src="./assets/images/pro-bner-dc.png" alt=""/>
+                          </div>
+                          <div class="pro-bner-img"><img src="./assets/images/pro-bner-img.jpg" alt=""/>
+                          </div>
+                          <div class="pro-bner-content"> 
+                            <h3 class="pro-bner-name">
+                               Chăm sóc<br/>người lớn tuổi</h3>
+                            <p class="pro-bner-des">Dịch vụ tận tình, nhân viên chu đáo</p>
+                            <div class="pro-btn"> <span class="txt">Khám phá ngay</span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pro-item col col-6">
                         <div class="pro-wr"> 
                           <div class="pro-img"> 
-                            <div class="pro-time">2 ngày trước</div>
-                            <div class="pro-type">Kinh doanh khác</div><a class="inner" href="#"> <img src="./assets/images/pro-3.jpg" alt=""/></a>
+                            <div class="pro-time"> <span class="txt">2 ngày trước</span></div>
+                            <div class="pro-type"> <span class="txt">Kinh doanh khác</span></div><a class="inner" href="#"> <img src="./assets/images/pro-3.jpg" alt=""/></a>
                           </div>
                           <div class="pro-content">
                             <h3 class="pro-name">$500,000</h3>
@@ -331,28 +473,8 @@
                               <div class="pro-note-item"> <span class="txt fw-5 c-txt-2">11,300 sqft</span></div>
                             </div>
                             <div class="pro-note">
-                              <div class="pro-note-item"> <span class="txt fw-5">Rent: <span class="fw-6 c-txt-3">$1,500</span><span style="font-size: .8em">/month</span></span></div>
-                              <div class="pro-note-item"> <span class="txt fw-5">Income: <span class="fw-6 c-txt-3">$1,000,000</span><span style="font-size: .8em">/year</span></span></div>
-                            </div>
-                            <div class="pro-des">471 Tam Oshanter Dr SE, Marietta, GA, 30067</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="pro-item col col-6">
-                        <div class="pro-wr"> 
-                          <div class="pro-img"> 
-                            <div class="pro-time">2 ngày trước</div>
-                            <div class="pro-type">Kinh doanh khác</div><a class="inner" href="#"> <img src="./assets/images/pro-4.jpg" alt=""/></a>
-                          </div>
-                          <div class="pro-content">
-                            <h3 class="pro-name">$500,000</h3>
-                            <div class="pro-note">
-                              <div class="pro-note-item"> <span class="txt fw-5 c-txt-2">Xưởng sửa chữa ô tô Đại Việt</span></div>
-                              <div class="pro-note-item"> <span class="txt fw-5 c-txt-2">11,300 sqft</span></div>
-                            </div>
-                            <div class="pro-note">
-                              <div class="pro-note-item"> <span class="txt fw-5">Rent: <span class="fw-6 c-txt-3">$1,500</span><span style="font-size: .8em">/month</span></span></div>
-                              <div class="pro-note-item"> <span class="txt fw-5">Income: <span class="fw-6 c-txt-3">$1,000,000</span><span style="font-size: .8em">/year</span></span></div>
+                              <div class="pro-note-item"> <span class="txt"> <span class="txt-hidden">Rent: </span><span class="fw-6 c-txt-3">$1,500</span><span style="font-size: .8em">/month</span></span></div>
+                              <div class="pro-note-item"> <span class="txt"> <span class="txt-hidden">Income: </span><span class="fw-6 c-txt-3">$1,000,000</span><span style="font-size: .8em">/year</span></span></div>
                             </div>
                             <div class="pro-des">471 Tam Oshanter Dr SE, Marietta, GA, 30067</div>
                           </div>
@@ -419,15 +541,14 @@
                         </div>
                       </div>
                       <div class="pro-item col col-third"> 
-                        <div class="pro-bner"> 
-                          <div class="pro-bner-tag">Sponsored</div>
+                        <div class="pro-bner --modifier --third">
                           <div class="pro-bner-dc"><img src="./assets/images/pro-bner-dc.png" alt=""/>
                           </div>
                           <div class="pro-bner-img"><img src="./assets/images/pro-bner-img.jpg" alt=""/>
                           </div>
                           <div class="pro-bner-content"> 
                             <h3 class="pro-bner-name">
-                               Chăm sóc<br>người lớn tuổi</h3>
+                               Chăm sóc<br/>người lớn tuổi</h3>
                             <p class="pro-bner-des">Dịch vụ tận tình, nhân viên chu đáo</p>
                             <div class="pro-btn"> <span class="txt">Khám phá ngay</span></div>
                           </div>

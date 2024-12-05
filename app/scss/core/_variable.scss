@@ -34,7 +34,7 @@
   //mb hd sticky
   --mb-size-hd-sticky: 5.4rem;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1024px) {
     --pd-sc: 4rem;
     --size-hd: 7.2rem;
   }
@@ -42,8 +42,8 @@
 
 //Responsive
 
-$res-tablet: 1024px;
-$res-tablet-min: 1025px;
+$res-tablet: 1023px;
+$res-tablet-min: 1024px;
 $mobile-min: 701px;
 $res-mobile: 1199px; //  cho mobile (≤ 1199px)
 $res-mobile-min: 1200px; //  cho mobile đến tablet (≥ 1200px)

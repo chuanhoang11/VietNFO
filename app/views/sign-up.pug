@@ -1,0 +1,98 @@
+extends layout/layout
+
+block vars
+   -title = 'Sign Up'
+   -bodyClass = 'page-sign'
+
+block container 
+   section.sec-sign 
+      .sign.ss-pd
+         .container
+            .sign-logo 
+               a(href="").logo-link
+                  +img("logo.svg")  
+            .sign-wrapper 
+               .sign-box.tabJS
+                  .sign-ctrl 
+                     .sign-ctrl-it.tabBtn Đăng nhập
+                     .sign-ctrl-it.tabBtn Đăng ký
+                  .sign-panel 
+                     .sign-panel-it.tabPanel 
+                        .wrapper
+                           form(action="")  
+                              .form-list.row 
+                                 .form-ip.col 
+                                    p.text Email
+                                    input(type="text" placeholder="Nhập email")
+                                 .form-ip.col 
+                                    p.text Mật khẩu
+                                    .input
+                                       input(type="password" placeholder="Nhập Mật khẩu")
+                                       .signPW 
+                                          +img("icon-eyes-open.svg")
+                                          +img("icon-eyes-close.svg")
+                                    a(href="").sign-forgot  Forgot password?
+                                 .form-ip.col 
+                                    +Checker("checkbox","","Keep me sign in")
+                                    p.sign-check Check this box only when on a private device.
+                                 .form-ip.col 
+                                    +Btn("Đăng nhập","button","full")
+                              .sign-with 
+                                 p.tt Or connect with:
+                                 a(href="").sign-with-btn 
+                                    +img("lgGG.svg")
+                                    span.txt Continue with Google
+                                 a(href="").sign-with-btn 
+                                    +img("lgFB.svg")
+                                    span.txt Continue with Facebook
+                                 a(href="").sign-with-btn 
+                                    +img("lgAP.svg")
+                                    span.txt Continue with Apple
+                     .sign-panel-it.tabPanel 
+                        .wrapper
+                           form(action="")  
+                              .form-list.row 
+                                 .form-ip.col 
+                                    p.text Email
+                                    input(type="text" placeholder="Nhập email")
+                                 .form-ip.col 
+                                    p.text Mật khẩu
+                                    .input
+                                       input(type="password" placeholder="Nhập Mật khẩu")
+                                       .signPW 
+                                          +img("icon-eyes-open.svg")
+                                          +img("icon-eyes-close.svg")
+                                    .input-note 
+                                       +img("ic-cancel.svg")
+                                       span.input-note-txt Ít nhất 8 ký tự
+                                    .input-note 
+                                       +img("ic-cancel.svg")
+                                       span.input-note-txt Có dùng số (ví dụ: 1234)
+                                    .input-note 
+                                       +img("ic-check.svg")
+                                       span.input-note-txt Có ký tự đặc biệt (ví dụ: !@#$)
+                                    .input-note 
+                                       +img("ic-check.svg")
+                                       span.input-note-txt Ít nhất một ký tự viết IN HOA (ví dụ: ABC)
+                                 .form-ip.col 
+                                    +Btn("Đăng ký","button","full")
+                              p.sign-note 
+                                 |By creating an account, you agree to 
+                                 br
+                                 |Our 
+                                 a(href="") Terms of Service, Privacy Policy, 
+                                 |and 
+                                 a(href="") Ads Service Agreement.
+                              .sign-with 
+                                 p.tt Or connect with:
+                                 a(href="").sign-with-btn 
+                                    +img("lgGG.svg")
+                                    span.txt Continue with Google
+                                 a(href="").sign-with-btn 
+                                    +img("lgFB.svg")
+                                    span.txt Continue with Facebook
+                                 a(href="").sign-with-btn 
+                                    +img("lgAP.svg")
+                                    span.txt Continue with Apple
+                     
+                           

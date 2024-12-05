@@ -10,12 +10,11 @@
   --size-hd-t: 9.2rem;
 
   &.sticky {
-    @include max(1200px) {
+    @include max(1024px) {
       height: var(--mb-size-hd-sticky);
     }
     box-shadow: rgba(149, 157, 165, 0.2) 0px 0.8rem 2.4rem;
-    @include min(1201px) {
-      --size-hd-t: 7.8rem;
+    @include min(1023px) {
       height: var(--size-hd-t);
       .t-slogan,
       .hd-lang {
@@ -66,7 +65,7 @@
       background: var(--colorf5);
       z-index: -2;
     }
-    @include max(1200px) {
+    @include max(1024px) {
       display: none;
     }
     .b-gr {
@@ -81,7 +80,7 @@
     position: relative;
     z-index: 2;
     transition: 0.3s ease-in-out;
-    @include max(1200px) {
+    @include max(1024px) {
       height: 100%;
     }
     &::before {
@@ -113,7 +112,7 @@
     .custom-logo-link {
       @include mid-flex;
     }
-    @include max(1200px) {
+    @include max(1024px) {
       width: 14rem;
     }
   }
@@ -124,7 +123,7 @@
       @include fz-16;
       min-width: unset;
       padding: 0.8rem 1.6rem;
-      @include max(1200px) {
+      @include max(1024px) {
         display: none;
       }
     }
@@ -140,7 +139,7 @@
     z-index: 2;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    @include max(1200px) {
+    @include max(1024px) {
       border-radius: 0.5rem;
     }
     &:hover {
@@ -187,7 +186,7 @@
       transition: 0.3s ease-in-out;
       z-index: 1;
       text-align: right;
-      @include max(1200px) {
+      @include max(1024px) {
         border-radius: 0.5rem;
       }
     }
@@ -195,9 +194,12 @@
   &-noti {
     position: absolute;
     @include mid;
-    width: 50%;
+    width: 65%;
     text-align: center;
-    @include max(1200px) {
+    @include min-max(1024px, 1200px) {
+      left: 47%;
+    }
+    @include max(800px) {
       display: none;
     }
   }

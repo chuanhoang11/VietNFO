@@ -1,20 +1,24 @@
 .hd-nav {
   height: 100%;
 
-  @include max(1200px) {
+  @include max(1024) {
     display: none;
   }
+
   .menu {
     &-nav {
       height: 100%;
       @include font-second;
+
       > .menu-list {
         height: 100%;
+
         //   margin: 0 -2.4rem;
         > .menu-item {
           height: 100%;
           @include flex;
           align-items: center;
+
           &:last-child {
             > .menu-list {
               left: initial;
@@ -32,6 +36,7 @@
             width: 0;
             @include transitionRe;
           }
+
           &::after {
             content: "";
             position: absolute;
@@ -61,6 +66,7 @@
           &:hover {
             > a {
               color: var(--color-pri);
+
               i {
                 transform: rotate(180deg);
                 color: var(--color-pri);
@@ -80,12 +86,13 @@
 
           &.current_page_item,
           &.current-menu-item,
-         //  &.current_page_parent,
+          //  &.current_page_parent,
           &.current-menu-parent,
           &.current-post-parent {
             > a {
               color: var(--color-pri);
             }
+
             &::before {
               width: calc(100% - 4.8rem);
             }
@@ -117,9 +124,11 @@
             &.current-menu-item {
               > a {
                 color: var(--color-pri);
+
                 &::after {
                   height: 100%;
                 }
+
                 //  color: $color-pri;
               }
             }
@@ -174,6 +183,7 @@
         @include transitionRe;
         @include hidden(-50%, 5px);
         box-shadow: rgba(100, 100, 111, 0.2) 0px 0.3rem 1.2rem 0px;
+
         > .menu-item {
           margin-left: 0;
           width: 100%;
@@ -190,6 +200,7 @@
             > a {
               color: var(--color-pri);
               background: #d4eef9;
+
               &::after {
                 height: 100%;
               }
@@ -209,6 +220,7 @@
             position: relative;
             color: var(--color2c);
             transition: 0.3s ease-in-out;
+
             &::after {
               @include pseudo;
               @include posi-vertical;
@@ -219,6 +231,7 @@
               left: 0;
               transition: all 0.4s ease-in-out;
             }
+
             > i {
               transform: rotate(-90deg) translate(5px, 0);
               margin-top: 0.8rem;
@@ -242,7 +255,7 @@
         > .menu-item {
           &.current_page_item,
           &.current-menu-item,
-         //  &.current_page_parent,
+          //  &.current_page_parent,
           &.current-menu-parent,
           &.current-post-parent {
             > a {
@@ -263,6 +276,7 @@
 
           > a {
             padding: 1.5rem;
+            padding-left: 3rem;
             @include flex;
             justify-content: space-between;
             align-items: center;
@@ -271,9 +285,11 @@
             font-weight: 500;
             border-bottom: 1px solid var(--border-color);
             position: relative;
+
             br {
               display: none;
             }
+
             &::before {
               display: none;
             }
@@ -289,6 +305,7 @@
             display: flex;
           }
         }
+
         &.active {
           > a {
             color: var(--color-pri);

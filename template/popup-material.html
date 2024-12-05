@@ -123,10 +123,11 @@
                         <div class="b-ip-select">
                           <div class="selectCus">
                             <div class="selectCusValue">
-                              <input type="text" hidden>
+                              <input type="text" hidden><span class="icon-arrow"> <i class="fa-light fa-chevron-down"></i></span>
                               <div class="txt">Loại sự kiện</div>
                             </div>
                             <div class="selectCusOptions">
+                              <div class="text-head">Loại sự kiện</div>
                               <label class="selectCusAll"> 
                                 <input type="checkbox"><span class="txt">Cộng đồng</span>
                               </label>
@@ -146,18 +147,21 @@
                       </div>
                       <div class="col col-sl-md"> 
                         <div class="b-ip-select">
-                          <div class="selectCus">
-                            <div class="selectCusValue">
-                              <input type="text" hidden>
+                          <div class="selectTwo">
+                            <div class="selectTwoValue">
+                              <input type="text" hidden><span class="icon-arrow"> <i class="fa-light fa-chevron-down"></i></span>
                               <div class="txt">Chưa diễn ra</div>
                             </div>
-                            <div class="selectCusOptions">
-                              <label class="selectCusAll"> 
-                                <input type="checkbox"><span class="txt">Chưa diễn ra</span>
-                              </label>
-                              <label class="selectCusOption"> 
-                                <input type="checkbox"><span class="txt">Đã diễn ra</span>
-                              </label>
+                            <div class="selectTwoOptions">
+                              <div class="selectTwoGr">
+                                <label class="selectCusOption"> 
+                                  <input type="radio" name="checktime"><span class="txt">Chưa diễn ra</span>
+                                </label>
+                                <label class="selectCusOption">
+                                  <input type="radio" name="checktime"><span class="txt">Đã diễn ra</span>
+                                </label>
+                              </div>
+                              <div class="selectTwoApply">Áp dụng</div>
                             </div>
                           </div>
                         </div>
@@ -187,12 +191,17 @@
                       </div>
                     </div>
                     <div class="head-sc mb-10"> <span class="txt">107 kết quả</span>
-                      <div class="pro-select"> <span class="txt">Sắp sếp:</span>
-                        <select class="re-select-main">
-                          <option value=""> Mới đăng</option>
-                          <option value=""> Thời gian diễn ra</option>
-                          <option value="" selected> Mặc định</option>
-                        </select>
+                      <div class="pro-select selectJS">
+                        <div class="t-head toggleSelect"><span class="txt">Sắp xếp:  </span>
+                          <div class="t-gr"><span class="t-name displayName">Mặc định</span><span class="icon"><i class="fa-light fa-chevron-down fw-7"></i></span></div>
+                        </div>
+                        <div class="b-pos boxPanel">
+                          <div class="b-inner">
+                            <button class="t-link getValue">Mới đăng</button>
+                            <button class="t-link getValue">Thời gian diễn ra</button>
+                            <button class="t-link getValue">Mặc định</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="pro-list row"> 

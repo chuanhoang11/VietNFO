@@ -197,15 +197,19 @@ export default function ComponentModule() {
   if (selectJS) {
     function scrollToActiveItem() {
       const container = document.querySelector(".pro-calendar.selectJS");
-      const activeItem = container.querySelector(".selectJSItem.active");
-      if (activeItem) {
+      if (container) {
+        const activeItem = container.querySelector(".selectJSItem.active");
+        if (!activeItem) return;
         // Tính toán vị trí của phần tử active
         const containerRect = container.getBoundingClientRect();
         const activeRect = activeItem.getBoundingClientRect();
 
         // Tính khoảng cách cần cuộn để đưa activeItem vào giữa container
         const offset =
-          activeRect.top - containerRect.top - container.clientHeight / 2 + activeItem.clientHeight / 2;
+          activeRect.top -
+          containerRect.top -
+          container.clientHeight / 2 +
+          activeItem.clientHeight / 2;
 
         // Cuộn container đến vị trí
         smoothScroll(container, container.scrollTop + offset, 500); // 500ms là thời gian cuộn
@@ -242,6 +246,7 @@ export default function ComponentModule() {
     // tạo function  từ đoạn code được comment ở trên
     function handleSelectMonth() {
       const container = document.querySelector(".selectJSBody");
+      if (!container) return;
       const listItems = container.querySelectorAll(".selectJSItem");
       listItems.forEach((item) => {
         item.addEventListener("click", () => {
@@ -255,5 +260,192 @@ export default function ComponentModule() {
       scrollToActiveItem();
     }
     handleSelectMonth();
+  }
+  const rangeInputs = document.querySelectorAll(".range-input input");
+  const progress = document.querySelector(".range-slider .progress");
+  const priceMin = document.querySelector(".range-item.min .price");
+  const priceMax = document.querySelector(".range-item.max .price");
+  const rangeApplyButton = document.querySelector(".range-apply");
+  const rangeValueInput = document.querySelector(".rangeValue");
+  const textValueElement = document.querySelector(".rangeTextValue");
+  const rangePanel = document.querySelector(".range-panel");
+  const rangeHead = document.querySelector(".range-head");
+
+  let priceGap = 0;
+
+  function formatCurrency(value) {
+    return value
+      .toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD",
+      })
+      .replace(/\.00$/, "");
+  }
+
+  if (rangeInputs && progress) {
+    let minVal = parseInt(rangeInputs[0].value);
+    let maxVal = parseInt(rangeInputs[1].value);
+
+    priceMin.innerHTML = formatCurrency(minVal);
+    priceMax.innerHTML = formatCurrency(maxVal);
+
+    progress.style.left = (minVal / rangeInputs[0].max) * 100 + "%";
+    progress.style.right = 100 - (maxVal / rangeInputs[1].max) * 100 + "%";
+
+    rangeInputs.forEach((item) => {
+      item.addEventListener("input", (e) => {
+        let minVal = parseInt(rangeInputs[0].value);
+        let maxVal = parseInt(rangeInputs[1].value);
+        if (maxVal - minVal < priceGap) {
+          if (e.target.className === "range-min") {
+            rangeInputs[0].value = maxVal - priceGap;
+          } else {
+            rangeInputs[1].value = minVal + priceGap;
+          }
+        } else {
+          progress.style.left = (minVal / rangeInputs[0].max) * 100 + "%";
+          progress.style.right =
+            100 - (maxVal / rangeInputs[1].max) * 100 + "%";
+        }
+      });
+    });
+
+    rangeInputs[0].addEventListener("input", () => {
+      let minVal = parseInt(rangeInputs[0].value);
+
+      priceMin.innerHTML = formatCurrency(minVal);
+    });
+
+    rangeInputs[1].addEventListener("input", () => {
+      let maxVal = parseInt(rangeInputs[1].value);
+
+      priceMax.innerHTML = formatCurrency(maxVal);
+    });
+
+    if (rangeApplyButton && rangeValueInput && textValueElement) {
+      rangeApplyButton.addEventListener("click", () => {
+        let minVal = parseInt(rangeInputs[0].value);
+        let maxVal = parseInt(rangeInputs[1].value);
+
+        rangeValueInput.value = `${minVal} - ${maxVal}`;
+
+        textValueElement.innerHTML = `${formatCurrency(
+          minVal
+        )} - ${formatCurrency(maxVal)}`;
+
+        rangePanel.classList.remove("show");
+      });
+    }
+
+    if (rangeHead) {
+      rangeHead.addEventListener("click", () => {
+        rangePanel.classList.toggle("show");
+      });
+    }
+    document.addEventListener("click", (e) => {
+      if (!rangePanel.contains(e.target) && !rangeHead.contains(e.target)) {
+        rangePanel.classList.remove("show");
+      }
+    });
+  }
+
+  //  JS Table
+
+  $(document).ready(function () {
+    function applyResponsiveCollapse() {
+      if ($(window).width() <= 950) {
+        $('.table-row').each(function () {
+          if (!$(this).find('.cell').first().hasClass('cl-head')) {
+            const firstCell = $(this).find('.cell').first();
+            firstCell.addClass('cl-head');
+            const otherCells = $(this).find('.cell').not(':first');
+            otherCells.wrapAll('<div class="cl-body"></div>');
+          }
+        });
+      } else {
+        // Xóa các class khi màn hình lớn hơn 600px
+        $('.cl-head').removeClass('cl-head');
+        $('.cl-body').children().unwrap();
+        $('.table-row').removeClass('active'); // Remove 'active' class
+      }
+    }
+
+    applyResponsiveCollapse(); // Gọi hàm khi load trang
+
+    $(window).resize(function () {
+      applyResponsiveCollapse(); // Gọi hàm khi thay đổi kích thước cửa sổ
+    });
+
+    // Toggle collapse-body khi nhấn vào collapse-head
+    $(document).on('click', '.cl-head', function () {
+      const $row = $(this).closest('.table-row'); // Lấy table-row chứa collapse-head
+      $row.toggleClass('active'); // Thêm/loại bỏ class active
+
+      // Toggle collapse-body
+      $(this).next('.cl-body').slideToggle();
+    });
+  });
+
+  // ================= JS Drop File
+  const fileInput = document.getElementById('fileInput');
+  const dropArea = document.getElementById('dropArea');
+  const fileList = document.getElementById('fileList');
+  if (fileInput && dropArea && fileList) {
+    // Mở cửa sổ chọn file khi nhấn vào "chọn file"
+
+    // Xử lý sự kiện khi chọn file từ input
+    fileInput.addEventListener('change', (e) => handleFiles(e.target.files));
+
+    // Kéo file vào drop area
+    dropArea.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropArea.classList.add('drag-over');
+    });
+
+    dropArea.addEventListener('dragleave', () => {
+      dropArea.classList.remove('drag-over');
+    });
+
+    // Xử lý khi thả file
+    dropArea.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropArea.classList.remove('drag-over');
+      handleFiles(e.dataTransfer.files);
+    });
+
+    // Hàm xử lý file
+    function handleFiles(files) {
+      fileList.innerHTML = ''; // Xóa danh sách cũ
+      Array.from(files).forEach(file => {
+        const li = document.createElement('li');
+        li.textContent = file.name;
+        fileList.appendChild(li);
+      });
+    }
+  }
+  // ================== JS PW
+  const signPws = document.querySelectorAll(".signPW")
+  console.log(signPws.innerHTML);
+
+  if (signPws) {
+    signPws.forEach(signPw => {
+      let clicked = false
+      document.addEventListener("click", (e) => {
+        if (signPw.contains(e.target)) {
+          const signIp = signPw.closest(".form-ip").querySelector("input")
+
+          if (clicked == false) {
+            signPw.classList.add("clicked")
+            signIp.setAttribute("type", "text")
+            clicked = true
+          }
+          else {
+            signPw.classList.remove("clicked")
+            signIp.setAttribute("type", "password")
+            clicked = false;
+          }
+        }
+      })
+    })
   }
 }

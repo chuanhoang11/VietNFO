@@ -350,6 +350,9 @@ table {
       color: var(--color-text);
       margin-bottom: 0.5rem;
       font-size: 1.6rem;
+      margin-top: 0;
+      color: #1F2237;
+      font-weight: 500;
       // @include font-second;
 
       .red {
@@ -360,14 +363,48 @@ table {
 
     .input {
       position: relative;
-
-      .seepassJS {
+      &:has(.signPW) {
+        input {
+          padding-right: 4rem;
+        }
+      }
+      .signPW {
         position: absolute;
+        width: 2.4rem;
+        height: 2.4rem;
         right: 1rem;
         top: 50%;
         transform: translateY(-50%);
-        color: var(--color-text);
         cursor: pointer;
+        img {
+          height: 100%;
+          width: 100%;
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+        &.clicked {
+          img {
+            &:nth-child(1) {
+              display: none;
+            }
+            &:nth-child(2) {
+              display: block;
+            }
+          }
+        }
+      }
+      &-note {
+        display: flex;
+        font-size: 1.4rem;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
+        img {
+          width: 1.2rem;
+          height: 1.2rem;
+          flex-shrink: 0;
+        }
       }
     }
 
@@ -407,6 +444,9 @@ table {
     }
 
     // config
+    &.per25 {
+      width: 25%;
+    }
     &.per3 {
       width: calc(100% / 3);
     }
@@ -417,6 +457,12 @@ table {
       @include max(500px) {
         width: 100%;
       }
+    }
+    &.per6 {
+      width: calc(100% - (100% / 3));
+    }
+    &.per75 {
+      width: 75%;
     }
 
     .input-dashed {

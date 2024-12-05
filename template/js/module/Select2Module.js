@@ -1,15 +1,58 @@
 export default function Select2Module() {
   $(document).ready(function () {
-    $(".re-select-main").select2();
-  });
+    var maxWidth = 0;
+    $(".re-select-main option").each(function () {
+      var optionWidth = $(this).text().length * 8;
+      if (optionWidth > maxWidth) {
+        maxWidth = optionWidth;
+      }
+    });
 
-  $(window).on("scroll", function () {
-    $(".re-select-main").each(function () {
-      if ($(this).data("select2").isOpen()) {
-        $(this).select2("close");
+    $(".re-select-main").select2({
+      width: maxWidth,
+    });
+  });
+  //   select Custom
+  $(document).ready(function () {
+    const selectJS = document.querySelector(".selectJS");
+    if (selectJS) {
+      $(".getValue").click(function () {
+        var newName = $(this).text();
+        $(".displayName").text(newName);
+      });
+    }
+    const toggleSelect = document.querySelector(".toggleSelect");
+    const dropdownPanel = document.querySelector(".boxPanel");
+
+    if (toggleSelect) {
+      $(toggleSelect).click(function (e) {
+        e.preventDefault();
+        $(dropdownPanel).toggleClass("active");
+      });
+    }
+    $(document).click(function (e) {
+      if (!$(e.target).closest(toggleSelect).length) {
+        $(dropdownPanel).removeClass("active");
       }
     });
   });
+  //   $(".re-select-main").on("select2:open", function () {
+  //     // Lấy chiều rộng của dropdown
+  //     var dropdownWidth = $(this).data("select2").dropdown.$dropdown.outerWidth();
+
+  //     // Lưu chiều rộng vào biến CSS --width-select2
+  //     $(":root").css("--width-select2", dropdownWidth + "px");
+
+  //     // (Tùy chọn) In ra console để kiểm tra chiều rộng
+  //     console.log("Dropdown width:", dropdownWidth);
+  //   });
+  //   $(window).on("scroll", function () {
+  //     $(".re-select-main").each(function () {
+  //       if ($(this).data("select2").isOpen()) {
+  //         $(this).select2("close");
+  //       }
+  //     });
+  //   });
 
   const selectCusContainers = document.querySelectorAll(".selectCus");
   if (selectCusContainers) {
@@ -24,6 +67,7 @@ export default function Select2Module() {
       );
       const applyButton = container.querySelector(".selectCusApply");
       const selectCusValueTxt = container.querySelector(".selectCusValue .txt");
+      const selectCusValueTxtFirst = selectCusValueTxt.innerText;
       const hiddenInput = container.querySelector(
         '.selectCusValue input[type="text"]'
       );
@@ -67,21 +111,23 @@ export default function Select2Module() {
       });
 
       // Xử lý nút Áp dụng
-      applyButton.addEventListener("click", () => {
-        const selectedOptions = Array.from(optionCheckboxes)
-          .filter((option) => option.checked)
-          .map(
-            (option) => option.parentElement.querySelector(".txt").innerText
-          );
+      if (applyButton) {
+        applyButton.addEventListener("click", () => {
+          const selectedOptions = Array.from(optionCheckboxes)
+            .filter((option) => option.checked)
+            .map(
+              (option) => option.parentElement.querySelector(".txt").innerText
+            );
 
-        selectCusValueTxt.innerText = selectedOptions.length
-          ? selectedOptions.join(", ")
-          : "Loại việc làm";
-        hiddenInput.value = selectedOptions.join(", ");
+          selectCusValueTxt.innerText = selectedOptions.length
+            ? selectedOptions.join(", ")
+            : selectCusValueTxtFirst;
+          hiddenInput.value = selectedOptions.join(", ");
 
-        // Ẩn menu sau khi áp dụng
-        selectCusOptions.classList.remove("show");
-      });
+          // Ẩn menu sau khi áp dụng
+          selectCusOptions.classList.remove("show");
+        });
+      }
     });
 
     // ===========================
@@ -95,6 +141,7 @@ export default function Select2Module() {
       const selectTwoValueTxt = selectTwoContainer.querySelector(
         ".selectTwoValue .txt"
       );
+      const selectTwoValueTxtFirst = selectTwoValueTxt.innerText
       const hiddenInput = selectTwoContainer.querySelector(
         '.selectTwoValue input[type="text"]'
       );
@@ -117,32 +164,42 @@ export default function Select2Module() {
           selectTwoOptions.classList.remove("show");
         }
       });
+      if (applyButton) {
+        // Xử lý khi nhấn nút "Áp dụng"
+        applyButton.addEventListener("click", () => {
+          // Tạo một object để lưu giá trị được chọn trong mỗi nhóm
+          const selectedValues = {};
 
-      // Xử lý khi nhấn nút "Áp dụng"
-      applyButton.addEventListener("click", () => {
-        // Tạo một object để lưu giá trị được chọn trong mỗi nhóm
-        const selectedValues = {};
+          // Duyệt qua các radio button để kiểm tra cái nào được chọn
+          radioGroups.forEach((radio) => {
+            if (radio.checked) {
+              const groupName = radio.name; // Lấy tên nhóm radio
+              const valueText =
+                radio.parentElement.querySelector(".txt").innerText; // Lấy giá trị
+              selectedValues[groupName] = valueText; // Lưu giá trị vào object
+            }
+          });
 
-        // Duyệt qua các radio button để kiểm tra cái nào được chọn
-        radioGroups.forEach((radio) => {
-          if (radio.checked) {
-            const groupName = radio.name; // Lấy tên nhóm radio
-            const valueText =
-              radio.parentElement.querySelector(".txt").innerText; // Lấy giá trị
-            selectedValues[groupName] = valueText; // Lưu giá trị vào object
-          }
+          // Nối các giá trị thành chuỗi với dấu gạch nối
+          const finalValue = Object.values(selectedValues).join(" - ");
+
+          // Cập nhật giá trị hiển thị và input ẩn
+          selectTwoValueTxt.innerText = finalValue || selectTwoValueTxtFirst;
+          hiddenInput.value = finalValue;
+
+          // Ẩn menu sau khi áp dụng
+          selectTwoOptions.classList.remove("show");
         });
-
-        // Nối các giá trị thành chuỗi với dấu gạch nối
-        const finalValue = Object.values(selectedValues).join(" - ");
-
-        // Cập nhật giá trị hiển thị và input ẩn
-        selectTwoValueTxt.innerText = finalValue || "Loại việc làm";
-        hiddenInput.value = finalValue;
-
-        // Ẩn menu sau khi áp dụng
-        selectTwoOptions.classList.remove("show");
-      });
+      }
     }
   }
+
+  $(".js-select2").select2({
+    closeOnSelect: false,
+    placeholder: "Placeholder",
+    allowHtml: true,
+    allowClear: true,
+    tags: true,
+    dropdownCssClass: "multi-dropdown",
+  });
 }
