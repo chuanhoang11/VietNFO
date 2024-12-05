@@ -672,3 +672,13 @@ mixin PageNumberCus
          a.next.page-numbers(href="")
             span.txt Next
             i.fa-solid.fa-arrow-right
+mixin AdminLabel(txt)
+   label.f-label #{txt}
+mixin AdminSelect(arr)
+   .admin-select
+      select
+         each item in arr
+            option(value="demo") #{item}
+mixin AdminInput(rest)
+   input.admin-input(&attributes(rest))
+
