@@ -114,7 +114,7 @@ export default function SwiperModule() {
   //   }
   functionSlider(".popdt-slider", {
     speed: 1200,
-    slidesPerView: "auto",
+    slidesPerView:"auto",
     // autoplay: {
     //   delay: 2600,
     // },

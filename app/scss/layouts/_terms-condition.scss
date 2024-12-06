@@ -1,0 +1,215 @@
+.terms-banner {
+  position: relative;
+}
+.bg-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(102deg, #4aa3a7 9.14%, #744cb1 90.52%);
+}
+.terms-tab {
+  .pro-fil {
+    margin: 3.2rem 0;
+    position: relative;
+  }
+  .pro-fil-link {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.6rem 1.2rem;
+    height: 5rem;
+    img {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+    .cookie {
+      display: flex;
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+    &:hover {
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+    &.active {
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+  .selectJSTxt {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .selectJSHead .selectJSTxt img {
+    filter: brightness(0) invert(1);
+  }
+}
+.terms-banner-content {
+  min-height: calc(490 / 1920 * 100vw);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0 0;
+  .container {
+    height: 100%;
+  }
+  .wave img {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: calc(224 / 1920 * 100vw);
+    z-index: -1;
+    @include max($tablet) {
+      display: none;
+    }
+  }
+  .text-banner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    @include max($tablet) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3.2rem;
+      padding: 3rem 0;
+
+      .title {
+        font-size: 3.2rem;
+      }
+      .desc {
+        br {
+          display: none;
+        }
+        font-size: 2rem;
+      }
+    }
+    .text-banner {
+      padding-top: 4.5rem;
+      @include max($tablet) {
+        padding-top: 0;
+      }
+      .title {
+        @include fz-50;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: 1rem;
+        vertical-align: middle;
+        color: white;
+      }
+      .desc {
+        @include fz-40;
+        color: #fff;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    .banner-decor {
+      max-width: 56.8rem;
+      width: 100%;
+      @include max(900px) {
+        max-width: 40rem;
+      }
+      @include max($tablet) {
+        max-width: 25.5rem;
+      }
+    }
+  }
+}
+.seciton-content {
+  padding: 4.2rem 0;
+  @include max($res-mobile) {
+    padding: 3.2rem 2rem;
+  }
+}
+.terms-content {
+}
+.terms-box-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.terms-box {
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+    0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  padding: 3.2rem 2.4rem;
+  .terms-box-title {
+    color: var(--Vietinfo-Blue, #004dd1);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0.8rem;
+  }
+  .terms-box-des {
+    ul {
+      list-style-type: decimal;
+      list-style-position: outside;
+      padding-left: 2rem;
+      margin: 0;
+      li {
+        &.bold-number {
+          &::marker {
+            font-weight: 700;
+          }
+        }
+        ul {
+          list-style-type: lower-alpha;
+          padding-left: 2rem;
+          margin: 0;
+          li {
+            ul {
+              list-style-type: lower-roman;
+              // &::marker {
+              //   font-weight: 700;
+              //   text-transform: lowercase;
+              // }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.terms-footer {
+  @include max($mobile) {
+    display: none;
+  }
+  display: flex;
+  gap: 6.8rem;
+  margin: 6.8rem 0;
+  flex-direction: column;
+  .line {
+    width: 400px;
+    height: 2px;
+    background: #000;
+    margin: 0 auto;
+  }
+  .content {
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
