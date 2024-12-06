@@ -1,0 +1,103 @@
+extends layout/layout-admin
+
+block vars
+	-title = 'Admin'
+	-bodyClass = 'page-home'
+	-isAdmin = 'true'
+
+block container 
+	.admin-heading
+		h1.admin-title Đăng tin rao vặt mới
+	.admin-form 
+		form(action="")
+			.admin-wrapper
+				.admin-block
+					.admin-heading-second.t-center
+						h2.admin-title-second THÔNG TIN CHUNG
+					.f-list.row 
+						.f-item.col.col-6
+							.f-list.row 
+								.f-item.col.col-8 
+									+AdminLabel("Chọn loại tin cần đăng")
+									+AdminSelect(
+										[
+											"Việc làm",
+											"Sang nhượng kinh doanh",
+											"Event - Sự kiện",
+											"Cho thuê bất động sản",
+											"Bán bất động sản",
+											" Rao vặt khác"
+										]
+									)
+								.f-item.col.col-4
+									+AdminLabel("Loại việc làm")
+									+AdminSelect(
+										[
+											"Làm nail",
+											"Nhà hàng",
+											"Văn phòng",
+											"Việc khác"
+										]
+									)
+						.f-item.col.col-6
+							+AdminLabel("Tiêu đề tin đăng") 
+							input.admin-input(placeholder="Nhập tiêu đề")
+						.f-item.col.col-6
+							+AdminLabel("Link URL")
+							.f-copy
+								input.admin-input(type="text" value="vietinfo.com/my-post-title")
+								+img("ic-copy.svg")
+				.admin-block 
+					.admin-heading-second.t-center
+						h2.admin-title-second THÔNG TIN LIÊN HỆ
+					.f-list.row
+						.f-item.col.col-6
+							label.admin-check 
+								input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
+								span.admin-check-radio
+								.admin-user 
+									p.name Tu Nguyen
+									p.des Email: admin@vietinfo.us
+									p.des Phone: 0123456789
+						.f-item.col.col-6.flex-center
+							label.admin-check 
+								input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
+								span.admin-check-radio
+								span.txt.c-pri Thêm thông tin liên lạc khác
+						.f-item.col.col-4 
+							+AdminLabel("Name") 
+							input.admin-input(type="text" placeholder="Your name")
+						.f-item.col.col-4 
+							+AdminLabel("Email") 
+							input.admin-input(type="text" placeholder="Enter your email")
+						.f-item.col.col-4 
+							+AdminLabel("Phone number") 
+							input.admin-input(type="text" placeholder="Contact number")
+				.admin-block
+					.admin-heading-second.t-center
+							h2.admin-title-second THÔNG TIN CHI TIẾT
+					.f-list.row
+						.f-item.col.col-4
+							+AdminLabel("Tên cơ sở kinh doanh")
+							input.admin-input(type="text" value="King Nail Salon")
+						.f-item.col.col-4
+							.f-flex
+								.f-flex-item
+									+AdminLabel("Mức lương từ")
+									.f-left
+										input.admin-input(type="text" value="1000")
+								span.dot -
+								.f-flex-item
+									label.f-label 
+										| Tới
+										span.fw-4 #{" "} (optional)
+									.f-left
+										input.admin-input(type="text" value="1000")
+						.f-item.col.col-4
+							label.f-label 
+								| Tới
+								span.fw-4 #{" "} (optional) 
+							
+
+
+				

@@ -19,11 +19,12 @@ html(lang="en")
 		link(rel='stylesheet' href='./css/backdoor.css')
 		link(rel='icon' type='image/png' href='./assets/images/mona.png')
 	body(class=bodyClass)
-		block header
-			include ../blocks/header
-		main.main
-			block container
-		block footer
-			include ../blocks/footer
+		block header 
+			include ../blocks/admin-header
+		main.main-admin
+			.main-admin-wrapper
+				block container
+			block footer 
+				+footer
 		block layer
 		include ../blocks/scripts
