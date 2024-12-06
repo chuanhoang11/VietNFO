@@ -1,0 +1,433 @@
+extends layout/layout
+
+block vars
+   -title = 'Giới thiệu quảng cáo'
+   -bodyClass = 'page-qc'
+
+block container 
+   section.sec-qc-score
+      .qc-score.ss-pd 
+         .container 
+            .qc-score-wrapper 
+               .head-sc.mb-48
+                  +title("Việc làm tại North Carolina", "Chúng tôi cam kết các thông số được cung cấp từ cơ sở dữ liệu theo thời gian thực", "dcor")
+            .qc-score-flex.row 
+               .qc-score-images.col 
+                  .img 
+                     +img("qc-img.jpg")
+               .qc-score-ctn.col 
+                  .wrapper 
+                     .head-sc.mb-24
+                        +title("NÂNG TẦM GIÁ TRỊ VIỆT", "Với mong muốn nâng tầm giá trị thương hiệu Việt, VietInfo tự hào là nền tảng giúp quảng bá thương hiệu cho các doanh nghiệp Việt tại USA. Chúng tôi không chỉ mang đến những giải pháp tiếp thị hiệu quả, mà còn tạo cơ hội kết nối sâu sắc với cộng đồng người Việt USA. Hãy chọn VietInfo để đưa thương hiệu của bạn vươn xa và lan tỏa giá trị Việt một cách mạnh mẽ.", "")
+                     .img 
+                        +img("qc-img.jpg")
+                     .home-number-list.row
+                        -
+                           var numbers = [
+                              { 
+                                 icon:"number1.png",
+                                 tt:"317826",
+                                 des:"Lượt truy cập"
+                              },
+                              {
+                                 icon:"number2.png",
+                                 tt:"20826",
+                                 des:"Việc làm"
+                              },
+                              {
+                                 icon:"number4.png",
+                                 tt:"20826",
+                                 des:"Bất động sản"
+                              },
+                              {
+                                 icon:"number5.png",
+                                 tt:"20826",
+                                 des:"Cửa tiệm"
+                              },
+                              {
+                                 icon:"number6.png",
+                                 tt:"20826",
+                                 des:"Events"
+                              },
+                              {
+                                 icon:"number7.png",
+                                 tt:"20826",
+                                 des:"Rao vặt"
+                              }
+                           ]
+                        each number in numbers
+                           .col
+                              .home-number-item.horizontal
+                                 .inner
+                                    .icon 
+                                       +img(number.icon)
+                                    .ctn
+                                       h4.tt.countNum=number.tt 
+                                       p.des=number.des
+   section.sec-qc-step 
+      .qc-step.ss-pd.bg-gray
+         .container 
+            .qc-step-wrapper  
+               .head-sc.mb-48.t-center
+                  +title("Quảng cáo tại VietInfo chỉ với 3 bước đơn giản", "Hệ thống quảng cáo tại VietInfo được thiết kế để vận hành tự động 100% hướng tới quy trình đơn giản và tiện lợi cho cộng đồng. Chỉ với 5 phút quý anh chị có thể tự đăng quảng cáo cho doanh nghiệp của mình trong 3 bước đơn giản sau khi đăng nhập. ", "")      
+               .qc-progress 
+                  .line-wrapper
+                     .line 
+                  .qc-progress-flex.row
+                     -
+                        var arrs = [
+                           {
+                              active:"",
+                              icon:"ic-qc1.svg",
+                              tt:"Đăng nhập ",
+                              link:"TẠI ĐÂY",
+                              des:"Đăng nhập vào hệ thống để đăng mới hoặc quản lý các chiến dịch quảng cáo một cách hiệu quả."
+                           },
+                           {
+                              active:"active",
+                              icon:"ic-qc2.svg",
+                              tt:"Thiết lập quảng cáo",
+                              link:"",
+                              des:"Thiết lập các thông số quảng cáo: chọn khu vực, vị trí, ngày xuất hiện quảng cáo, upload ad banner."
+                           },
+                           {
+                              active:"",
+                              icon:"ic-qc3.svg",
+                              tt:"Thanh tóan",
+                              link:"",
+                              des:"Hệ thống thanh toán đa dạng tiện lợi (e.g., debit, credit card) thông qua cổng thanh toán bảo mật."
+                           },
+                           {
+                              active:"",
+                              icon:"ic-qc4.svg",
+                              tt:"Online",
+                              link:"",
+                              des:"Banner quảng cáo sau khi được duyệt sẽ TỰ ĐỘNG xuất hiện theo ngày tháng và thông số đã thiết lập."
+                           }
+                        ]
+                     each arr in arrs
+                        .qc-progress-it.col(class=arr.active) 
+                           .inner 
+                              +img(arr.icon)   
+                              .ctn 
+                                 p.tt=arr.tt
+                                    a(href="").tt-link=arr.link  
+                                 p.des=arr.des
+   section.sec-qc-area 
+      .qc-area.ss-pd 
+         .container 
+            .qc-area-wrapper.tabJS 
+               .head-sc.mb-48
+                  +title("Khu vực - vị trí quảng cáo", "Khu vực - vị trí nơi ads sẽ xuất hiện trên VietInfo và kích thước tương ứng", "dcor")                                    
+               .qc-area-mobile  
+                  +FourCountUp()
+               .pro-fil.selectJS
+                  .pro-fil-head.selectJSHead
+                     span.pro-li 
+                        +img('ic-calendar-white.svg')
+                        span.txt.selectJSTxt 
+                     i.fas.fa-angle-down
+                  ul.selectJSBody 
+                     li
+                        span.pro-fil-link.selectJSItem.tabBtn.active  Trang chủ - homepage
+                     li 
+                        span.pro-fil-link.selectJSItem.tabBtn Trang kết quả tìm kiếm
+                     li
+                        span.pro-fil-link.selectJSItem.tabBtn Trang xem chi tiết
+                     li 
+                        span.pro-fil-link.selectJSItem.tabBtn Trang danh sách business
+               .qc-area-panels.tabPanel
+                  .qc-area-flex.row 
+                     .qc-area-ctn.col 
+                        .wrapper 
+                           +FourCountUp()
+                           .qc-area-list 
+                              -
+                                 var arrs = [
+                                    {
+                                       name:"H1 Homepage (1280 x 200 px)",
+                                       des:"Vị trí H1 trên trang homepage - bên trên section “Việc làm”"
+                                    },
+                                    {
+                                       name:"H2 Homepage (1280 x 200 px)",
+                                       des:"Vị trí H2 trên trang homepage - bên trên section “Việt Event”"
+                                    },
+                                    {
+                                       name:"H3 Homepage (1280 x 200 px)",
+                                       des:"Vị trí H3 trên trang homepage - bên trên section “Bất động sản đang bán”"
+                                    },
+                                    {
+                                       name:"H4 Homepage (1280 x 200 px)",
+                                       des:"Vị trí H4 trên trang homepage - bên trên section “Rao vặt khác”"
+                                    },
+                                    {
+                                       name:"H5 Homepage (640 x 250 px)",
+                                       des:"Vị trí H5 trên trang homepage - nằm trong section “Rao vặt khác”"
+                                    },
+                                    {
+                                       name:"H6 Homepage (400 x 300 px)",
+                                       des:"Vị trí H6 trên trang homepage - nằm trong section “Góc tài liệu/thông tin cộng đồng”"
+                                    },
+                                    {
+                                       name:"H7 Homepage (1280 x 200 px)",
+                                       des:"Vị trí H7 trên trang homepage - bên trên trang chủ footer"
+                                    }
+                                 ]
+                              each arr in arrs
+                                 .qc-area-item 
+                                    label.inner 
+                                       input(type="radio" name="rdo")
+                                       .box 
+                                          span.circle 
+                                          .ctn 
+                                             p.tt=arr.name           
+                                             p.des=arr.des
+                     .qc-area-images.col 
+                        .img 
+                           +AdvAreaImg("adv-area-img.jpg","adv-area-mobile.jpg")
+               .qc-area-panels.tabPanel
+                  .qc-area-flex.row 
+                     .qc-area-ctn.col 
+                        .wrapper 
+                           +FourCountUp()
+                           .qc-area-list 
+                              -
+                                 var arrs = [
+                                    {
+                                       name:"S-Job Search (200 x 100 px)",
+                                       des:"Ads nằm trong trang kết quả tìm kiếm việc làm"
+                                    },
+                                    {
+                                       name:"S-Business-selling (200 x 200 px)",
+                                       des:"Ads nằm trong trang kết quả tìm kiếm nhà hàng - cửa tiệm đang bán"
+                                    },
+                                    {
+                                       name:"S-Real-estate (200 x 200 px)",
+                                       des:"Ads nằm trong “các trang” kết quả tìm kiếm bất động sản (bao gồm cả bán và thuê)"
+                                    },
+                                    {
+                                       name:"S-Viet-event (752 x 190 px)",
+                                       des:"Ads nằm trong trang kết quả tìm kiếm Việt Events"
+                                    },
+                                    {
+                                       name:"S-Rao-vat (752 x 190 px)",
+                                       des:"Ads nằm trong trang kết quả tìm kiếm về Rao vặt khác"
+                                    },
+                                 ]
+                              each arr in arrs
+                                 .qc-area-item 
+                                    label.inner 
+                                       input(type="radio" name="rdo")
+                                       .box 
+                                          span.circle 
+                                          .ctn 
+                                             p.tt=arr.name           
+                                             p.des=arr.des
+                     .qc-area-images.col 
+                        .img 
+                           +AdvAreaImg("adv-area-img.jpg","adv-area-mobile.jpg")         
+               .qc-area-panels.tabPanel
+                  .qc-area-flex.row 
+                     .qc-area-ctn.col 
+                        .wrapper 
+                           +FourCountUp()
+                           .qc-area-list 
+                              -
+                                 var arrs = [
+                                    {
+                                       name:"D-Job (270 x 270 px)",
+                                       des:"Ads nằm trong trang xem chi tiết về tin “Việc làm”"
+                                    },
+                                    {
+                                       name:"D-Business-selling (270 x 270 px)",
+                                       des:"Ads nằm trong trang xem chi tiết về tin “Nhà hàng - cửa tiệm đang bán”"
+                                    },
+                                    {
+                                       name:"D-Real-estate (270 x 270 px)",
+                                       des:"Ads nằm trong các trang xem chi tiết về “Bất động sản” (bao gồm cả bán và thuê)”"
+                                    },
+                                    {
+                                       name:"D-Viet-event (270 x 270 px)",
+                                       des:"Ads nằm trong trang xem chi tiết về tin “Việt Events”"
+                                    },
+                                    {
+                                       name:"D-Rao-vat (270 x 270 px)",
+                                       des:"Ads nằm trong trang xem chi tiết về tin “Rao vặt khác”"
+                                    },
+                                    {
+                                       name:"D-Tai-lieu (270 x 270 px)",
+                                       des:"Ads nằm trong các trang xem chi tiết về “Tài liệu” chia sẻ cho cộng đồng"
+                                    }
+                                 ]
+                              each arr in arrs
+                                 .qc-area-item 
+                                    label.inner 
+                                       input(type="radio" name="rdo")
+                                       .box 
+                                          span.circle 
+                                          .ctn 
+                                             p.tt=arr.name           
+                                             p.des=arr.des
+                     .qc-area-images.col 
+                        .img 
+                           +AdvAreaImg("adv-area-img.jpg","adv-area-mobile.jpg")
+               .qc-area-panels.tabPanel
+                  .qc-area-flex.row 
+                     .qc-area-ctn.col 
+                        .wrapper 
+                           +FourCountUp()
+                           .qc-area-list 
+                              -
+                                 var arrs = [
+                                    {
+                                       name:"L-Doctor (1280 x 200 px)",
+                                       des:"Ads nằm trong trang list danh sách các “Phòng khám Việt”"
+                                    },
+                                    {
+                                       name:"L-CPA-tax (1280 x 200 px)",
+                                       des:"Ads nằm trong trang list danh sách các “Khai thuế/CPA Việt”"
+                                    },
+                                    {
+                                       name:"L-attorney (1280 x 200 px)",
+                                       des:"Ads nằm trong trang list danh sách các “Phòng luật sư Việt”"
+                                    },
+                                    {
+                                       name:"L-realtor (1280 x 200 px)",
+                                       des:"Ads nằm trong trang list danh sách các “Realtor Việt”"
+                                    },
+                                    {
+                                       name:"L-handymen (1280 x 200 px)",
+                                       des:"Ads nằm trong trang list danh sách các “Thợ Việt sửa nhà/vườn”"
+                                    }
+                                 ]
+                              each arr in arrs
+                                 .qc-area-item 
+                                    label.inner 
+                                       input(type="radio" name="rdo")
+                                       .box 
+                                          span.circle 
+                                          .ctn 
+                                             p.tt=arr.name           
+                                             p.des=arr.des
+                     .qc-area-images.col 
+                        +AdvAreaImg("adv-area-img.jpg","adv-area-mobile.jpg")                     
+   section.sec-qc-brand 
+      .qc-brand.bg-gray.ss-pd
+         .container 
+            .head-sc.mb-48
+               +title("Đối tác của chúng tôi", "", "")
+            .qc-brand-wrapper  
+               .qc-brand-slide 
+                  .swiper-container 
+                     .swiper.rows 
+                        .swiper-wrapper 
+                           each val,index in Array(5)
+                              .swiper-slide.col 
+                                 .img 
+                                    .img-inner 
+                                       +img(`br${index+1}.png`)                  
+   section.sec-qc-faq 
+      .qc-faq.ss-pd 
+         .container 
+            .head-sc.mb-48
+               +title("Câu hỏi thường gặp", "Các câu hỏi thường gặp và thông tin hữu ích cho việc đăng quảng cáo", "dcor")
+            .qc-faq-wrapper
+               .qc-faq-cl.collapse-block 
+                  -
+                     var arrs = [
+                        {
+                           name:"Tôi không thành thạo về máy tính, làm sao tôi có thể đăng quảng cáo tại VietInfo?",
+                           blue:"Hệ thống quảng cáo tại VietInfo được thiết kế để vận hành tự động 100% hướng tới quy trình <strong> đơn giản và tiện lợi </strong> cho cộng đồng. Chỉ với 5 phút quý anh chị có thể tự đăng quảng cáo cho doanh nghiệp của mình trong 3 bước đơn giản sau khi <a href=``>đăng nhập</a>. ",
+                        },
+                        {
+                           name:"Khu vực (page) và vị trí quảng cáo nào trên VietInfo là tốt nhất ?",
+                        },
+                        {
+                           name:"Những ai  sẽ xem được quảng cáo của tôi?",
+                           blue:"Phụ thuộc vào “quy mô quảng cáo” anh/chị chọn khi đăng ký quảng cáo. VietInfo cung cấp 2 lựa chọn cho quy mô quảng cáo: <strong>1) Toàn nước Mỹ; 2) Theo tiểu bang.</strong>",
+                           red:"Ví dụ 1: nếu anh/chị chọn quy mô quảng cáo là “Toàn nước Mỹ” thì quảng cáo của anh chị sẽ xuất hiện cho tất cả độc giả của VietInfo trên toàn nước Mỹ. Ví dụ 2: Nếu anh chị chọn “quy mô quảng cáo” là “Theo tiểu bang” và sau đó chọn tiểu bang Georgia và Texas thì quảng cáo của anh chị sẽ chỉ xuất hiện cho những độc giả vào VietInfo từ Georgia và Texas."
+                        },
+                        {
+                           name:"Tôi muốn một quảng cáo sống động, tôi có thể dùng một banner ảnh động thay vì banner tĩnh cho quảng cáo được không?",
+                        },
+                        {
+                           name:"Banner quảng cáo cho màn Desktop và Mobile là gì và vì sao tôi nên upload cả hai loại banner này?",
+                        },
+                        {
+                           name:"Tôi chưa có banner quảng cáo, tôi có đăng quảng cáo ngay được không?",
+                        },
+                        {
+                           name:"Làm sao tôi biết quảng cáo của tôi trên VietInfo đã có bao nhiêu lượt người xem ?",
+                        },
+                        {
+                           name:"Tôi phải làm gì sau khi đã hoàn tất thủ tục đăng quảng cáo?",
+                        },
+                        {
+                           name:"Sau khi đã đăng quảng cáo, tôi đổi ý và muốn thay đổi banner hoặc nội trên banner có được không?",
+                        }
+                     ]
+                  each arr in arrs
+                     .qc-faq-item.collapse-item 
+                        .qc-faq-head.collapse-head
+                           span.txt=arr.name
+                           span.icon 
+                              i.fa-solid.fa-chevron-down
+                        .qc-faq-body.collapse-body
+                           ul 
+                              if arr.blue && arr.red 
+                                 li.blue 
+                                       +img("ic-blue.svg")
+                                       p.des!=arr.blue 
+                                 li.red 
+                                    +img("ic-red.svg")
+                                    p.des=arr.red 
+                              else 
+                                 if arr.blue
+                                    li.blue 
+                                       +img("ic-blue.svg")
+                                       p.des!=arr.blue 
+                                 else if arr.red
+                                    li.red 
+                                       +img("ic-red.svg")
+                                       p.des=arr.red 
+                                 else 
+                                    li 
+                                       p.des Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptatum, rerum consequatur voluptatem enim illo quia dolore amet blanditiis magnam sunt ut accusantium odio quam natus reiciendis officiis veritatis nemo.
+   section.sec-home-solve 
+      .home-solve.ss-pd
+         .container 
+            .head-sc.mb-48.t-center
+               .head
+                  h2.t-title 
+                     | Giải pháp công nghệ cho doanh nghiệp
+                  p.t-des 
+                     | Với đội ngũ là những chuyên gia thiết kế, lập trình viên giàu kinh nghiệm, dẫn dắt bởi CTO là giáo sư nghành khoa học máy tính tại Mỹ, chúng tôi hợp tác cùng <span class='fw-7'>Qixtech LLC</span>, công ty công nghệ hàng đầu cung cấp các giải pháp IT chuyên nghiệp cho doanh nghiệp.
+            .home-solve-list.row.rows-3.gap-res
+               -
+                  var solves = [
+                     {
+                        icon:"solve1.png",
+                        tt:"Thiết kế banner",
+                        des:"Chúng tôi cung cấp dịch vụ thiết kế banner quảng cáo cho cá nhân và doanh nghiệp",
+                     },
+                     {
+                        icon:"solve2.png",
+                        tt:"Thiết kế website",
+                        des:"Với 15+ năm kinh nghiệm chúng tôi thiết kế customize Website chuẩn SEO chuyên nghiệp cho doanh nghiệp",
+                     },
+                     {
+                        icon:"solve3.png",
+                        tt:"Digital Marketing",
+                        des:"Giải pháp digital marketing chuyên nghiệp nhằm giúp khách hàng quảng bá dịch vụ và nâng tầm vị thế thương hiệu",
+                     }
+                  ]
+               each solve in solves  
+                  .col 
+                     .home-solve-item
+                        .inners 
+                           .icon 
+                              +img(solve.icon)
+                           .bot
+                              h4.tt=solve.tt 
+                              p.des=solve.des
+                              +Btn("Liên hệ tư vấn","","trans")

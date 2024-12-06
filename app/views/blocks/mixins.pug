@@ -670,3 +670,42 @@ mixin PageNumberCus
          a.next.page-numbers(href="")
             span.txt Next
             i.fa-solid.fa-arrow-right
+
+mixin FourCountUp()
+   .home-number-list.row
+      -
+         var numbers = [
+            {
+               icon:"number9.png",
+               tt:"213111",
+               des:"Pageviews"
+            },
+            {
+               icon:"number10.png",
+               tt:"213111",
+               des:"Tìm kiếm"
+            },
+            {
+               icon:"number11.png",
+               tt:"213111",
+               des:"Tương tác"
+            },
+            {
+               icon:"number12.png",
+               tt:"50",
+               des:"State"
+            }
+         ]
+      each number in numbers
+         .col
+            .home-number-item.horizontal
+               .inner
+                  .icon 
+                     +img(number.icon)
+                  .ctn
+                     h4.tt.countNum=number.tt 
+                     p.des=number.des
+mixin AdvAreaImg(img,imgMobile) 
+   .img-inner 
+      +img(img)
+      +img(imgMobile)
