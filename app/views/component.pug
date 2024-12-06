@@ -11,3 +11,106 @@ block container
             +title("Việc làm tại North Carolina","Việc làm sẵn có tại khu vực của bạn","dcor")
             +SwiperControl()
          +PageNumber()
+         .form-edit 
+            textarea.formJs
+         .form-upload.collapse-block 
+            .b-inner.tabJS 
+               span.t-head 
+                  | Banner quảng cáo cho vị trí đã chọn
+               .b-head 
+                  .b-box.tabBtn
+                     .ck-bcheck 
+                        label.ck-binner
+                           input(type="radio" hidden name="status")
+                           span.ck-dot
+                           span.t-txt 
+                              | Đã có banner quảng cáo
+                           span.t-des
+                              | Tải mới banner mới lên hoặc chọn banner cữ lưu trong hệ thống để dùng lại
+                  .b-box.tabBtn 
+                     .ck-bcheck 
+                        label.ck-binner
+                           input(type="radio" hidden name="status")
+                           span.ck-dot
+                           span.t-txt 
+                              | Chưa có banner quảng cáo
+                           span.t-des
+                              | Upload banner quảng cáo sau
+               .upload-panel.tabPanel 
+                  .b-wrapper
+                     each i,index in Array(2)
+                        .inner-panel.uploadFormJs.collapse-item
+                           if(index ===1)
+                              .thead.collapse-head Upload mobile version 
+                                 a(href="").tlink Tìm hiểu thêm 
+                                 span.icon 
+                                    i.fa-light.fa-chevron-down
+                              .b-body.collapse-body
+                                 | Chưa có nội dung 
+                           else
+                              .thead.collapse-head Upload desktop version 
+                                 span.icon 
+                                    i.fa-light.fa-chevron-down
+                              .b-body.collapse-body
+                                 .b-boxed
+                                    .t-txt 
+                                       | Upload 1 banner cho màn hình desktop 
+                                       span.c-red 
+                                          | [ 100 x 100 px ]
+                                    .b-bdrop 
+                                       .progress-container
+                                          svg.progress-circle(viewbox='0 0 36 36' xmlns='http://www.w3.org/2000/svg')
+                                             path.circle-bg(fill='none' stroke='#FAFAFA' stroke-width='3' d='M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32')
+                                             path.circle(fill='none' stroke='#1849D6' stroke-width='3' stroke-dasharray='100, 100' d='M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32')
+                                             text(x="18" y="19" text-anchor="middle" alignment-baseline="middle" ).progress-text 0%
+                                          span.txt Uploading...
+                                          span.btn-cancel.btn-action.btnCalcelJs Cancel
+                                       .inner.dropzoneJs
+                                          input(type="file" class="ipUpFile" )
+                                          .b-gr 
+                                             span.icon 
+                                                +img("icon-upload.svg")
+                                             .t-text 
+                                                | Kéo thả hình ảnh or 
+                                                span.c-pri.fw-7 
+                                                   | Chọn và tải lên
+                                             .t-txt Hoặc chọn ảnh cũ đã sử dụng lưu trong hệ thống để dùng lại
+                                    .t-note Only support .jpg or .png files
+                                 .t-line
+                                    span.t-txt
+                                       | OR
+                                 .b-url 
+                                    .thead Upload from URL
+                                    .b-in 
+                                       input(type="text"  class="inputFileUrl" placeholder="Add file URL")
+                                       button.btn-upfile.btnUpfileJS.btn-action 
+                                          span 
+                                             | Upload
+                                 ul.b-list.hide.imageListJs
+               .upload-panel.tabPanel
+                  .inner-panel
+                     .b-content 
+                        .b-head 
+                           .t-item 
+                              span.icon
+                                 +img("p-check.svg")
+                              p.t-des 
+                                 | Bước 1: Hoàn tất các bước đăng ký quảng cáo như bình thường bao gồm cả thanh toán
+                                 span.fw-7 
+                                    | (việc upload banner có thể thực hiện sau khi các bước đăng ký đã hoàn tất).
+                           .t-item 
+                              span.icon 
+                                 +img("p-check.svg")
+                              p.t-des
+                                 | Bước 2: Upload bổ sung banner thông qua mục “Quản lý quảng cáo” trên tài khoản của anh/chị
+                                 span.fw-7
+                                    | (sau khi đã hoàn tất bước 1).
+                        .b-mid
+                           p.t-text 
+                              i.fa-light.fa-arrow-right.fw-7.icon
+                              | Banner quảng cáo
+                           ul.t-list
+                              li 
+                                 | Option 1: Quý anh/chị có thể tự thiết kế banner.
+                              li 
+                                 | Option 2: Liên hệ đối tác của Vietinfo để được hỗ trợ thiết kế ($50/design: bao gồm 1 banner cho màn desktop và 1 cho mobile). Xin vui lòng gửi email tới: support@qixtech.com với tiêu đề: “VietInfo: thiết kế bannner” để được hỗ trợ.

@@ -20,37 +20,39 @@ import ScrollTriggerModule from "./module/ScrollTriggerModule.js";
 import LoadMoreModule from "./module/LoadMoreModule.js";
 import ComponentModule from "./module/ComponentModule.js";
 import DatePickerModule from "./module/DatePickerModule.js";
+import FileModule from "./module/FileModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
-    // Animation
-    AnimatedModule();
-    ScrollTriggerModule();
-    AosModule();
-    // Loadmore
-    LoadMoreModule();
-    ShowHideModule();
-    // Tab
-    TabModule();
-    IsotopeModule();
-    // Upload File
-    // DateTime
-    DatePickerModule();
-    // PlusMinus
-    PlusMinusModule();
-    // Select
-    Select2Module();
-    // CountUP
-    CountUpModule();
-    // Component
-    SwiperModule();
-    MobileModule();
-    BtnToTopModule();
-    HeaderModule();
-    PopupModule();
-    CheckModule();
-    GalleryModule();
-    SearchModule();
-    SideModule();
-    CollapseModule();
-    ComponentModule();
+  // Animation
+  AnimatedModule();
+  ScrollTriggerModule();
+  AosModule();
+  // Loadmore
+  LoadMoreModule();
+  ShowHideModule();
+  // Tab
+  TabModule();
+  IsotopeModule();
+  // Upload File
+  // DateTime
+  DatePickerModule();
+  // PlusMinus
+  PlusMinusModule();
+  // Select
+  Select2Module();
+  // CountUP
+  CountUpModule();
+  // Component
+  SwiperModule();
+  MobileModule();
+  BtnToTopModule();
+  HeaderModule();
+  PopupModule();
+  CheckModule();
+  GalleryModule();
+  SearchModule();
+  SideModule();
+  CollapseModule();
+  ComponentModule();
+  FileModule();
 });
