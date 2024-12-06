@@ -679,6 +679,6 @@ mixin AdminSelect(arr)
       select
          each item in arr
             option(value="demo") #{item}
-mixin AdminInput(rest)
-   input.admin-input(&attributes(rest))
+mixin AdminInput(...attributes)
+   input.admin-input(type="text" ...attributes)
 
