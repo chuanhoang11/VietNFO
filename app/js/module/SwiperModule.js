@@ -124,7 +124,7 @@ export default function SwiperModule() {
     effect: "slide",
   });
 
-  functionSlider(".adv-brand-slide", {
+  functionSlider(".qc-brand-slide", {
     speed: 10000,
     slidesPerView:"auto",
     autoplay: {
