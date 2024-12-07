@@ -129,15 +129,8 @@ block container
 					.f-item.col.col-4
 						+AdminLabel("Zip code") 
 						input.admin-input(type="number" value="30062")
-					.f-item.col
-						+AdminLabel("Mô tả chi tiết") 
-					.f-item.col 
-						label.f-label.no-clamb
-							| Ngày tin đăng hết hạn - expired 
-							span.fw-4 (sau khi đăng tin, bất cứ lúc nào cũng có thể gia hạn thêm thông qua dashboard “quản lý tin rao vặt")
-						.admin-date.f-left 
-							+img("ic-calendar.svg")
-							input.admin-input(type="text" value="" placeholder="Chọn ngày tháng bạn muốn tin này hết hiệu lực" name="datetimes")
+					+MoTaChiTiet()
+					+NgayDangTinHetHan()
 					.f-item.col 
 						+AdminLabel("Photos")
 						+DropZone()
