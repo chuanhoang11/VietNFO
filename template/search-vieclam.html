@@ -882,7 +882,146 @@
     <script src="./assets/library/gsap/gsap.min.js"></script>
     <script src="./assets/library/gsap/ScrollTrigger.min.js"></script>
     <script src="./assets/library/trimline/jquery.trimLines.js"></script>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v17.0"></script>
+    <script src="./assets/library/dropzone/dropzone.min.js"></script>
+    <script>
+      function formatFileSize(bytes) {
+         if (bytes < 1024) return bytes + ' B';
+         let kb = bytes / 1024;
+         if (kb < 1024) return kb.toFixed(2) + ' KB';
+         let mb = kb / 1024;
+         if (mb < 1024) return mb.toFixed(2) + ' MB';
+         let gb = mb / 1024;
+         return gb.toFixed(2) + ' GB';
+      }
+      Dropzone.autoDiscover = false;
+      var dropzone = new Dropzone('#dropzone-upload', {
+         parallelUploads: 2,
+         thumbnailHeight: 120,
+         thumbnailWidth: 120,
+         maxFilesize: 3,
+         filesizeBase: 1000,
+         addedfile: function(file) {
+            // Tạo div để hiển thị thông tin tải lên
+            var resultDiv = document.getElementById('upload-result');
+            if (!file || !file.upload || !file.upload.uuid) {
+               console.error('File hoặc UUID không hợp lệ:', file);
+               return;
+            }
+            // Tạo HTML cho file đang upload
+            var fileDiv = document.createElement('div');
+            fileDiv.classList.add('swiper-slide', 'col', 'col-4');
+            fileDiv.id = 'file-' + file.upload.uuid; // Dùng UUID để nhận diện từng file
+            var imageUrl = file.dataURL || 'No link available';
+            fileDiv.innerHTML = `
+                  <div class="dropzone-wr">
+                     <div class="dropzone-img none">
+                        <img src=${imageUrl} alt="">
+                     </div>
+                     <div class="dropzone-ct">
+                        <div class="dropzone-top">
+                        <div class="content"> 
+                           <p class="dropzone-title fw-6">Uploading...</p>
+                           <p class="dropzone-des"><span class='percent'>65%</span>  • 30 seconds remaining</p>
+                        </div>
+                        <div class="dropzone-delete"> <img src="./assets/images/ic-delete.svg" alt="">
+                        </div>
+                        </div>
+                        <div class="dropzone-progress">
+                        <div class="inner"></div>
+                        </div>
+                     </div>
+                  </div>
+            `;
+            
+            // Thêm fileDiv vào div hiển thị kết quả
+            resultDiv.appendChild(fileDiv);
+            var deleteButton = fileDiv.querySelector('.dropzone-delete');
+            deleteButton.addEventListener('click', function () {
+                  removeFile(file);
+            });
+         },
+         thumbnail: function (file, dataUrl) {
+         if (!file || !file.upload || !file.upload.uuid) {
+               console.error('File hoặc UUID không hợp lệ trong thumbnail:', file);
+               return;
+         }
+      
+         // Cập nhật thumbnail khi Dropzone tạo ra dataURL
+         var fileDiv = document.getElementById('file-' + file.upload.uuid);
+         if (fileDiv) {
+               var imgElement = fileDiv.querySelector('.dropzone-img img');
+               imgElement.src = dataUrl;
+               fileDiv.querySelector('.dropzone-img').classList.remove('none'); // Hiển thị hình ảnh
+         }
+         },
+         uploadprogress: function(file, progress, bytesSent) {
+            if (!file || !file.upload || !file.upload.uuid) {
+               console.error('File hoặc UUID không hợp lệ:', file);
+               return;
+            }
+            // Cập nhật tiến trình và phần trăm
+            var fileDiv = document.getElementById('file-' + file.upload.uuid);
+            var progressBar = fileDiv.querySelector('.dropzone-progress .inner');
+            var progressPercentage = fileDiv.querySelector('.dropzone-wr .percent');
+      
+            // Cập nhật thanh progress và phần trăm
+            progressBar.style.width = progress + '%';
+            progressPercentage.textContent = progress.toFixed(2) + '%';
+         },
+         success: function(file, response) {
+            if (!file || !file.upload || !file.upload.uuid) {
+               console.error('File hoặc UUID không hợp lệ:', file);
+               return;
+           }
+            // Khi tải lên thành công, cập nhật thông tin file
+            var fileDiv = document.getElementById('file-' + file.upload.uuid);
+            var fileName = file.name; // Tên file đã upload
+            var fileSize = formatFileSize(file.size);
+            var imageUrl = file.dataURL || 'No link available';
+            // Thay đổi 'Uploading...' thành tên file
+            fileDiv.querySelector('.dropzone-title').innerHTML = `${fileName}`;
+            
+            // Cập nhật thanh progress thành 100%
+            fileDiv.querySelector('.dropzone-progress .inner').style.width = '100%';
+            fileDiv.querySelector('.dropzone-wr .percent').textContent = '100%';
+            
+      
+            // Ẩn thanh progress và phần trăm sau khi thành công
+            setTimeout(function() {
+               fileDiv.querySelector('.dropzone-progress').style.display = 'none';
+               fileDiv.querySelector('.dropzone-title').innerHTML = `${fileName}`;
+               fileDiv.querySelector('.dropzone-progress').style.display = 'none';
+               fileDiv.querySelector('.dropzone-des').innerHTML = fileSize;
+               fileDiv.querySelector('.dropzone-img').classList.remove('none'); 
+            }, 1000); // Ẩn sau 1 giây
+         },
+         complete: function(file) {
+            if (!file || !file.upload || !file.upload.uuid) {
+               console.error('File hoặc UUID không hợp lệ:', file);
+               return;
+           }
+            // Nếu upload hoàn tất, ẩn thanh progress và % sau một thời gian ngắn
+            var fileDiv = document.getElementById('file-' + file.upload.uuid);
+             var fileName = file.name; 
+             var fileSize = formatFileSize(file.size);
+             var imageUrl = file.dataURL || 'No link available';
+            setTimeout(function() {
+               fileDiv.querySelector('.dropzone-title').innerHTML = `${fileName}`;
+               fileDiv.querySelector('.dropzone-progress').style.display = 'none';
+               fileDiv.querySelector('.dropzone-des').innerHTML = fileSize;
+               fileDiv.querySelector('.dropzone-img').classList.remove('none'); 
+            }, 1000); // Ẩn thanh progress sau 1 giây
+         }
+      });
+      function removeFile(file) {
+       var fileDiv = document.getElementById('file-' + file.upload.uuid);
+       if (fileDiv) {
+           fileDiv.remove(); // Xóa phần tử khỏi DOM
+           dropzone.removeFile(file); // Xóa file khỏi Dropzone
+           console.log(`File ${file.name} đã bị xóa.`);
+       }
+      }
+    </script>
     <script src="./js/main.js" type="module"></script>
   </body>
 </html>

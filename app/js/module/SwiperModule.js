@@ -75,6 +75,14 @@ export default function SwiperModule() {
       slidesPerView: "auto",
 
     });
+
+    functionSlider(".dropzone-slider", {
+      centeredSlides: false,
+      loop: false,
+      effect: "slide",
+      slidesPerView: "auto",
+
+    });
   }
 
   //   const prodt_silder = document.querySelectorAll(".prdsSlider");

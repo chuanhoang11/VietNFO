@@ -28,6 +28,35 @@
     }
 }
 
+.admin-heading.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+}
+
+.admin-heading.flex .right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+
+    @include max($mobile) {
+        width: 100%;
+        gap: .8rem;
+    }
+}
+
+.admin-heading.flex .right .btn {
+    font-size: 1.4rem;
+    padding: .8rem 1.6rem;
+
+    @include max($mobile) {
+        width: 100%;
+    }
+}
+
 .admin-heading-second {
     margin-bottom: 1.6rem;
 
@@ -40,6 +69,12 @@
     font-size: 3.2rem;
     font-weight: 700;
     color: #1D2939;
+
+    >img {
+        width: 1em;
+        display: inline-block;
+        vertical-align: middle;
+    }
 
     @include max($mobile) {
         font-size: 2.4rem;
@@ -76,4 +111,96 @@
     @include max($mobile) {
         padding: 1.6rem;
     }
+}
+
+.popup-change-password .popup-main {
+    width: 64rem;
+
+}
+
+.popup-change-password {
+    border-radius: 1.2rem;
+}
+
+.popup-change-password~.popup-close {
+    display: none;
+}
+
+.popup-change-password .popup-wrapper {
+    padding: 2.4rem;
+}
+
+.popup-change-password .btn-gr {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    .btn {
+        flex: 1;
+    }
+    .btn.trans{
+        border-color: #D0D5DD;
+        color: #344054;
+        &::after{
+            opacity: 0;
+        }
+    }
+}
+.admin-heading.t-center{
+    @include max($mobile){
+        text-align: left;
+    }
+}
+.admin-back{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    color: var(--color-pri);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    >img{
+        width: 2em;
+        transition: .3s ease-in-out;
+    }
+    @include hover{
+        img{
+            transform: translateX(-.2rem);
+        }
+    }
+}
+
+.popup-add-pay  .popup-main {
+    width: 64rem;
+
+}
+
+.popup-add-pay  {
+    border-radius: .5rem;
+}
+
+.popup-add-pay ~.popup-close {
+    background-color: #344054;
+    border-radius: .8rem;
+   i{
+    color: white !important;
+    font-size: 2rem !important;
+   }
+}   
+
+.popup-add-pay  .popup-wrapper {
+    padding: 2.4rem;
+}
+
+.popup-add-pay .f-left.second >img{
+    width: 2rem;
+    left: 2rem;
+ 
+}
+
+.popup-add-pay .pay-list{
+    justify-content: center;
+    display: flex !important;
+    margin-bottom: 2.4rem;
+    flex-wrap: wrap;
 }
