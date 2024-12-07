@@ -91,6 +91,16 @@
     }
 }
 
+.admin-title-third {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #101828;
+
+    @include max($mobile) {
+        font-size: 1.6rem;
+    }
+}
+
 
 .main-admin .ft .container {
     max-width: 100%;
