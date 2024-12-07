@@ -131,4 +131,16 @@ export default function SwiperModule() {
     loop: false,
     effect: "slide",
   });
+
+  functionSlider(".qc-brand-slide", {
+    speed: 10000,
+    slidesPerView:"auto",
+    autoplay: {
+      delay: 0,
+    },
+    initialSlide: 0,
+    centeredSlides: false,
+    loop: true,
+    effect: "slide",
+  });
 }

@@ -26,10 +26,27 @@ export default function TabModule() {
                         tBtn[i].classList.add('active');
                         // tPanel[i].classList.add('open');
                         $(tPanel[i]).slideDown(400);
-
+                        GenHeight();
                     }
                 }
             }
         });
+        function GenHeight() {
+            if (window.innerWidth > 500) {
+                const advAreas = document.querySelectorAll(".qc-area-flex")
+                if (advAreas) {
+                    advAreas.forEach(advArea => {
+                        const advCtn = advArea.querySelector(".qc-area-ctn")
+                        const advImg = advArea.querySelector(".qc-area-images")
+
+                        const advCtnHeight = advCtn.clientHeight;
+                        advImg.style.height = advCtnHeight + "px"
+                    })
+                }
+            }
+
+        }
     }
+
+
 }
