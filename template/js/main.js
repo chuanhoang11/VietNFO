@@ -20,41 +20,43 @@ import ScrollTriggerModule from "./module/ScrollTriggerModule.js";
 import LoadMoreModule from "./module/LoadMoreModule.js";
 import ComponentModule from "./module/ComponentModule.js";
 import DatePickerModule from "./module/DatePickerModule.js";
+import FileModule from "./module/FileModule.js";
 import AdminBaseModule from "./module/AdminBaseModule.js";
 import AdminDashboardModule from "./module/AdminDashboardModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
-    // Animation
-    AnimatedModule();
-    ScrollTriggerModule();
-    AosModule();
-    // Loadmore
-    LoadMoreModule();
-    ShowHideModule();
-    // Tab
-    TabModule();
-    IsotopeModule();
-    // Upload File
-    // DateTime
-    DatePickerModule();
-    // PlusMinus
-    PlusMinusModule();
-    // Select
-    Select2Module();
-    // CountUP
-    CountUpModule();
-    // Component
-    SwiperModule();
-    MobileModule();
-    BtnToTopModule();
-    HeaderModule();
-    PopupModule();
-    CheckModule();
-    GalleryModule();
-    SearchModule();
-    SideModule();
-    CollapseModule();
-    ComponentModule();
-    AdminBaseModule();
-    AdminDashboardModule();
+  // Animation
+  AnimatedModule();
+  ScrollTriggerModule();
+  AosModule();
+  // Loadmore
+  LoadMoreModule();
+  ShowHideModule();
+  // Tab
+  TabModule();
+  IsotopeModule();
+  // Upload File
+  // DateTime
+  DatePickerModule();
+  // PlusMinus
+  PlusMinusModule();
+  // Select
+  Select2Module();
+  // CountUP
+  CountUpModule();
+  // Component
+  SwiperModule();
+  MobileModule();
+  BtnToTopModule();
+  HeaderModule();
+  PopupModule();
+  CheckModule();
+  GalleryModule();
+  SearchModule();
+  SideModule();
+  CollapseModule();
+  ComponentModule();
+  AdminBaseModule();
+  AdminDashboardModule();
+  FileModule();
 });
