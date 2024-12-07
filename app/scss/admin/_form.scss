@@ -23,31 +23,36 @@
     }
 }
 
-.f-item.flex-center{
+.f-item.flex-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.f-flex{
+
+.f-flex {
     display: flex;
     gap: .8rem;
     align-items: flex-end;
 }
-.f-flex .dot{
+
+.f-flex .dot {
     position: relative;
     bottom: 1.6rem;
 }
-.f-flex-item{
+
+.f-flex-item {
     flex: 1;
 }
-.f-left{
+
+.f-left {
     position: relative;
 }
 
-.f-left .admin-input{
+.f-left .admin-input {
     padding-left: 3rem;
 }
-.admin-form .f-list{
+
+.admin-form .f-list {
     --rg: 2.4rem;
     --cg: 2.4rem;
 }
@@ -188,6 +193,7 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    cursor: pointer;
 
     &::before {
         content: "";
@@ -200,6 +206,6 @@
     }
 }
 
-.admin-check input:checked ~ .admin-check-radio::before {
+.admin-check input:checked~.admin-check-radio::before {
     opacity: 1;
 }

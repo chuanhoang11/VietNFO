@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin Dashboard</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/backdoor.css">
+    <link rel="icon" type="image/png" href="./assets/images/mona.png">
+  </head>
+  <body class="page-dashboard-home">
+    <div class="hds">
+      <div class="hds-burger"> <span> </span><span> </span><span></span></div><a class="hds-logo" href=""> <img src="./assets/images/logo-white.svg" alt=""/></a>
+    </div>
+    <div class="sbar-overlay"></div>
+    <div class="sbar"> 
+      <div class="sbar-head"> 
+        <div class="sbar-head-flex"><a class="sbar-logo" href=""><img src="./assets/images/logo-white.svg" alt=""/></a>
+          <div class="sbar-close"><i class="far fa-times"></i></div>
+        </div>
+        <div class="sbar-user"> 
+          <div class="sbar-user-ava"> <img src="./assets/images/sbar-user-ava.jpg" alt=""/>
+          </div>
+          <div class="sbar-user-content t-center"> 
+            <p class="sbar-user-name fw-7">Tu Nguyen</p>
+            <p class="sbar-user-des">tu.nguyen@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="sbar-body"> 
+        <div class="sbar-menu"> 
+          <ul> 
+            <li> <a href=""><img src="./assets/images/sbar-menu-1.svg" alt=""/><span class="txt">Dashboard </span></a></li>
+            <li> <a href=""><img src="./assets/images/sbar-menu-2.svg" alt=""/><span class="txt">Profile</span></a></li>
+            <li> <a href=""><img src="./assets/images/sbar-menu-3.svg" alt=""/><span class="txt">Quản lý tin rao vặt</span></a></li>
+            <li> <a href=""><img src="./assets/images/sbar-menu-4.svg" alt=""/><span class="txt">Quản lý quảng cáo</span></a></li>
+            <li> <a href=""><img src="./assets/images/sbar-menu-5.svg" alt=""/><span class="txt">Billing & Payment</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sbar-foot"><a class="sbar-btn" href=""> <img src="./assets/images/ic-home.svg" alt=""/><span class="txt">Back To Homepage</span></a></div>
+    </div>
+    <main class="main-admin">
+      <div class="main-admin-wrapper">
+        <div class="admin-heading">
+          <h1 class="admin-title">Dashboard Admin</h1>
+        </div>
+        <div class="admin-form admin-dashboard">
+          <form action="/submit-url" method="post"> 
+            <div class="admin-wrapper">
+              <div class="admin-block">
+                <div class="admin-das-hd">
+                  <div class="admin-das-left">
+                    <h2 class="admin-title-third">Lịch sử đăng tin</h2><span class="number-post"><span class="txt fw-5">10 posts</span></span>
+                  </div>
+                  <div class="admin-das-right">
+                    <div class="admin-action">
+                      <label class="btn-switch">
+                        <input type="checkbox" name="enable-all" id="enable-all"><span class="control-round"></span>
+                      </label><span class="note-txt fw-5">Enable All</span>
+                    </div>
+                    <button class="btn btn-delete" type="submit"><span class="inner">Delete All</span><i></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="admin-das-bd"> 
+                  <div class="admin-das-table">
+                    <div class="das-table-container">
+                      <div class="das-table-header">
+                        <div class="das-header-cell">
+                          <label class="admin-check"> 
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="txt">Name</span>
+                          </label>
+                        </div>
+                        <div class="das-header-cell">Status<img src="./assets/images/ic-arrow-down.svg" alt=""/>
+                        </div>
+                        <div class="das-header-cell">Last updated</div>
+                        <div class="das-header-cell">Views</div>
+                        <div class="das-header-cell">Turn on/off</div>
+                        <div class="das-header-cell">Re-Use</div>
+                        <div class="das-header-cell">Edit</div>
+                        <div class="das-header-cell">Delete</div>
+                      </div>
+                      <div class="das-table-row">
+                        <div class="das-cell" data-text="Name">
+                          <label class="admin-check"> 
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Nhà ở</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">Cho thuê bất động sản</span></span></span>
+                          </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
+                        </div>
+                        <div class="das-cell" data-text="Status"><span class="status active"><span class="icon"></span><span class="txt fw-5">Active</span></span></div>
+                        <div class="das-cell" data-text="Last updated">09/30/2024</div>
+                        <div class="das-cell" data-text="Views">1,000</div>
+                        <div class="das-cell" data-text="Turn on/off"> 
+                          <div class="admin-action">
+                            <label class="btn-switch">
+                              <input type="checkbox" name="enable-all" id="enable-all"><span class="control-round"></span>
+                            </label><span class="note-txt fw-5">On</span>
+                          </div>
+                        </div>
+                        <div class="das-cell" data-text="Re-Use"> <span class="icon-act"><img src="./assets/images/rotate-cw.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Edit"> <span class="icon-act"><img src="./assets/images/edit.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Delete"> <span class="icon-act"><img src="./assets/images/trash.svg" alt=""/></span></div>
+                      </div>
+                      <div class="das-table-row">
+                        <div class="das-cell" data-text="Name">
+                          <label class="admin-check"> 
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Giải pickleball Viet Atlanta Tournament</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">Việt event</span></span></span>
+                          </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
+                        </div>
+                        <div class="das-cell" data-text="Status"><span class="status expired"><span class="icon"></span><span class="txt fw-5">Expired</span></span></div>
+                        <div class="das-cell" data-text="Last updated">09/30/2024</div>
+                        <div class="das-cell" data-text="Views">1,000</div>
+                        <div class="das-cell" data-text="Turn on/off"> 
+                          <div class="admin-action">
+                            <label class="btn-switch">
+                              <input type="checkbox" name="enable-all" id="enable-all"><span class="control-round"></span>
+                            </label><span class="note-txt fw-5">On</span>
+                          </div>
+                        </div>
+                        <div class="das-cell" data-text="Re-Use"> <span class="icon-act"><img src="./assets/images/rotate-cw.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Edit"> <span class="icon-act"><img src="./assets/images/edit.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Delete"> <span class="icon-act"><img src="./assets/images/trash.svg" alt=""/></span></div>
+                      </div>
+                      <div class="das-table-row">
+                        <div class="das-cell" data-text="Name">
+                          <label class="admin-check"> 
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Thương mại</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">Bán bất động sản</span></span></span>
+                          </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
+                        </div>
+                        <div class="das-cell" data-text="Status"><span class="status active"><span class="icon"></span><span class="txt fw-5">Active</span></span></div>
+                        <div class="das-cell" data-text="Last updated">09/30/2024</div>
+                        <div class="das-cell" data-text="Views">1,000</div>
+                        <div class="das-cell" data-text="Turn on/off"> 
+                          <div class="admin-action">
+                            <label class="btn-switch">
+                              <input type="checkbox" name="enable-all" id="enable-all"><span class="control-round"></span>
+                            </label><span class="note-txt fw-5">On</span>
+                          </div>
+                        </div>
+                        <div class="das-cell" data-text="Re-Use"> <span class="icon-act"><img src="./assets/images/rotate-cw.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Edit"> <span class="icon-act"><img src="./assets/images/edit.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Delete"> <span class="icon-act"><img src="./assets/images/trash.svg" alt=""/></span></div>
+                      </div>
+                      <div class="das-table-row">
+                        <div class="das-cell" data-text="Name">
+                          <label class="admin-check"> 
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Nhà ở</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">Cho thuê bất động sản</span></span></span>
+                          </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
+                        </div>
+                        <div class="das-cell" data-text="Status"><span class="status active"><span class="icon"></span><span class="txt fw-5">Active</span></span></div>
+                        <div class="das-cell" data-text="Last updated">09/30/2024</div>
+                        <div class="das-cell" data-text="Views">1,000</div>
+                        <div class="das-cell" data-text="Turn on/off"> 
+                          <div class="admin-action">
+                            <label class="btn-switch">
+                              <input type="checkbox" name="enable-all" id="enable-all"><span class="control-round"></span>
+                            </label><span class="note-txt fw-5">On</span>
+                          </div>
+                        </div>
+                        <div class="das-cell" data-text="Re-Use"> <span class="icon-act"><img src="./assets/images/rotate-cw.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Edit"> <span class="icon-act"><img src="./assets/images/edit.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Delete"> <span class="icon-act"><img src="./assets/images/trash.svg" alt=""/></span></div>
+                      </div>
+                      <div class="das-table-row">
+                        <div class="das-cell" data-text="Name">
+                          <label class="admin-check"> 
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Giải pickleball Viet Atlanta Tournament</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">Cho thuê bất động sản</span></span></span>
+                          </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
+                        </div>
+                        <div class="das-cell" data-text="Status"><span class="status expired"><span class="icon"></span><span class="txt fw-5">Inactive</span></span></div>
+                        <div class="das-cell" data-text="Last updated">09/30/2024</div>
+                        <div class="das-cell" data-text="Views">1,000</div>
+                        <div class="das-cell" data-text="Turn on/off"> 
+                          <div class="admin-action">
+                            <label class="btn-switch">
+                              <input type="checkbox" name="enable-all" id="enable-all"><span class="control-round"></span>
+                            </label><span class="note-txt fw-5">On</span>
+                          </div>
+                        </div>
+                        <div class="das-cell" data-text="Re-Use"> <span class="icon-act"><img src="./assets/images/rotate-cw.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Edit"> <span class="icon-act"><img src="./assets/images/edit.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Delete"> <span class="icon-act"><img src="./assets/images/trash.svg" alt=""/></span></div>
+                      </div>
+                      <div class="das-table-row">
+                        <div class="das-cell" data-text="Name">
+                          <label class="admin-check"> 
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Giải pickleball Viet Atlanta Tournament</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">Cho thuê bất động sản</span></span></span>
+                          </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
+                        </div>
+                        <div class="das-cell" data-text="Status"><span class="status expired"><span class="icon"></span><span class="txt fw-5">Inactive</span></span></div>
+                        <div class="das-cell" data-text="Last updated">09/30/2024</div>
+                        <div class="das-cell" data-text="Views">1,000</div>
+                        <div class="das-cell" data-text="Turn on/off"> 
+                          <div class="admin-action">
+                            <label class="btn-switch">
+                              <input type="checkbox" name="enable-all" id="enable-all"><span class="control-round"></span>
+                            </label><span class="note-txt fw-5">On</span>
+                          </div>
+                        </div>
+                        <div class="das-cell" data-text="Re-Use"> <span class="icon-act"><img src="./assets/images/rotate-cw.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Edit"> <span class="icon-act"><img src="./assets/images/edit.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Delete"> <span class="icon-act"><img src="./assets/images/trash.svg" alt=""/></span></div>
+                      </div>
+                      <div class="table-pagi"> 
+                        <div class="form-ip"> 
+                          <select class="re-select-main" name="">
+                            <option value="1"> 10 items/page </option>
+                            <option value="1"> 20 items/page </option>
+                            <option value="1"> 30 items/page </option>
+                          </select>
+                        </div>
+                        <ul class="page-numbers page-navigation">
+                          <li> <a class="prev page-numbers" href=""><i class="fa-solid fa-arrow-left"></i><span class="txt">Previous</span></a></li>
+                          <li><span class="page-numbers current">
+                                1</span></li>
+                          <li><a class="page-numbers" href="">
+                                2</a></li>
+                          <li> <span class="page-numbers dot">
+                               ...</span></li>
+                          <li><a class="page-numbers" href="">
+                                10</a></li>
+                          <li> <a class="next page-numbers" href=""><span class="txt">Next</span><i class="fa-solid fa-arrow-right"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="admin-block">
+                <div class="admin-das-hd">
+                  <div class="admin-das-left">
+                    <h2 class="admin-title-third">Lịch sử quảng cáo</h2><span class="number-post"><span class="txt fw-5">10 ads</span></span>
+                  </div>
+                  <div class="admin-das-right">
+                    <div class="admin-action">
+                      <label class="btn-switch">
+                        <input type="checkbox" name="enable-all" id="enable-all"><span class="control-round"></span>
+                      </label><span class="note-txt fw-5">Enable All</span>
+                    </div>
+                    <button class="btn btn-delete" type="submit"><span class="inner">Delete All</span><i></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="admin-das-bd"> 
+                  <div class="admin-das-table">
+                    <div class="das-table-container">
+                      <div class="das-table-header">
+                        <div class="das-header-cell">
+                          <label class="admin-check"> 
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="txt">Name</span>
+                          </label>
+                        </div>
+                        <div class="das-header-cell">Status<img src="./assets/images/ic-arrow-down.svg" alt=""/>
+                        </div>
+                        <div class="das-header-cell">Views</div>
+                        <div class="das-header-cell">Receipt</div>
+                        <div class="das-header-cell">Turn on/off</div>
+                        <div class="das-header-cell">Re-Use</div>
+                        <div class="das-header-cell">Edit</div>
+                        <div class="das-header-cell">Delete</div>
+                      </div>
+                      <div class="das-table-row">
+                        <div class="das-cell" data-text="Name">
+                          <label class="admin-check"> 
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-noti.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Homepage - trang chủ</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">H1 [140 x 200 px]; Feb, May,<span class="fw-7">+5</span></span></span></span>
+                          </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
+                        </div>
+                        <div class="das-cell" data-text="Status"><span class="status required"><span class="icon"></span><span class="txt fw-5">Banner required</span></span></div>
+                        <div class="das-cell" data-text="Views">1,000</div>
+                        <div class="das-cell" data-text="Receipt"> <span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Turn on/off"> 
+                          <div class="admin-action">
+                            <label class="btn-switch">
+                              <input type="checkbox" name="enable-all" id="enable-all"><span class="control-round"></span>
+                            </label><span class="note-txt fw-5">On</span>
+                          </div>
+                        </div>
+                        <div class="das-cell" data-text="Re-Use"> <span class="icon-act"><img src="./assets/images/rotate-cw.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Edit"> 
+                          <p class="icon-wr"><span class="icon-act"><img src="./assets/images/edit.svg" alt=""/></span><span class="icon-act"><img src="./assets/images/ic-danger.svg" alt=""/></span></p>
+                        </div>
+                        <div class="das-cell" data-text="Delete"> <span class="icon-act"><img src="./assets/images/trash.svg" alt=""/></span></div>
+                      </div>
+                      <div class="das-table-row">
+                        <div class="das-cell" data-text="Name">
+                          <label class="admin-check"> 
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Search - trang kết quả tìm kiếm</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">S2 [120 x 200 px]; Feb, May, <span class="fw-7">+5</span></span></span></span>
+                          </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
+                        </div>
+                        <div class="das-cell" data-text="Status"><span class="status expired"><span class="icon"></span><span class="txt fw-5">Expired</span></span></div>
+                        <div class="das-cell" data-text="Views">1,000</div>
+                        <div class="das-cell" data-text="Receipt"> <span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Turn on/off"> 
+                          <div class="admin-action">
+                            <label class="btn-switch">
+                              <input type="checkbox" name="enable-all" id="enable-all"><span class="control-round"></span>
+                            </label><span class="note-txt fw-5">On</span>
+                          </div>
+                        </div>
+                        <div class="das-cell" data-text="Re-Use"> <span class="icon-act"><img src="./assets/images/rotate-cw.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Edit"> <span class="icon-act"><img src="./assets/images/edit.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Delete"> <span class="icon-act"><img src="./assets/images/trash.svg" alt=""/></span></div>
+                      </div>
+                      <div class="das-table-row">
+                        <div class="das-cell" data-text="Name">
+                          <label class="admin-check"> 
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Search - trang kết quả tìm kiếm</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">S2 [120 x 200 px]; Feb, May, <span class="fw-7">+5</span></span></span></span>
+                          </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
+                        </div>
+                        <div class="das-cell" data-text="Status"><span class="status active"><span class="icon"></span><span class="txt fw-5">Active</span></span></div>
+                        <div class="das-cell" data-text="Views">1,000</div>
+                        <div class="das-cell" data-text="Receipt"> <span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Turn on/off"> 
+                          <div class="admin-action">
+                            <label class="btn-switch">
+                              <input type="checkbox" name="enable-all" id="enable-all"><span class="control-round"></span>
+                            </label><span class="note-txt fw-5">On</span>
+                          </div>
+                        </div>
+                        <div class="das-cell" data-text="Re-Use"> <span class="icon-act"><img src="./assets/images/rotate-cw.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Edit"> 
+                          <p class="icon-wr"><span class="icon-act"><img src="./assets/images/edit.svg" alt=""/></span><span class="icon-act"><img src="./assets/images/ic-danger.svg" alt=""/></span></p>
+                        </div>
+                        <div class="das-cell" data-text="Delete"> <span class="icon-act"><img src="./assets/images/trash.svg" alt=""/></span></div>
+                      </div>
+                      <div class="das-table-row">
+                        <div class="das-cell" data-text="Name">
+                          <label class="admin-check"> 
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Search - trang kết quả tìm kiếm</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">S2 [120 x 200 px]; Feb, May,<span class="fw-7">+5</span></span></span></span>
+                          </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
+                        </div>
+                        <div class="das-cell" data-text="Status"><span class="status expired"><span class="icon"></span><span class="txt fw-5">Inactive</span></span></div>
+                        <div class="das-cell" data-text="Views">1,000</div>
+                        <div class="das-cell" data-text="Receipt"> <span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Turn on/off"> 
+                          <div class="admin-action">
+                            <label class="btn-switch">
+                              <input type="checkbox" name="enable-all" id="enable-all"><span class="control-round"></span>
+                            </label><span class="note-txt fw-5">On</span>
+                          </div>
+                        </div>
+                        <div class="das-cell" data-text="Re-Use"> <span class="icon-act"><img src="./assets/images/rotate-cw.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Edit"> 
+                          <p class="icon-wr"><span class="icon-act"><img src="./assets/images/edit.svg" alt=""/></span><span class="icon-act"><img src="./assets/images/ic-danger.svg" alt=""/></span></p>
+                        </div>
+                        <div class="das-cell" data-text="Delete"> <span class="icon-act"><img src="./assets/images/trash.svg" alt=""/></span>
+                          <div class="das-table-row"></div>
+                        </div>
+                        <div class="das-cell" data-text="Name">
+                          <label class="admin-check"> 
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Search - trang kết quả tìm kiếm</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">S2 [120 x 200 px]; Feb, May,<span class="fw-7">+5</span></span></span></span>
+                          </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
+                        </div>
+                        <div class="das-cell" data-text="Status"><span class="status active"><span class="icon"></span><span class="txt fw-5">Active</span></span></div>
+                        <div class="das-cell" data-text="Views">1,000</div>
+                        <div class="das-cell" data-text="Receipt"> <span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Turn on/off"> 
+                          <div class="admin-action">
+                            <label class="btn-switch">
+                              <input type="checkbox" name="enable-all" id="enable-all"><span class="control-round"></span>
+                            </label><span class="note-txt fw-5">On</span>
+                          </div>
+                        </div>
+                        <div class="das-cell" data-text="Re-Use"> <span class="icon-act"><img src="./assets/images/rotate-cw.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Edit"> <span class="icon-act"><img src="./assets/images/edit.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Delete"> <span class="icon-act"><img src="./assets/images/trash.svg" alt=""/></span></div>
+                      </div>
+                      <div class="table-pagi"> 
+                        <div class="form-ip"> 
+                          <select class="re-select-main" name="">
+                            <option value="1"> 10 items/page </option>
+                            <option value="1"> 20 items/page </option>
+                            <option value="1"> 30 items/page </option>
+                          </select>
+                        </div>
+                        <ul class="page-numbers page-navigation">
+                          <li> <a class="prev page-numbers" href=""><i class="fa-solid fa-arrow-left"></i><span class="txt">Previous</span></a></li>
+                          <li><span class="page-numbers current">
+                                1</span></li>
+                          <li><a class="page-numbers" href="">
+                                2</a></li>
+                          <li> <span class="page-numbers dot">
+                               ...</span></li>
+                          <li><a class="page-numbers" href="">
+                                10</a></li>
+                          <li> <a class="next page-numbers" href=""><span class="txt">Next</span><i class="fa-solid fa-arrow-right"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="ft"> 
+        <div class="container"> 
+          <div class="ft-wrap"> 
+            <div class="ft-head"> 
+              <div class="ft-logo"> <a class="custom-logo-link" href=""><img src="./assets/images/logo.svg" alt=""/></a></div>
+              <div class="t-slogan"><span class="t-text">
+                   Cổng thông tin <span class="fw-7 c-pri">
+                     MIỄN PHÍ </span>dành cho cộng đồng người Việt tại Mỹ</span></div>
+            </div>
+            <div class="ft-nav">
+              <ul class="menu"> 
+                <li><a href="">VIỆC LÀM</a></li>
+                <li><a href="">MUA CỬA TIỆM</a></li>
+                <li><a href="">VIỆT EVENTS</a></li>
+                <li><a href="">THUÊ NHÀ</a></li>
+                <li><a href="">MUA NHÀ</a></li>
+                <li><a href="">RAO VẶT</a></li>
+                <li><a href="">LIÊN HỆ QUẢNG CÁO</a></li>
+              </ul>
+            </div>
+            <div class="ft-sc"> 
+              <div class="social"> 
+                <div class="social-list"> <a class="social-link" href=""> <img src="./assets/images/ic-fb.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-yt.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-ins.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-x.svg" alt=""/></a></div>
+              </div>
+            </div>
+            <div class="ft-panel"> 
+              <div class="ft-list row"> 
+                <div class="col col-4">
+                  <div class="ft-box"> 
+                    <div class="b-inner"> <span class="t-text"> LIÊN HỆ HỢP TÁC</span>
+                      <div class="b-gr"> <a class="t-link" href="">Email:contact@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-4">
+                  <div class="ft-box"> 
+                    <div class="b-inner"> <span class="t-text"> LIÊN HỆ QUẢNG CÁO</span>
+                      <div class="b-gr"> <a class="t-link" href="">Email:ads@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-4">
+                  <div class="ft-box"> 
+                    <div class="b-inner"> <span class="t-text"> HỖ TRỢ KỸ THUẬT</span>
+                      <div class="b-gr"> <a class="t-link" href="">Email:admin@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ft-bank"> 
+              <div class="i-list"><a class="i-link" href=""><img src="./assets/images/icon-bank (1).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (2).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (3).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (4).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (5).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (6).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (7).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (8).svg" alt=""/></a>
+              </div>
+            </div>
+            <div class="ft-bot">
+              <div class="ft-nav"> 
+                <ul class="menu">
+                  <li> <a href="">Privacy Policy</a></li>
+                  <li> <a href="">Terms of Service </a></li>
+                  <li> <a href="">Ads Service Agreement</a></li>
+                </ul>
+              </div><span class="t-text">
+                  Designed by Qixtech - Web Design & Digital Marketing</span><span class="t-text">
+                 Copyright © 2024. VietInfo LLC. All Right Reserved. </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="fixed-side">
+      <div class="fchat"> <a class="i-link" href=""><img src="./assets/images/icon-mess2.svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-mess.svg" alt=""/></a></div>
+      <div class="back-to-top backToTop">
+        <div class="icon fa-solid fa-arrow-up"></div>
+      </div>
+    </div>
+    <script src="./assets/library/jquery/jquery.js"></script>
+    <script src="./assets/library/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/library/aos/aos.js"></script>
+    <script src="./assets/library/splide/splide-auto-scroll.js"></script>
+    <script src="./assets/library/splide/splide.js"></script>
+    <script src="./assets/library/select2/select2.min.js"></script>
+    <script src="./assets/library/gallery/lightgallery-all.min.js"></script>
+    <script src="./assets/library/jquery/jquery-migrate.js"></script>
+    <script src="./assets/library/isotope/isotope.pkgd.min.js"></script>
+    <script src="./assets/library/datetime/moment.min.js"></script>
+    <script src="./assets/library/datetime/daterangepicker.min.js"></script>
+    <script src="./assets/library/smoothscroll/SmoothScroll.min.js"></script>
+    <script src="./assets/library/splitting/splitting.min.js"></script>
+    <script src="./assets/library/fancybox/fancybox.umd.js"></script>
+    <script src="./assets/library/gsap/gsap.min.js"></script>
+    <script src="./assets/library/gsap/ScrollTrigger.min.js"></script>
+    <script src="./assets/library/trimline/jquery.trimLines.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v17.0"></script>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
