@@ -38,6 +38,15 @@
     --pd-sc: 4rem;
     --size-hd: 7.2rem;
   }
+
+  // biến admin
+  --sz-hds: 6rem;
+  --w-sbar: 27.8rem;
+  --hd-admin-input:5.6rem;
+
+  @media (max-width: 700px) {
+    --w-sbar: 26.8rem;
+  }
 }
 
 //Responsive
@@ -50,6 +59,7 @@ $res-mobile-min: 1200px; //  cho mobile đến tablet (≥ 1200px)
 $mobile: 700px; //  cho mobile nhỏ (≤ 500px)
 $tablet: 768px; //  cho tablet (≤ 768px)
 $tablet-min: 1024px; //  cho tablet lớn (≥ 1024px)
+
 //Distance
 $radius: 0.6rem;
 // cubic

@@ -15,16 +15,19 @@
   @include font-second;
   min-width: 20rem;
   border-radius: var(--rs08);
+
   @include max(600px) {
     font-size: 1.4rem;
     padding: 0.8rem 1.6rem;
   }
-  > * {
+
+  >* {
     position: relative;
     z-index: 2;
   }
-  .text {
-  }
+
+  .text {}
+
   .icon {
     width: 2rem;
     height: 2rem;
@@ -32,29 +35,37 @@
     flex-shrink: 0;
     font-weight: 500;
   }
+
   &.invert {
     background: #323b53;
+
     &::after {
       background: var(--color-sec);
     }
+
     .icon {
       color: #fff;
     }
   }
+
   &.center {
     margin: 0 auto;
   }
+
   &.trans {
     background: transparent;
     color: var(--color-pri);
     border: 0.1rem solid var(--color-pri);
+
     @include hover {
       color: var(--color-white);
     }
+
     &::after {
       background: var(--color-pri);
     }
   }
+
   &::after {
     position: absolute;
     content: "";
@@ -66,18 +77,22 @@
     transition: all 0.3s ease;
     z-index: 1;
   }
+
   @include hover {
     color: var(--color-white);
+
     &::after {
       left: 0;
       width: 100%;
     }
+
     .icon {
       transform: unset;
       color: var(--color-white);
     }
   }
 }
+
 .btn-noti {
   display: flex;
   align-items: center;
@@ -86,12 +101,15 @@
   transition: 0.3s ease-in-out;
   border-radius: var(--rs08);
   overflow: hidden;
+
   @include hover {
     background: var(--colore6);
+
     .icon {
       background: #fff;
     }
   }
+
   .icon {
     @include mid-flex;
     width: 3.2rem;
@@ -100,10 +118,12 @@
     background: var(--colore6);
     flex-shrink: 0;
     transition: 0.3s ease-in-out;
+
     img {
       border-radius: unset;
     }
   }
+
   .t-text {
     @include fz-16;
     font-weight: 700;

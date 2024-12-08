@@ -21,6 +21,8 @@ import LoadMoreModule from "./module/LoadMoreModule.js";
 import ComponentModule from "./module/ComponentModule.js";
 import DatePickerModule from "./module/DatePickerModule.js";
 import FileModule from "./module/FileModule.js";
+import AdminBaseModule from "./module/AdminBaseModule.js";
+import AdminDashboardModule from "./module/AdminDashboardModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   // Animation
@@ -54,5 +56,7 @@ window.addEventListener("DOMContentLoaded", () => {
   SideModule();
   CollapseModule();
   ComponentModule();
+  AdminBaseModule();
+  AdminDashboardModule();
   FileModule();
 });

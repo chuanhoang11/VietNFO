@@ -1,0 +1,136 @@
+extends layout/layout-admin
+
+block vars
+	-title = 'Admin'
+	-bodyClass = 'page-home'
+	-isAdmin = 'true'
+
+block container 
+	.admin-heading
+		h1.admin-title Đăng tin rao vặt mới
+	.admin-form 
+		.admin-wrapper
+			.admin-block
+				.admin-heading-second.t-center
+					h2.admin-title-second THÔNG TIN CHUNG
+				.f-list.row.layout-
+					.f-item.col.col-4
+						+AdminLabel("Chọn loại tin cần đăng")
+						+AdminSelect(
+							[
+								"Sang nhượng kinh doanh",
+								"Tiệm nail",
+								"Nhà hàng",
+								"Nhà hàng"
+							]
+						)
+					.f-item.col.col-8
+						+AdminLabel("Link URL")
+						.f-copy
+							input.admin-input(type="text" value="vietinfo.com/my-post-title")
+							+img("ic-copy.svg")
+			.admin-block
+				.admin-heading-second.t-center
+						h2.admin-title-second THÔNG TIN CHI TIẾT
+				.f-list.row.layout-five
+					.f-item.col.col-4
+						+AdminLabel("Loại kinh doanh")
+						+AdminSelect(
+							[
+								"Tiệm nail",
+								"Sang nhượng kinh doanh",
+								"Event - Sự kiện",
+								"Việc làm",
+								"Bán bất động sản",
+								"Rao vặt khác"
+							]
+						)
+					.f-item.col.col-4
+						+AdminLabel("Tên nhà hàng/cửa tiệm")
+						input.admin-input(type="text" value="King nail salon")
+					.f-item.col.col-2
+						+AdminLabel("Giá bán")
+						.f-left
+							.f-left-ic $
+							input.admin-input(type="text" value="1,000,000")
+					.f-item.col.col-2.flex-center
+						label.admin-check.admin-check-posi
+							input(type="checkbox" id="Covered Parking" name="Covered Parking" hidden)
+							span.admin-check-checkbox
+							span.txt Thương lượng
+					.f-item.col.col-3
+						.f-list.row
+							.f-item.col.col-6
+								+AdminLabel("Số ghế")
+								input.admin-input(type="text" value="20") 
+							.f-item.col.col-6
+								+AdminLabel("Số bàn")
+								input.admin-input(type="text" value="20") 
+					.f-item.col.col-3
+						+AdminLabel("Diện tích văn phòng")
+						.f-left.second 
+							.f-left-ic sqft
+							input.admin-input(type="text" value="11,300")
+					.f-item.col.col-2
+						+AdminLabel("Income")
+						.f-left 
+							.f-left-ic $
+							input.admin-input(type="text" value="1000,000")
+					.f-item.col.col-4.flex-center
+						.admin-check-flex.admin-check-posi
+							label.admin-check
+								input(type="radio" id="thuong-luong" name="thuong-luong" hidden)
+								span.admin-check-radio
+								span.txt Month
+							label.admin-check
+								input(type="radio" id="thuong-luong" name="thuong-luong" hidden)
+								span.admin-check-radio
+								span.txt Year
+					.f-item.col.col-3
+						label.f-label
+							| Rent 
+							span.fw-4 (optional)
+						.f-left 
+							.f-left-ic $
+							input.admin-input(type="text" value="1,500")
+					.f-item.col.col-9.flex-center
+						.admin-check-flex.admin-check-posi
+							label.admin-check
+								input(type="radio" id="thuong-luong" name="thuong-luong" hidden)
+								span.admin-check-radio
+								span.txt Month
+							label.admin-check
+								input(type="radio" id="thuong-luong" name="thuong-luong" hidden)
+								span.admin-check-radio
+								span.txt Year
+					.f-item.col.col-6
+						+AdminLabel("Address 1") 
+						input.admin-input(type="text" placeholder="Street address")
+					.f-item.col.col-6
+						label.f-label
+							| Address 2 
+							span.fw-4 (optional)
+						input.admin-input(type="text" placeholder="Apt, suite, unit, building, floor, etc.")
+					.f-item.col.col-4
+						+AdminLabel("City") 
+						input.admin-input(type="text" value="Atlanta")
+					.f-item.col.col-4
+						+AdminLabel("State") 
+						+AdminSelect(
+							[
+								"Georgia",
+								"Georgia",
+								"Georgia",
+								"Georgia"
+							]
+						)
+					.f-item.col.col-4
+						+AdminLabel("Zip code") 
+						input.admin-input(type="number" value="30062")
+					+MoTaChiTiet()
+					+NgayDangTinHetHan()
+					.f-item.col 
+						+AdminLabel("Photos")
+						+DropZone()
+			+ThongTinLienHe()
+			+Btn("Đăng bài", "button", "admin-btn")

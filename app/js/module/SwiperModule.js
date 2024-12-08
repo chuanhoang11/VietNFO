@@ -75,6 +75,14 @@ export default function SwiperModule() {
       slidesPerView: "auto",
 
     });
+
+    functionSlider(".dropzone-slider", {
+      centeredSlides: false,
+      loop: false,
+      effect: "slide",
+      slidesPerView: "auto",
+
+    });
   }
 
   //   const prodt_silder = document.querySelectorAll(".prdsSlider");
@@ -121,6 +129,18 @@ export default function SwiperModule() {
     initialSlide: 0,
     centeredSlides: false,
     loop: false,
+    effect: "slide",
+  });
+
+  functionSlider(".qc-brand-slide", {
+    speed: 10000,
+    slidesPerView:"auto",
+    autoplay: {
+      delay: 0,
+    },
+    initialSlide: 0,
+    centeredSlides: false,
+    loop: true,
     effect: "slide",
   });
 }

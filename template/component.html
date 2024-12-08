@@ -1,338 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/backdoor.css">
-    <link rel="icon" type="image/png" href="./assets/images/mona.png">
-  </head>
-  <body class="page-component">
-    <header class="hd"> 
-      <div class="container"> 
-        <div class="hd-wrap"> 
-          <div class="hd-top">
-            <div class="home-bn-srch">
-              <form action="">
-                <div class="home-bn-srch-box">
-                  <div class="sl"> 
-                    <select class="re-select-main" name="" data-placeholder="Danh mục"> 
-                      <option value=""> Danh mục</option>
-                      <option value="1"> Danh mục 1</option>
-                      <option value="2"> Danh mục 2</option>
-                      <option value="3"> Danh mục 3</option>
-                    </select>
+
+<head>
+   <meta charset="utf-8">
+   <title></title>
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="robots" content="index, follow">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="./css/backdoor.css">
+   <link rel="icon" type="image/png" href="./assets/images/mona.png">
+</head>
+
+<body class="page-component">
+   <header class="hd">
+      <div class="container">
+         <div class="hd-wrap">
+            <div class="hd-top">
+               <div class="home-bn-srch">
+                  <form action="">
+                     <div class="home-bn-srch-box">
+                        <div class="sl">
+                           <select class="re-select-main" name="" data-placeholder="Danh mục">
+                              <option value=""> Danh mục</option>
+                              <option value="1"> Danh mục 1</option>
+                              <option value="2"> Danh mục 2</option>
+                              <option value="3"> Danh mục 3</option>
+                           </select>
+                        </div>
+                        <div class="ip">
+                           <div class="ip-wrap"><img src="./assets/images/ic-pin.svg" alt="" />
+                              <input type="text" placeholder="State, city, ZIP code">
+                           </div>
+                           <button class="ip-icon"><img src="./assets/images/ic-srch.svg" alt="" />
+                           </button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="b-gr">
+                  <div class="hd-logo"> <a class="custom-logo-link" href=""><img src="./assets/images/logo.svg"
+                           alt="" /></a></div>
+                  <div class="hd-noti t-slogan"><span class="t-text">
+                        Cổng thông tin <span class="fw-7 c-pri">
+                           MIỄN PHÍ </span>dành cho cộng đồng người Việt tại Mỹ</span></div>
+                  <div class="hd-ctr">
+                     <div class="hd-lang"> <span class="i-ar"><i class="fa-light fa-chevron-down"></i></span><span
+                           class="t-text">
+                           VN </span>
+                        <div class="lang-pos"> <a class="t-text" href="">EN </a></div>
+                     </div><a class="btn" href=""><span class="inner">Đăng tin miễn phí</span><i></i></a>
+                     <div class="hd-burger" id="hamburger">
+                        <div class="burger">
+                           <div class="hamburger">
+                              <div class="line"> </div>
+                              <div class="line"></div>
+                              <div class="line"></div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
-                  <div class="ip"> 
-                    <div class="ip-wrap"><img src="./assets/images/ic-pin.svg" alt=""/>
-                      <input type="text" placeholder="State, city, ZIP code">
-                    </div>
-                    <button class="ip-icon"><img src="./assets/images/ic-srch.svg" alt=""/>
-                    </button>
-                  </div>
-                </div>
-              </form>
+               </div>
             </div>
-            <div class="b-gr"> 
-              <div class="hd-logo"> <a class="custom-logo-link" href=""><img src="./assets/images/logo.svg" alt=""/></a></div>
-              <div class="hd-noti t-slogan"><span class="t-text">
-                   Cổng thông tin <span class="fw-7 c-pri">
-                     MIỄN PHÍ </span>dành cho cộng đồng người Việt tại Mỹ</span></div>
-              <div class="hd-ctr"> 
-                <div class="hd-lang"> <span class="i-ar"><i class="fa-light fa-chevron-down"></i></span><span class="t-text">
-                     VN </span>
-                  <div class="lang-pos"> <a class="t-text" href="">EN </a></div>
-                </div><a class="btn" href=""><span class="inner">Đăng tin miễn phí</span><i></i></a>
-                <div class="hd-burger" id="hamburger"> 
-                  <div class="burger"> 
-                    <div class="hamburger"> 
-                      <div class="line"> </div>
-                      <div class="line"></div>
-                      <div class="line"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="hd-bot">
+               <div class="b-gr">
+                  <div class="hd-nav">
+                     <div class="menu-nav">
+                        <ul class="menu-list">
+                           <li class="menu-item"> <a class="menu-link" href="">Việc làm</a></li>
+                           <li class="menu-item"> <a class="menu-link" href="">Mua cửa tiệm</a></li>
+                           <li class="menu-item"> <a class="menu-link" href="">Việt Event</a></li>
+                           <li class="menu-item"> <a class="menu-link" href="">Thuê nhà</a></li>
+                           <li class="menu-item"> <a class="menu-link" href="">Mua nhà</a></li>
+                           <li class="menu-item"> <a class="menu-link" href="">Rao vặt</a></li>
+                        </ul>
+                     </div>
+                  </div><a class="btn-noti" href=""> <span class="icon"> <img src="./assets/images/icon-noti.svg"
+                           alt="" /></span><span class="t-text">
+                        Quảng cáo trên VietInfo</span></a>
+               </div>
             </div>
-          </div>
-          <div class="hd-bot">
-            <div class="b-gr"> 
-              <div class="hd-nav">
-                <div class="menu-nav"> 
-                  <ul class="menu-list">
-                    <li class="menu-item"> <a class="menu-link" href="">Việc làm</a></li>
-                    <li class="menu-item"> <a class="menu-link" href="">Mua cửa tiệm</a></li>
-                    <li class="menu-item"> <a class="menu-link" href="">Việt Event</a></li>
-                    <li class="menu-item"> <a class="menu-link" href="">Thuê nhà</a></li>
-                    <li class="menu-item"> <a class="menu-link" href="">Mua nhà</a></li>
-                    <li class="menu-item"> <a class="menu-link" href="">Rao vặt</a></li>
-                  </ul>
-                </div>
-              </div><a class="btn-noti" href=""> <span class="icon"> <img src="./assets/images/icon-noti.svg" alt=""/></span><span class="t-text">
-                   Quảng cáo trên VietInfo</span></a>
-            </div>
-          </div>
-        </div>
+         </div>
       </div>
       <div class="mobile-overlay"></div>
       <div class="mobile">
-        <div class="mobile-con">
-          <div class="mobile-wr">
-            <div class="mobile-nav">
-              <div class="menu-nav">
-                <ul class="menu-list">
-                  <li class="menu-item"><a class="menu-link" href="">Việc làm</a></li>
-                  <li class="menu-item"><a class="menu-link" href="">Mua cửa tiệm</a></li>
-                  <li class="menu-item"><a class="menu-link" href="">Việt Event</a></li>
-                  <li class="menu-item"><a class="menu-link" href="">Thuê nhà</a></li>
-                  <li class="menu-item"><a class="menu-link" href="">Mua nhà</a></li>
-                </ul>
-              </div>
+         <div class="mobile-con">
+            <div class="mobile-wr">
+               <div class="mobile-nav">
+                  <div class="menu-nav">
+                     <ul class="menu-list">
+                        <li class="menu-item"><a class="menu-link" href="">Việc làm</a></li>
+                        <li class="menu-item"><a class="menu-link" href="">Mua cửa tiệm</a></li>
+                        <li class="menu-item"><a class="menu-link" href="">Việt Event</a></li>
+                        <li class="menu-item"><a class="menu-link" href="">Thuê nhà</a></li>
+                        <li class="menu-item"><a class="menu-link" href="">Mua nhà</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="mobile-content"><a class="btn-noti" href=""> <span class="icon"> <img
+                           src="./assets/images/icon-noti.svg" alt="" /></span><span class="t-text">
+                        Quảng cáo trên VietInfo</span></a><a class="btn full" href=""><span class="inner">Đăng tin miễn
+                        phí</span><i></i></a>
+                  <div class="hd-noti"> <span class="t-text">
+                        Cổng thông tin <span class="fw-7 c-pri">
+                           MIỄN PHÍ </span>dành cho cộng đồng người Việt tại Mỹ</span></div>
+               </div>
             </div>
-            <div class="mobile-content"><a class="btn-noti" href=""> <span class="icon"> <img src="./assets/images/icon-noti.svg" alt=""/></span><span class="t-text">
-                   Quảng cáo trên VietInfo</span></a><a class="btn full" href=""><span class="inner">Đăng tin miễn phí</span><i></i></a>
-              <div class="hd-noti"> <span class="t-text">
-                   Cổng thông tin <span class="fw-7 c-pri">
-                     MIỄN PHÍ </span>dành cho cộng đồng người Việt tại Mỹ</span></div>
-            </div>
-          </div>
-        </div>
+         </div>
       </div>
-    </header>
-    <main class="main">
+   </header>
+   <main class="main">
       <div class="ss-pd">
-        <div class="container">
-          <div class="head-sc">
-            <div class="head dcor">
-              <h2 class="t-title"> Việc làm tại North Carolina</h2>
-              <p class="t-des"> Việc làm sẵn có tại khu vực của bạn</p>
+         <div class="container">
+            <div class="head-sc">
+               <div class="head dcor">
+                  <h2 class="t-title"> Việc làm tại North Carolina</h2>
+                  <p class="t-des"> Việc làm sẵn có tại khu vực của bạn</p>
+               </div>
+               <div class="swiper-control">
+                  <div class="swiper-control-btn swiper-prev"> <i class="fa-light fa-chevron-left"></i></div>
+                  <div class="swiper-control-btn swiper-next"> <i class="fa-light fa-chevron-right"></i></div>
+               </div>
             </div>
-            <div class="swiper-control"> 
-              <div class="swiper-control-btn swiper-prev"> <i class="fa-light fa-chevron-left"></i></div>
-              <div class="swiper-control-btn swiper-next"> <i class="fa-light fa-chevron-right"></i></div>
-            </div>
-          </div>
-          <ul class="page-numbers">
-            <li> <a class="prev page-numbers" href=""><i class="fa fa-angle-left"></i></a></li>
-            <li><span class="page-numbers current">
-                  1</span></li>
-            <li><a class="page-numbers" href="">
-                  2</a></li>
-            <li> <span class="page-numbers dot">
-                 ...</span></li>
-            <li><a class="page-numbers" href="">
-                  10</a></li>
-            <li> <a class="next page-numbers" href=""><i class="fa fa-angle-right"></i></a></li>
-          </ul>
-          <div class="form-edit"> 
-            <textarea class="formJs"></textarea>
-          </div>
-          <div class="form-upload collapse-block"> 
-            <div class="b-inner tabJS"> <span class="t-head">
-                 Banner quảng cáo cho vị trí đã chọn</span>
-              <div class="b-head"> 
-                <div class="b-box tabBtn">
-                  <div class="ck-bcheck"> 
-                    <label class="ck-binner">
-                      <input type="radio" hidden name="status"><span class="ck-dot"></span><span class="t-txt">
-                         Đã có banner quảng cáo</span><span class="t-des">Tải mới banner mới lên hoặc chọn banner cữ lưu trong hệ thống để dùng lại</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="b-box tabBtn"> 
-                  <div class="ck-bcheck"> 
-                    <label class="ck-binner">
-                      <input type="radio" hidden name="status"><span class="ck-dot"></span><span class="t-txt">
-                         Chưa có banner quảng cáo</span><span class="t-des">Upload banner quảng cáo sau</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="upload-panel tabPanel"> 
-                <div class="b-wrapper">
-                  <div class="inner-panel uploadFormJs collapse-item">
-                    <div class="thead collapse-head">Upload desktop version <span class="icon"> <i class="fa-light fa-chevron-down"></i></span></div>
-                    <div class="b-body collapse-body">
-                      <div class="b-boxed">
-                        <div class="t-txt">
-                           Upload 1 banner cho màn hình desktop <span class="c-red">
-                             [ 100 x 100 px ]</span></div>
-                        <div class="b-bdrop"> 
-                          <div class="progress-container">
-                            <svg class="progress-circle" viewbox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-                              <path class="circle-bg" fill="none" stroke="#FAFAFA" stroke-width="3" d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32"></path>
-                              <path class="circle" fill="none" stroke="#1849D6" stroke-width="3" stroke-dasharray="100, 100" d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32"></path>
-                              <text class="progress-text" x="18" y="19" text-anchor="middle" alignment-baseline="middle">0%</text>
-                            </svg><span class="txt">Uploading...</span><span class="btn-cancel btn-action btnCalcelJs">Cancel</span>
-                          </div>
-                          <div class="inner dropzoneJs">
-                            <input class="ipUpFile" type="file">
-                            <div class="b-gr"> <span class="icon"> <img src="./assets/images/icon-upload.svg" alt=""/></span>
-                              <div class="t-text">
-                                 Kéo thả hình ảnh or <span class="c-pri fw-7">
-                                   Chọn và tải lên</span></div>
-                              <div class="t-txt">Hoặc chọn ảnh cũ đã sử dụng lưu trong hệ thống để dùng lại</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="t-note">Only support .jpg or .png files</div>
-                      </div>
-                      <div class="t-line"><span class="t-txt">OR</span></div>
-                      <div class="b-url"> 
-                        <div class="thead">Upload from URL</div>
-                        <div class="b-in"> 
-                          <input class="inputFileUrl" type="text" placeholder="Add file URL">
-                          <button class="btn-upfile btnUpfileJS btn-action"> <span>
-                               Upload</span></button>
-                        </div>
-                      </div>
-                      <ul class="b-list hide imageListJs"></ul>
-                    </div>
-                  </div>
-                  <div class="inner-panel uploadFormJs collapse-item">
-                    <div class="thead collapse-head">Upload mobile version <a class="tlink" href="">Tìm hiểu thêm </a><span class="icon"> <i class="fa-light fa-chevron-down"></i></span></div>
-                    <div class="b-body collapse-body">Chưa có nội dung </div>
-                  </div>
-                </div>
-              </div>
-              <div class="upload-panel tabPanel">
-                <div class="inner-panel">
-                  <div class="b-content"> 
-                    <div class="b-head"> 
-                      <div class="t-item"> <span class="icon"><img src="./assets/images/p-check.svg" alt=""/></span>
-                        <p class="t-des">
-                           Bước 1: Hoàn tất các bước đăng ký quảng cáo như bình thường bao gồm cả thanh toán<span class="fw-7">
-                             (việc upload banner có thể thực hiện sau khi các bước đăng ký đã hoàn tất).</span></p>
-                      </div>
-                      <div class="t-item"> <span class="icon"> <img src="./assets/images/p-check.svg" alt=""/></span>
-                        <p class="t-des">Bước 2: Upload bổ sung banner thông qua mục “Quản lý quảng cáo” trên tài khoản của anh/chị<span class="fw-7">(sau khi đã hoàn tất bước 1).</span></p>
-                      </div>
-                    </div>
-                    <div class="b-mid">
-                      <p class="t-text"> <i class="fa-light fa-arrow-right fw-7 icon"></i>Banner quảng cáo</p>
-                      <ul class="t-list">
-                        <li>
-                           Option 1: Quý anh/chị có thể tự thiết kế banner.</li>
-                        <li>
-                           Option 2: Liên hệ đối tác của Vietinfo để được hỗ trợ thiết kế ($50/design: bao gồm 1 banner cho màn desktop và 1 cho mobile). Xin vui lòng gửi email tới: support@qixtech.com với tiêu đề: “VietInfo: thiết kế bannner” để được hỗ trợ.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer class="ft"> 
-      <div class="container"> 
-        <div class="ft-wrap"> 
-          <div class="ft-head"> 
-            <div class="ft-logo"> <a class="custom-logo-link" href=""><img src="./assets/images/logo.svg" alt=""/></a></div>
-            <div class="t-slogan"><span class="t-text">
-                 Cổng thông tin <span class="fw-7 c-pri">
-                   MIỄN PHÍ </span>dành cho cộng đồng người Việt tại Mỹ</span></div>
-          </div>
-          <div class="ft-nav">
-            <ul class="menu"> 
-              <li><a href="">VIỆC LÀM</a></li>
-              <li><a href="">MUA CỬA TIỆM</a></li>
-              <li><a href="">VIỆT EVENTS</a></li>
-              <li><a href="">THUÊ NHÀ</a></li>
-              <li><a href="">MUA NHÀ</a></li>
-              <li><a href="">RAO VẶT</a></li>
-              <li><a href="">LIÊN HỆ QUẢNG CÁO</a></li>
+            <ul class="page-numbers">
+               <li> <a class="prev page-numbers" href=""><i class="fa fa-angle-left"></i></a></li>
+               <li><span class="page-numbers current">
+                     1</span></li>
+               <li><a class="page-numbers" href="">
+                     2</a></li>
+               <li> <span class="page-numbers dot">
+                     ...</span></li>
+               <li><a class="page-numbers" href="">
+                     10</a></li>
+               <li> <a class="next page-numbers" href=""><i class="fa fa-angle-right"></i></a></li>
             </ul>
-          </div>
-          <div class="ft-sc"> 
-            <div class="social"> 
-              <div class="social-list"> <a class="social-link" href=""> <img src="./assets/images/ic-fb.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-yt.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-ins.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-x.svg" alt=""/></a></div>
+            <div class="form-edit">
+               <textarea class="formJs"></textarea>
             </div>
-          </div>
-          <div class="ft-panel"> 
-            <div class="ft-list row"> 
-              <div class="col col-4">
-                <div class="ft-box"> 
-                  <div class="b-inner"> <span class="t-text"> LIÊN HỆ HỢP TÁC</span>
-                    <div class="b-gr"> <a class="t-link" href="">Email:contact@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
+            <div class="form-upload collapse-block">
+               <div class="b-inner tabJS"> <span class="t-head">
+                     Banner quảng cáo cho vị trí đã chọn</span>
+                  <div class="b-head">
+                     <div class="b-box tabBtn">
+                        <div class="ck-bcheck">
+                           <label class="ck-binner">
+                              <input type="radio" hidden name="status"><span class="ck-dot"></span><span class="t-txt">
+                                 Đã có banner quảng cáo</span><span class="t-des">Tải mới banner mới lên hoặc chọn
+                                 banner cữ lưu trong hệ thống để dùng lại</span>
+                           </label>
+                        </div>
+                     </div>
+                     <div class="b-box tabBtn">
+                        <div class="ck-bcheck">
+                           <label class="ck-binner">
+                              <input type="radio" hidden name="status"><span class="ck-dot"></span><span class="t-txt">
+                                 Chưa có banner quảng cáo</span><span class="t-des">Upload banner quảng cáo sau</span>
+                           </label>
+                        </div>
+                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col col-4">
-                <div class="ft-box"> 
-                  <div class="b-inner"> <span class="t-text"> LIÊN HỆ QUẢNG CÁO</span>
-                    <div class="b-gr"> <a class="t-link" href="">Email:ads@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
+                  <div class="upload-panel tabPanel">
+                     <div class="b-wrapper">
+                        <div class="inner-panel uploadFormJs collapse-item">
+                           <div class="thead collapse-head">Upload desktop version <span class="icon"> <i
+                                    class="fa-light fa-chevron-down"></i></span></div>
+                           <div class="b-body collapse-body">
+                              <div class="b-boxed">
+                                 <div class="t-txt">
+                                    Upload 1 banner cho màn hình desktop <span class="c-red">
+                                       [ 100 x 100 px ]</span></div>
+                                 <div class="b-bdrop">
+                                    <div class="progress-container">
+                                       <svg class="progress-circle" viewbox="0 0 36 36"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path class="circle-bg" fill="none" stroke="#FAFAFA" stroke-width="3"
+                                             d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32"></path>
+                                          <path class="circle" fill="none" stroke="#1849D6" stroke-width="3"
+                                             stroke-dasharray="100, 100" d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32">
+                                          </path>
+                                          <text class="progress-text" x="18" y="19" text-anchor="middle"
+                                             alignment-baseline="middle">0%</text>
+                                       </svg><span class="txt">Uploading...</span><span
+                                          class="btn-cancel btn-action btnCalcelJs">Cancel</span>
+                                    </div>
+                                    <div class="inner dropzoneJs">
+                                       <input class="ipUpFile" type="file">
+                                       <div class="b-gr"> <span class="icon"> <img src="./assets/images/icon-upload.svg"
+                                                alt="" /></span>
+                                          <div class="t-text">
+                                             Kéo thả hình ảnh or <span class="c-pri fw-7">
+                                                Chọn và tải lên</span></div>
+                                          <div class="t-txt">Hoặc chọn ảnh cũ đã sử dụng lưu trong hệ thống để dùng lại
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="t-note">Only support .jpg or .png files</div>
+                              </div>
+                              <div class="t-line"><span class="t-txt">OR</span></div>
+                              <div class="b-url">
+                                 <div class="thead">Upload from URL</div>
+                                 <div class="b-in">
+                                    <input class="inputFileUrl" type="text" placeholder="Add file URL">
+                                    <button class="btn-upfile btnUpfileJS btn-action"> <span>
+                                          Upload</span></button>
+                                 </div>
+                              </div>
+                              <ul class="b-list hide imageListJs"></ul>
+                           </div>
+                        </div>
+                        <div class="inner-panel uploadFormJs collapse-item">
+                           <div class="thead collapse-head">Upload mobile version <a class="tlink" href="">Tìm hiểu thêm
+                              </a><span class="icon"> <i class="fa-light fa-chevron-down"></i></span></div>
+                           <div class="b-body collapse-body">Chưa có nội dung </div>
+                        </div>
+                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col col-4">
-                <div class="ft-box"> 
-                  <div class="b-inner"> <span class="t-text"> HỖ TRỢ KỸ THUẬT</span>
-                    <div class="b-gr"> <a class="t-link" href="">Email:admin@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
+                  <div class="upload-panel tabPanel">
+                     <div class="inner-panel">
+                        <div class="b-content">
+                           <div class="b-head">
+                              <div class="t-item"> <span class="icon"><img src="./assets/images/p-check.svg"
+                                       alt="" /></span>
+                                 <p class="t-des">
+                                    Bước 1: Hoàn tất các bước đăng ký quảng cáo như bình thường bao gồm cả thanh
+                                    toán<span class="fw-7">
+                                       (việc upload banner có thể thực hiện sau khi các bước đăng ký đã hoàn
+                                       tất).</span></p>
+                              </div>
+                              <div class="t-item"> <span class="icon"> <img src="./assets/images/p-check.svg"
+                                       alt="" /></span>
+                                 <p class="t-des">Bước 2: Upload bổ sung banner thông qua mục “Quản lý quảng cáo” trên
+                                    tài khoản của anh/chị<span class="fw-7">(sau khi đã hoàn tất bước 1).</span></p>
+                              </div>
+                           </div>
+                           <div class="b-mid">
+                              <p class="t-text"> <i class="fa-light fa-arrow-right fw-7 icon"></i>Banner quảng cáo</p>
+                              <ul class="t-list">
+                                 <li>
+                                    Option 1: Quý anh/chị có thể tự thiết kế banner.</li>
+                                 <li>
+                                    Option 2: Liên hệ đối tác của Vietinfo để được hỗ trợ thiết kế ($50/design: bao gồm
+                                    1 banner cho màn desktop và 1 cho mobile). Xin vui lòng gửi email tới:
+                                    support@qixtech.com với tiêu đề: “VietInfo: thiết kế bannner” để được hỗ trợ.</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
                   </div>
-                </div>
-              </div>
+               </div>
             </div>
-          </div>
-          <div class="ft-bank"> 
-            <div class="i-list"><a class="i-link" href=""><img src="./assets/images/icon-bank (1).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (2).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (3).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (4).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (5).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (6).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (7).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (8).svg" alt=""/></a>
-            </div>
-          </div>
-          <div class="ft-bot">
-            <div class="ft-nav"> 
-              <ul class="menu">
-                <li> <a href="">Privacy Policy</a></li>
-                <li> <a href="">Terms of Service </a></li>
-                <li> <a href="">Ads Service Agreement</a></li>
-              </ul>
-            </div><span class="t-text">
-                Designed by Qixtech - Web Design & Digital Marketing</span><span class="t-text">
-               Copyright © 2024. VietInfo LLC. All Right Reserved. </span>
-          </div>
-        </div>
+         </div>
       </div>
-    </footer>
-    <div class="fixed-side">
-      <div class="fchat"> <a class="i-link" href=""><img src="./assets/images/icon-mess2.svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-mess.svg" alt=""/></a></div>
+   </main>
+   <footer class="ft">
+      <div class="container">
+         <div class="ft-wrap">
+            <div class="ft-head">
+               <div class="ft-logo"> <a class="custom-logo-link" href=""><img src="./assets/images/logo.svg"
+                        alt="" /></a></div>
+               <div class="t-slogan"><span class="t-text">
+                     Cổng thông tin <span class="fw-7 c-pri">
+                        MIỄN PHÍ </span>dành cho cộng đồng người Việt tại Mỹ</span></div>
+            </div>
+            <div class="ft-nav">
+               <ul class="menu">
+                  <li><a href="">VIỆC LÀM</a></li>
+                  <li><a href="">MUA CỬA TIỆM</a></li>
+                  <li><a href="">VIỆT EVENTS</a></li>
+                  <li><a href="">THUÊ NHÀ</a></li>
+                  <li><a href="">MUA NHÀ</a></li>
+                  <li><a href="">RAO VẶT</a></li>
+                  <li><a href="">LIÊN HỆ QUẢNG CÁO</a></li>
+               </ul>
+            </div>
+            <div class="ft-sc">
+               <div class="social">
+                  <div class="social-list"> <a class="social-link" href=""> <img src="./assets/images/ic-fb.svg"
+                           alt="" /></a><a class="social-link" href=""> <img src="./assets/images/ic-yt.svg"
+                           alt="" /></a><a class="social-link" href=""> <img src="./assets/images/ic-ins.svg"
+                           alt="" /></a><a class="social-link" href=""> <img src="./assets/images/ic-x.svg"
+                           alt="" /></a></div>
+               </div>
+            </div>
+            <div class="ft-panel">
+               <div class="ft-list row">
+                  <div class="col col-4">
+                     <div class="ft-box">
+                        <div class="b-inner"> <span class="t-text"> LIÊN HỆ HỢP TÁC</span>
+                           <div class="b-gr"> <a class="t-link" href="">Email:contact@vietinfo.us </a><a class="t-link"
+                                 href="">Phone:678 408 2288 </a></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col col-4">
+                     <div class="ft-box">
+                        <div class="b-inner"> <span class="t-text"> LIÊN HỆ QUẢNG CÁO</span>
+                           <div class="b-gr"> <a class="t-link" href="">Email:ads@vietinfo.us </a><a class="t-link"
+                                 href="">Phone:678 408 2288 </a></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col col-4">
+                     <div class="ft-box">
+                        <div class="b-inner"> <span class="t-text"> HỖ TRỢ KỸ THUẬT</span>
+                           <div class="b-gr"> <a class="t-link" href="">Email:admin@vietinfo.us </a><a class="t-link"
+                                 href="">Phone:678 408 2288 </a></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="ft-bank">
+               <div class="i-list"><a class="i-link" href=""><img src="./assets/images/icon-bank (1).svg"
+                        alt="" /></a><a class="i-link" href=""><img src="./assets/images/icon-bank (2).svg"
+                        alt="" /></a><a class="i-link" href=""><img src="./assets/images/icon-bank (3).svg"
+                        alt="" /></a><a class="i-link" href=""><img src="./assets/images/icon-bank (4).svg"
+                        alt="" /></a><a class="i-link" href=""><img src="./assets/images/icon-bank (5).svg"
+                        alt="" /></a><a class="i-link" href=""><img src="./assets/images/icon-bank (6).svg"
+                        alt="" /></a><a class="i-link" href=""><img src="./assets/images/icon-bank (7).svg"
+                        alt="" /></a><a class="i-link" href=""><img src="./assets/images/icon-bank (8).svg"
+                        alt="" /></a>
+               </div>
+            </div>
+            <div class="ft-bot">
+               <div class="ft-nav">
+                  <ul class="menu">
+                     <li> <a href="">Privacy Policy</a></li>
+                     <li> <a href="">Terms of Service </a></li>
+                     <li> <a href="">Ads Service Agreement</a></li>
+                  </ul>
+               </div><span class="t-text">
+                  Designed by Qixtech - Web Design & Digital Marketing</span><span class="t-text">
+                  Copyright © 2024. VietInfo LLC. All Right Reserved. </span>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <div class="fixed-side">
+      <div class="fchat"> <a class="i-link" href=""><img src="./assets/images/icon-mess2.svg" alt="" /></a><a
+            class="i-link" href=""><img src="./assets/images/icon-mess.svg" alt="" /></a></div>
       <div class="back-to-top backToTop">
-        <div class="icon fa-solid fa-arrow-up"></div>
+         <div class="icon fa-solid fa-arrow-up"></div>
       </div>
-    </div>
-    <script src="./assets/library/jquery/jquery.js"></script>
-    <script src="./assets/library/swiper/swiper-bundle.min.js"></script>
-    <script src="./assets/library/aos/aos.js"></script>
-    <script src="./assets/library/splide/splide-auto-scroll.js"></script>
-    <script src="./assets/library/splide/splide.js"></script>
-    <script src="./assets/library/select2/select2.min.js"></script>
-    <script src="./assets/library/gallery/lightgallery-all.min.js"></script>
-    <script src="./assets/library/jquery/jquery-migrate.js"></script>
-    <script src="./assets/library/isotope/isotope.pkgd.min.js"></script>
-    <script src="./assets/library/datetime/moment.min.js"></script>
-    <script src="./assets/library/datetime/daterangepicker.min.js"></script>
-    <script src="./assets/library/smoothscroll/SmoothScroll.min.js"></script>
-    <script src="./assets/library/splitting/splitting.min.js"></script>
-    <script src="./assets/library/fancybox/fancybox.umd.js"></script>
-    <script src="./assets/library/gsap/gsap.min.js"></script>
-    <script src="./assets/library/gsap/ScrollTrigger.min.js"></script>
-    <script src="./assets/library/trimline/jquery.trimLines.js"></script>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v17.0"></script>
-    <script src="./assets/library/froala_editor/js/froala_editor.min.js"></script>
-    <script src="./assets/library/froala_editor/js/plugins/emoticons.min.js"></script>
-    <script src="./assets/library/froala_editor/js/plugins/align.min.js"></script>
-    <script src="./assets/library/froala_editor/js/plugins/font_family.min.js"></script>
-    <script src="./assets/library/froala_editor/js/plugins/font_size.min.js"></script>
-    <script src="./assets/library/froala_editor/js/plugins/image.min.js"></script>
-    <script src="./assets/library/froala_editor/js/plugins/link.min.js"></script>
-    <script src="./assets/library/froala_editor/js/plugins/lists.min.js"></script>
-    <script src="./assets/library/froala_editor/js/plugins/file.min.js"></script>
-    <script src="./assets/library/froala_editor/js/plugins/table.min.js"></script>
-    <script src="./js/main.js" type="module"></script>
-  </body>
+   </div>
+   <script src="./assets/library/jquery/jquery.js"></script>
+   <script src="./assets/library/swiper/swiper-bundle.min.js"></script>
+   <script src="./assets/library/aos/aos.js"></script>
+   <script src="./assets/library/splide/splide-auto-scroll.js"></script>
+   <script src="./assets/library/splide/splide.js"></script>
+   <script src="./assets/library/select2/select2.min.js"></script>
+   <script src="./assets/library/gallery/lightgallery-all.min.js"></script>
+   <script src="./assets/library/jquery/jquery-migrate.js"></script>
+   <script src="./assets/library/isotope/isotope.pkgd.min.js"></script>
+   <script src="./assets/library/datetime/moment.min.js"></script>
+   <script src="./assets/library/datetime/daterangepicker.min.js"></script>
+   <script src="./assets/library/smoothscroll/SmoothScroll.min.js"></script>
+   <script src="./assets/library/splitting/splitting.min.js"></script>
+   <script src="./assets/library/fancybox/fancybox.umd.js"></script>
+   <script src="./assets/library/gsap/gsap.min.js"></script>
+   <script src="./assets/library/gsap/ScrollTrigger.min.js"></script>
+   <script src="./assets/library/trimline/jquery.trimLines.js"></script>
+   <script async defer crossorigin="anonymous"
+      src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v17.0"></script>
+   <script src="./js/main.js" type="module"></script>
+</body>
+
 </html>
