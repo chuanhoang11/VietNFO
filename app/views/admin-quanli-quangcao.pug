@@ -1,0 +1,387 @@
+extends layout/layout-admin
+
+block vars
+    - title = 'Admin Dashboard'
+    - bodyClass = 'page-dashboard-home'
+    - isAdmin = true
+
+block container
+    .admin-heading.flex 
+        .left 
+            h1.admin-title 
+                span.txt Welcome back, Tu 
+                +img("ic-ring.svg")
+        .right 
+            .btn.trans 
+                span.inner ĐĂNG KÝ QUẢNG CÁO
+            +Btn("ĐĂNG TIN RAO VẶT MIỄN PHÍ")
+    .admin-note 
+        p.tag-new 
+            span.inner.fw-5 News
+        p.txt.fw-5 Mừng năm mới 2025, VietInfo giảm giá 10% cho quý khách hàng đăng ký quảng cáo trên 6 tháng từ ngày December 01 - 31, 2024!
+    .admin-block.admin-search
+        .admin-form
+            .sear-form 
+                form(action="")
+                    .b-form-gr
+                        .form-list.row 
+                            .col.form-ip.col-search 
+                                .b-ip-search
+                                    span.icon
+                                        +img("icon-search.svg")
+                                    span.icon-remove 
+                                        i.fa-light.fa-xmark.fw-7
+                                    input(type="search" placeholder="Marietta")
+                            .col.col-sl-md
+                                .b-ip-select
+                                    .selectCus
+                                        .selectCusValue
+                                            input(type="text", hidden)
+                                            span.icon-arrow 
+                                                i.fa-light.fa-chevron-down
+                                            .txt Tất cả tin
+                                        .selectCusOptions
+                                            label.selectCusAll 
+                                                input(type="checkbox")
+                                                span.txt Việc làm
+                                            label.selectCusOption 
+                                                input(type="checkbox")
+                                                span.txt Sang nhượng kinh doanh
+                                            label.selectCusOption 
+                                                input(type="checkbox")
+                                                span.txt Cho thuê bất động sản
+                                            label.selectCusOption 
+                                                input(type="checkbox")
+                                                span.txt Bán bất động sản
+                                            label.selectCusOption 
+                                                input(type="checkbox")
+                                                span.txt Việt event
+                                            label.selectCusOption 
+                                                input(type="checkbox")
+                                                span.txt Rao vặt khác
+                                            .selectCusApply Áp dụng
+                            .col.col-sl-md
+                                .b-ip-select
+                                    .selectCus
+                                        .selectCusValue
+                                            input(type="text", hidden)
+                                            span.icon-arrow 
+                                                i.fa-light.fa-chevron-down
+                                            .txt Tất cả trạng thái
+                                        .selectCusOptions
+                                            label.selectCusAll 
+                                                input(type="checkbox")
+                                                span.txt Bỏ chọn tất cả
+                                            label.selectCusOption 
+                                                input(type="checkbox")
+                                                span.txt Gia đình
+                                            label.selectCusOption 
+                                                input(type="checkbox")
+                                                span.txt Active
+                                            label.selectCusOption 
+                                                input(type="checkbox")
+                                                span.txt Inactive
+                                            .selectCusApply Áp dụng
+                            .col.col-btn
+                                +Btn("Save search")
+    .admin-form.admin-dashboard.admin-quangcao
+        form(action="/submit-url" method="post") 
+            .admin-wrapper
+                .admin-block.--custom
+                    .admin-das-hd
+                        .admin-das-left
+                            h2.admin-title-third Lịch sử quảng cáo
+                            span.number-post
+                                span.txt.fw-5 10 ads
+                        .admin-das-right
+                            .admin-action
+                                label.btn-switch
+                                    input(type="checkbox" class="switch-input")
+                                    span.control-round
+                                span.note-txt.fw-5.switch-status Enable All
+                            +Btn('Delete All', 'button',"btn-delete")
+                    .admin-das-bd 
+                        .admin-das-table
+                            .das-table-container
+                                .das-table-header
+                                    .das-header-cell
+                                        label.admin-check 
+                                            input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
+                                            span.admin-check-radio.square
+                                            span.txt Name
+                                    .das-header-cell
+                                        |Status
+                                        +img("ic-arrow-down.svg")
+                                    .das-header-cell Views
+                                    .das-header-cell Receipt
+                                    .das-header-cell Turn on/off
+                                    .das-header-cell Re-Use
+                                    .das-header-cell Edit
+                                    .das-header-cell Delete
+                                .das-table-row
+                                    .das-cell(data-text="Name")
+                                        label.admin-check 
+                                            input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
+                                            span.admin-check-radio.square
+                                            span.check-content
+                                                span.icon
+                                                    +img("ic-noti.png")
+                                                span.content-txt
+                                                    span.txt-title
+                                                        span.txt.fw-5 Homepage - trang chủ
+                                                        +img("external-link.svg")
+                                                    span.txt-note H1 [140 x 200 px]; Feb, May,
+                                                        span.fw-7 +5
+                                        span.icon-arr 
+                                            +img("arrow-table-cl.svg")
+                                    .das-cell(data-text="Status")
+                                        span.status.required
+                                            span.icon
+                                            span.txt.fw-5 Banner required
+                                    .das-cell(data-text="Views") 1,000
+                                    .das-cell(data-text="Receipt") 
+                                        span.icon-act
+                                            +img("ic-note.svg")
+                                    .das-cell(data-text="Turn on/off") 
+                                        .admin-action
+                                            label.btn-switch
+                                                input(type="checkbox" class="switch-input")
+                                                span.control-round
+                                            span.note-txt.fw-5.switch-status Off
+                                    .das-cell(data-text="Re-Use") 
+                                        p.icon-wr 
+                                            span.icon-act
+                                                +img("rotate-cw.svg")
+                                    .das-cell(data-text="Edit") 
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("edit.svg")
+                                            span.icon-act
+                                                +img("ic-danger.svg")
+                                    .das-cell(data-text="Delete") 
+                                        p.icon-wr 
+                                            span.icon-act
+                                                +img("trash.svg")
+                                .das-table-row
+                                    .das-cell(data-text="Name")
+                                        label.admin-check 
+                                            input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
+                                            span.admin-check-radio.square
+                                            span.check-content
+                                                span.icon
+                                                    +img("ic-check.png")
+                                                span.content-txt
+                                                    span.txt-title
+                                                        span.txt.fw-5 Detail - trang detail
+                                                        +img("external-link.svg")
+                                                    span.txt-note D1 [140 x 200 px]; Feb, May,
+                                                        span.fw-7 +5
+                                        span.icon-arr 
+                                            +img("arrow-table-cl.svg")
+                                    .das-cell(data-text="Status")
+                                        span.status.expired
+                                            span.icon
+                                            span.txt.fw-5 Expired
+                                    .das-cell(data-text="Views") 1,000
+                                    .das-cell(data-text="Receipt") 
+                                        span.icon-act
+                                            +img("ic-note.svg")
+                                    .das-cell(data-text="Turn on/off") 
+                                        .admin-action
+                                            label.btn-switch
+                                                input(type="checkbox" class="switch-input")
+                                                span.control-round
+                                            span.note-txt.fw-5.switch-status Off
+                                    .das-cell(data-text="Re-Use") 
+                                        p.icon-wr 
+                                            span.icon-act
+                                                +img("rotate-cw.svg")
+                                    .das-cell(data-text="Edit") 
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("edit.svg")
+                                    .das-cell(data-text="Delete")
+                                        p.icon-wr 
+                                            span.icon-act
+                                                +img("trash.svg")
+                                .das-table-row
+                                    .das-cell(data-text="Name")
+                                        label.admin-check 
+                                            input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
+                                            span.admin-check-radio.square
+                                            span.check-content
+                                                span.icon
+                                                    +img("ic-check.png")
+                                                span.content-txt
+                                                    span.txt-title
+                                                        span.txt.fw-5 Search - trang kết quả tìm kiếm
+                                                        +img("external-link.svg")
+                                                    span.txt-note S2 [120 x 200 px]; Feb, May, 
+                                                        span.fw-7 +5
+                                        span.icon-arr 
+                                            +img("arrow-table-cl.svg")
+                                    .das-cell(data-text="Status")
+                                        span.status.required 
+                                            span.icon
+                                            span.txt.fw-5 
+                                                |Receipt required
+                                                br
+                                                |Banner required
+                                    .das-cell(data-text="Views") 1,000
+                                    .das-cell(data-text="Receipt") 
+                                        span.icon-act
+                                            +img("ic-note.svg")
+                                    .das-cell(data-text="Turn on/off") 
+                                        .admin-action
+                                            label.btn-switch
+                                                input(type="checkbox" class="switch-input")
+                                                span.control-round
+                                            span.note-txt.fw-5.switch-status Off
+                                    .das-cell(data-text="Re-Use") 
+                                        p.icon-wr 
+                                            span.icon-act
+                                                +img("rotate-cw.svg")
+                                    .das-cell(data-text="Edit") 
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("edit.svg")
+                                            span.icon-act
+                                                +img("ic-danger.svg")
+                                    .das-cell(data-text="Delete") 
+                                        p.icon-wr 
+                                            span.icon-act
+                                                +img("trash.svg")
+                                .das-table-row
+                                    .das-cell(data-text="Name")
+                                        label.admin-check 
+                                            input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
+                                            span.admin-check-radio.square
+                                            span.check-content
+                                                span.icon
+                                                    +img("ic-check.png")
+                                                span.content-txt
+                                                    span.txt-title
+                                                        span.txt.fw-5 Search - trang kết quả tìm kiếm
+                                                        +img("external-link.svg")
+                                                    span.txt-note S2 [120 x 200 px]; Feb, May,
+                                                        span.fw-7 +5
+                                        span.icon-arr 
+                                            +img("arrow-table-cl.svg")
+                                    .das-cell(data-text="Status")
+                                        span.status.required
+                                            span.icon
+                                            span.txt.fw-5 Receipt required
+                                    .das-cell(data-text="Views") 1,000
+                                    .das-cell(data-text="Receipt") 
+                                        span.icon-act
+                                            +img("ic-note.svg")
+                                    .das-cell(data-text="Turn on/off") 
+                                        .admin-action
+                                            label.btn-switch
+                                                input(type="checkbox" class="switch-input")
+                                                span.control-round
+                                            span.note-txt.fw-5.switch-status Off
+                                    .das-cell(data-text="Re-Use") 
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("rotate-cw.svg")
+                                    .das-cell(data-text="Edit") 
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("edit.svg")
+                                            span.icon-act
+                                                +img("ic-danger.svg")
+                                    .das-cell(data-text="Delete") 
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("trash.svg")
+                                .das-table-row
+                                    .das-cell(data-text="Name")
+                                        label.admin-check 
+                                            input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
+                                            span.admin-check-radio.square
+                                            span.check-content
+                                                span.icon
+                                                    +img("ic-check.png")
+                                                span.content-txt
+                                                    span.txt-title
+                                                        span.txt.fw-5 Search - trang kết quả tìm kiếm
+                                                        +img("external-link.svg")
+                                                    span.txt-note S2 [120 x 200 px]; Feb, May,
+                                                        span.fw-7 +5
+                                        span.icon-arr 
+                                            +img("arrow-table-cl.svg")
+                                    .das-cell(data-text="Status")
+                                        span.status.expired
+                                            span.icon
+                                            span.txt.fw-5 Inactive
+                                    .das-cell(data-text="Views") 1,000
+                                    .das-cell(data-text="Receipt") 
+                                        span.icon-act
+                                            +img("ic-note.svg")
+                                    .das-cell(data-text="Turn on/off") 
+                                        .admin-action
+                                            label.btn-switch
+                                                input(type="checkbox" class="switch-input")
+                                                span.control-round
+                                            span.note-txt.fw-5.switch-status Off
+                                    .das-cell(data-text="Re-Use") 
+                                        span.icon-act
+                                            +img("rotate-cw.svg")
+                                    .das-cell(data-text="Edit") 
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("edit.svg")
+                                    .das-cell(data-text="Delete") 
+                                        span.icon-act
+                                            +img("trash.svg")
+                                .das-table-row
+                                    .das-cell(data-text="Name")
+                                        label.admin-check 
+                                            input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
+                                            span.admin-check-radio.square
+                                            span.check-content
+                                                span.icon
+                                                    +img("ic-check.png")
+                                                span.content-txt
+                                                    span.txt-title
+                                                        span.txt.fw-5 Search - trang kết quả tìm kiếm
+                                                        +img("external-link.svg")
+                                                    span.txt-note S2 [120 x 200 px]; Feb, May,
+                                                        span.fw-7 +5
+                                        span.icon-arr 
+                                            +img("arrow-table-cl.svg")
+                                    .das-cell(data-text="Status")
+                                        span.status.active
+                                            span.icon
+                                            span.txt.fw-5 Active
+                                    .das-cell(data-text="Views") 1,000
+                                    .das-cell(data-text="Receipt") 
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("ic-note.svg")
+                                    .das-cell(data-text="Turn on/off") 
+                                        .admin-action
+                                            label.btn-switch
+                                                input(type="checkbox" class="switch-input")
+                                                span.control-round
+                                            span.note-txt.fw-5.switch-status Off
+                                    .das-cell(data-text="Re-Use") 
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("rotate-cw.svg")
+                                    .das-cell(data-text="Edit") 
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("edit.svg")
+                                    .das-cell(data-text="Delete") 
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("trash.svg")
+                                .table-pagi 
+                                    .form-ip 
+                                        select(name="" class="re-select-main")
+                                            option(value="1")  10 items/page 
+                                            option(value="1")  20 items/page 
+                                            option(value="1")  30 items/page 
+                                    +PageNumberCus()

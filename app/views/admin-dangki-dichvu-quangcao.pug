@@ -1,0 +1,115 @@
+extends layout/layout-admin
+
+block vars
+	-title = 'Admin'
+	-bodyClass = 'page-home'
+	-isAdmin = 'true'
+
+block container
+	a(href="").admin-back 
+		+img("ic-back.svg")
+		span.txt Quay lại
+	.admin-heading.t-center
+		h1.admin-title Đăng ký dịch vụ quảng cáo
+	.admin-pro 
+		.admin-pro-inner
+			.admin-pro-row.row
+				.col.col-4.check-active
+					.admin-pro-it 
+						span.icon 
+							+img("admin-pro-icon (1).svg")
+						span.txt 
+							| Thiết lập quảng cáo 
+				.col-line-mb
+				.col.col-4.check-active
+					.admin-pro-it
+						span.icon 
+							+img("admin-pro-icon (2).svg")
+						span.txt 
+							| Thanh toán 
+				.col-line-mb
+				.col.col-4.check-active
+					.admin-pro-it 
+						span.icon 
+							+img("admin-pro-icon (3).svg")
+						span.txt 
+							| Online
+				.col-line-mb
+	.admin-wrapper
+		.admin-block.admin-regis-success
+			.admin-regis-icon 
+				+img('check-icon.png')
+			.admin-regis-content.t-center
+				h4.admin-regis-title.fw-7.c-pri Cảm ơn vì đã đặt quảng cáo với chúng tôi
+				p.admin-regis-desc
+					|Đơn hàng 
+					span.desc-code.c-pri VIAD123456 
+					| của bạn đã được đặt thành công. Bạn sẽ tìm thấy tất cả thông tin chi tiết về đơn hàng của mình qua email và chúng tôi sẽ gửi cho bạn email xác nhận khác khi quảng cáo của bạn đã được duyệt. 
+			+Btn("Trở về trang chủ", "")
+	.admin-block.admin-success-info
+		.admin-success-hd
+			.left 
+				.content 
+					span.txt 03/22/2024
+				.content 
+					span.txt Order code: 
+					span.code #VIAD123456
+				.content 
+					span.txt Receipt
+					span.code 
+						+img('ic-receipt.svg')
+			.right
+				span.status.review
+					span.icon
+					span.txt.fw-5 Under review
+		.admin-success-middle 
+			.top
+				.left 
+					span.icon
+						+img("ic-check.png")
+					.content
+						.content-left
+							p.content-title.fw-5 Homepage - trang chủ Ad
+							.desc-list 
+								.tag.fw-5
+									span.txt H1
+								.tag.fw-5
+									span.txt May, June, July, 
+										span.fw-7 +5
+				.right 
+					.price.c-pri.fw-5 $96.00
+			.bot 
+				.left 
+					button.btn-show-more.fw-6.c-pri
+						span.txt View details 
+						span.icon
+							+img("arr-right.svg") 
+				.right 
+					.total-price Total: 
+						span.fw-5.price.c-pri $96.00
+		.admin-success-bot 
+			.left 
+				.info-user 
+					.info-user-title 
+						+img("ic-user.svg")  
+						span.txt Billing information
+					.info-user-name.fw-5 Le Thuy Linh, Qixtech LLC
+					.info-user-list 
+						p.info-user-txt 
+							span.txt linhle@gmail.com
+						p.info-user-txt 
+							span.txt 3286 Fairbanks North Houston Rd
+						p.info-user-txt 
+							span.txt Marietta, GA 30062
+			.right
+				.info-user 
+					.info-user-title 
+						+img("ic-payment.svg") 
+						span.txt Payment method
+					.info-user-list 
+						p.info-user-txt
+							+img("img-visa.png") 
+							span.txt.fw-5 ***0933 | Expires 3/29
+			
+
+
