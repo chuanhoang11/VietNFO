@@ -1,0 +1,111 @@
+extends layout/layout-admin
+
+block vars
+	-title = 'Chỉnh sửa quảng cáo'
+	-bodyClass = 'page-home'
+	-isAdmin = 'true'
+
+block container 
+	a(href="").admin-back 
+		+img("ic-back.svg")
+		span.txt Quay lại
+	.admin-heading.t-center
+		h1.admin-title Chỉnh sửa quảng cáo
+	.admin-pro.layout-half
+		.admin-pro-inner
+			.admin-pro-row.row
+				.col.col-6.check-active
+					.admin-pro-it 
+						span.icon 
+							+img("admin-pro-icon (4).svg")
+						span.txt 
+							| Chỉnh sửa thiết lập quảng cáo
+				.col-line-mb
+				.col.col-6
+					.admin-pro-it 
+						span.icon 
+							+img("admin-pro-icon (3).svg")
+						span.txt 
+							| Online
+				.col-line-mb
+	.admin-form 
+		.admin-wrapper
+			.admin-block
+				.f-list.row
+					.f-item.col.col-6
+						+AdminLabel("Khu vực đặt quảng cáo <a href='' class='c-pri fw-5'>Tìm hiểu thêm</a>")
+						+AdminSelect(
+							[
+								"Trang chủ - homepage",
+								"Sang nhượng kinh doanh",
+								"Event - Sự kiện",
+								"Việc làm",
+								"Bán bất động sản",
+								"Rao vặt khác"
+							]
+						)
+					.f-item.col.col-6
+						+AdminLabel("Vị trí đặt quảng cáo")
+						+AdminSelect(
+							[
+								"Vị trí H1 (120 x 240 px)",
+								"Vị trí H2 (100 x 100 px)",
+								"Vị trí H3 (90 x 90 px)",
+								"Vị trí H4 (80 x 80 px)",
+								"Vị trí H5 (70 x 70 px)",
+								"Vị trí H6 (60 x 60 px)"
+							]
+						)
+					.f-item.col 
+						+AdminLabel("Quy mô quảng cáo <span class='fw-4'>(nơi quảng cáo sẽ xuất hiện, ví dụ anh chị chọn “Toàn nước Mỹ,” ads sẽ xuất hiện trên toàn nước Mỹ)</span>")
+						+AdminSelect(
+							[
+								"Theo tiểu bang ($1,200/state/month)",
+								"Theo tiểu bang ($1,100/state/month)",
+								"Theo tiểu bang ($1,000/state/month)",
+								"Theo tiểu bang ($900/state/month)",
+								"Theo tiểu bang ($800/state/month)",
+								"Theo tiểu bang ($700/state/month)"
+							]
+						)
+					.f-item.col
+						+AdminLabel("State(s)")
+						.b-ip-select.b-admin
+							.selectCus
+								.selectCusValue
+									input(type="text", hidden)
+									span.icon-arrow 
+										i.fa-light.fa-chevron-down
+									.txt States
+								.selectCusOptions
+									.text-head 
+										.b-ip-search
+											span.icon
+												+img("icon-search.svg")
+											span.icon-remove 
+												i.fa-light.fa-xmark.fw-7
+											input(type="search" placeholder="Marietta")
+									label.selectCusAll 
+										input(type="checkbox")
+										span.txt Chọn tất cả
+									label.selectCusOption 
+										input(type="checkbox")
+										span.txt Alabama
+									label.selectCusOption 
+										input(type="checkbox")
+										span.txt Alaska
+									label.selectCusOption 
+										input(type="checkbox")
+										span.txt Arizona
+									label.selectCusOption 
+										input(type="checkbox")
+										span.txt Arkansas
+									label.selectCusOption 
+										input(type="checkbox")
+										span.txt California
+									label.selectCusOption 
+										input(type="checkbox")
+										span.txt Colorado
+									.selectCusApply Xác nhận
+					.f-item.col
+						+AdminLabel("Thời gian quảng cáo <span class='fw-4'>(5% discount tự động apply cho quảng cáo trên 6 months)</span>")
