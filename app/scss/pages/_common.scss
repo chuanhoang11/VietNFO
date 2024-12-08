@@ -163,7 +163,7 @@ body.page-search {
         flex: 1;
       }
 
-      @include max($mobile) {
+      @include max($res-tablet) {
         width: 100%;
         flex: unset;
         position: fixed;
@@ -189,7 +189,7 @@ body.page-search {
         width: 39rem;
       }
 
-      @include max($mobile) {
+      @include max($res-tablet) {
         width: 100%;
       }
     }
