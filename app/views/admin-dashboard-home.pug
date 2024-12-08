@@ -6,8 +6,19 @@ block vars
     - isAdmin = true
 
 block container
-    .admin-heading
-        h1.admin-title Dashboard Admin
+    .admin-heading.flex 
+        .left 
+            h1.admin-title 
+                span.txt Welcome back, Tu 
+                +img("ic-ring.svg")
+        .right 
+            .btn.trans 
+                span.inner ĐĂNG KÝ QUẢNG CÁO
+            +Btn("ĐĂNG TIN RAO VẶTMIỄN PHÍ")
+    .admin-note 
+        p.tag-new 
+            span.inner.fw-5 News
+        p.txt.fw-5 Mừng năm mới 2025, VietInfo giảm giá 10% cho quý khách hàng đăng ký quảng cáo trên 6 tháng từ ngày December 01 - 31, 2024!
     .admin-form.admin-dashboard
         form(action="/submit-url" method="post") 
             .admin-wrapper

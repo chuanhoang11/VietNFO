@@ -470,3 +470,36 @@ input:checked+.control-round:before {
         }
     }
 }
+
+.admin-note {
+    display: flex;
+    gap: .8rem;
+    padding: 1.6rem 2.4rem;
+    border-radius: .5rem;
+    background: #F8F9FC;
+    color: var(--color-pri);
+    margin-bottom: 1.6rem;
+
+    @include min($tablet-min) {
+        align-items: center;
+    }
+
+    @include max($tablet) {
+        flex-direction: column;
+        gap: .4rem;
+    }
+
+    @include max($mobile) {
+        padding: 1.2rem 1.6rem;
+        margin-bottom: 2.4rem;
+    }
+}
+
+.tag-new {
+    padding: .4rem 1rem;
+    border-radius: .5rem;
+    border: .1rem solid #EFF8FF;
+    background: #FEC84B;
+    color: #000;
+    width: fit-content;
+}
