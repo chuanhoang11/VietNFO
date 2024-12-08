@@ -24,4 +24,5 @@ export default function AdminBaseModule() {
             sbar.classList.remove("open")
         })
     }
+
 }

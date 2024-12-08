@@ -8,6 +8,10 @@
 @import url("../assets/library/splitting/splitting.css");
 @import url("../assets/library/fancybox/fancybox.css");
 @import url("../assets/library/splide/splide.css");
+@import url("../assets/library/froala_editor/css/froala_editor.css");
+@import url("../assets/library/froala_editor/css/plugins/table.css");
+@import url("../assets/library/froala_editor/css/plugins/image.css");
+@import url("../assets/library/froala_editor/css/plugins/file.css");
 
 @import url("../assets/library/datetime/daterangepicker.css");
 // Core
@@ -69,6 +73,8 @@
 @import "./pages/regi";
 @import "./pages/course";
 @import "./pages/quhu";
+@import "./pages/admin-dasboard";
+
 @import "./admin/base";
 @import "./admin/sbar";
 @import "./admin/form";
