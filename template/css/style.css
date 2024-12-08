@@ -15675,8 +15675,6 @@ input:checked + .control-round:before {
   width: -moz-fit-content;
   width: fit-content; }
 
-<<<<<<< HEAD
-=======
 .admin-search {
   padding: 1.6rem 2.4rem;
   margin-bottom: 1.6rem; }
@@ -15984,7 +15982,6 @@ input:checked + .control-round:before {
     -o-object-fit: contain;
     object-fit: contain; }
 
->>>>>>> origin/update-admin-dashboard
 .register-promotion-section {
   display: -webkit-box;
   display: -ms-flexbox;
