@@ -159,7 +159,7 @@ export default function ComponentModule() {
         const selectJSHead = item.querySelector(".selectJSHead");
         const selectJSTxt = item.querySelector(".selectJSTxt");
         const selectJSItem = item.querySelectorAll(".selectJSItem");
-        if (selectJSItem) {
+        if (selectJSItem && selectJSHead) {
           selectJSHead.addEventListener("click", () => {
             item.classList.toggle("active");
           });
@@ -446,6 +446,21 @@ export default function ComponentModule() {
           }
         }
       })
+    })
+  }
+
+
+  const btnDanhSach = document.querySelector(".sear-btn")
+  if(btnDanhSach) {
+    btnDanhSach.addEventListener("click", () => {
+      const list = document.querySelector("#map-block")
+      const txt = btnDanhSach.querySelector(".txt")
+      list.classList.toggle("close")
+      if(list.classList.contains("close")) {
+        txt.innerHTML = "Bản đồ"
+      } else {
+        txt.innerHTML = "Danh sách"
+      }
     })
   }
 }

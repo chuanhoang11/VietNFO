@@ -51,13 +51,14 @@ mixin PageNumber
                i.fa.fa-angle-right
 mixin breadCrumb(arr)
    .breadcrumb 
-      ul.breadcrumb-list
-         li.breadcrumb-item(data-aos="fade-right")
-            a.breadcrumb-link(href="")
-               | Trang chủ
-         each txt in arr
+      .container
+         ul.breadcrumb-list
             li.breadcrumb-item(data-aos="fade-right")
-               a.breadcrumb-link(href="") #{txt}
+               a.breadcrumb-link(href="")
+                  | Trang chủ
+            each txt in arr
+               li.breadcrumb-item(data-aos="fade-right")
+                  a.breadcrumb-link(href="") #{txt}
 mixin pagination(classCustom)
    .swiper-pagination(class=classCustom)
 
@@ -562,9 +563,10 @@ mixin proItemThird(item)
                         span.txt #{item.views}
 mixin proItemFourth(item)
    .pro-wr.four 
-      +img("ic-loa.svg")
       .pro-content 
-         h3.pro-name Chăm sóc người già - Marietta, GA 30062
+         h3.pro-name 
+            +img("ic-loa.svg")
+            | Chăm sóc người già - Marietta, GA 30062
          .pro-des Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...
          .pro-note 
             .pro-note-item 
@@ -626,6 +628,9 @@ mixin proBanner(classCustom)
          p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
          .pro-btn  
             span.txt Khám phá ngay
+mixin proBannerSecond(img)
+   a(href="").pro-bner-img-second 
+      +img(img)
 mixin HomeHero()
    .home-hero
       .home-hero-tags
@@ -650,6 +655,9 @@ mixin HomeHero()
                         +img("ft-icon (4).svg")
       .home-hero-right
          +img("hero-img.jpg")
+mixin HomeHeroSecond()
+   a(href="").home-hero-banner 
+      +img("home-hero-banner.png")
 mixin PageNumberCus 
    ul.page-numbers.page-navigation
       li 
@@ -764,8 +772,8 @@ mixin ThongTinLienHe
    .admin-block 
       .admin-heading-second.t-center
          h2.admin-title-second THÔNG TIN LIÊN HỆ
-      .f-list.row
-         .f-item.col.col-6
+      .f-list.row.--layout-thongtinchung
+         .f-item.col.col-4
             label.admin-check 
                input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
                span.admin-check-radio
@@ -773,7 +781,7 @@ mixin ThongTinLienHe
                   p.name Tu Nguyen
                   p.des Email: admin@vietinfo.us
                   p.des Phone: 0123456789
-         .f-item.col.col-6.flex-center
+         .f-item.col.col-8.flex-center
             label.admin-check 
                input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
                span.admin-check-radio
@@ -790,6 +798,8 @@ mixin ThongTinLienHe
 mixin MoTaChiTiet
    .f-item.col
       +AdminLabel("Mô tả chi tiết")
+      .motachitiet 
+         +img("img-edit.png")
 mixin NgayDangTinHetHan
    .f-item.col
       label.f-label.no-clamb
@@ -838,3 +848,246 @@ mixin AdvAreaImg(img,imgMobile)
    .img-inner 
       +img(img)
       +img(imgMobile)
+mixin SearLayout(title)
+   section.sec-sear
+      .sear
+         .sear-wrap 
+            .sear-head.sear-head-custom
+               .sear-form 
+                  form(action="")
+                     .b-form-gr
+                        .form-list.row 
+                           .col.col-buger 
+                              .hd-burger#hamburger-second
+                                 .burger 
+                                    .hamburger  
+                                       .line 
+                                       .line
+                                       .line
+                           .col.form-ip.col-search 
+                              .b-ip-search
+                                 span.icon
+                                    +img("icon-search.svg")
+                                 span.icon-remove 
+                                    i.fa-light.fa-xmark.fw-7
+                                 input(type="search" placeholder="Marietta")
+                           .col.col-sl-md
+                              .b-ip-select
+                                 .selectCus
+                                    .selectCusValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Loại việc làm
+                                    .selectCusOptions
+                                       .text-head Loại việc làm
+                                       label.selectCusAll 
+                                          input(type="checkbox")
+                                          span.txt Chọn tất cả
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Làm nail
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Nhà hàng
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Văn phòng
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Việc khác
+                                       .selectCusApply Áp dụng
+                           .col.col-sl-md
+                              .b-ip-select
+                                 .selectCus
+                                    .selectCusValue
+                                       input(type="text", hidden)
+                                       span.icon-arrow 
+                                          i.fa-light.fa-chevron-down
+                                       .txt Thời gian đăng tin
+                                    .selectCusOptions
+                                       .text-head Thời gian đăng tin
+                                       label.selectCusAll 
+                                          input(type="checkbox")
+                                          span.txt Chọn tất cả
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Một tuần trước
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Một tháng trước
+                                       label.selectCusOption 
+                                          input(type="checkbox")
+                                          span.txt Lâu hơn
+                                       .selectCusApply Áp dụng
+                           .col.col-btn
+                              +Btn("Tìm kiếm")
+            .sear-btn 
+               .sear-btn-burger 
+                  span 
+                  span 
+                  span 
+               span.txt Danh sách
+            .sear-block 
+               .sear-row.row 
+                  .col.col-7#map-block
+                     .sear-map 
+                        .inner
+                           +img("map-img.jpg")
+                           .btn-del 
+                              span.t-text 
+                                 | Remove boundary
+                              span.icon 
+                                 i.fa-light.fa-xmark.fw-7
+                  .col.col-5
+                     .sear-panel
+                        .head-sc.mb-10
+                           +title(title, "","dcor")
+                        .head-sc.mb-10 
+                           span.txt 107 kết quả
+                           +selectPong("Mặc định",['Mới đăng Tiền lương (cao tới thấp)','Tiền lương (thấp tới cao)','Lượt xem (cao tới thấp)', 'Lượt xem (thấp tới cao)','Mặc định'])
+                        block
+                        +PageNumber()
+                        footer.ft 
+                           .container 
+                              .ft-wrap 
+                                 .ft-head 
+                                    .ft-logo 
+                                       a(href="").custom-logo-link
+                                          +img("logo.svg")
+                                    .t-slogan
+                                       span.t-text 
+                                          | Cổng thông tin 
+                                          span.fw-7.c-pri 
+                                             | MIỄN PHÍ 
+                                          | dành cho cộng đồng người Việt tại Mỹ
+                                 .ft-nav
+                                    ul.menu 
+                                       -
+                                          var arrs = [
+                                             {
+                                                txt:"VIỆC LÀM",
+                                             },
+                                             {
+                                                txt:"MUA CỬA TIỆM",
+                                             },
+                                             {
+                                                txt:"VIỆT EVENTS",
+                                             },
+                                             {
+                                                txt:"THUÊ NHÀ",
+                                             },
+                                             {
+                                                txt:"MUA NHÀ",
+                                             },
+                                             {
+                                                txt:"RAO VẶT",
+                                             },
+                                             {
+                                                txt:"LIÊN HỆ QUẢNG CÁO",
+                                             },
+                                          ]
+                                       each i,index in arrs
+                                          li
+                                             a(href="")
+                                                | #{i.txt}
+                                 .ft-sc 
+                                    .social 
+                                       .social-list 
+                                          a(href="").social-link 
+                                             +img("ic-fb.svg") 
+                                          a(href="").social-link 
+                                             +img("ic-yt.svg") 
+                                          a(href="").social-link 
+                                             +img("ic-ins.svg") 
+                                          a(href="").social-link 
+                                             +img("ic-x.svg")
+                                 .ft-panel 
+                                    .ft-list.row 
+                                       -
+                                          var arrs = [
+                                             {
+                                                tt:"LIÊN HỆ HỢP TÁC",
+                                                mail:"contact@vietinfo.us",
+                                                phone:"678 408 2288",
+                                             },
+                                             {
+                                                tt:"LIÊN HỆ QUẢNG CÁO",
+                                                mail:"ads@vietinfo.us",
+                                                phone:"678 408 2288",
+                                             },
+                                             {
+                                                tt:"HỖ TRỢ KỸ THUẬT",
+                                                mail:"admin@vietinfo.us",
+                                                phone:"678 408 2288",
+                                             },
+                                          ]
+                                       each i,index in arrs
+                                          .col.col-4
+                                             .ft-box 
+                                                .b-inner 
+                                                   span.t-text 
+                                                      | #{i.tt}
+                                                   .b-gr 
+                                                      a(href="").t-link
+                                                         | Email:#{i.mail} 
+                                                      a(href="").t-link
+                                                         | Phone:#{i.phone} 
+                                 .ft-bank 
+                                    .i-list
+                                       each i,index in Array(8)
+                                          a(href="").i-link
+                                             +img(`icon-bank (${index+1}).svg`)
+                                 .ft-bot
+                                    .ft-nav 
+                                       ul.menu
+                                          li 
+                                             a(href="")
+                                                | Privacy Policy
+                                          li 
+                                             a(href="")
+                                                | Terms of Service 
+                                          li 
+                                             a(href="")
+                                                | Ads Service Agreement
+                                    span.t-text 
+                                       |  Designed by Qixtech - Web Design & Digital Marketing
+                                    span.t-text 
+                                       | Copyright © 2024. VietInfo LLC. All Right Reserved. 
+mixin PopupSideBar()
+   .wrapper 
+      .popdt-thumbnail 
+         .img 
+            .img-inner 
+               +img("popdt-thumbnail.jpg")
+      .popdt-contact 
+         p.tt Liên hệ:
+         p.des Darynda Jenkins
+         .popdt-address 
+            a(href="").link 
+               +img("ic-send.svg") 
+               span.txt keller@gmail.com
+            a(href="").link 
+               +img("ic-phone.svg") 
+               span.txt 012345667
+      .popdt-map 
+         .iframe 
+            iframe(
+            referrerpolicy="no-referrer-when-downgrade" 
+            loading="lazy" 
+            allowfullscreen="" 
+            style="border:0;" 
+            height="450" 
+            width="600" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2654293242267!2d106.6535495758385!3d10.790971358923679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed189fa855d%3A0xf63e15bfce46baef!2sC%C3%B4ng%20ty%20TNHH%20-%20MONA%20MEDIA!5e0!3m2!1svi!2s!4v1732719275356!5m2!1svi!2s"
+            )
+      .popdt-share 
+         span.txt Share this listing:
+         .social 
+            .social-list 
+               a(href="").social-link
+                  +img("ic-fb.svg") 
+               a(href="").social-link
+                  +img("ic-x.svg") 
+      +proBannerSecond("pro-bner-sidebar.png")
+

@@ -537,6 +537,7 @@ input:checked+.control-round:before {
     justify-content: center;
     flex-direction: column;
     gap: 4rem;
+    margin-bottom: 2.4rem;
 
     @include max($res-mobile) {
         gap: 3.2rem;

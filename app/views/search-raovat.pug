@@ -1,0 +1,15 @@
+extends layout/layout
+
+block vars
+	-title = 'Search rao vặt'
+	-bodyClass = 'page-search-res page-search page-result'
+
+block container 
+	+SearLayout("Rao vặt tại North Carolina")
+		.pro-list.row
+			each item,index in Array(3)
+				if(index == 2)
+					.pro-item.col.col-third
+						+proBannerSecond("pro-bner-vietevent.png")
+				.pro-item.col.col-third
+					+proItemFourth(item)

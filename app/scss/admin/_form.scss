@@ -70,7 +70,7 @@
   padding-left: 5rem;
 }
 
-.f-left > img {
+.f-left>img {
   width: 1.5rem;
   @include posi-vertical;
   left: 1rem;
@@ -95,7 +95,7 @@
 .f-pass {
   position: relative;
 
-  > img {
+  >img {
     position: absolute;
     @include posi-vertical;
     right: 1rem;
@@ -158,7 +158,7 @@
 
 // Responsive form
 .f-list.layout-first {
-  @include max(1330px) {
+  @include max(1440px) {
     .f-item.col-6 {
       width: 100%;
     }
@@ -179,7 +179,7 @@
       width: 100%;
     }
 
-    .f-item.col-8 + .f-item.col-4 {
+    .f-item.col-8+.f-item.col-4 {
       width: 100%;
     }
 
@@ -199,7 +199,7 @@
       width: 100%;
     }
 
-    .f-item.col-8 + .col-4 {
+    .f-item.col-8+.col-4 {
       width: 100%;
     }
 
@@ -207,7 +207,7 @@
       width: 50%;
     }
 
-    > .f-item.col > .f-list > .f-item.col-4 {
+    >.f-item.col>.f-list>.f-item.col-4 {
       width: 100%;
     }
 
@@ -233,6 +233,18 @@
 
     .admin-check-posi {
       position: static;
+    }
+  }
+}
+
+.f-list.--layout-thongtinchung {
+  @include min-max($mobile-min, $res-mobile) {
+    .col-4:nth-child(1) {
+      width: 50%;
+    }
+
+    .col-8:nth-child(2) {
+      width: 50%;
     }
   }
 }
@@ -276,6 +288,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .admin-select {
+
   .select2-container--default .select2-selection--single,
   .select2-container {
     height: var(--hd-admin-input);
@@ -298,8 +311,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
   }
 
-  .select2-container--default.select2-container--open.select2-container--below
-    .select2-selection--single {
+  .select2-container--default.select2-container--open.select2-container--below .select2-selection--single {
     border-radius: 0.5rem !important;
   }
 
@@ -313,21 +325,32 @@ input[type="number"]::-webkit-outer-spin-button {
     left: unset;
     width: 1.5rem;
     height: 1.5rem;
-    filter: brightness(0) saturate(100%) invert(46%) sepia(11%) saturate(732%)
-      hue-rotate(183deg) brightness(90%) contrast(85%);
+    filter: brightness(0) saturate(100%) invert(46%) sepia(11%) saturate(732%) hue-rotate(183deg) brightness(90%) contrast(85%);
   }
 }
 
 .admin-select.second {
+
   .select2-container--default .select2-selection--single,
   .select2-container {
     height: 4.8rem;
   }
 
   .select2-container--default .select2-selection--single,
-  .select2-container--default.select2-container--open.select2-container--below
-    .select2-selection--single {
+  .select2-container--default.select2-container--open.select2-container--below .select2-selection--single {
     border-radius: 0.8rem !important;
+  }
+}
+
+.admin-select.second.--third {
+
+  .select2-container--default .select2-selection--single,
+  .select2-container--default.select2-container--open.select2-container--below .select2-selection--single {
+    border-radius: 0.6rem !important;
+  }
+  .select2-selection__placeholder{
+    font-weight: 400 !important;
+    color: #6B7280;
   }
 }
 
@@ -364,8 +387,7 @@ input[type="number"]::-webkit-outer-spin-button {
     color: var(--color-pri);
   }
 
-  .select2-container--default .select2-results__option--selected {
-  }
+  .select2-container--default .select2-results__option--selected {}
 }
 
 .f-copy {
@@ -377,7 +399,7 @@ input[type="number"]::-webkit-outer-spin-button {
     cursor: pointer;
   }
 
-  > img {
+  >img {
     @include posi-vertical;
     right: 1rem;
     width: 2.4rem;
@@ -452,13 +474,13 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
-.admin-check input:checked ~ .admin-check-checkbox,
-.admin-check input:checked ~ .admin-check-radio {
+.admin-check input:checked~.admin-check-checkbox,
+.admin-check input:checked~.admin-check-radio {
   border-color: var(--color-pri);
 }
 
-.admin-check input:checked ~ .admin-check-checkbox::before,
-.admin-check input:checked ~ .admin-check-radio::before {
+.admin-check input:checked~.admin-check-checkbox::before,
+.admin-check input:checked~.admin-check-radio::before {
   opacity: 1;
 }
 
@@ -476,7 +498,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
-.admin-date > img {
+.admin-date>img {
   left: 1.6rem;
 }
 
@@ -484,8 +506,7 @@ input[type="number"]::-webkit-outer-spin-button {
   padding-left: 4rem;
 }
 
-.admin-dropdown-datepicker {
-}
+.admin-dropdown-datepicker {}
 
 .admin-btn {
   height: var(--hd-admin-input);
@@ -768,6 +789,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   @include max(500px) {
+
     &:nth-child(3),
     &:nth-child(1),
     &:nth-child(2) {
@@ -787,7 +809,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 0.5rem;
   height: 100%;
 
-  > img {
+  >img {
     @include imgCover;
   }
 }
@@ -801,7 +823,7 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: flex-start;
   gap: 1rem;
 
-  > img {
+  >img {
     width: 2.8rem;
     flex-shrink: 0;
   }
@@ -874,7 +896,7 @@ input[type="number"]::-webkit-outer-spin-button {
     cursor: pointer;
   }
 
-  .admin-check .content > * {
+  .admin-check .content>* {
     vertical-align: middle;
   }
 
@@ -908,14 +930,13 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 0.6rem;
   border: 0.1rem solid #d0d5dd;
   display: inline-block;
-  filter: drop-shadow(0px 0.523px 5.23px rgba(183, 183, 183, 0.08))
-    drop-shadow(0px 5.23px 10.46px rgba(183, 183, 183, 0.08));
+  filter: drop-shadow(0px 0.523px 5.23px rgba(183, 183, 183, 0.08)) drop-shadow(0px 5.23px 10.46px rgba(183, 183, 183, 0.08));
 
   @include max($mobile) {
     width: 5rem;
   }
 
-  > img {
+  >img {
     width: 100%;
     display: block;
   }

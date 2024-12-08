@@ -1,0 +1,211 @@
+extends layout/layout-admin
+
+block vars
+	-title = 'Chỉnh sửa quảng cáo'
+	-bodyClass = 'page-home'
+	-isAdmin = 'true'
+
+block container 
+	a(href="").admin-back 
+		+img("ic-back.svg")
+		span.txt Quay lại
+	.admin-heading.t-center
+		h1.admin-title Chỉnh sửa quảng cáo
+	.admin-pro.layout-half
+		.admin-pro-inner
+			.admin-pro-row.row
+				.col.col-6.active
+					.admin-pro-it 
+						span.icon 
+							+img("admin-pro-icon (4).svg")
+						span.txt 
+							| Chỉnh sửa thiết lập quảng cáo
+				.col-line-mb
+				.col.col-6
+					.admin-pro-it 
+						span.icon 
+							+img("admin-pro-icon (3).svg")
+						span.txt 
+							| Online
+				.col-line-mb
+	.admin-form 
+		.admin-wrapper
+			.admin-block
+				.f-list.row
+					.f-item.col.col-6
+						+AdminLabel("Khu vực đặt quảng cáo <a href='' class='c-pri fw-5'>Tìm hiểu thêm</a>")
+						+AdminSelect(
+							[
+								"Trang chủ - homepage",
+								"Sang nhượng kinh doanh",
+								"Event - Sự kiện",
+								"Việc làm",
+								"Bán bất động sản",
+								"Rao vặt khác"
+							],
+						  "second --bg"
+						)
+					.f-item.col.col-6
+						+AdminLabel("Vị trí đặt quảng cáo")
+						+AdminSelect(
+							[
+								"Vị trí H1 (120 x 240 px)",
+								"Vị trí H2 (100 x 100 px)",
+								"Vị trí H3 (90 x 90 px)",
+								"Vị trí H4 (80 x 80 px)",
+								"Vị trí H5 (70 x 70 px)",
+								"Vị trí H6 (60 x 60 px)"
+							],
+							"second --bg"
+						)
+					.f-item.col 
+						+AdminLabel("Quy mô quảng cáo <span class='fw-4'>(nơi quảng cáo sẽ xuất hiện, ví dụ anh chị chọn “Toàn nước Mỹ,” ads sẽ xuất hiện trên toàn nước Mỹ)</span>")
+						+AdminSelect(
+							[
+								"Theo tiểu bang ($1,200/state/month)",
+								"Theo tiểu bang ($1,100/state/month)",
+								"Theo tiểu bang ($1,000/state/month)",
+								"Theo tiểu bang ($900/state/month)",
+								"Theo tiểu bang ($800/state/month)",
+								"Theo tiểu bang ($700/state/month)"
+							],
+							"second --bg"
+						)
+					.f-item.col
+						+AdminLabel("State(s)")
+						.b-ip-select.b-admin.read-only
+							.selectCus
+								.selectCusValue
+									input(type="text", hidden)
+									span.icon-arrow 
+										i.fa-light.fa-chevron-down
+									.txt States
+								.selectCusOptions
+									.text-head 
+										.b-ip-search
+											span.icon
+												+img("icon-search.svg")
+											span.icon-remove 
+												i.fa-light.fa-xmark.fw-7
+											input(type="search" placeholder="Marietta")
+									label.selectCusAll 
+										input(type="checkbox")
+										span.txt Chọn tất cả
+									label.selectCusOption 
+										input(type="checkbox")
+										span.txt Alabama
+									label.selectCusOption 
+										input(type="checkbox")
+										span.txt Alaska
+									label.selectCusOption 
+										input(type="checkbox")
+										span.txt Arizona
+									label.selectCusOption 
+										input(type="checkbox")
+										span.txt Arkansas
+									label.selectCusOption 
+										input(type="checkbox")
+										span.txt California
+									label.selectCusOption 
+										input(type="checkbox")
+										span.txt Colorado
+									.selectCusApply Xác nhận
+					.f-item.col
+						+AdminLabel("Thời gian quảng cáo <span class='fw-4'>(5% discount tự động apply cho quảng cáo trên 6 months)</span>")
+			.form-upload.collapse-block 
+				.b-inner 
+					span.t-head 
+						| Banner quảng cáo cho vị trí đã chọn
+					.b-head 
+						.b-box
+							.ck-bcheck.checked 
+								label.ck-binner
+									input(type="radio" checked hidden name="status")
+									span.ck-dot
+									.upload-panel
+										.inner-panel
+											.b-content 
+												.b-mid
+													p.t-text 
+														i.fa-light.fa-arrow-right.fw-7.icon
+														| Banner quảng cáo
+													ul.t-list
+														li 
+															| Option 1: Quý anh/chị có thể tự thiết kế banner.
+														li 
+															| Option 2: Liên hệ đối tác của Vietinfo để được hỗ trợ thiết kế ($50/design: bao gồm 1 banner cho màn desktop và 1 cho mobile). Xin vui lòng gửi email tới: support@qixtech.com với tiêu đề: “VietInfo: thiết kế bannner” để được hỗ trợ.
+					.upload-panel 
+						.b-wrapper
+							each i,index in Array(2)
+								.inner-panel.uploadFormJs.collapse-item
+									if(index ===1)
+										.thead.collapse-head Upload mobile version 
+											a(href="").tlink Tìm hiểu thêm 
+											span.icon 
+												i.fa-light.fa-chevron-down
+										.b-body.collapse-body
+											| Chưa có nội dung 
+									else
+										.thead.collapse-head Upload desktop version 
+											span.icon 
+												i.fa-light.fa-chevron-down
+										.b-body.collapse-body
+											.b-boxed
+												.t-txt 
+													| Upload 1 banner cho màn hình desktop 
+													span.c-red 
+														| [ 100 x 100 px ]
+												.b-bdrop 
+													.progress-container
+														svg.progress-circle(viewbox='0 0 36 36' xmlns='http://www.w3.org/2000/svg')
+															path.circle-bg(fill='none' stroke='#FAFAFA' stroke-width='3' d='M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32')
+															path.circle(fill='none' stroke='#1849D6' stroke-width='3' stroke-dasharray='100, 100' d='M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32')
+															text(x="18" y="19" text-anchor="middle" alignment-baseline="middle" ).progress-text 0%
+														span.txt Uploading...
+														span.btn-cancel.btn-action.btnCalcelJs Cancel
+													.inner.dropzoneJs
+														input(type="file" class="ipUpFile" )
+														.b-gr 
+															span.icon 
+																+img("icon-upload.svg")
+															.t-text 
+																| Kéo thả hình ảnh or 
+																span.c-pri.fw-7 
+																	| Chọn và tải lên
+															.t-txt Hoặc chọn ảnh cũ đã sử dụng lưu trong hệ thống để dùng lại
+												.t-note Only support .jpg or .png files
+											.t-line
+												span.t-txt
+													| OR
+											.b-url 
+												.thead Upload from URL
+												.b-in 
+													input(type="text"  class="inputFileUrl" placeholder="Add file URL")
+													button.btn-upfile.btnUpfileJS.btn-action 
+														span 
+															| Upload
+											ul.b-list.hide.imageListJs
+			.upload-panel.custom 
+				.b-wrapper
+					.inner-panel.uploadFormJs
+						.thead.fw-7 Ảnh chụp biên lai (receipt) đã thanh toán 
+						.b-boxed
+							.b-bdrop 
+								.progress-container
+									svg.progress-circle(viewbox='0 0 36 36' xmlns='http://www.w3.org/2000/svg')
+										path.circle-bg(fill='none' stroke='#FAFAFA' stroke-width='3' d='M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32')
+										path.circle(fill='none' stroke='#1849D6' stroke-width='3' stroke-dasharray='100, 100' d='M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32')
+										text(x="18" y="19" text-anchor="middle" alignment-baseline="middle" ).progress-text 0%
+									span.txt Uploading...
+									span.btn-cancel.btn-action.btnCalcelJs Cancel
+								.inner.dropzoneJs
+									input(type="file" class="ipUpFile" )
+									.b-gr 
+										span.icon 
+											+img("icon-upload2.svg")
+										.t-text 
+											span.c-pri 
+												| Chọn và tải lên 
+												span.c-text hoặc kéo thả để tải lên biên lai bạn đã thanh toán cho ad này
+							ul.b-list.hide.imageListJs
+			+Btn("Tiếp theo","","admin-btn",true)

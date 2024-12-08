@@ -34,7 +34,7 @@ block container
    section.sec-home-hero
       .home-hero.ss-pd-t
          .container
-            +HomeHero()
+            +HomeHeroSecond()
    section.sec-pro 
       .pro.ss-pd.pro-slider
          .container 
@@ -328,7 +328,7 @@ block container
    section.sec-home-hero
       .home-hero.ss-pd-t
          .container
-            +HomeHero()
+            +HomeHeroSecond()
    section.sec-pro 
       .pro.ss-pd.pro-slider-third
          .container
@@ -603,29 +603,7 @@ block container
    section.sec-home-hero
       .home-hero
          .container
-            .home-hero
-               .home-hero-tags
-                  span.home-hero-tag Sponsored
-               .home-hero-left
-                  .bg
-                     +img("hero-dec.png")
-                  .home-hero-ctn
-                     h3.home-hero-tt Trải nghiệm xứng tầm
-                     p.home-hero-des Nhà phát triển bất động sản hàng hiệu
-                     .home-hero-bot 
-                        +Btn("Khám phá ngay","")
-                        .social 
-                           .social-list 
-                              a(href="").social-link 
-                                 +img("ic-fb.svg") 
-                              a(href="").social-link 
-                                 +img("ic-yt.svg") 
-                              a(href="").social-link 
-                                 +img("ic-ins.svg")
-                              a(href="").social-link 
-                                 +img("ic-x.svg")
-               .home-hero-right
-                  +img("hero-img.jpg")
+            +HomeHeroSecond()
    section.sec-pro 
       .pro.ss-pd.pro-slider
          .container 
@@ -818,7 +796,7 @@ block container
                         .swiper-slide.col
                            .pro-grid 
                               .pro-grid-item 
-                                 +proBanner()
+                                 +proBannerSecond("pro-bner-1.png")
                               each item in Array(6)
                                  .pro-grid-item 
                                     +proItemFourth(item)
@@ -870,5 +848,5 @@ block container
    section.sec-home-hero
       .home-hero.ss-pd.--bg
          .container
-            +HomeHero()
+            +HomeHeroSecond()
                
