@@ -23,6 +23,8 @@ import DatePickerModule from "./module/DatePickerModule.js";
 import FileModule from "./module/FileModule.js";
 import AdminBaseModule from "./module/AdminBaseModule.js";
 import AdminDashboardModule from "./module/AdminDashboardModule.js";
+import ToggleSwitchModule from "./module/ToggleSwitchModule.js";
+
 
 window.addEventListener("DOMContentLoaded", () => {
   // Animation
@@ -59,4 +61,5 @@ window.addEventListener("DOMContentLoaded", () => {
   AdminBaseModule();
   AdminDashboardModule();
   FileModule();
+  ToggleSwitchModule();
 });

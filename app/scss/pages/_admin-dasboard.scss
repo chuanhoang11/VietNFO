@@ -232,6 +232,8 @@ input:checked+.control-round:before {
     @include min(1251px) {
         display: flex;
         gap: 1.2rem;
+        justify-content: flex-start;
+        width: 100%;
     }
 }
 
@@ -243,7 +245,7 @@ input:checked+.control-round:before {
     font-size: 1.2rem;
     color: var(--color);
     padding: .2rem .8rem;
-    max-width: 12.3rem;
+    // max-width: 12.3rem;
 
     .icon {
         width: .8rem;
@@ -268,6 +270,12 @@ input:checked+.control-round:before {
         --color: #F04438;
         color: #B42318;
         background-color: #FFF6ED;
+    }
+
+    &.review {
+        --color: #F79009;
+        color: #B54708;
+        background-color: #FFFAEB;
     }
 }
 
@@ -459,14 +467,14 @@ input:checked+.control-round:before {
 
 }
 
-.admin-block:nth-child(2) {
+.admin-block.--custom {
 
     .das-table-header,
     .das-table-row {
-        grid-template-columns: 1fr 17rem 10rem 9rem 12.5rem 10rem 11.5rem 9.2rem;
+        grid-template-columns: 1fr 18rem 10rem 9rem 12.5rem 10rem 11.5rem 9.2rem;
 
         @include max(1400px) {
-            grid-template-columns: 1fr 17rem 10rem 8rem 11rem 8.2rem 7.2rem 7.2rem;
+            grid-template-columns: 1fr 18rem 10rem 8rem 11rem 8.2rem 7.2rem 7.2rem;
         }
     }
 }
@@ -502,4 +510,306 @@ input:checked+.control-round:before {
     background: #FEC84B;
     color: #000;
     width: fit-content;
+}
+
+.admin-search {
+    padding: 1.6rem 2.4rem;
+    margin-bottom: 1.6rem;
+}
+
+.admin-block.admin-search {
+    box-shadow: unset;
+}
+
+.admin-block .sear-form .form-list .col-btn {
+    @include max(1005px) {
+        margin-bottom: 0;
+    }
+
+    @include max(700px) {
+        width: 100%;
+    }
+}
+
+.admin-regis-success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include max($res-mobile) {
+        gap: 3.2rem;
+    }
+
+    @include max($tablet) {
+        gap: 2.4rem;
+    }
+}
+
+.admin-regis-icon {
+    width: 12rem;
+
+    @include max($mobile) {
+        width: 9rem;
+    }
+
+    img {
+        object-fit: contain;
+    }
+}
+
+.admin-regis-title {
+    font-size: 2.4rem;
+    margin-bottom: 1.6rem;
+
+    @include max($mobile) {
+        font-size: 2rem;
+    }
+}
+
+.admin-regis-desc {
+    font-size: 1.4rem;
+}
+
+.admin-success-hd {
+    display: flex;
+    padding: 1.6rem 3.2rem;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: .1rem solid #E5E7EB;
+
+    @include max($tablet) {
+        padding: 1.6rem;
+    }
+
+    @include max(768px) {
+        padding: .8rem;
+    }
+}
+
+.admin-success-hd .left {
+    display: flex;
+    gap: 3.3rem;
+
+    @include min(769px) {
+        align-items: center;
+        justify-content: space-between;
+        gap: .8rem;
+    }
+
+    @include max(768px) {
+        flex-direction: column;
+        gap: .8rem;
+    }
+}
+
+.admin-success-hd .content {
+    img {
+        vertical-align: middle;
+        width: 1.8rem;
+        object-fit: contain;
+    }
+
+    .code {
+        color: #6B7280;
+    }
+}
+
+.admin-success-hd .content:not(:last-child) {
+    position: relative;
+
+    @include min(769px) {
+        &::after {
+            content: "";
+            position: absolute;
+            right: -1.7rem;
+            height: 100%;
+            width: 0.1rem;
+            background: #D9D9D9;
+        }
+    }
+
+}
+
+.admin-success-middle {
+    padding: 2.4rem 3.2rem;
+    width: 100%;
+    border-bottom: .1rem solid #E5E7EB;
+
+    @include max($tablet) {
+        padding: 1.6rem;
+    }
+
+    @include max(768px) {
+        padding: 1.6rem .8rem;
+    }
+}
+
+.admin-success-middle .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+.admin-success-middle .left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.admin-success-middle .icon {
+    width: 6.4rem;
+    border-radius: 100%;
+
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    @include max($res-mobile) {
+        width: 4.4rem;
+    }
+
+    @include max(768px) {
+        display: none;
+    }
+}
+
+.admin-success-middle .desc-list {
+    display: flex;
+    gap: .8rem;
+    flex-wrap: wrap;
+
+    @include min(769px) {
+        align-items: center;
+    }
+
+    @include max(768px) {
+        flex-direction: column;
+    }
+}
+
+.desc-list .tag {
+    padding: .8rem 1.2rem;
+    font-size: 1.4rem;
+    border-radius: .8rem;
+    background: #F3F4F6;
+    width: fit-content;
+}
+
+.admin-success-middle .bot {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-price .price {
+    font-size: 2.4rem;
+
+    @include max($mobile) {
+        font-size: 2rem;
+    }
+}
+
+.admin-success-bot {
+    padding: 1.6rem 3.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 4.8rem;
+
+    @include max($tablet) {
+        padding: 1.6rem;
+    }
+
+
+    @include max(768px) {
+        padding: 1.6rem .8rem;
+        gap: 3.2rem;
+        flex-direction: column;
+    }
+}
+
+.admin-success-bot .left {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: -2.4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: .1rem;
+        height: 70%;
+        background-color: #D1D5DB;
+
+        @include max($res-mobile) {
+            right: -1.6rem;
+        }
+
+        @include max(768px) {
+            right: 0;
+            top: unset;
+            transform: unset;
+            bottom: -1.6rem;
+            width: 100%;
+            height: .1rem;
+        }
+    }
+}
+
+.admin-success-bot .left,
+.admin-success-bot .right {
+    width: calc(50% - 2.4rem);
+
+    @include max($res-mobile) {
+        width: calc(50% - 1.6rem);
+    }
+
+    @include max(768px) {
+        width: 100%;
+    }
+}
+
+.info-user-title {
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.info-user-list {
+    margin-top: .8rem;
+    color: #6B7280;
+    font-size: 1.6rem;
+}
+
+.admin-success-info {
+    color: #101828;
+}
+
+.btn-show-more {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+
+    .icon {
+        width: 2.4rem;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.info-user-txt {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    img {
+        height: 4.6rem;
+        object-fit: contain;
+    }
 }
