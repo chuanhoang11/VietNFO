@@ -2084,7 +2084,7 @@ body.page-result .sear .ft {
 
 .mobile {
   position: fixed;
-  z-index: 1;
+  z-index: 12;
   top: var(--size-hd);
   left: 0;
   bottom: 0;
@@ -2135,7 +2135,7 @@ body.page-result .sear .ft {
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 12;
     background-color: rgba(0, 0, 0, 0.8);
     transition: 0.6s ease;
     -webkit-transition: 0.6s ease;
@@ -8914,7 +8914,11 @@ ul.page-numbers {
       width: fit-content; }
       .sear-head.sear-head-custom .col-btn .btn {
         width: 100%;
-        height: 4rem; }
+        height: 4rem;
+        padding: 1.2rem !important;
+        text-align: center; }
+        .sear-head.sear-head-custom .col-btn .btn i {
+          display: none; }
     .sear-head.sear-head-custom .col-search {
       -webkit-box-ordinal-group: -1;
       -ms-flex-order: -2;
