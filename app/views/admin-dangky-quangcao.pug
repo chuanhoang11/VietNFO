@@ -1,0 +1,186 @@
+extends layout/layout-admin
+
+block vars
+	-title = 'Admin'
+	-bodyClass = 'page-home'
+	-isAdmin = 'true'
+
+block container 
+	+popup("popup-add-pay", "popup-add-pay")
+		.mb-24.t-center
+			p.t20.fw-5.c-txt-4 Debit or credit card
+		.pay-list
+			each item, index in Array(8)
+				span.pay-ic 
+					+img("pay-" + (index + 1) + ".svg")
+		.f-list.row 
+			.f-item.col 
+				input.admin-input.second(type="text" placeholder="Name on card")
+			.f-item.col 
+				.f-left.second
+					+img("ic-card.svg")
+					input.admin-input.second(type="text" placeholder="Card number")
+			.f-item.col.col-6
+				input.admin-input.second(type="text" placeholder="MM/YYYY")
+			.f-item.col.col-6
+				input.admin-input.second(type="text" placeholder="CVV")
+			.f-item.col 
+				+Btn("Add card", "button", "full")
+	a(href="").admin-back 
+		+img("ic-back.svg")
+		span.txt Quay lại
+	.admin-heading.t-center
+		h1.admin-title Đăng ký dịch vụ quảng cáo
+	.register-promotion-section.row
+		.admin-wrapper.col.payment-section
+			.admin-pay-table 
+				table 
+					thead 
+						tr 
+							td.title Payment methods
+							td.--w Remove
+							td.--w Edit
+					tbody
+						tr
+							td 
+								label.admin-check 
+									input(type="radio" id="paypal" name="paypal" hidden)
+									div.admin-check-radio
+									.content 
+										span.pay-ic 
+											+img("pay-1.svg")
+										span.txt.fw-7  Visa
+										span.txt(style="color: #6B7280")  ***4567
+							td.--w
+								.delete 
+									+img("ic-trash.svg")
+							td.--w 
+								.edit.popup-open(data-popup="popup-add-pay") 
+									+img("ic-edit.svg")
+						tr
+							td 
+								label.admin-check 
+									input(type="radio" id="paypal" name="paypal" hidden)
+									div.admin-check-radio
+									.content 
+										span.pay-ic 
+											+img("pay-2.svg")
+										span.txt.fw-7  Mastercard
+										span.txt(style="color: #6B7280")  ***1234
+							td.--w
+								.delete 
+									+img("ic-trash.svg")
+							td.--w 
+								.edit.popup-open(data-popup="popup-add-pay") 
+									+img("ic-edit.svg")
+						tr
+							td(colspan="3")
+								.flex
+									label.admin-check 
+										input(type="radio" id="paypal" name="paypal" hidden)
+										div.admin-check-radio
+										span.txt.fw-5 Add a credit or debit
+									.pay-list
+										each item, index in Array(8)
+											span.pay-ic 
+												+img("pay-" + (index + 1) + ".svg")
+			.admin-pay-table.second
+				table 
+					thead 
+						tr 
+							td.title Billing information
+							td.--w Edit
+					tbody
+						tr
+							td 
+								label.admin-check 
+									input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
+									span.admin-check-radio
+									.admin-user 
+										p.name Tu Nguyen
+										p.des Email: admin@vietinfo.us
+										p.des Phone: 0123456789
+							td.--w 
+								.edit 
+									+img("ic-edit.svg")
+			.admin-block 
+				.admin-heading-second
+					p.c-txt.t20.fw-5(style="color: #1F2237") Update billing information
+				.f-list.row 
+					.f-item.col.col-4 	
+						+AdminLabel("Name")
+						input.admin-input.second(type="text" value="Tu Nguyen")
+					.f-item.col.col-4 	
+						+AdminLabel("Organization <span class='fw-4'>(optional)</span>")
+						input.admin-input.second(type="text" value="Qixtech LLC")
+					.f-item.col.col-4 	
+						+AdminLabel("Email")
+						input.admin-input.second(type="text" value="lethuylinh@gmail.com")
+					.f-item.col.col-6 
+						+AdminLabel("Address 1 ") 
+						input.admin-input.second(type="text" value="3286 Robinson Oaks Way NE")
+					.f-item.col.col-6
+						+AdminLabel("Address 2 <span class='fw-4'>(optional)</span>") 
+						input.admin-input.second(type="text" value="Apt, suite, unit, building, floor, etc.")
+					.f-item.col.col-4
+							+AdminLabel("City") 
+							input.admin-input.second(type="text" value="Atlanta")
+					.f-item.col.col-4
+						+AdminLabel("State") 
+						+AdminSelect(
+							[
+								"Georgia",
+								"Georgia",
+								"Georgia",
+								"Georgia"
+							],
+							"second"
+						)
+					.f-item.col.col-4
+						+AdminLabel("Zip code") 
+						input.admin-input.second(type="number" value="30062")
+			+Btn("Lưu ", "button", "m-left")
+		.section-sumary.col.admin-wrapper
+			.admin-block 
+				.admin-heading-icon
+					span.title
+						+img("ticket-sale.svg")
+						span.c-txt.t20.fw-5(style="color: #1F2237") Product info
+					span.ic-down 
+						+img("arrow-down.svg")
+				.product-list 
+					.product-item 
+						.product-img 
+							+img("ic-loa.svg")
+						.product-info 
+							.product-name 
+								span Homepage Ad
+							.product-tag 
+								.tag 
+									span H1
+								.tag
+									span May 
+									span.fw-7 +5
+						.product-price
+								span.c-pri.fw-5 $96.00
+			.admin-block
+				.admin-heading-second
+					p.c-txt.t16.fw-5(style="color: #1F2237") Payment history 
+				.sumary-list 
+					.sumary-item.t14.border-bottom
+						span.txt.fw-5  Sub total
+						span.c-txt.t16.fw-5(style="color: #1F2237") $96.00 
+					.sumary-item.t14
+						span.txt.fw-5  Discount
+						span.c-txt.t16.fw-5(style="color: #1F2237") -$10.00
+					.sumary-item.t14.border-bottom
+						span.txt.fw-5  Taxes
+						span.c-txt.t16.fw-5(style="color: #1F2237") $8.00
+					.sumary-item.t14
+						span.txt.fw-5  Total payment
+						span.c-txt.fw-5.c-pri.t20 $94.00
+				p.terms-purchase By proceeding with your purchase, you agree to Vietinfo's 
+					a(href="").c-pri Terms of Service 
+					|and 
+					a(href="").c-pri Personal Data Processing Policy.
+				+Btn("Checkout", "button", "full")
