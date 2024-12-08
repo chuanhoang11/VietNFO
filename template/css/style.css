@@ -11823,6 +11823,10 @@ body.page-search {
       color: #fff;
       border-color: var(--color-pri); } }
 
+.b-ip-select.b-admin.read-only .selectCusValue,
+.b-ip-select.b-admin.read-only .selectTwoValue {
+  background: #f2f4f7; }
+
 .b-ip-select.b-admin .selectCusValue,
 .b-ip-select.b-admin .selectTwoValue {
   -webkit-box-orient: horizontal;
