@@ -923,6 +923,9 @@ body.page-search {
   padding: 1.6rem;
   overflow: hidden;
   border-radius: 0.5rem;
+  &.checked {
+    background: #eff8ff;
+  }
 }
 
 .ck-binner {
@@ -982,6 +985,18 @@ body.page-search {
       border-radius: inherit;
     }
   }
+  .upload-panel .inner-panel {
+    padding: unset;
+    border: unset;
+    .b-mid {
+      padding: unset;
+      margin: unset;
+      border: unset;
+      .t-list {
+        margin-left: 1.8rem;
+      }
+    }
+  }
 }
 
 .ck-dot {
@@ -1009,6 +1024,14 @@ body.page-search {
 }
 
 .upload-panel {
+  &.custom {
+    .thead {
+      color: #344054;
+    }
+    .inner-panel .b-boxed .inner::before {
+      border: 0.1rem solid var(--border-color);
+    }
+  }
   .b-wrapper {
     display: flex;
     flex-direction: column;
@@ -1206,7 +1229,7 @@ body.page-search {
           justify-content: center;
           align-items: center;
           text-align: center;
-
+          padding: 0 2rem;
           .icon {
             width: 3.6rem;
             @include mid-flex;
@@ -1374,6 +1397,7 @@ body.page-search {
   .selectTwoValue {
     flex-direction: row-reverse;
     justify-content: space-between;
+    background: #f2f4f7;
     .icon-arrow {
       color: #667085;
       font-size: 1.2rem;

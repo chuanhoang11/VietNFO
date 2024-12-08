@@ -11230,6 +11230,8 @@ body.page-search {
   padding: 1.6rem;
   overflow: hidden;
   border-radius: 0.5rem; }
+  .ck-bcheck.checked {
+    background: #eff8ff; }
 
 .ck-binner {
   display: -webkit-box;
@@ -11280,6 +11282,15 @@ body.page-search {
       z-index: -1;
       margin: -1.6rem;
       border-radius: inherit; }
+  .ck-binner .upload-panel .inner-panel {
+    padding: unset;
+    border: unset; }
+    .ck-binner .upload-panel .inner-panel .b-mid {
+      padding: unset;
+      margin: unset;
+      border: unset; }
+      .ck-binner .upload-panel .inner-panel .b-mid .t-list {
+        margin-left: 1.8rem; }
 
 .ck-dot {
   position: absolute;
@@ -11319,6 +11330,12 @@ body.page-search {
     font-family: "Font Awesome 6 Pro";
     font-size: 1rem;
     font-weight: 700; }
+
+.upload-panel.custom .thead {
+  color: #344054; }
+
+.upload-panel.custom .inner-panel .b-boxed .inner::before {
+  border: 0.1rem solid var(--border-color); }
 
 .upload-panel .b-wrapper {
   display: -webkit-box;
@@ -11556,7 +11573,8 @@ body.page-search {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        text-align: center; }
+        text-align: center;
+        padding: 0 2rem; }
         .upload-panel .inner-panel .b-boxed .inner .b-gr .icon {
           width: 3.6rem;
           display: -moz-flex;
@@ -11797,7 +11815,8 @@ body.page-search {
   flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  background: #f2f4f7; }
   .b-ip-select.b-admin .selectCusValue .icon-arrow,
   .b-ip-select.b-admin .selectTwoValue .icon-arrow {
     color: #667085;

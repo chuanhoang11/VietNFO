@@ -54,7 +54,7 @@
         <div class="admin-pro layout-half">
           <div class="admin-pro-inner">
             <div class="admin-pro-row row">
-              <div class="col col-6 check-active">
+              <div class="col col-6 active">
                 <div class="admin-pro-it"> <span class="icon"> <img src="./assets/images/admin-pro-icon (4).svg" alt=""/></span><span class="txt">
                      Chỉnh sửa thiết lập quảng cáo</span></div>
               </div>
@@ -73,7 +73,7 @@
               <div class="f-list row">
                 <div class="f-item col col-6">
                   <label class="f-label">Khu vực đặt quảng cáo <a href='' class='c-pri fw-5'>Tìm hiểu thêm</a></label>
-                  <div class="admin-select">
+                  <div class="admin-select second --bg">
                     <select>
                       <option value="demo">Trang chủ - homepage</option>
                       <option value="demo">Sang nhượng kinh doanh</option>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="f-item col col-6">
                   <label class="f-label">Vị trí đặt quảng cáo</label>
-                  <div class="admin-select">
+                  <div class="admin-select second --bg">
                     <select>
                       <option value="demo">Vị trí H1 (120 x 240 px)</option>
                       <option value="demo">Vị trí H2 (100 x 100 px)</option>
@@ -99,7 +99,7 @@
                 </div>
                 <div class="f-item col"> 
                   <label class="f-label">Quy mô quảng cáo <span class='fw-4'>(nơi quảng cáo sẽ xuất hiện, ví dụ anh chị chọn “Toàn nước Mỹ,” ads sẽ xuất hiện trên toàn nước Mỹ)</span></label>
-                  <div class="admin-select">
+                  <div class="admin-select second --bg">
                     <select>
                       <option value="demo">Theo tiểu bang ($1,200/state/month)</option>
                       <option value="demo">Theo tiểu bang ($1,100/state/month)</option>
@@ -112,7 +112,7 @@
                 </div>
                 <div class="f-item col">
                   <label class="f-label">State(s)</label>
-                  <div class="b-ip-select b-admin">
+                  <div class="b-ip-select b-admin read-only">
                     <div class="selectCus">
                       <div class="selectCusValue">
                         <input type="text" hidden><span class="icon-arrow"> <i class="fa-light fa-chevron-down"></i></span>
@@ -155,6 +155,108 @@
                 </div>
               </div>
             </div>
+            <div class="form-upload collapse-block"> 
+              <div class="b-inner"> <span class="t-head">
+                   Banner quảng cáo cho vị trí đã chọn</span>
+                <div class="b-head"> 
+                  <div class="b-box">
+                    <div class="ck-bcheck checked"> 
+                      <label class="ck-binner">
+                        <input type="radio" checked hidden name="status"><span class="ck-dot"></span>
+                        <div class="upload-panel">
+                          <div class="inner-panel">
+                            <div class="b-content"> 
+                              <div class="b-mid">
+                                <p class="t-text"> <i class="fa-light fa-arrow-right fw-7 icon"></i>Banner quảng cáo</p>
+                                <ul class="t-list">
+                                  <li>
+                                     Option 1: Quý anh/chị có thể tự thiết kế banner.</li>
+                                  <li>
+                                     Option 2: Liên hệ đối tác của Vietinfo để được hỗ trợ thiết kế ($50/design: bao gồm 1 banner cho màn desktop và 1 cho mobile). Xin vui lòng gửi email tới: support@qixtech.com với tiêu đề: “VietInfo: thiết kế bannner” để được hỗ trợ.</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="upload-panel"> 
+                  <div class="b-wrapper">
+                    <div class="inner-panel uploadFormJs collapse-item">
+                      <div class="thead collapse-head">Upload desktop version <span class="icon"> <i class="fa-light fa-chevron-down"></i></span></div>
+                      <div class="b-body collapse-body">
+                        <div class="b-boxed">
+                          <div class="t-txt">
+                             Upload 1 banner cho màn hình desktop <span class="c-red">
+                               [ 100 x 100 px ]</span></div>
+                          <div class="b-bdrop"> 
+                            <div class="progress-container">
+                              <svg class="progress-circle" viewbox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                                <path class="circle-bg" fill="none" stroke="#FAFAFA" stroke-width="3" d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32"></path>
+                                <path class="circle" fill="none" stroke="#1849D6" stroke-width="3" stroke-dasharray="100, 100" d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32"></path>
+                                <text class="progress-text" x="18" y="19" text-anchor="middle" alignment-baseline="middle">0%</text>
+                              </svg><span class="txt">Uploading...</span><span class="btn-cancel btn-action btnCalcelJs">Cancel</span>
+                            </div>
+                            <div class="inner dropzoneJs">
+                              <input class="ipUpFile" type="file">
+                              <div class="b-gr"> <span class="icon"> <img src="./assets/images/icon-upload.svg" alt=""/></span>
+                                <div class="t-text">
+                                   Kéo thả hình ảnh or <span class="c-pri fw-7">
+                                     Chọn và tải lên</span></div>
+                                <div class="t-txt">Hoặc chọn ảnh cũ đã sử dụng lưu trong hệ thống để dùng lại</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="t-note">Only support .jpg or .png files</div>
+                        </div>
+                        <div class="t-line"><span class="t-txt">OR</span></div>
+                        <div class="b-url"> 
+                          <div class="thead">Upload from URL</div>
+                          <div class="b-in"> 
+                            <input class="inputFileUrl" type="text" placeholder="Add file URL">
+                            <button class="btn-upfile btnUpfileJS btn-action"> <span>
+                                 Upload</span></button>
+                          </div>
+                        </div>
+                        <ul class="b-list hide imageListJs"></ul>
+                      </div>
+                    </div>
+                    <div class="inner-panel uploadFormJs collapse-item">
+                      <div class="thead collapse-head">Upload mobile version <a class="tlink" href="">Tìm hiểu thêm </a><span class="icon"> <i class="fa-light fa-chevron-down"></i></span></div>
+                      <div class="b-body collapse-body">Chưa có nội dung </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upload-panel custom"> 
+              <div class="b-wrapper">
+                <div class="inner-panel uploadFormJs">
+                  <div class="thead fw-7">Ảnh chụp biên lai (receipt) đã thanh toán </div>
+                  <div class="b-boxed">
+                    <div class="b-bdrop"> 
+                      <div class="progress-container">
+                        <svg class="progress-circle" viewbox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                          <path class="circle-bg" fill="none" stroke="#FAFAFA" stroke-width="3" d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32"></path>
+                          <path class="circle" fill="none" stroke="#1849D6" stroke-width="3" stroke-dasharray="100, 100" d="M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32"></path>
+                          <text class="progress-text" x="18" y="19" text-anchor="middle" alignment-baseline="middle">0%</text>
+                        </svg><span class="txt">Uploading...</span><span class="btn-cancel btn-action btnCalcelJs">Cancel</span>
+                      </div>
+                      <div class="inner dropzoneJs">
+                        <input class="ipUpFile" type="file">
+                        <div class="b-gr"> <span class="icon"> <img src="./assets/images/icon-upload2.svg" alt=""/></span>
+                          <div class="t-text"> <span class="c-pri">
+                               Chọn và tải lên <span class="c-text">hoặc kéo thả để tải lên biên lai bạn đã thanh toán cho ad này</span></span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="b-list hide imageListJs"></ul>
+                  </div>
+                </div>
+              </div>
+            </div><a class="btn admin-btn" href=""><span class="inner">Tiếp theo</span><i class="fa-light fa-arrow-right icon"></i></a>
           </div>
         </div>
       </div>
