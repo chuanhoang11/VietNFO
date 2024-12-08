@@ -11626,6 +11626,10 @@ body.page-search {
       color: #fff;
       border-color: var(--color-pri); } }
 
+.b-ip-select.b-admin.read-only .selectCusValue,
+.b-ip-select.b-admin.read-only .selectTwoValue {
+  background: #f2f4f7; }
+
 .b-ip-select.b-admin .selectCusValue,
 .b-ip-select.b-admin .selectTwoValue {
   -webkit-box-orient: horizontal;
@@ -11634,8 +11638,7 @@ body.page-search {
   flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  background: #f2f4f7; }
+  justify-content: space-between; }
   .b-ip-select.b-admin .selectCusValue .icon-arrow,
   .b-ip-select.b-admin .selectTwoValue .icon-arrow {
     color: #667085;
