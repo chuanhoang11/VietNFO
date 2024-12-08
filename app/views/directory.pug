@@ -6,35 +6,11 @@ block vars
 
 block container 
    +breadCrumb(["Luật sư Việt"])
-   section.sec-home-hero 
-      .home-hero.ss-pd
-         .container 
-            .home-hero 
-               .home-hero-tags 
-                  span.home-hero-tag Sponsored
-               .home-hero-left
-                  .bg   
-                     +img("hero-dec.png")
-                  .home-hero-ctn    
-                     h3.home-hero-tt Trải nghiệm xứng tầm
-                     p.home-hero-des Nhà phát triển bất động sản hàng hiệu
-                     .home-hero-bot 
-                        +Btn("Khám phá ngay","")
-                        .social 
-                           .social-list 
-                              a(href="").social-link 
-                                 +img("ic-fb.svg") 
-                              a(href="").social-link 
-                                 +img("ic-yt.svg") 
-                              a(href="").social-link 
-                                 +img("ic-ins.svg") 
-                              a(href="").social-link 
-                                 +img("ic-x.svg")
-               .home-hero-right
-                  +img("hero-img.jpg")
    section.sec-direc-data 
-      .direc-data.ss-pd
+      .direc-data.ss-pd-b
          .container 
+            .mb-24
+               +HomeHeroSecond()
             .head-sc.mb-48
                +title("Văn phòng luật sư Việt tại Georgia", "Directory văn phòng luật sư Việt", "dcor")
             .direc-table-wrapper 
@@ -122,13 +98,14 @@ block container
                   .form-list.row 
                      .form-ip.col.per3  
                         p.text Business type
-                        select(name="" class="re-select-main" data-placeholder="Select business type") 
-                           option(value="") Select business type
-                           option(value="1") Y tế
-                           option(value="2") Kế toán - CPA
-                           option(value="3") Văn phòng luật
-                           option(value="3") Bất động sản
-                           option(value="3") Việc nhà
+                        .admin-select.second.--third
+                           select(name="" class="re-select-main" data-placeholder="Select business type") 
+                              option(value="") Select business type
+                              option(value="1") Y tế
+                              option(value="2") Kế toán - CPA
+                              option(value="3") Văn phòng luật
+                              option(value="3") Bất động sản
+                              option(value="3") Việc nhà
                      .form-ip.col.per3  
                         p.text Business name
                         input(type="text" placeholder="Enter your business name")
@@ -160,13 +137,14 @@ block container
                         input(type="text" placeholder="Texas")
                      .form-ip.col.per3  
                         p.text State
-                        select(name="" class="re-select-main" data-placeholder="Choose state") 
-                           option(value="") Choose state
-                           option(value="1") State 1
-                           option(value="2") State 2
-                           option(value="3") State 3
-                           option(value="3") State 4
-                           option(value="3") State 5
+                        .admin-select.second.--third
+                           select(name="" class="re-select-main" data-placeholder="Choose state") 
+                              option(value="") Choose state
+                              option(value="1") State 1
+                              option(value="2") State 2
+                              option(value="3") State 3
+                              option(value="3") State 4
+                              option(value="3") State 5
                      .form-ip.col.per3  
                         p.text Zip code
                         input(type="text" placeholder="Zip code")

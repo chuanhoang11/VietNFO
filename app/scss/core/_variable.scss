@@ -33,10 +33,12 @@
     0px 0.05rem 0.5rem rgba(183, 183, 183, 0.08);
   //mb hd sticky
   --mb-size-hd-sticky: 5.4rem;
+  --h-sear: 5.6rem;
 
   @media (max-width: 1024px) {
     --pd-sc: 4rem;
     --size-hd: 7.2rem;
+    --h-sear: 11.4rem;
   }
 
   // biến admin

@@ -231,8 +231,7 @@
   gap: 0.4em;
 
   >img {
-    width: 2rem;
-    height: 2rem;
+    width: 1.2em;
     position: relative;
     flex-shrink: 0;
   }
@@ -538,6 +537,7 @@
 }
 
 .pro-wr.four {
+  --pd-content: calc(12/14 * 1em);
   flex-direction: row;
   padding: var(--pd-content);
   gap: 1em;
@@ -556,6 +556,20 @@
     -webkit-line-clamp: 2;
     word-break: break-all
   }
+}
+
+.pro-wr.four .pro-content {
+  gap: calc(5/12 * 1em)
+}
+
+.pro-wr.four .pro-name {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: .3em;
+}
+.pro-wr.four .pro-name >img{
+  width: 1.2em;
 }
 
 .pro-wr.five .pro-des {
@@ -1081,11 +1095,11 @@
 
 
 
-@include min-max($mobile, $res-mobile) {
-  .sear-panel .pro-img {
-    display: none;
-  }
-}
+// @include min-max($mobile, $res-mobile) {
+//   .sear-panel .pro-img {
+//     display: none;
+//   }
+// }
 
 .pro-select {
   display: flex;
@@ -1131,6 +1145,10 @@
 }
 
 .sear-panel .head-sc .t-title {
+  @include max(1330px) {
+    font-size: 1.7vw;
+  }
+
   @include max($res-mobile) {
     font-size: 2vw;
   }
@@ -1144,12 +1162,16 @@
   }
 }
 
-.pro-item.col-6,
-.pro-item.col-third {
-  @include min-max(500px, $mobile) {
-    width: 50%;
-  }
+.pro-item.col-6 .pro-img .inner {
+  padding-top: calc(180 / 360 * 100%);
 }
+
+// .pro-item.col-6,
+// .pro-item.col-third {
+//   @include min-max(500px, $mobile) {
+//     width: 50%;
+//   }
+// }
 
 .pro-slider-second .swiper-slide:nth-child(2),
 .pro-slider-third .swiper-slide:nth-child(2) {
@@ -1209,5 +1231,209 @@
   @include min(1331px) {
     padding: calc(11/16 * 1em);
     padding-left: calc(50/16 * 1em);
+  }
+}
+
+
+.home-hero-banner {
+  display: block;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.pro-bner-img-second {
+  height: 100%;
+  width: 100%;
+  display: block;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.pro-list.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  --rg: 0rem;
+  --cg: 0rem;
+  gap: .8rem;
+
+  @include max(1330px) {
+    grid-template-columns: 1fr;
+  }
+
+  .pro-item.col {
+    width: 100%;
+  }
+
+  .pro-item.second {
+    grid-row: span 2;
+  }
+}
+
+.sear-head.sear-head-custom {
+
+  .selectCusValue .txt,
+  .selectTwoValue .txt {
+    font-size: 1.4rem;
+  }
+
+  .b-ip-search input {
+    font-size: 1.4rem;
+  }
+
+}
+
+@include min($res-tablet-min) {
+  .sear-form .col-buger {
+    display: none;
+  }
+
+  .sear-panel {
+    height: calc(100vh - 14.8rem) !important;
+    overflow: hidden auto;
+  }
+
+  .sear-head.sear-head-custom {
+    height: var(--h-sear);
+  }
+
+  .sear-head.sear-head-custom {
+    .b-ip-search {
+      height: 3.6rem;
+    }
+
+    .selectCusValue,
+    .selectTwoValue {
+      height: 3.6rem;
+      font-size: 1.4rem;
+    }
+
+
+    .col-btn {
+      .btn {
+        width: 100%;
+        height: 3.6rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.page-search-res .mobile-overlay,
+.page-search-res .mobile {
+  top: var(--h-sear);
+}
+
+
+
+@include max($res-tablet) {
+
+  .sear-head.sear-head-custom {
+    position: sticky;
+    top: 0;
+  }
+
+  .page-search-res .hd {
+    display: none;
+  }
+
+  .page-search-res .main {
+    padding-top: 0;
+  }
+
+  .sear-head.sear-head-custom {
+    height: var(--h-sear);
+  }
+
+  .sear-form .col-buger {
+    width: fit-content !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sear-head.sear-head-custom {
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .col-sl-md {
+      width: 50% !important;
+      flex: unset !important;
+      order: 1;
+    }
+
+    .col-btn {
+      width: fit-content;
+
+      .btn {
+        width: 100%;
+        height: 4rem;
+      }
+    }
+
+    .col-search {
+      order: -2;
+      min-width: 40%;
+      width: unset !important;
+      flex: 1;
+    }
+
+    .col-buger {
+      order: -3;
+
+      .hamburger {
+        .line {
+          background-color: var(--color-pri);
+        }
+      }
+    }
+
+    .selectCusValue,
+    .selectTwoValue,
+    .b-ip-search {
+      height: 4rem;
+    }
+  }
+}
+
+.sear-btn {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  z-index: 11;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-pri);
+  padding: 1.2rem;
+  border-radius: .6rem;
+  color: white;
+
+  @include min($res-tablet-min) {
+    display: none;
+  }
+
+  &-burger {
+    span:nth-child(2) {
+      margin: .3rem 0;
+    }
+
+    span {
+      display: block;
+      width: 1.8rem;
+      height: .1rem;
+      background-color: white;
+      border-radius: 100rem;
+    }
   }
 }

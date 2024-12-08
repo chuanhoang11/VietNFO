@@ -1,0 +1,26 @@
+extends layout/layout
+
+block vars
+	-title = 'Search Việt Event'
+	-bodyClass = 'page-search-res page-search page-result'
+
+block container 
+	+SearLayout("Việt Event tại North Carolina")
+		.pro-list.row
+			- 
+				var proArr = [
+					{
+						img: "pro-1-1.jpg",
+						name: "Hội chợ mùa thu",
+						des: "Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai)",
+						address: "9185 Old Southwick Pass, Johns Creek, GA 30067 (Nhà thờ Việt Nam)",
+						time: "Sept 14 – 16, 2024",
+						views: "1000"
+					},
+				]
+			each item,index in Array(3)
+				if(index == 2)
+					.pro-item.col.col-third
+						+proBannerSecond("pro-bner-vietevent.png")
+				.pro-item.col.col-third
+					+proItemThird(proArr[0])
