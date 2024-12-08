@@ -213,47 +213,5 @@ block container
                                                             +img('ic-pro-4.svg')
                                                             span.txt 1000
             .popdt-side.col 
-               .wrapper 
-                  .popdt-contact 
-                     p.tt Liên hệ:
-                     p.des Darynda Jenkins
-                     .popdt-address 
-                        a(href="").link 
-                           +img("ic-send.svg") 
-                           span.txt keller@gmail.com
-                        a(href="").link 
-                           +img("ic-phone.svg") 
-                           span.txt 012345667
-                  .popdt-map 
-                     .iframe 
-                        iframe(
-                        referrerpolicy="no-referrer-when-downgrade" 
-                        loading="lazy" 
-                        allowfullscreen="" 
-                        style="border:0;" 
-                        height="450" 
-                        width="600" 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2654293242267!2d106.6535495758385!3d10.790971358923679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed189fa855d%3A0xf63e15bfce46baef!2sC%C3%B4ng%20ty%20TNHH%20-%20MONA%20MEDIA!5e0!3m2!1svi!2s!4v1732719275356!5m2!1svi!2s"
-                        )
-                  .popdt-share 
-                     span.txt Share this listing:
-                     .social 
-                        .social-list 
-                           a(href="").social-link
-                              +img("ic-fb.svg") 
-                           a(href="").social-link
-                              +img("ic-x.svg") 
-                  .pro-bner 
-                     .pro-bner-dc
-                        +img('pro-bner-dc.png')
-                     .pro-bner-img
-                        +img('pro-bner-img.jpg')
-                     .pro-bner-content 
-                        h3.pro-bner-name
-                           |Chăm sóc
-                           br
-                           |người lớn tuổi
-                        p.pro-bner-des Dịch vụ tận tình, nhân viên chu đáo
-                        .pro-btn 
-                           span.txt Khám phá ngay
+               +PopupSideBar()
       +footer()
