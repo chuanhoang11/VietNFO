@@ -11835,8 +11835,7 @@ body.page-search {
   flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  background: #f2f4f7; }
+  justify-content: space-between; }
   .b-ip-select.b-admin .selectCusValue .icon-arrow,
   .b-ip-select.b-admin .selectTwoValue .icon-arrow {
     color: #667085;
