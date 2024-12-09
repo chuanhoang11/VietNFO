@@ -1,0 +1,121 @@
+extends layout/layout-admin
+
+block vars
+	-title = 'Admin'
+	-bodyClass = 'page-home'
+	-isAdmin = 'true'
+
+block container 
+	+popup("popup-change-password", "popup-change-password")
+		.mb-20 
+			p.t18.fw-6.c-txt-2 THAY ĐỔI MẬT KHẨU
+		.f-list.row 
+			.f-item.col
+				+AdminLabel("Mật khẩu hiện tại") 
+				input.admin-input(type="password")
+			.f-item.col
+				+AdminLabel("Mật khẩu mới") 
+				.f-pass 
+					input.admin-input(type="password")
+					+img("ic-eye.svg")
+				.f-required 
+					ul 
+						li.success Ít nhất 8 ký tự
+						li.fail Có cả viết hoa và viết thường (e.g. Aa)
+						li Có dùng số (e.g. 1234)
+						li Có ký hiệu đặc biệt (e.g. !@#$)
+			.f-item.col
+				+AdminLabel("Nhập lại mật khẩu mới") 
+				.f-pass
+					input.admin-input(type="password")
+					+img("ic-eye.svg")
+			.f-item.col
+				.btn-gr
+					+Btn("Cancel", "button", "trans popup-close")
+					+Btn("Save", "button", "")
+	.admin-heading.flex 
+		.left 
+			h1.admin-title 
+				span.txt Quản lý thông tin user 
+				+img("ic-ring.svg")
+		.right 
+			.btn.trans.popup-open(data-popup="popup-change-password")
+				span.inner THAY ĐỔI MẬT KHẨU
+			+Btn("THAY ĐỔI THÔNG TIN", "")
+	.admin-wrapper 
+		.admin-block 
+			.f-list.row
+				.f-item.col
+					.prf-image
+						.prf-image-head.mb-16 
+							p.fw-6.c-txt-2 Profile Image
+							.prf-clear.c-pri Clear
+						.prf-image-list.row 
+							.prf-image-item.col.col-4 
+								.prf-image-box 
+									.prf-image-box-inner 
+										+img("ic-upload-2.svg")
+										p.c-pri Chọn và tải lên
+										p.des hoặc kéo thả hình ảnh đại diện (size 1000x1000). Hoặc chọn các ảnh cũ đã sử dụng
+							.prf-image-item.col.col-4 
+								.prf-clear.c-pri Clear
+							each item in Array(3)
+								.prf-image-item.col.col-4 
+									.prf-image-wr 
+										+img("prf-img.jpg")
+										.prf-image-content
+											+img("ic-file.svg")
+											.content 
+												p ảnh cũ.jpg
+												p 200 KB
+				.f-item.col.col-4 
+					+AdminLabel("Full name") 
+					input.admin-input.second(type="text" value="Linh Doan")
+				.f-item.col.col-4 
+					+AdminLabel("Phone") 
+					input.admin-input.second(type="text" value="4704694788")
+				.f-item.col.col-4 
+					+AdminLabel("Email") 
+					input.admin-input.second(type="text" value="lethuylinh@gmail.com")
+				.f-item.col.col-4 
+					+AdminLabel("Loại hình kinh doanh") 
+					+AdminSelect(
+						[
+							"Nail",
+							"Nhà hàng",
+							"Bất động sản",
+							"Kế toán - CPA",
+							"Y tế",
+							"Luật",
+							"Giải trí",
+							"Kinh doanh khác",
+						],
+						"second"
+					)
+				.f-item.col.col-8
+					+AdminLabel("Tên doanh nghiệp của bạn <span class='fw-4'>(optional)</span>") 
+					input.admin-input.second(type="text" value="Qixtech LLC")
+				.f-item.col.col-6 
+					+AdminLabel("Address 1 ") 
+					input.admin-input.second(type="text" value="3286 Robinson Oaks Way NE")
+				.f-item.col.col-6
+					+AdminLabel("Address 2 <span class='fw-4'>(optional)</span>") 
+					input.admin-input.second(type="text" value="Apt, suite, unit, building, floor, etc.")
+				.f-item.col.col-4
+						+AdminLabel("City") 
+						input.admin-input.second(type="text" value="Atlanta")
+				.f-item.col.col-4
+					+AdminLabel("State") 
+					+AdminSelect(
+						[
+							"Georgia",
+							"Georgia",
+							"Georgia",
+							"Georgia"
+						],
+						"second"
+					)
+				.f-item.col.col-4
+					+AdminLabel("Zip code") 
+					input.admin-input.second(type="number" value="30062")
+		+Btn("Save", "button", "admin-btn")

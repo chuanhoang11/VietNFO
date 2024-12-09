@@ -29,11 +29,11 @@ export default function DatePickerModule() {
             if (dataType == "single") {
                 type = true
             } else
-            if (dataType == "double") {
-                type = false
-            } else {
-                type = true
-            }
+                if (dataType == "double") {
+                    type = false
+                } else {
+                    type = true
+                }
             if (dataMin != "" && dataMin) {
                 if (dataMin == "tomorrow") {
                     minDay = tomorrow
@@ -61,7 +61,7 @@ export default function DatePickerModule() {
                     separator: " - "
                 }
             });
-            $(openTimeItem).on("apply.daterangepicker", function(ev, picker) {
+            $(openTimeItem).on("apply.daterangepicker", function (ev, picker) {
                 if (type) {
                     openTimePickerText.classList.add("disable")
                     openTimePickerInput.value = picker.startDate.format(formatValue);
@@ -73,8 +73,8 @@ export default function DatePickerModule() {
                     // checkValue();
                 } else {
                     openTimePickerText.classList.add("disable")
-                        // $(`input[name="arrivaldate"]`).attr('value', `${picker.startDate.format(formatValue)}`)
-                        // $(`input[name="departuredate"]`).attr('value', `${picker.endDate.format(formatValue)}`)
+                    // $(`input[name="arrivaldate"]`).attr('value', `${picker.startDate.format(formatValue)}`)
+                    // $(`input[name="departuredate"]`).attr('value', `${picker.endDate.format(formatValue)}`)
                     $(openTimePickerText).html(`${picker.startDate.format(formatView)}-${picker.endDate.format(formatView)}`);
                     openTimePickerInput.setAttribute(
                         "data-time",
@@ -88,5 +88,25 @@ export default function DatePickerModule() {
 
         })
     }
+    $('input[name="datetimes"]').daterangepicker({
+        parentEl: '.admin-dropdown-datepicker',
+        autoUpdateInput: false, // Ban đầu không tự động cập nhật
+        singleDatePicker: true,
+        showDropdowns: true,
+        minYear: 1901,
+        autoApply: true,
+        maxYear: parseInt(moment().format('YYYY'), 10),
+        locale: {
+            cancelLabel: 'Clear', // Để placeholder hiển thị sau khi clear
+            format: 'MM/DD/YYYY' // Định dạng ngày
+        }
+    }, function (start, end, label) {
+        $('.daterangepicker .drp-calendar').addClass('admin-datepicker');
+        var years = moment().diff(start, 'years');
+    });
 
+    // Cập nhật input khi chọn
+    $('input[name="datetimes"]').on('apply.daterangepicker', function (ev, picker) {
+        $(this).val(picker.startDate.format('MM/DD/YYYY')); // Thay đổi định dạng tùy ý
+    });
 }

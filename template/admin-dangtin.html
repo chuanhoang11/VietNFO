@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/min/dropzone.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/backdoor.css">
+    <link rel="icon" type="image/png" href="./assets/images/mona.png">
+  </head>
+  <body class="page-home">
+    <div class="hds">
+      <div class="hds-burger"> <span> </span><span> </span><span></span></div><a class="hds-logo" href=""> <img src="./assets/images/logo-white.svg" alt=""/></a>
+    </div>
+    <div class="sbar-overlay"></div>
+    <div class="sbar"> 
+      <div class="sbar-head"> 
+        <div class="sbar-head-flex"><a class="sbar-logo" href=""><img src="./assets/images/logo-white.svg" alt=""/></a>
+          <div class="sbar-close"><i class="far fa-times"></i></div>
+        </div>
+        <div class="sbar-user"> 
+          <div class="sbar-user-ava"> <img src="./assets/images/sbar-user-ava.jpg" alt=""/>
+          </div>
+          <div class="sbar-user-content t-center"> 
+            <p class="sbar-user-name fw-7">Tu Nguyen</p>
+            <p class="sbar-user-des">tu.nguyen@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="sbar-body"> 
+        <div class="sbar-menu"> 
+          <ul> 
+            <li> <a href=""><img src="./assets/images/sbar-menu-1.svg" alt=""/><span class="txt">Dashboard </span></a></li>
+            <li> <a href=""><img src="./assets/images/sbar-menu-2.svg" alt=""/><span class="txt">Profile</span></a></li>
+            <li> <a href=""><img src="./assets/images/sbar-menu-3.svg" alt=""/><span class="txt">Quản lý tin rao vặt</span></a></li>
+            <li> <a href=""><img src="./assets/images/sbar-menu-4.svg" alt=""/><span class="txt">Quản lý quảng cáo</span></a></li>
+            <li> <a href=""><img src="./assets/images/sbar-menu-5.svg" alt=""/><span class="txt">Billing & Payment</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sbar-foot"><a class="sbar-btn" href=""> <img src="./assets/images/ic-home.svg" alt=""/><span class="txt">Back To Homepage</span></a></div>
+    </div>
+    <main class="main-admin">
+      <div class="main-admin-wrapper">
+        <div class="admin-heading">
+          <h1 class="admin-title">Đăng tin rao vặt mới</h1>
+        </div>
+        <div class="admin-form"> 
+          <div class="admin-wrapper">
+            <div class="admin-block">
+              <div class="admin-heading-second t-center">
+                <h2 class="admin-title-second">THÔNG TIN CHUNG</h2>
+              </div>
+              <div class="f-list row layout-first">
+                <div class="f-item col col-4">
+                  <label class="f-label">Chọn loại tin cần đăng</label>
+                  <div class="admin-select">
+                    <select>
+                      <option value="demo">Việc làm</option>
+                      <option value="demo">Sang nhượng kinh doanh</option>
+                      <option value="demo">Event - Sự kiện</option>
+                      <option value="demo">Cho thuê bất động sản</option>
+                      <option value="demo">Bán bất động sản</option>
+                      <option value="demo"> Rao vặt khác</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="f-item col col-8">
+                  <label class="f-label">Tiêu đề tin đăng</label>
+                  <input class="admin-input" value="Tìm người chăm sóc người già">
+                </div>
+                <div class="f-item col col-6">
+                  <label class="f-label">Link URL</label>
+                  <div class="f-copy">
+                    <input class="admin-input" type="text" value="vietinfo.com/my-post-title"><img src="./assets/images/ic-copy.svg" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="admin-block">
+              <div class="admin-heading-second t-center">
+                <h2 class="admin-title-second">THÔNG TIN CHI TIẾT</h2>
+              </div>
+              <div class="f-list row layout-second">
+                <div class="f-item col col-6">
+                  <label class="f-label">Address 1</label>
+                  <input class="admin-input" type="text" placeholder="Street address">
+                </div>
+                <div class="f-item col col-6">
+                  <label class="f-label">Address 2 <span class="fw-4">(optional)</span></label>
+                  <input class="admin-input" type="text" placeholder="Apt, suite, unit, building, floor, etc.">
+                </div>
+                <div class="f-item col col-4">
+                  <label class="f-label">City</label>
+                  <input class="admin-input" type="text" value="Atlanta">
+                </div>
+                <div class="f-item col col-4">
+                  <label class="f-label">State</label>
+                  <div class="admin-select">
+                    <select>
+                      <option value="demo">Georgia</option>
+                      <option value="demo">Georgia</option>
+                      <option value="demo">Georgia</option>
+                      <option value="demo">Georgia</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="f-item col col-4">
+                  <label class="f-label">Zip code</label>
+                  <input class="admin-input" type="number" value="30062">
+                </div>
+                <div class="f-item col">
+                  <label class="f-label">Mô tả chi tiết</label>
+                  <div class="motachitiet"> <img src="./assets/images/img-edit.png" alt=""/>
+                  </div>
+                </div>
+                <div class="f-item col">
+                  <label class="f-label no-clamb">Ngày tin đăng hết hạn - expired <span class="fw-4">(có thể gia hạn thêm thông qua dashboard “quản lý tin rao vặt")</span></label>
+                  <div class="admin-date f-left"> <img src="./assets/images/ic-calendar.svg" alt=""/>
+                    <input class="admin-input" type="text" value="" placeholder="Chọn ngày tháng tin hết hiệu lực" name="datetimes"/>
+                  </div>
+                </div>
+                <div class="f-item col"> 
+                  <label class="f-label">Photos</label>
+                  <div class="f-flex-col">
+                    <div class="dropzone" id="dropzone">
+                      <form action="/upload" id="dropzone-upload">
+                        <div class="dropzone-content"> <img src="./assets/images/ic-upload-pri.svg" alt=""/>
+                          <p class="title">
+                             Kéo thả hình ảnh or <span class="fw-6 c-pri">Chọn và tải lên</span></p>
+                          <p class="des">Hoặc chọn ảnh cũ đã sử dụng lưu trong hệ thống để dùng lại</p>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="dropzone-slider">
+                      <div class="swiper-control dropzone-control"> 
+                        <div class="swiper-control-btn swiper-prev"> <i class="fa-light fa-chevron-left"></i></div>
+                        <div class="swiper-control-btn swiper-next"> <i class="fa-light fa-chevron-right"></i></div>
+                      </div>
+                      <div class="swiper-container"> 
+                        <div class="swiper rows">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide col col-4"> 
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">cover image.jpg</p>
+                                      <p class="dropzone-des">500kb</p>
+                                    </div>
+                                    <div class="dropzone-delete"><img src="./assets/images/ic-delete-2.svg" alt=""/>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide col col-4"> 
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">Uploading...</p>
+                                      <p class="dropzone-des">65%  • 30 seconds remaining</p>
+                                    </div>
+                                    <div class="dropzone-control">
+                                      <div class="dropzone-pause"><img src="./assets/images/ic-pause.svg" alt=""/>
+                                      </div>
+                                      <div class="dropzone-delete"><img src="./assets/images/ic-delete.svg" alt=""/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="dropzone-progress"> <span class="inner"></span></div>
+                                </div>
+                              </div>
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">Uploading...</p>
+                                      <p class="dropzone-des">65%  • 30 seconds remaining</p>
+                                    </div>
+                                    <div class="dropzone-control">
+                                      <div class="dropzone-pause"><img src="./assets/images/ic-pause.svg" alt=""/>
+                                      </div>
+                                      <div class="dropzone-delete"><img src="./assets/images/ic-delete.svg" alt=""/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="dropzone-progress"> <span class="inner"></span></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide col col-4">
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">woman potrait.jpg</p>
+                                      <p class="dropzone-des">500kb</p>
+                                    </div>
+                                    <div class="dropzone-delete"><img src="./assets/images/ic-delete-2.svg" alt=""/>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">woman potrait.jpg</p>
+                                      <p class="dropzone-des">500kb</p>
+                                    </div>
+                                    <div class="dropzone-delete"><img src="./assets/images/ic-delete-2.svg" alt=""/>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide col col-4">
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">woman potrait.jpg</p>
+                                      <p class="dropzone-des">500kb</p>
+                                    </div>
+                                    <div class="dropzone-delete"><img src="./assets/images/ic-delete-2.svg" alt=""/>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">woman potrait.jpg</p>
+                                      <p class="dropzone-des">500kb</p>
+                                    </div>
+                                    <div class="dropzone-delete"><img src="./assets/images/ic-delete-2.svg" alt=""/>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="admin-block"> 
+              <div class="admin-heading-second t-center">
+                <h2 class="admin-title-second">THÔNG TIN LIÊN HỆ</h2>
+              </div>
+              <div class="f-list row --layout-thongtinchung">
+                <div class="f-item col col-4">
+                  <label class="admin-check"> 
+                    <input type="radio" id="check-lienhe" name="check-lienhe" hidden="hidden"/><span class="admin-check-radio"></span>
+                    <div class="admin-user"> 
+                      <p class="name">Tu Nguyen</p>
+                      <p class="des">Email: admin@vietinfo.us</p>
+                      <p class="des">Phone: 0123456789</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="f-item col col-8 flex-center">
+                  <label class="admin-check"> 
+                    <input type="radio" id="check-lienhe" name="check-lienhe" hidden="hidden"/><span class="admin-check-radio"></span><span class="txt c-pri">Thêm thông tin liên lạc khác</span>
+                  </label>
+                </div>
+                <div class="f-item col col-4"> 
+                  <label class="f-label">Name</label>
+                  <input class="admin-input" type="text" placeholder="Your name"/>
+                </div>
+                <div class="f-item col col-4"> 
+                  <label class="f-label">Email</label>
+                  <input class="admin-input" type="text" placeholder="Enter your email"/>
+                </div>
+                <div class="f-item col col-4"> 
+                  <label class="f-label">Phone number</label>
+                  <input class="admin-input" type="number" placeholder="Contact number"/>
+                </div>
+              </div>
+            </div>
+            <button class="btn admin-btn" type="submit"><span class="inner">Đăng bài</span><i></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="ft"> 
+        <div class="container"> 
+          <div class="ft-wrap"> 
+            <div class="ft-head"> 
+              <div class="ft-logo"> <a class="custom-logo-link" href=""><img src="./assets/images/logo.svg" alt=""/></a></div>
+              <div class="t-slogan"><span class="t-text">
+                   Cổng thông tin <span class="fw-7 c-pri">
+                     MIỄN PHÍ </span>dành cho cộng đồng người Việt tại Mỹ</span></div>
+            </div>
+            <div class="ft-nav">
+              <ul class="menu"> 
+                <li><a href="">VIỆC LÀM</a></li>
+                <li><a href="">MUA CỬA TIỆM</a></li>
+                <li><a href="">VIỆT EVENTS</a></li>
+                <li><a href="">THUÊ NHÀ</a></li>
+                <li><a href="">MUA NHÀ</a></li>
+                <li><a href="">RAO VẶT</a></li>
+                <li><a href="">LIÊN HỆ QUẢNG CÁO</a></li>
+              </ul>
+            </div>
+            <div class="ft-sc"> 
+              <div class="social"> 
+                <div class="social-list"> <a class="social-link" href=""> <img src="./assets/images/ic-fb.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-yt.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-ins.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-x.svg" alt=""/></a></div>
+              </div>
+            </div>
+            <div class="ft-panel"> 
+              <div class="ft-list row"> 
+                <div class="col col-4">
+                  <div class="ft-box"> 
+                    <div class="b-inner"> <span class="t-text"> LIÊN HỆ HỢP TÁC</span>
+                      <div class="b-gr"> <a class="t-link" href="">Email:contact@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-4">
+                  <div class="ft-box"> 
+                    <div class="b-inner"> <span class="t-text"> LIÊN HỆ QUẢNG CÁO</span>
+                      <div class="b-gr"> <a class="t-link" href="">Email:ads@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-4">
+                  <div class="ft-box"> 
+                    <div class="b-inner"> <span class="t-text"> HỖ TRỢ KỸ THUẬT</span>
+                      <div class="b-gr"> <a class="t-link" href="">Email:admin@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ft-bank"> 
+              <div class="i-list"><a class="i-link" href=""><img src="./assets/images/icon-bank (1).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (2).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (3).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (4).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (5).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (6).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (7).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (8).svg" alt=""/></a>
+              </div>
+            </div>
+            <div class="ft-bot">
+              <div class="ft-nav"> 
+                <ul class="menu">
+                  <li> <a href="">Privacy Policy</a></li>
+                  <li> <a href="">Terms of Service </a></li>
+                  <li> <a href="">Ads Service Agreement</a></li>
+                </ul>
+              </div><span class="t-text">
+                  Designed by Qixtech - Web Design & Digital Marketing</span><span class="t-text">
+                 Copyright © 2024. VietInfo LLC. All Right Reserved. </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="fixed-side">
+      <div class="fchat"> <a class="i-link" href=""><img src="./assets/images/icon-mess2.svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-mess.svg" alt=""/></a></div>
+      <div class="back-to-top backToTop">
+        <div class="icon fa-solid fa-arrow-up"></div>
+      </div>
+    </div>
+    <script src="./assets/library/jquery/jquery.js"></script>
+    <script src="./assets/library/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/library/aos/aos.js"></script>
+    <script src="./assets/library/splide/splide-auto-scroll.js"></script>
+    <script src="./assets/library/splide/splide.js"></script>
+    <script src="./assets/library/select2/select2.min.js"></script>
+    <script src="./assets/library/gallery/lightgallery-all.min.js"></script>
+    <script src="./assets/library/jquery/jquery-migrate.js"></script>
+    <script src="./assets/library/isotope/isotope.pkgd.min.js"></script>
+    <script src="./assets/library/datetime/moment.min.js"></script>
+    <script src="./assets/library/datetime/daterangepicker.min.js"></script>
+    <script src="./assets/library/smoothscroll/SmoothScroll.min.js"></script>
+    <script src="./assets/library/splitting/splitting.min.js"></script>
+    <script src="./assets/library/fancybox/fancybox.umd.js"></script>
+    <script src="./assets/library/gsap/gsap.min.js"></script>
+    <script src="./assets/library/gsap/ScrollTrigger.min.js"></script>
+    <script src="./assets/library/trimline/jquery.trimLines.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v17.0"></script>
+    <script src="./assets/library/froala_editor/js/froala_editor.min.js"></script>
+    <script src="./assets/library/froala_editor/js/plugins/emoticons.min.js"></script>
+    <script src="./assets/library/froala_editor/js/plugins/align.min.js"></script>
+    <script src="./assets/library/froala_editor/js/plugins/font_family.min.js"></script>
+    <script src="./assets/library/froala_editor/js/plugins/font_size.min.js"></script>
+    <script src="./assets/library/froala_editor/js/plugins/image.min.js"></script>
+    <script src="./assets/library/froala_editor/js/plugins/link.min.js"></script>
+    <script src="./assets/library/froala_editor/js/plugins/lists.min.js"></script>
+    <script src="./assets/library/froala_editor/js/plugins/file.min.js"></script>
+    <script src="./assets/library/froala_editor/js/plugins/table.min.js"></script>
+    <script src="./assets/library/dropzone/dropzone.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

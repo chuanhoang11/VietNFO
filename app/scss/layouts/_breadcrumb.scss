@@ -1,4 +1,9 @@
 .breadcrumb {
+  padding-top: 1.6rem;
+  padding-bottom: 4rem;
+  @include max($mobile){
+    padding-bottom: 3.2rem;
+  }
   &-wrapper {
   }
 
@@ -19,22 +24,19 @@
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    font-weight: 400;
-    color: var(--color-white);
+    font-weight: 600;
     transition: 0.3s ease-in-out;
+    color: var(--color-pri);
     &:not(:first-child) {
       &::before {
         display: inline-block;
-        content: "\f054";
-        font-family: "Font Awesome 5 Pro";
-        vertical-align: middle;
-        position: relative;
+        content: "/";
       }
     }
 
     &:last-child {
-      color: var(--color-white);
       pointer-events: none;
+      color: #373A51;
     }
 
     @include hover {

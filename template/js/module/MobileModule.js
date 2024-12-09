@@ -1,5 +1,7 @@
 export default function MobileModule() {
   const burgerBtn = document.getElementById("hamburger");
+  const burgerBtnSecond = document.getElementById("hamburger-second");
+
 
   const mobile = document.querySelector(".mobile");
   const mobileOverLay = document.querySelector(".mobile-overlay");
@@ -33,6 +35,11 @@ export default function MobileModule() {
 
   if (burgerBtn) {
     burgerBtn.addEventListener("click", () => {
+      HandleOpen();
+    });
+  }
+  if (burgerBtnSecond) {
+    burgerBtnSecond.addEventListener("click", () => {
       HandleOpen();
     });
   }

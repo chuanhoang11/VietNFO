@@ -2737,6 +2737,7 @@ $table-spacing: 1rem; // 10px
     color: #333333;
     transition: 0.4s;
     cursor: pointer;
+    font-weight: 700;
 
     &.active {
       border-color: var(--color-pri);

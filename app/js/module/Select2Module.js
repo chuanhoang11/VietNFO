@@ -11,6 +11,12 @@ export default function Select2Module() {
     $(".re-select-main").select2({
       width: maxWidth,
     });
+    $(".admin-select select").select2(
+      {
+        containerCssClass: "admin-select-container",
+        dropdownCssClass: "admin-select-dropdown"
+      }
+    );
   });
   //   select Custom
   $(document).ready(function () {

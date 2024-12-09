@@ -33,23 +33,35 @@
     0px 0.05rem 0.5rem rgba(183, 183, 183, 0.08);
   //mb hd sticky
   --mb-size-hd-sticky: 5.4rem;
+  --h-sear: 5.6rem;
 
   @media (max-width: 1024px) {
     --pd-sc: 4rem;
     --size-hd: 7.2rem;
+    --h-sear: 11.4rem;
+  }
+
+  // biến admin
+  --sz-hds: 6rem;
+  --w-sbar: 27.8rem;
+  --hd-admin-input:5.6rem;
+
+  @media (max-width: 700px) {
+    --w-sbar: 26.8rem;
   }
 }
 
 //Responsive
 
-$res-tablet: 1023px;
-$res-tablet-min: 1024px;
+$res-tablet: 1024px;
+$res-tablet-min: 1025px;
 $mobile-min: 701px;
 $res-mobile: 1199px; //  cho mobile (≤ 1199px)
 $res-mobile-min: 1200px; //  cho mobile đến tablet (≥ 1200px)
 $mobile: 700px; //  cho mobile nhỏ (≤ 500px)
 $tablet: 768px; //  cho tablet (≤ 768px)
-$tablet-min: 1024px; //  cho tablet lớn (≥ 1024px)
+$tablet-min: 1025px; //  cho tablet lớn (≥ 1024px)
+
 //Distance
 $radius: 0.6rem;
 // cubic

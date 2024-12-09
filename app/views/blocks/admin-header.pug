@@ -1,0 +1,48 @@
+.hds
+	.hds-burger 
+		span 
+		span 
+		span
+	a(href="").hds-logo 
+		+img("logo-white.svg") 
+.sbar-overlay
+.sbar 
+	.sbar-head 
+		.sbar-head-flex
+			a(href="").sbar-logo
+				+img("logo-white.svg") 
+			.sbar-close
+				i.far.fa-times
+		.sbar-user 
+			.sbar-user-ava 
+				+img("sbar-user-ava.jpg")
+			.sbar-user-content.t-center 
+				p.sbar-user-name.fw-7 Tu Nguyen
+				p.sbar-user-des tu.nguyen@gmail.com
+	.sbar-body 
+		.sbar-menu 
+			ul 
+				li 
+					a(href="")
+						+img("sbar-menu-1.svg")
+						span.txt Dashboard 
+				li 
+					a(href="")
+						+img("sbar-menu-2.svg")
+						span.txt Profile
+				li 
+					a(href="")
+						+img("sbar-menu-3.svg")
+						span.txt Quản lý tin rao vặt
+				li 
+					a(href="")
+						+img("sbar-menu-4.svg")
+						span.txt Quản lý quảng cáo
+				li 
+					a(href="")
+						+img("sbar-menu-5.svg")
+						span.txt Billing & Payment
+	.sbar-foot
+		a(href="").sbar-btn 
+			+img("ic-home.svg")
+			span.txt Back To Homepage
