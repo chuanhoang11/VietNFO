@@ -15117,10 +15117,10 @@ body.page-search {
         height: 4.22rem; } }
 
 .qc-faq-cl {
-  --pd:2.4rem; }
+  --pd: 2.4rem; }
   @media screen and (max-width: 768px) {
     .qc-faq-cl {
-      --pd:1.6rem; } }
+      --pd: 1.6rem; } }
 
 .qc-faq-item {
   background-color: #FCFCFD;
@@ -15198,6 +15198,183 @@ body.page-search {
       font-weight: 700; }
     .qc-faq-body ul li a {
       color: var(--color-pri); }
+
+.adminDate {
+  position: relative; }
+  .adminDate-ip {
+    position: relative; }
+    .adminDate-ip img {
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      left: 1.6rem;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      pointer-events: none; }
+    .adminDate-ip input {
+      height: 5rem;
+      border-radius: 0.5rem;
+      border: 0.1rem solid var(--border);
+      width: 100%;
+      padding-left: 5rem; }
+      .adminDate-ip input:focus {
+        outline: none; }
+  .adminDate-slide {
+    position: relative; }
+    .adminDate-slide-item {
+      font-weight: 600;
+      text-align: center;
+      color: #344054; }
+      .adminDate-slide-item input {
+        display: none; }
+    .adminDate-slide .swiper-control-btn {
+      width: 3.6rem;
+      height: 3.6rem; }
+      .adminDate-slide .swiper-control-btn.swiper-prev {
+        left: 0; }
+      .adminDate-slide .swiper-control-btn.swiper-next {
+        right: 0; }
+  .adminDate-note {
+    text-align: center;
+    color: #1D2939;
+    margin: 2rem 0;
+    font-weight: 500; }
+  .adminDate-list {
+    --cg: .8rem;
+    --rg: .8rem; }
+  .adminDate-item {
+    width: 25%;
+    cursor: pointer; }
+    @media screen and (max-width: 1200px) {
+      .adminDate-item {
+        width: calc(100% / 3); } }
+    @media screen and (max-width: 500px) {
+      .adminDate-item {
+        font-size: 1.2rem;
+        width: 50%; } }
+    .adminDate-item .inner {
+      padding: .8rem 1rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-radius: .5rem;
+      border: 0.1rem solid var(--border);
+      color: #344054;
+      font-weight: 600;
+      gap: 0.8rem; }
+      .adminDate-item .inner::before {
+        content: "";
+        display: block;
+        width: .8rem;
+        height: .8rem;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        border-radius: 100rem;
+        background-color: #12B76A; }
+    .adminDate-item input:checked ~ .inner {
+      background-color: #12B76A;
+      color: white; }
+      .adminDate-item input:checked ~ .inner::before {
+        border: 0.1rem solid white; }
+    .adminDate-item.disabled {
+      pointer-events: none; }
+      .adminDate-item.disabled .inner {
+        background-color: #D0D5DD; }
+        .adminDate-item.disabled .inner::before {
+          background-color: #B42318; }
+  .adminDate-popup {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    -webkit-box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+    box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0; }
+    .adminDate-popup.open {
+      opacity: 1;
+      pointer-events: visible; }
+  .adminDate-bottom {
+    border-top: 0.1rem solid var(--border);
+    margin-top: 2rem;
+    padding-top: 2rem; }
+  .adminDate-result {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 1rem; }
+    .adminDate-result .txt {
+      font-weight: 500;
+      font-size: 1.4rem;
+      margin-top: 0.5em;
+      color: #1D2939;
+      white-space: nowrap; }
+    .adminDate-result-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: .8rem; }
+    .adminDate-result-item {
+      padding: 1rem 1.4rem;
+      border: 0.1rem solid var(--border);
+      border-radius: .5rem; }
+      @media screen and (max-width: 500px) {
+        .adminDate-result-item {
+          font-size: 1.4rem; } }
+  .adminDate-button {
+    margin-top: 2.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem; }
+  .adminDate-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1rem 1.6rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    cursor: pointer;
+    -webkit-transition: 0.4s;
+    transition: 0.4s; }
+    .adminDate-btn.cancel {
+      background-color: white;
+      border: 0.1rem solid var(--border);
+      margin-left: auto; }
+      @media (hover: hover) {
+        .adminDate-btn.cancel:hover {
+          background-color: #ffcdcd;
+          color: red;
+          border-color: red; } }
+    .adminDate-btn.save {
+      background-color: var(--color-pri);
+      color: white; }
+      @media (hover: hover) {
+        .adminDate-btn.save:hover {
+          background-color: #12B76A; } }
 
 .admin-dashboard .admin-block {
   padding: 0; }
