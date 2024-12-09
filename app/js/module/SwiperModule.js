@@ -143,4 +143,13 @@ export default function SwiperModule() {
     loop: true,
     effect: "slide",
   });
+
+  functionSlider(".adminDate-slide", {
+    speed: 1000,
+    slidesPerView:"auto",
+    initialSlide: 0,
+    centeredSlides: false,
+    loop: false,
+    effect: "slide",
+  });
 }
