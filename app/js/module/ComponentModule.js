@@ -451,16 +451,102 @@ export default function ComponentModule() {
 
 
   const btnDanhSach = document.querySelector(".sear-btn")
-  if(btnDanhSach) {
+  if (btnDanhSach) {
     btnDanhSach.addEventListener("click", () => {
       const list = document.querySelector("#map-block")
       const txt = btnDanhSach.querySelector(".txt")
       list.classList.toggle("close")
-      if(list.classList.contains("close")) {
+      if (list.classList.contains("close")) {
         txt.innerHTML = "Bản đồ"
       } else {
         txt.innerHTML = "Danh sách"
       }
     })
   }
+
+  $(document).ready(function () {
+    const adminDate = $('.adminDate');
+    const adminDatePopup = $('.adminDate-popup');
+    const adminDateIp = $('.adminDate-ip input');
+    const adminDateResultList = $('.adminDate-result-list');
+    const monthCheckboxes = $('.adminDate-item input[type="checkbox"]');
+
+    // Mở popup
+    adminDate.on('click', function () {
+      console.log('Popup opened'); // Debug log
+      adminDatePopup.addClass('open');
+    });
+
+    // Đóng popup khi bấm Cancel
+    $('.adminDate-btn.cancel').on('click', function (e) {
+      e.stopPropagation();
+      adminDatePopup.removeClass('open');
+      // adminDateResultList.empty(); // Xóa danh sách các tháng đã chọn
+      // monthCheckboxes.prop('checked', false); // Bỏ chọn tất cả checkbox
+    });
+
+    // Xử lý chọn tháng
+    monthCheckboxes.on('change', function () {
+      const monthName = $(this).val(); // Lấy tên tháng
+      const year = $('.swiper-slide-active input').val(); // Lấy năm active
+
+      if ($(this).is(':checked')) {
+        // Thêm tháng vào danh sách kết quả
+        const resultItem = `
+                <div class="adminDate-result-item">
+                    <input type="hidden" value="${year}-${monthName}" />
+                    <span>${monthName} (${year})</span>
+                </div>`;
+        adminDateResultList.append(resultItem);
+      } else {
+        // Xóa tháng khỏi danh sách kết quả
+        adminDateResultList.find(`input[value="${year}-${monthName}"]`).parent().remove();
+      }
+    });
+
+    // Lưu giá trị khi bấm Save
+    $('.adminDate-btn.save').on('click', function (e) {
+      e.stopPropagation();
+      let selectedDates = [];
+      adminDateResultList.find('input').each(function () {
+        selectedDates.push($(this).val());
+      });
+
+      // Đưa giá trị vào input chính
+      adminDateIp.val(selectedDates.join(', '));
+
+      // Đóng popup
+      adminDatePopup.removeClass('open');
+    });
+    // Đóng popup khi bấm ra ngoài
+    $(document).on('click', function (e) {
+      if (!$(e.target).closest('.adminDate').length) {
+        adminDatePopup.removeClass('open');
+      }
+    });
+
+    const swiper = new Swiper('.adminDate .swiper', {
+      speed: 1000,
+      slidesPerView: "auto",
+      initialSlide: 0,
+      centeredSlides: false,
+      loop: false,
+      effect: "slide",
+      navigation:{
+        prevEl:".adminDate-slide .swiper-prev",
+        nextEl:".adminDate-slide .swiper-next",
+      },
+      on: {
+        slideChange: function () {
+          console.log('Year changed to:', $('.swiper-slide-active input').val());
+
+          // Bỏ chọn các checkbox
+          monthCheckboxes.prop('checked', false);
+
+          // Làm mới danh sách kết quả
+          adminDateResultList.empty();
+        }
+      }
+    });
+  });
 }

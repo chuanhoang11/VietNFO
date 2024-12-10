@@ -1411,13 +1411,16 @@ body.page-search {
 }
 
 .b-ip-select.b-admin {
-
+  &.read-only {
+    .selectCusValue,
+    .selectTwoValue {
+      background: #f2f4f7;
+    }
+  }
   .selectCusValue,
   .selectTwoValue {
     flex-direction: row-reverse;
     justify-content: space-between;
-    background: #f2f4f7;
-
     .icon-arrow {
       color: #667085;
       font-size: 1.2rem;

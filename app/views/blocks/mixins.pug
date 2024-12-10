@@ -1091,3 +1091,101 @@ mixin PopupSideBar()
                   +img("ic-x.svg") 
       +proBannerSecond("pro-bner-sidebar.png")
 
+mixin AdminDate()
+   .adminDate 
+      .adminDate-popup 
+         .adminDate-slide 
+            +SwiperControl("posi plus")
+            .swiper 
+               .swiper-wrapper 
+                  -
+                     var years = [
+                        {
+                           name:"2020"
+                        },
+                        {
+                           name:"2021"
+                        },
+                        {
+                           name:"2022"
+                        },
+                        {
+                           name:"2023"
+                        },
+                        {
+                           name:"2024"
+                        },
+                     ] 
+                  each year in years
+                     .swiper-slide
+                        .adminDate-slide-item   
+                           input(type="text" value=`${year.name}`)
+                           p.txt=year.name
+         .adminDate-note Chọn một hoặc nhiều tháng bạn muốn hiện quảng cáo
+         .adminDate-list.row 
+            -
+               var months = [
+                  {
+                     name:"January",
+                     status:""
+                  },
+                  {
+                     name:"February",
+                     status:""
+                  },
+                  {
+                     name:"March",
+                     status:""
+                  },
+                  {
+                     name:"April",
+                     status:"disabled"
+                  },
+                  {
+                     name:"May",
+                     status:""
+                  },
+                  {
+                     name:"June",
+                     status:""
+                  },
+                  {
+                     name:"July",
+                     status:""
+                  },
+                  {
+                     name:"August",
+                     status:""
+                  },
+                  {
+                     name:"September",
+                     status:""
+                  },
+                  {
+                     name:"October",
+                     status:""
+                  },
+                  {
+                     name:"November",
+                     status:""
+                  },
+                  {
+                     name:"December",
+                     status:""
+                  },
+               ]
+            each month in months
+               label.adminDate-item.col(class=`${month.status}`)
+                  input(type="checkbox" value=`${month.name}` hidden)
+                  .inner
+                     span.txt=month.name
+         .adminDate-bottom 
+            .adminDate-result 
+               span.txt Thời gian quảng cáo:
+               .adminDate-result-list
+            .adminDate-button
+               .adminDate-btn.cancel Cancel
+               .adminDate-btn.save Save
+      .adminDate-ip
+         +img("ic-calendar.svg")
+         input(type="text" placeholder="Chọn một hoặc nhiều tháng bạn muốn hiện quảng cáo")
