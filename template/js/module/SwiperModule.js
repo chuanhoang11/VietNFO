@@ -144,12 +144,13 @@ export default function SwiperModule() {
     effect: "slide",
   });
 
-  functionSlider(".adminDate-slide", {
-    speed: 1000,
-    slidesPerView:"auto",
-    initialSlide: 0,
-    centeredSlides: false,
-    loop: false,
-    effect: "slide",
-  });
+  // functionSlider(".adminDate-slide", {
+  //   speed: 1000,
+  //   slidesPerView:"auto",
+  //   initialSlide: 0,
+  //   centeredSlides: false,
+  //   loop: false,
+  //   effect: "slide",
+  // });
+  
 }

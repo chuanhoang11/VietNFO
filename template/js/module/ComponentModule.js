@@ -524,5 +524,29 @@ export default function ComponentModule() {
         adminDatePopup.removeClass('open');
       }
     });
+
+    const swiper = new Swiper('.adminDate .swiper', {
+      speed: 1000,
+      slidesPerView: "auto",
+      initialSlide: 0,
+      centeredSlides: false,
+      loop: false,
+      effect: "slide",
+      navigation:{
+        prevEl:".adminDate-slide .swiper-prev",
+        nextEl:".adminDate-slide .swiper-next",
+      },
+      on: {
+        slideChange: function () {
+          console.log('Year changed to:', $('.swiper-slide-active input').val());
+
+          // Bỏ chọn các checkbox
+          monthCheckboxes.prop('checked', false);
+
+          // Làm mới danh sách kết quả
+          adminDateResultList.empty();
+        }
+      }
+    });
   });
 }
