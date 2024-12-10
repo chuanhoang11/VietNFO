@@ -98,40 +98,6 @@
                 </div>
               </div>
             </div>
-            <div class="admin-block"> 
-              <div class="admin-heading-second t-center">
-                <h2 class="admin-title-second">THÔNG TIN LIÊN HỆ</h2>
-              </div>
-              <div class="f-list row --layout-thongtinchung">
-                <div class="f-item col col-4">
-                  <label class="admin-check"> 
-                    <input type="radio" id="check-lienhe" name="check-lienhe" hidden="hidden"/><span class="admin-check-radio"></span>
-                    <div class="admin-user"> 
-                      <p class="name">Tu Nguyen</p>
-                      <p class="des">Email: admin@vietinfo.us</p>
-                      <p class="des">Phone: 0123456789</p>
-                    </div>
-                  </label>
-                </div>
-                <div class="f-item col col-8 flex-center">
-                  <label class="admin-check"> 
-                    <input type="radio" id="check-lienhe" name="check-lienhe" hidden="hidden"/><span class="admin-check-radio"></span><span class="txt c-pri">Thêm thông tin liên lạc khác</span>
-                  </label>
-                </div>
-                <div class="f-item col col-4"> 
-                  <label class="f-label">Name</label>
-                  <input class="admin-input" type="text" placeholder="Your name"/>
-                </div>
-                <div class="f-item col col-4"> 
-                  <label class="f-label">Email</label>
-                  <input class="admin-input" type="text" placeholder="Enter your email"/>
-                </div>
-                <div class="f-item col col-4"> 
-                  <label class="f-label">Phone number</label>
-                  <input class="admin-input" type="number" placeholder="Contact number"/>
-                </div>
-              </div>
-            </div>
             <div class="admin-block">
               <div class="admin-heading-second t-center">
                 <h2 class="admin-title-second">THÔNG TIN CHI TIẾT</h2>
@@ -208,6 +174,182 @@
                   <div class="admin-date f-left"> <img src="./assets/images/ic-calendar.svg" alt=""/>
                     <input class="admin-input" type="text" value="" placeholder="Chọn ngày tháng tin hết hiệu lực" name="datetimes">
                   </div>
+                </div>
+                <div class="f-item col"> 
+                  <label class="f-label">Photos</label>
+                  <div class="f-flex-col">
+                    <div class="dropzone" id="dropzone">
+                      <form action="/upload" id="dropzone-upload">
+                        <div class="dropzone-content"> <img src="./assets/images/ic-upload-pri.svg" alt=""/>
+                          <p class="title">
+                             Kéo thả hình ảnh or <span class="fw-6 c-pri">Chọn và tải lên</span></p>
+                          <p class="des">Hoặc chọn ảnh cũ đã sử dụng lưu trong hệ thống để dùng lại</p>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="dropzone-slider">
+                      <div class="swiper-control dropzone-control"> 
+                        <div class="swiper-control-btn swiper-prev"> <i class="fa-light fa-chevron-left"></i></div>
+                        <div class="swiper-control-btn swiper-next"> <i class="fa-light fa-chevron-right"></i></div>
+                      </div>
+                      <div class="swiper-container"> 
+                        <div class="swiper rows">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide col col-4"> 
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">cover image.jpg</p>
+                                      <p class="dropzone-des">500kb</p>
+                                    </div>
+                                    <div class="dropzone-delete"><img src="./assets/images/ic-delete-2.svg" alt=""/>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide col col-4"> 
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">Uploading...</p>
+                                      <p class="dropzone-des">65%  • 30 seconds remaining</p>
+                                    </div>
+                                    <div class="dropzone-control">
+                                      <div class="dropzone-pause"><img src="./assets/images/ic-pause.svg" alt=""/>
+                                      </div>
+                                      <div class="dropzone-delete"><img src="./assets/images/ic-delete.svg" alt=""/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="dropzone-progress"> <span class="inner"></span></div>
+                                </div>
+                              </div>
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">Uploading...</p>
+                                      <p class="dropzone-des">65%  • 30 seconds remaining</p>
+                                    </div>
+                                    <div class="dropzone-control">
+                                      <div class="dropzone-pause"><img src="./assets/images/ic-pause.svg" alt=""/>
+                                      </div>
+                                      <div class="dropzone-delete"><img src="./assets/images/ic-delete.svg" alt=""/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="dropzone-progress"> <span class="inner"></span></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide col col-4">
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">woman potrait.jpg</p>
+                                      <p class="dropzone-des">500kb</p>
+                                    </div>
+                                    <div class="dropzone-delete"><img src="./assets/images/ic-delete-2.svg" alt=""/>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">woman potrait.jpg</p>
+                                      <p class="dropzone-des">500kb</p>
+                                    </div>
+                                    <div class="dropzone-delete"><img src="./assets/images/ic-delete-2.svg" alt=""/>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide col col-4">
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">woman potrait.jpg</p>
+                                      <p class="dropzone-des">500kb</p>
+                                    </div>
+                                    <div class="dropzone-delete"><img src="./assets/images/ic-delete-2.svg" alt=""/>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="dropzone-wr">
+                                <div class="dropzone-img"> <img src="./assets/images/dropzone-img.jpg" alt=""/>
+                                </div>
+                                <div class="dropzone-ct"> 
+                                  <div class="dropzone-top"> 
+                                    <div class="content"> 
+                                      <p class="dropzone-title fw-6">woman potrait.jpg</p>
+                                      <p class="dropzone-des">500kb</p>
+                                    </div>
+                                    <div class="dropzone-delete"><img src="./assets/images/ic-delete-2.svg" alt=""/>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="admin-block"> 
+              <div class="admin-heading-second t-center">
+                <h2 class="admin-title-second">THÔNG TIN LIÊN HỆ</h2>
+              </div>
+              <div class="f-list row --layout-thongtinchung">
+                <div class="f-item col col-4">
+                  <label class="admin-check"> 
+                    <input type="radio" id="check-lienhe" name="check-lienhe" hidden="hidden"/><span class="admin-check-radio"></span>
+                    <div class="admin-user"> 
+                      <p class="name">Tu Nguyen</p>
+                      <p class="des">Email: admin@vietinfo.us</p>
+                      <p class="des">Phone: 0123456789</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="f-item col col-8 flex-center">
+                  <label class="admin-check"> 
+                    <input type="radio" id="check-lienhe" name="check-lienhe" hidden="hidden"/><span class="admin-check-radio"></span><span class="txt c-pri">Thêm thông tin liên lạc khác</span>
+                  </label>
+                </div>
+                <div class="f-item col col-4"> 
+                  <label class="f-label">Name</label>
+                  <input class="admin-input" type="text" placeholder="Your name"/>
+                </div>
+                <div class="f-item col col-4"> 
+                  <label class="f-label">Email</label>
+                  <input class="admin-input" type="text" placeholder="Enter your email"/>
+                </div>
+                <div class="f-item col col-4"> 
+                  <label class="f-label">Phone number</label>
+                  <input class="admin-input" type="number" placeholder="Contact number"/>
                 </div>
               </div>
             </div>

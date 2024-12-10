@@ -7,7 +7,7 @@
   z-index: 50;
   background: var(--color-white);
   --size-hd-b: 4.8rem;
-  --size-hd-t: 9.2rem;
+  --size-hd-t: 7.8rem;
 
   &.sticky {
     @include max(1024px) {

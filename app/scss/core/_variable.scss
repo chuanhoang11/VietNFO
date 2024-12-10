@@ -1,5 +1,5 @@
 :root {
-  --size-hd: 14rem;
+  --size-hd: 12.6rem;
   --color-pri: #004dd1;
   --color-sec: #003794;
   --color-tt: #1d2939;
@@ -32,12 +32,12 @@
   --shd: 0px 0.5rem 1rem rgba(183, 183, 183, 0.08),
     0px 0.05rem 0.5rem rgba(183, 183, 183, 0.08);
   //mb hd sticky
-  --mb-size-hd-sticky: 5.4rem;
+  --mb-size-hd-sticky: 7.8rem;
   --h-sear: 5.6rem;
 
   @media (max-width: 1024px) {
     --pd-sc: 4rem;
-    --size-hd: 7.2rem;
+    --size-hd: 7.8rem;
     --h-sear: 11.4rem;
   }
 

@@ -46,7 +46,7 @@ block container
 						.f-copy
 							input.admin-input(type="text" value="vietinfo.com/my-post-title")
 							+img("ic-copy.svg")
-			+ThongTinLienHe()
+			
 			.admin-block
 				.admin-heading-second.t-center
 						h2.admin-title-second THÔNG TIN CHI TIẾT
@@ -116,4 +116,8 @@ block container
 						.admin-date.f-left 
 							+img("ic-calendar.svg")
 							input.admin-input(type="text" value="" placeholder="Chọn ngày tháng tin hết hiệu lực" name="datetimes")
+					.f-item.col 
+						+AdminLabel("Photos")
+						+DropZone()
+			+ThongTinLienHe()
 			+Btn("Đăng bài", "button", "admin-btn")
