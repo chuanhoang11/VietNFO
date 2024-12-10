@@ -1,3 +1,10 @@
+.terms-page {
+  .breadcrumb {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+}
+
 .terms-banner {
   position: relative;
 }
@@ -130,9 +137,11 @@
   }
 }
 .seciton-content {
-  padding: 4.2rem 0;
+  padding-top: 4.2rem;
+  padding-bottom: 4.2rem;
   @include max($res-mobile) {
-    padding: 3.2rem 2rem;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
   }
 }
 .terms-content {

@@ -10118,6 +10118,10 @@ table .status {
     width: 100%;
     display: block; }
 
+.terms-page .breadcrumb {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem; }
+
 .terms-banner {
   position: relative; }
 
@@ -10271,10 +10275,12 @@ table .status {
           max-width: 25.5rem; } }
 
 .seciton-content {
-  padding: 4.2rem 0; }
+  padding-top: 4.2rem;
+  padding-bottom: 4.2rem; }
   @media screen and (max-width: 1199px) {
     .seciton-content {
-      padding: 3.2rem 2rem; } }
+      padding-top: 3.2rem;
+      padding-bottom: 3.2rem; } }
 
 .terms-box-list {
   display: -webkit-box;
