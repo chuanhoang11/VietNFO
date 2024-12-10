@@ -12341,7 +12341,7 @@ body.page-search {
     @media only screen and (max-width: 800px) {
       .home-bn-tt {
         font-size: 4rem; } }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 700px) {
       .home-bn-tt {
         text-align: center; } }
   .home-bn-srch-box {
@@ -12355,6 +12355,9 @@ body.page-search {
     @media screen and (max-width: 1200px) {
       .home-bn-srch-box {
         --w: 15rem; } }
+    @media screen and (max-width: 700px) {
+      .home-bn-srch-box {
+        margin: 0 auto; } }
     .home-bn-srch-box .sl {
       width: var(--w);
       border: 0.1rem solid var(--border);
@@ -12486,7 +12489,7 @@ body.page-search {
     @media screen and (min-width: 701px) {
       .home-bn-ctn {
         padding-left: 6.8rem; } }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 700px) {
       .home-bn-ctn {
         padding: 6.4rem 0; } }
 
@@ -13362,7 +13365,8 @@ body.page-search {
   aspect-ratio: 320/270;
   min-height: 20rem;
   overflow: hidden;
-  border-radius: 0.5rem; }
+  border-radius: 0.5rem;
+  width: 100%; }
   .popdt-map .iframe iframe {
     height: 100%;
     width: 100%;
@@ -14548,10 +14552,6 @@ body.page-search {
 .popdt-main .popdt-slider .swiper {
   padding-bottom: 0; }
 
-@media screen and (min-width: 1201px) {
-  .popdt .container {
-    padding: 0 1.5rem; } }
-
 @media screen and (max-width: 1200px) {
   .popdt-slider.slider-three .swiper-slide {
     width: 50%; }
@@ -14616,19 +14616,29 @@ body.page-search {
   display: -ms-flexbox;
   display: flex;
   gap: 2.4rem;
-  margin-bottom: 2.4rem; }
+  margin-bottom: 2.4rem;
+  position: relative;
+  height: 3.819rem; }
   .sign-ctrl-it {
     font-size: 2.4rem;
     border-bottom: 0.1rem solid var(--border);
     color: #333333;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
     cursor: pointer;
-    font-weight: 700; }
+    font-weight: 400;
+    position: absolute; }
     .sign-ctrl-it.active {
       border-color: var(--color-pri);
       color: var(--color-pri);
-      pointer-events: none; }
+      pointer-events: none;
+      -webkit-text-stroke: 1px var(--color-pri); }
+    .sign-ctrl-it:nth-child(1) {
+      left: 0;
+      bottom: 0; }
+    .sign-ctrl-it:nth-child(2) {
+      left: 15rem;
+      bottom: 0; }
 
 .sign-note {
   text-align: center;
