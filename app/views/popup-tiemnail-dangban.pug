@@ -390,37 +390,72 @@ block container
                      .swiper-container 
                         .swiper.rows
                            .swiper-wrapper 
-                              each val,index in Array((5))
+                              - 
+                                 var proArr = [
+                                    {
+                                       img: "pro-1.jpg",
+                                       time: "2 ngày trước",
+                                       type: "Tiệm nail",
+                                       price: "$500,000",
+                                       tag: "Thương lượng",
+                                       note: [
+                                          "6 tables",
+                                          "6 chairs",
+                                          "11,300 sqft"
+                                       ],
+                                       rent: "$1,500",
+                                       income: "$1,000,000",
+                                       address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                    },
+                                    {
+                                       img: "pro-1.jpg",
+                                       time: "2 ngày trước",
+                                       type: "Tiệm nail",
+                                       price: "$500,000",
+                                       tag: "Thương lượng",
+                                       note: [
+                                          "6 tables",
+                                          "6 chairs",
+                                          "11,300 sqft"
+                                       ],
+                                       rent: "$1,500",
+                                       income: "$1,000,000",
+                                       address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                    },
+                                    {
+                                       img: "pro-1.jpg",
+                                       time: "2 ngày trước",
+                                       type: "Tiệm nail",
+                                       price: "$500,000",
+                                       tag: "Thương lượng",
+                                       note: [
+                                          "6 tables",
+                                          "6 chairs",
+                                          "11,300 sqft"
+                                       ],
+                                       rent: "$1,500",
+                                       income: "$1,000,000",
+                                       address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                    },
+                                    {
+                                       img: "pro-1.jpg",
+                                       time: "2 ngày trước",
+                                       type: "Tiệm nail",
+                                       price: "$500,000",
+                                       tag: "Thương lượng",
+                                       note: [
+                                          "6 tables",
+                                          "6 chairs",
+                                          "11,300 sqft"
+                                       ],
+                                       rent: "$1,500",
+                                       income: "$1,000,000",
+                                       address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                    },
+                                 ]
+                              each item in proArr   
                                  .swiper-slide.col
-                                    .pro-wr 
-                                       .pro-img 
-                                          .pro-time
-                                             span.txt 2 ngày trước
-                                          .pro-type
-                                             span.txt Tiệm nail
-                                          a(href="#").inner 
-                                             +img("pro-1.jpg")
-                                       .pro-content
-                                          .pro-top 
-                                             h3.pro-name $500,000
-                                             .pro-tag Thương lượng
-                                          .pro-note
-                                             .pro-note-item 
-                                                   span.txt.fw-5.c-txt-2 6 tables
-                                             .pro-note-item 
-                                                   span.txt.fw-5.c-txt-2 6 chairs
-                                             .pro-note-item 
-                                                   span.txt.fw-5.c-txt-2 11,300 sqft
-                                          .pro-note
-                                             .pro-note-item 
-                                                span.txt.fw-5 Rent: 
-                                                   span.fw-6.c-txt-3 $1,500
-                                                   span(style="font-size: .8em") /month
-                                             .pro-note-item 
-                                                span.txt.fw-5 Income: 
-                                                   span.fw-6.c-txt-3 $1,000
-                                                   span(style="font-size: .8em") /year
-                                          .pro-des 471 Tam Oshanter Dr SE, Marietta, GA, 30067
+                                    +proItem(item)
             .popdt-side.col 
                +PopupSideBar()
       +footer()

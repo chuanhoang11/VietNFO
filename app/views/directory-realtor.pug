@@ -6,35 +6,11 @@ block vars
 
 block container 
    +breadCrumb(["Luật sư Việt"])
-   section.sec-home-hero 
-      .home-hero.ss-pd
-         .container 
-            .home-hero 
-               .home-hero-tags 
-                  span.home-hero-tag Sponsored
-               .home-hero-left
-                  .bg   
-                     +img("hero-dec.png")
-                  .home-hero-ctn    
-                     h3.home-hero-tt Trải nghiệm xứng tầm
-                     p.home-hero-des Nhà phát triển bất động sản hàng hiệu
-                     .home-hero-bot 
-                        +Btn("Khám phá ngay","")
-                        .social 
-                           .social-list 
-                              a(href="").social-link 
-                                 +img("ic-fb.svg") 
-                              a(href="").social-link 
-                                 +img("ic-yt.svg") 
-                              a(href="").social-link 
-                                 +img("ic-ins.svg") 
-                              a(href="").social-link 
-                                 +img("ic-x.svg")
-               .home-hero-right
-                  +img("hero-img.jpg")
    section.sec-direc-data 
-      .direc-data.ss-pd
+      .direc-data.ss-pd-b
          .container 
+            .mb-24
+               +HomeHeroSecond()
             .head-sc.mb-48
                +title("Realtor - chuyên gia bất động sản", "Directory Realtor người Việt", "dcor")
             .direc-table-wrapper 

@@ -384,29 +384,84 @@ block container
                      .swiper-container 
                         .swiper.rows
                            .swiper-wrapper 
-                              each val,index in Array((5))
+                              - 
+                                 var proArrThird = [
+                                    {
+                                       img: "pro-9.jpg",
+                                       time: "2 ngày trước",
+                                       type: "Thương mại",
+                                       name: "ABC Plaza",
+                                       note: [
+                                          {
+                                             name: "$24.00 - $25.00 SF/YR",
+                                          },
+                                          {
+                                             name: "150 - 2000 sqft",
+                                          },
+                                          {
+                                             name: "Built in 2018"
+                                          },
+                                       ],
+                                       address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                    },
+                                    {
+                                       img: "pro-9.jpg",
+                                       time: "2 ngày trước",
+                                       type: "Thương mại",
+                                       name: "ABC Plaza",
+                                       note: [
+                                          {
+                                             name: "$24.00 - $25.00 SF/YR",
+                                          },
+                                          {
+                                             name: "150 - 2000 sqft",
+                                          },
+                                          {
+                                             name: "Built in 2018"
+                                          },
+                                       ],
+                                       address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                    },
+                                    {
+                                       img: "pro-9.jpg",
+                                       time: "2 ngày trước",
+                                       type: "Thương mại",
+                                       name: "ABC Plaza",
+                                       note: [
+                                          {
+                                             name: "$24.00 - $25.00 SF/YR",
+                                          },
+                                          {
+                                             name: "150 - 2000 sqft",
+                                          },
+                                          {
+                                             name: "Built in 2018"
+                                          },
+                                       ],
+                                       address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                    },
+                                    {
+                                       img: "pro-9.jpg",
+                                       time: "2 ngày trước",
+                                       type: "Thương mại",
+                                       name: "ABC Plaza",
+                                       note: [
+                                          {
+                                             name: "$24.00 - $25.00 SF/YR",
+                                          },
+                                          {
+                                             name: "150 - 2000 sqft",
+                                          },
+                                          {
+                                             name: "Built in 2018"
+                                          },
+                                       ],
+                                       address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                    },
+                                 ]
+                              each item in proArrThird   
                                  .swiper-slide.col
-                                    .pro-wr
-                                       .pro-img 
-                                          .pro-time 
-                                             span.txt 2 ngày trước
-                                          .pro-type 
-                                             span.txt Nhà ở
-                                          a(href="#").inner 
-                                             +img("pro-9.jpg")
-                                       .pro-content
-                                          h3.pro-name ABC Plaza
-                                          .pro-note
-                                             .pro-note-item 
-                                                .pro-li.fw-6.c-txt-2 
-                                                   span.txt $2,500,000
-                                             .pro-note-item 
-                                                .pro-li.fw-6.c-txt-2 
-                                                   span.txt 20,000 SF
-                                             .pro-note-item 
-                                                .pro-li.fw-6.c-txt-2 
-                                                   span.txt Built in 2018
-                                          .pro-des 471 Tam Oshanter Dr SE, Marietta, GA, 30067
+                                    +proItem2(item)
             .popdt-side.col 
                +PopupSideBar()
       +footer()

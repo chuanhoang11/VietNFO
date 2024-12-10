@@ -249,30 +249,36 @@ block container
                                  .swiper-slide.col 
                                     .wrapper 
                                        .row
-                                          each vals,index in Array(3)
+                                          - 
+                                             var proArrFive = [
+                                                {
+                                                   img: "pro-1-1.jpg",
+                                                   name: "Giải pickeball",
+                                                   des: "Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai) Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai)",
+                                                   address: "9185 Old Southwick Pass, Johns Creek, GA 30067 (Nhà thờ Việt Nam)",
+                                                   time: "Sept 14 – 16, 2024",
+                                                   views: "1000"
+                                                },
+                                                {
+                                                   img: "pro-1-1.jpg",
+                                                   name: "Giải pickeball",
+                                                   des: "Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai) Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai)",
+                                                   address: "9185 Old Southwick Pass, Johns Creek, GA 30067 (Nhà thờ Việt Nam)",
+                                                   time: "Sept 14 – 16, 2024",
+                                                   views: "1000"
+                                                },
+                                                {
+                                                   img: "pro-1-1.jpg",
+                                                   name: "Giải pickeball",
+                                                   des: "Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai) Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Mai)",
+                                                   address: "9185 Old Southwick Pass, Johns Creek, GA 30067 (Nhà thờ Việt Nam)",
+                                                   time: "Sept 14 – 16, 2024",
+                                                   views: "1000"
+                                                },
+                                             ]
+                                          each item in proArrFive
                                              .pro-item.col
-                                                .pro-wr.third
-                                                   .pro-img 
-                                                      .inner 
-                                                         +img("pro-1-1.jpg")
-                                                   .pro-content 
-                                                      h3.pro-name Hội chợ mùa thu
-                                                      p.pro-des Theo Ban tổ chức, Hội chợ mùa Thu Hoàng Mai năm 2024 sẽ được tổ chức từ ngày 4 đến 8/10 tại khu vực Hồ Đền Lừ (phường Hoàng Văn Thụ, quận Hoàng Ma
-                                                      ul.pro-ul 
-                                                         li 
-                                                            .pro-li.fw-5
-                                                               +img('ic-pro-2.svg')
-                                                               span.txt 9185 Old Southwick Pass, Johns Creek, GA (Nhà thờ Việt Nam)
-                                                         li 
-                                                            .pro-note 
-                                                               .pro-note-item 
-                                                                  .pro-li.fw-5
-                                                                     +img('ic-pro-6.svg')
-                                                                     span.txt Sept 14 – 16, 2024
-                                                               .pro-note-item 
-                                                                  .pro-li.fw-5
-                                                                     +img('ic-pro-4.svg')
-                                                                     span.txt 1000
+                                                +proItemThird(item)
                         +pagination
                      
             .popdt-side.col 
