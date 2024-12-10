@@ -43,7 +43,7 @@ block container
 								"Bán bất động sản",
 								"Rao vặt khác"
 							],
-						  "second --bg"
+						  "second --bg --disable"
 						)
 					.f-item.col.col-6
 						+AdminLabel("Vị trí đặt quảng cáo")
@@ -56,7 +56,7 @@ block container
 								"Vị trí H5 (70 x 70 px)",
 								"Vị trí H6 (60 x 60 px)"
 							],
-							"second --bg"
+							"second --bg --disable"
 						)
 					.f-item.col 
 						+AdminLabel("Quy mô quảng cáo <span class='fw-4'>(nơi quảng cáo sẽ xuất hiện, ví dụ anh chị chọn “Toàn nước Mỹ,” ads sẽ xuất hiện trên toàn nước Mỹ)</span>")
@@ -69,7 +69,7 @@ block container
 								"Theo tiểu bang ($800/state/month)",
 								"Theo tiểu bang ($700/state/month)"
 							],
-							"second --bg"
+							"second --bg --disable"
 						)
 					.f-item.col
 						+AdminLabel("State(s)")
@@ -112,6 +112,9 @@ block container
 									.selectCusApply Xác nhận
 					.f-item.col
 						+AdminLabel("Thời gian quảng cáo <span class='fw-4'>(5% discount tự động apply cho quảng cáo trên 6 months)</span>")
+						.admin-date.f-left.--disable
+							+img("ic-calendar.svg")
+							input.admin-input.second.--bg(type="text" value="Jan, Feb +5" placeholder="Chọn ngày tháng tin hết hiệu lực")
 			.form-upload.collapse-block 
 				.b-inner 
 					span.t-head 
