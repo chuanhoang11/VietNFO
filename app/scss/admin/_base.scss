@@ -50,11 +50,13 @@
 
 .admin-heading.flex .right .btn {
     font-size: 1.4rem;
-    padding: .8rem 1.6rem;
+    padding: .95rem 1.5rem;
 
     @include max($mobile) {
         width: 100%;
     }
+    border: .1rem solid var(--color-pri);
+    height: 4rem;
 }
 
 .admin-heading-second {
@@ -69,6 +71,9 @@
     font-size: 3.2rem;
     font-weight: 700;
     color: #1D2939;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
 
     >img {
         width: 1em;

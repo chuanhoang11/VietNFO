@@ -12,9 +12,7 @@ block container
                 span.txt Welcome back, Tu 
                 +img("ic-ring.svg")
         .right 
-            .btn.trans 
-                span.inner ĐĂNG KÝ QUẢNG CÁO
-            +Btn("ĐĂNG TIN RAO VẶT MIỄN PHÍ")
+            +Btn("ĐĂNG KÝ QUẢNG CÁO MỚI")
     .admin-note 
         p.tag-new 
             span.inner.fw-5 News
@@ -43,22 +41,22 @@ block container
                                         .selectCusOptions
                                             label.selectCusAll 
                                                 input(type="checkbox")
-                                                span.txt Việc làm
+                                                span.txt Bỏ chọn tất cả
                                             label.selectCusOption 
                                                 input(type="checkbox")
-                                                span.txt Sang nhượng kinh doanh
+                                                span.txt Trang chủ - homepage
                                             label.selectCusOption 
                                                 input(type="checkbox")
-                                                span.txt Cho thuê bất động sản
+                                                span.txt Trang kết quả tìm kiếm
                                             label.selectCusOption 
                                                 input(type="checkbox")
                                                 span.txt Bán bất động sản
                                             label.selectCusOption 
                                                 input(type="checkbox")
-                                                span.txt Việt event
+                                                span.txt Trang xem chi tiết
                                             label.selectCusOption 
                                                 input(type="checkbox")
-                                                span.txt Rao vặt khác
+                                                span.txt Trang danh sách business
                                             .selectCusApply Áp dụng
                             .col.col-sl-md
                                 .b-ip-select
@@ -74,16 +72,22 @@ block container
                                                 span.txt Bỏ chọn tất cả
                                             label.selectCusOption 
                                                 input(type="checkbox")
-                                                span.txt Gia đình
+                                                span.txt Under review
                                             label.selectCusOption 
                                                 input(type="checkbox")
-                                                span.txt Active
+                                                span.txt Banner required
+                                            label.selectCusOption 
+                                                input(type="checkbox")
+                                                span.txt Receipt required
+                                            label.selectCusOption 
+                                                input(type="checkbox")
+                                                span.txt Expired
                                             label.selectCusOption 
                                                 input(type="checkbox")
                                                 span.txt Inactive
                                             .selectCusApply Áp dụng
                             .col.col-btn
-                                +Btn("Save search")
+                                +Btn("Save search","button","btn-search")
     .admin-form.admin-dashboard.admin-quangcao
         form(action="/submit-url" method="post") 
             .admin-wrapper
@@ -96,7 +100,7 @@ block container
                         .admin-das-right
                             .admin-action
                                 label.btn-switch
-                                    input(type="checkbox" class="switch-input")
+                                    input(type="checkbox" )
                                     span.control-round
                                 span.note-txt.fw-5.switch-status Enable All
                             +Btn('Delete All', 'button',"btn-delete")
@@ -126,7 +130,7 @@ block container
                                             span.check-content
                                                 span.icon
                                                     +img("ic-noti.png")
-                                                span.content-txt
+                                                a(href="").content-txt
                                                     span.txt-title
                                                         span.txt.fw-5 Homepage - trang chủ
                                                         +img("external-link.svg")
@@ -140,8 +144,9 @@ block container
                                             span.txt.fw-5 Banner required
                                     .das-cell(data-text="Views") 1,000
                                     .das-cell(data-text="Receipt") 
-                                        span.icon-act
-                                            +img("ic-note.svg")
+                                        p.icon-wr 
+                                            span.icon-act
+                                                +img("ic-note.svg")
                                     .das-cell(data-text="Turn on/off") 
                                         .admin-action
                                             label.btn-switch
@@ -169,8 +174,8 @@ block container
                                             span.admin-check-radio.square
                                             span.check-content
                                                 span.icon
-                                                    +img("ic-check.png")
-                                                span.content-txt
+                                                    +img("ic-noti.png")
+                                                a(href="").content-txt
                                                     span.txt-title
                                                         span.txt.fw-5 Detail - trang detail
                                                         +img("external-link.svg")
@@ -184,8 +189,9 @@ block container
                                             span.txt.fw-5 Expired
                                     .das-cell(data-text="Views") 1,000
                                     .das-cell(data-text="Receipt") 
-                                        span.icon-act
-                                            +img("ic-note.svg")
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("ic-note.svg")
                                     .das-cell(data-text="Turn on/off") 
                                         .admin-action
                                             label.btn-switch
@@ -211,8 +217,8 @@ block container
                                             span.admin-check-radio.square
                                             span.check-content
                                                 span.icon
-                                                    +img("ic-check.png")
-                                                span.content-txt
+                                                    +img("ic-noti.png")
+                                                a(href="").content-txt
                                                     span.txt-title
                                                         span.txt.fw-5 Search - trang kết quả tìm kiếm
                                                         +img("external-link.svg")
@@ -229,8 +235,9 @@ block container
                                                 |Banner required
                                     .das-cell(data-text="Views") 1,000
                                     .das-cell(data-text="Receipt") 
-                                        span.icon-act
-                                            +img("ic-note.svg")
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("ic-note.svg")
                                     .das-cell(data-text="Turn on/off") 
                                         .admin-action
                                             label.btn-switch
@@ -258,8 +265,8 @@ block container
                                             span.admin-check-radio.square
                                             span.check-content
                                                 span.icon
-                                                    +img("ic-check.png")
-                                                span.content-txt
+                                                    +img("ic-noti.png")
+                                                a(href="").content-txt
                                                     span.txt-title
                                                         span.txt.fw-5 Search - trang kết quả tìm kiếm
                                                         +img("external-link.svg")
@@ -273,8 +280,9 @@ block container
                                             span.txt.fw-5 Receipt required
                                     .das-cell(data-text="Views") 1,000
                                     .das-cell(data-text="Receipt") 
-                                        span.icon-act
-                                            +img("ic-note.svg")
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("ic-note.svg")
                                     .das-cell(data-text="Turn on/off") 
                                         .admin-action
                                             label.btn-switch
@@ -302,8 +310,8 @@ block container
                                             span.admin-check-radio.square
                                             span.check-content
                                                 span.icon
-                                                    +img("ic-check.png")
-                                                span.content-txt
+                                                    +img("ic-noti.png")
+                                                a(href="").content-txt
                                                     span.txt-title
                                                         span.txt.fw-5 Search - trang kết quả tìm kiếm
                                                         +img("external-link.svg")
@@ -317,8 +325,9 @@ block container
                                             span.txt.fw-5 Inactive
                                     .das-cell(data-text="Views") 1,000
                                     .das-cell(data-text="Receipt") 
-                                        span.icon-act
-                                            +img("ic-note.svg")
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("ic-note.svg")
                                     .das-cell(data-text="Turn on/off") 
                                         .admin-action
                                             label.btn-switch
@@ -326,15 +335,17 @@ block container
                                                 span.control-round
                                             span.note-txt.fw-5.switch-status Off
                                     .das-cell(data-text="Re-Use") 
-                                        span.icon-act
-                                            +img("rotate-cw.svg")
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("rotate-cw.svg")
                                     .das-cell(data-text="Edit") 
                                         p.icon-wr
                                             span.icon-act
                                                 +img("edit.svg")
                                     .das-cell(data-text="Delete") 
-                                        span.icon-act
-                                            +img("trash.svg")
+                                        p.icon-wr
+                                            span.icon-act
+                                                +img("trash.svg")
                                 .das-table-row
                                     .das-cell(data-text="Name")
                                         label.admin-check 
@@ -342,8 +353,8 @@ block container
                                             span.admin-check-radio.square
                                             span.check-content
                                                 span.icon
-                                                    +img("ic-check.png")
-                                                span.content-txt
+                                                    +img("ic-noti.png")
+                                                a(href="").content-txt
                                                     span.txt-title
                                                         span.txt.fw-5 Search - trang kết quả tìm kiếm
                                                         +img("external-link.svg")

@@ -12,26 +12,26 @@ export default function AdminDashboardModule() {
           }
         });
       } else {
-        // Xóa các class khi màn hình lớn hơn 600px
         $('.das-cl-head').removeClass('das-cl-head');
         $('.das-cl-body').children().unwrap();
-        $('.das-table-row').removeClass('active'); // Remove 'active' class
+        $('.das-table-row').removeClass('active'); 
       }
     }
 
-    applyResponsiveCollapse(); // Gọi hàm khi load trang
+    applyResponsiveCollapse(); 
 
     $(window).resize(function () {
-      applyResponsiveCollapse(); // Gọi hàm khi thay đổi kích thước cửa sổ
+      applyResponsiveCollapse(); 
     });
 
-    // Toggle collapse-body khi nhấn vào collapse-head
-    $(document).on('click', '.das-cl-head', function () {
+
+    $(document).on('click', '.das-cl-head .icon-arr ', function () {
       const $row = $(this).closest('.das-table-row'); // Lấy table-row chứa collapse-head
       $row.toggleClass('active'); // Thêm/loại bỏ class active
 
       // Toggle collapse-body
-      $(this).next('.das-cl-body').slideToggle();
+      // $(this).next('.das-cl-body').slideToggle();
+      $(this).closest('.das-cell').next('.das-cl-body').slideToggle();
     });
   });
 

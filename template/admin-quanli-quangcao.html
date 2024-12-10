@@ -53,8 +53,7 @@
             <h1 class="admin-title"> <span class="txt">Welcome back, Tu </span><img src="./assets/images/ic-ring.svg" alt=""/>
             </h1>
           </div>
-          <div class="right"> 
-            <div class="btn trans"> <span class="inner">ĐĂNG KÝ QUẢNG CÁO</span></div><a class="btn" href=""><span class="inner">ĐĂNG TIN RAO VẶT MIỄN PHÍ</span><i></i></a>
+          <div class="right"> <a class="btn" href=""><span class="inner">ĐĂNG KÝ QUẢNG CÁO MỚI</span><i></i></a>
           </div>
         </div>
         <div class="admin-note"> 
@@ -81,22 +80,22 @@
                           </div>
                           <div class="selectCusOptions">
                             <label class="selectCusAll"> 
-                              <input type="checkbox"><span class="txt">Việc làm</span>
+                              <input type="checkbox"><span class="txt">Bỏ chọn tất cả</span>
                             </label>
                             <label class="selectCusOption"> 
-                              <input type="checkbox"><span class="txt">Sang nhượng kinh doanh</span>
+                              <input type="checkbox"><span class="txt">Trang chủ - homepage</span>
                             </label>
                             <label class="selectCusOption"> 
-                              <input type="checkbox"><span class="txt">Cho thuê bất động sản</span>
+                              <input type="checkbox"><span class="txt">Trang kết quả tìm kiếm</span>
                             </label>
                             <label class="selectCusOption"> 
                               <input type="checkbox"><span class="txt">Bán bất động sản</span>
                             </label>
                             <label class="selectCusOption"> 
-                              <input type="checkbox"><span class="txt">Việt event</span>
+                              <input type="checkbox"><span class="txt">Trang xem chi tiết</span>
                             </label>
                             <label class="selectCusOption"> 
-                              <input type="checkbox"><span class="txt">Rao vặt khác</span>
+                              <input type="checkbox"><span class="txt">Trang danh sách business</span>
                             </label>
                             <div class="selectCusApply">Áp dụng</div>
                           </div>
@@ -115,10 +114,16 @@
                               <input type="checkbox"><span class="txt">Bỏ chọn tất cả</span>
                             </label>
                             <label class="selectCusOption"> 
-                              <input type="checkbox"><span class="txt">Gia đình</span>
+                              <input type="checkbox"><span class="txt">Under review</span>
                             </label>
                             <label class="selectCusOption"> 
-                              <input type="checkbox"><span class="txt">Active</span>
+                              <input type="checkbox"><span class="txt">Banner required</span>
+                            </label>
+                            <label class="selectCusOption"> 
+                              <input type="checkbox"><span class="txt">Receipt required</span>
+                            </label>
+                            <label class="selectCusOption"> 
+                              <input type="checkbox"><span class="txt">Expired</span>
                             </label>
                             <label class="selectCusOption"> 
                               <input type="checkbox"><span class="txt">Inactive</span>
@@ -128,7 +133,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col col-btn"><a class="btn" href=""><span class="inner">Save search</span><i></i></a>
+                    <div class="col col-btn">
+                      <button class="btn btn-search" type="submit"><span class="inner">Save search</span><i></i>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -147,7 +154,7 @@
                   <div class="admin-das-right">
                     <div class="admin-action">
                       <label class="btn-switch">
-                        <input class="switch-input" type="checkbox"><span class="control-round"></span>
+                        <input type="checkbox"><span class="control-round"></span>
                       </label><span class="note-txt fw-5 switch-status">Enable All</span>
                     </div>
                     <button class="btn btn-delete" type="submit"><span class="inner">Delete All</span><i></i>
@@ -175,12 +182,14 @@
                       <div class="das-table-row">
                         <div class="das-cell" data-text="Name">
                           <label class="admin-check"> 
-                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-noti.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Homepage - trang chủ</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">H1 [140 x 200 px]; Feb, May,<span class="fw-7">+5</span></span></span></span>
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-noti.png" alt=""/></span><a class="content-txt" href=""><span class="txt-title"><span class="txt fw-5">Homepage - trang chủ</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">H1 [140 x 200 px]; Feb, May,<span class="fw-7">+5</span></span></a></span>
                           </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
                         </div>
                         <div class="das-cell" data-text="Status"><span class="status required"><span class="icon"></span><span class="txt fw-5">Banner required</span></span></div>
                         <div class="das-cell" data-text="Views">1,000</div>
-                        <div class="das-cell" data-text="Receipt"> <span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Receipt"> 
+                          <p class="icon-wr"> <span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></p>
+                        </div>
                         <div class="das-cell" data-text="Turn on/off"> 
                           <div class="admin-action">
                             <label class="btn-switch">
@@ -201,12 +210,14 @@
                       <div class="das-table-row">
                         <div class="das-cell" data-text="Name">
                           <label class="admin-check"> 
-                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Detail - trang detail</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">D1 [140 x 200 px]; Feb, May,<span class="fw-7">+5</span></span></span></span>
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-noti.png" alt=""/></span><a class="content-txt" href=""><span class="txt-title"><span class="txt fw-5">Detail - trang detail</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">D1 [140 x 200 px]; Feb, May,<span class="fw-7">+5</span></span></a></span>
                           </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
                         </div>
                         <div class="das-cell" data-text="Status"><span class="status expired"><span class="icon"></span><span class="txt fw-5">Expired</span></span></div>
                         <div class="das-cell" data-text="Views">1,000</div>
-                        <div class="das-cell" data-text="Receipt"> <span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Receipt"> 
+                          <p class="icon-wr"><span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></p>
+                        </div>
                         <div class="das-cell" data-text="Turn on/off"> 
                           <div class="admin-action">
                             <label class="btn-switch">
@@ -227,13 +238,15 @@
                       <div class="das-table-row">
                         <div class="das-cell" data-text="Name">
                           <label class="admin-check"> 
-                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Search - trang kết quả tìm kiếm</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">S2 [120 x 200 px]; Feb, May, <span class="fw-7">+5</span></span></span></span>
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-noti.png" alt=""/></span><a class="content-txt" href=""><span class="txt-title"><span class="txt fw-5">Search - trang kết quả tìm kiếm</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">S2 [120 x 200 px]; Feb, May, <span class="fw-7">+5</span></span></a></span>
                           </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
                         </div>
                         <div class="das-cell" data-text="Status"><span class="status required"> <span class="icon"></span><span class="txt fw-5">
                                Receipt required<br>Banner required</span></span></div>
                         <div class="das-cell" data-text="Views">1,000</div>
-                        <div class="das-cell" data-text="Receipt"> <span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Receipt"> 
+                          <p class="icon-wr"><span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></p>
+                        </div>
                         <div class="das-cell" data-text="Turn on/off"> 
                           <div class="admin-action">
                             <label class="btn-switch">
@@ -254,12 +267,14 @@
                       <div class="das-table-row">
                         <div class="das-cell" data-text="Name">
                           <label class="admin-check"> 
-                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Search - trang kết quả tìm kiếm</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">S2 [120 x 200 px]; Feb, May,<span class="fw-7">+5</span></span></span></span>
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-noti.png" alt=""/></span><a class="content-txt" href=""><span class="txt-title"><span class="txt fw-5">Search - trang kết quả tìm kiếm</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">S2 [120 x 200 px]; Feb, May,<span class="fw-7">+5</span></span></a></span>
                           </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
                         </div>
                         <div class="das-cell" data-text="Status"><span class="status required"><span class="icon"></span><span class="txt fw-5">Receipt required</span></span></div>
                         <div class="das-cell" data-text="Views">1,000</div>
-                        <div class="das-cell" data-text="Receipt"> <span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Receipt"> 
+                          <p class="icon-wr"><span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></p>
+                        </div>
                         <div class="das-cell" data-text="Turn on/off"> 
                           <div class="admin-action">
                             <label class="btn-switch">
@@ -280,12 +295,14 @@
                       <div class="das-table-row">
                         <div class="das-cell" data-text="Name">
                           <label class="admin-check"> 
-                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Search - trang kết quả tìm kiếm</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">S2 [120 x 200 px]; Feb, May,<span class="fw-7">+5</span></span></span></span>
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-noti.png" alt=""/></span><a class="content-txt" href=""><span class="txt-title"><span class="txt fw-5">Search - trang kết quả tìm kiếm</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">S2 [120 x 200 px]; Feb, May,<span class="fw-7">+5</span></span></a></span>
                           </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
                         </div>
                         <div class="das-cell" data-text="Status"><span class="status expired"><span class="icon"></span><span class="txt fw-5">Inactive</span></span></div>
                         <div class="das-cell" data-text="Views">1,000</div>
-                        <div class="das-cell" data-text="Receipt"> <span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Receipt"> 
+                          <p class="icon-wr"><span class="icon-act"><img src="./assets/images/ic-note.svg" alt=""/></span></p>
+                        </div>
                         <div class="das-cell" data-text="Turn on/off"> 
                           <div class="admin-action">
                             <label class="btn-switch">
@@ -293,16 +310,20 @@
                             </label><span class="note-txt fw-5 switch-status">Off</span>
                           </div>
                         </div>
-                        <div class="das-cell" data-text="Re-Use"> <span class="icon-act"><img src="./assets/images/rotate-cw.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Re-Use"> 
+                          <p class="icon-wr"><span class="icon-act"><img src="./assets/images/rotate-cw.svg" alt=""/></span></p>
+                        </div>
                         <div class="das-cell" data-text="Edit"> 
                           <p class="icon-wr"><span class="icon-act"><img src="./assets/images/edit.svg" alt=""/></span></p>
                         </div>
-                        <div class="das-cell" data-text="Delete"> <span class="icon-act"><img src="./assets/images/trash.svg" alt=""/></span></div>
+                        <div class="das-cell" data-text="Delete"> 
+                          <p class="icon-wr"><span class="icon-act"><img src="./assets/images/trash.svg" alt=""/></span></p>
+                        </div>
                       </div>
                       <div class="das-table-row">
                         <div class="das-cell" data-text="Name">
                           <label class="admin-check"> 
-                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-check.png" alt=""/></span><span class="content-txt"><span class="txt-title"><span class="txt fw-5">Search - trang kết quả tìm kiếm</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">S2 [120 x 200 px]; Feb, May,<span class="fw-7">+5</span></span></span></span>
+                            <input type="radio" id="check-lienhe" name="check-lienhe" hidden><span class="admin-check-radio square"></span><span class="check-content"><span class="icon"><img src="./assets/images/ic-noti.png" alt=""/></span><a class="content-txt" href=""><span class="txt-title"><span class="txt fw-5">Search - trang kết quả tìm kiếm</span><img src="./assets/images/external-link.svg" alt=""/></span><span class="txt-note">S2 [120 x 200 px]; Feb, May,<span class="fw-7">+5</span></span></a></span>
                           </label><span class="icon-arr"> <img src="./assets/images/arrow-table-cl.svg" alt=""/></span>
                         </div>
                         <div class="das-cell" data-text="Status"><span class="status active"><span class="icon"></span><span class="txt fw-5">Active</span></span></div>
