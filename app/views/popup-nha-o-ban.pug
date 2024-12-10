@@ -381,32 +381,112 @@ block container
                      .swiper-container 
                         .swiper.rows
                            .swiper-wrapper 
-                              each val,index in Array((5))
+                              - 
+                                 var proArrThird = [
+                                    {
+                                       img: "pro-7.jpg",
+                                       time: "2 ngày trước",
+                                       type: "Nhà ở",
+                                       price: "$1,000",
+                                       note: [
+                                          {
+                                             name: "2 bed",
+                                             icon: "ic-pro-bed.svg"
+                                          },
+                                          {
+                                             name: "2 ba",
+                                             icon: "ic-pro-shower.svg"
+                                          },
+                                          {
+                                             name: "11,300 sqft"
+                                          },
+                                       ],
+                                       address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                    },
+                                    {
+                                       img: "pro-7.jpg",
+                                       time: "2 ngày trước",
+                                       type: "Nhà ở",
+                                       price: "$1,000",
+                                       note: [
+                                          {
+                                             name: "2 bed",
+                                             icon: "ic-pro-bed.svg"
+                                          },
+                                          {
+                                             name: "2 ba",
+                                             icon: "ic-pro-shower.svg"
+                                          },
+                                          {
+                                             name: "11,300 sqft"
+                                          },
+                                       ],
+                                       address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                    },
+                                    {
+                                       img: "pro-7.jpg",
+                                       time: "2 ngày trước",
+                                       type: "Nhà ở",
+                                       price: "$1,000",
+                                       note: [
+                                          {
+                                             name: "2 bed",
+                                             icon: "ic-pro-bed.svg"
+                                          },
+                                          {
+                                             name: "2 ba",
+                                             icon: "ic-pro-shower.svg"
+                                          },
+                                          {
+                                             name: "11,300 sqft"
+                                          },
+                                       ],
+                                       address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                    },
+                                    {
+                                       img: "pro-7.jpg",
+                                       time: "2 ngày trước",
+                                       type: "Nhà ở",
+                                       price: "$1,000",
+                                       note: [
+                                          {
+                                             name: "2 bed",
+                                             icon: "ic-pro-bed.svg"
+                                          },
+                                          {
+                                             name: "2 ba",
+                                             icon: "ic-pro-shower.svg"
+                                          },
+                                          {
+                                             name: "11,300 sqft"
+                                          },
+                                       ],
+                                       address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                    },
+                                    {
+                                       img: "pro-7.jpg",
+                                       time: "2 ngày trước",
+                                       type: "Nhà ở",
+                                       price: "$1,000",
+                                       note: [
+                                          {
+                                             name: "2 bed",
+                                             icon: "ic-pro-bed.svg"
+                                          },
+                                          {
+                                             name: "2 ba",
+                                             icon: "ic-pro-shower.svg"
+                                          },
+                                          {
+                                             name: "11,300 sqft"
+                                          },
+                                       ],
+                                       address: "471 Tam Oshanter Dr SE, Marietta, GA, 30067"
+                                    },
+                                 ]
+                              each item in proArrThird   
                                  .swiper-slide.col
-                                    .pro-wr
-                                       .pro-img 
-                                          .pro-time 
-                                             span.txt 2 ngày trước
-                                          .pro-type 
-                                             span.txt Nhà ở
-                                          a(href="#").inner 
-                                             +img("pro-7.jpg")
-                                       .pro-content
-                                          h3.pro-name $123,000/tháng
-                                             span(style="font-size: .8em").fw-4 /month
-                                          .pro-note
-                                             .pro-note-item 
-                                                .pro-li.fw-6.c-txt-2 
-                                                   +img("ic-pro-bed.svg")
-                                                   span.txt 2 bed
-                                             .pro-note-item 
-                                                .pro-li.fw-6.c-txt-2 
-                                                   +img("ic-pro-shower.svg")
-                                                   span.txt 1 ba
-                                             .pro-note-item 
-                                                .pro-li.fw-6.c-txt-2 
-                                                   span.txt 11,300 sqft
-                                          .pro-des 471 Tam Oshanter Dr SE, Marietta, GA, 30067
+                                    +proItem2(item)
             .popdt-side.col 
                +PopupSideBar()
       +footer()

@@ -192,26 +192,9 @@ block container
                               .swiper-slide.col 
                                  .wrapper 
                                     .row
-                                       each vals,index in Array(3)
-                                          .pro-grid-item.col
-                                             .pro-wr.four 
-                                                +img("ic-loa.svg")
-                                                .pro-content 
-                                                   h3.pro-name Chăm sóc người già - Marietta, GA 30062
-                                                   .pro-des Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...
-                                                   .pro-note 
-                                                      .pro-note-item 
-                                                         .pro-li.fw-6.c-txt-2 
-                                                            +img('ic-pro-2.svg')
-                                                            span.txt Marietta 30062
-                                                      .pro-note-item 
-                                                         .pro-li.fw-6.c-txt-2 
-                                                            +img('ic-pro-7.svg')
-                                                            span.txt 2 ngày trước
-                                                      .pro-note-item 
-                                                         .pro-li.fw-6.c-txt-2 
-                                                            +img('ic-pro-4.svg')
-                                                            span.txt 1000
+                                       each item in Array(3)
+                                          .pro-grid-item.col 
+                                             +proItemFourth(item)
             .popdt-side.col 
                +PopupSideBar()
       +footer()
