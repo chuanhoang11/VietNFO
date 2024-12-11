@@ -500,17 +500,18 @@ mixin proItem3(item)
             h3.pro-name #{item.price}
          if item.name
             h3.pro-name #{item.name}
-         if item.note.length > 0 
-            .pro-note
-               each note in item.note
-                  .pro-note-item 
-                     if(note.icon)
-                        .pro-li.fw-5.c-txt-2 
-                           +img(note.icon)
-                           span.txt #{note.name}
-                     else 
-                        span.txt.fw-5.c-txt-2 #{note.name}
-         .pro-des #{item.address}
+         .pro-content-child
+            if item.note.length > 0 
+               .pro-note
+                  each note in item.note
+                     .pro-note-item 
+                        if(note.icon)
+                           .pro-li.fw-5.c-txt-2 
+                              +img(note.icon)
+                              span.txt #{note.name}
+                        else 
+                           span.txt.fw-5.c-txt-2 #{note.name}
+            .pro-des #{item.address}
 mixin proItemSecond(item)
    .pro-wr.second 
       .pro-content 
@@ -566,7 +567,7 @@ mixin proItemFourth(item)
       .pro-content 
          h3.pro-name 
             +img("ic-loa.svg")
-            | Chăm sóc người già - Marietta, GA 30062
+            span.txt Chăm sóc người già - Marietta, GA 30062
          .pro-des Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...Tìm người chăm sóc...
          .pro-note 
             .pro-note-item 
@@ -775,7 +776,7 @@ mixin ThongTinLienHe
       .f-list.row.--layout-thongtinchung
          .f-item.col.col-4
             label.admin-check 
-               input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
+               input(type="radio" id="check-lienhe" class="check-radio-lienhe" name="check-lienhe"  hidden checked)
                span.admin-check-radio
                .admin-user 
                   p.name Tu Nguyen
@@ -783,16 +784,16 @@ mixin ThongTinLienHe
                   p.des Phone: 0123456789
          .f-item.col.col-8.flex-center
             label.admin-check 
-               input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
+               input(type="radio" id="check-themthongtin" class="check-radio-lienhe check-themthongtin" name="check-lienhe"  hidden)
                span.admin-check-radio
                span.txt.c-pri Thêm thông tin liên lạc khác
-         .f-item.col.col-4 
+         .f-item.col.col-4.hideThongTinLienHe 
             +AdminLabel("Name") 
             input.admin-input(type="text" placeholder="Your name")
-         .f-item.col.col-4 
+         .f-item.col.col-4.hideThongTinLienHe 
             +AdminLabel("Email") 
             input.admin-input(type="text" placeholder="Enter your email")
-         .f-item.col.col-4 
+         .f-item.col.col-4.hideThongTinLienHe 
             +AdminLabel("Phone number") 
             input.admin-input(type="number" placeholder="Contact number")
 mixin MoTaChiTiet

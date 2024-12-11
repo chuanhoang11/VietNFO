@@ -549,4 +549,23 @@ export default function ComponentModule() {
       }
     });
   });
+  const checkThemThongTin = document.querySelectorAll(".check-radio-lienhe");
+  if (checkThemThongTin) {
+    checkThemThongTin.forEach((item) => {
+      item.addEventListener("change", (e) => {
+        const themThongTin = document.querySelectorAll(".hideThongTinLienHe");
+        if (e.target.classList.contains("check-themthongtin") && e.target.checked){
+          themThongTin.forEach((item) => {
+            item.classList.add("open");
+          });
+        }
+        else{
+          themThongTin.forEach((item) => {
+            item.classList.remove("open");
+          });
+        }
+      });
+    });
+   
+  }
 }

@@ -47,203 +47,205 @@
       <div class="sbar-foot"><a class="sbar-btn" href=""> <img src="./assets/images/ic-home.svg" alt=""/><span class="txt">Back To Homepage</span></a></div>
     </div>
     <main class="main-admin">
-      <div class="main-admin-wrapper">
-        <div class="popup" data-popup-id="popup-change-password">
-          <div class="popup-overlay"></div>
-          <div class="popup-main">
-            <div class="popup-main-wrapper popup-change-password">
-              <div class="popup-over">
-                <div class="popup-wrapper">
-                  <div class="mb-20"> 
-                    <p class="t18 fw-6 c-txt-2">THAY ĐỔI MẬT KHẨU</p>
-                  </div>
-                  <div class="f-list row"> 
-                    <div class="f-item col">
-                      <label class="f-label">Mật khẩu hiện tại</label>
-                      <input class="admin-input" type="password">
+      <div class="main-admin-out">
+        <div class="main-admin-wrapper">
+          <div class="popup" data-popup-id="popup-change-password">
+            <div class="popup-overlay"></div>
+            <div class="popup-main">
+              <div class="popup-main-wrapper popup-change-password">
+                <div class="popup-over">
+                  <div class="popup-wrapper">
+                    <div class="mb-20"> 
+                      <p class="t18 fw-6 c-txt-2">THAY ĐỔI MẬT KHẨU</p>
                     </div>
-                    <div class="f-item col">
-                      <label class="f-label">Mật khẩu mới</label>
-                      <div class="f-pass"> 
-                        <input class="admin-input" type="password"><img src="./assets/images/ic-eye.svg" alt=""/>
+                    <div class="f-list row"> 
+                      <div class="f-item col">
+                        <label class="f-label">Mật khẩu hiện tại</label>
+                        <input class="admin-input" type="password">
                       </div>
-                      <div class="f-required"> 
-                        <ul> 
-                          <li class="success">Ít nhất 8 ký tự</li>
-                          <li class="fail">Có cả viết hoa và viết thường (e.g. Aa)</li>
-                          <li>Có dùng số (e.g. 1234)</li>
-                          <li>Có ký hiệu đặc biệt (e.g. !@#$)</li>
-                        </ul>
+                      <div class="f-item col">
+                        <label class="f-label">Mật khẩu mới</label>
+                        <div class="f-pass"> 
+                          <input class="admin-input" type="password"><img src="./assets/images/ic-eye.svg" alt=""/>
+                        </div>
+                        <div class="f-required"> 
+                          <ul> 
+                            <li class="success">Ít nhất 8 ký tự</li>
+                            <li class="fail">Có cả viết hoa và viết thường (e.g. Aa)</li>
+                            <li>Có dùng số (e.g. 1234)</li>
+                            <li>Có ký hiệu đặc biệt (e.g. !@#$)</li>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                    <div class="f-item col">
-                      <label class="f-label">Nhập lại mật khẩu mới</label>
-                      <div class="f-pass">
-                        <input class="admin-input" type="password"><img src="./assets/images/ic-eye.svg" alt=""/>
+                      <div class="f-item col">
+                        <label class="f-label">Nhập lại mật khẩu mới</label>
+                        <div class="f-pass">
+                          <input class="admin-input" type="password"><img src="./assets/images/ic-eye.svg" alt=""/>
+                        </div>
                       </div>
-                    </div>
-                    <div class="f-item col">
-                      <div class="btn-gr">
-                        <button class="btn trans popup-close" type="submit"><span class="inner">Cancel</span><i></i>
-                        </button>
-                        <button class="btn" type="submit"><span class="inner">Save</span><i></i>
-                        </button>
+                      <div class="f-item col">
+                        <div class="btn-gr">
+                          <button class="btn trans popup-close" type="submit"><span class="inner">Cancel</span><i></i>
+                          </button>
+                          <button class="btn" type="submit"><span class="inner">Save</span><i></i>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="popup-close"><i class="fas fa-times icon"></i></div>
             </div>
-            <div class="popup-close"><i class="fas fa-times icon"></i></div>
+          </div>
+          <div class="admin-heading flex"> 
+            <div class="left"> 
+              <h1 class="admin-title"> <span class="txt">Quản lý thông tin user </span><img src="./assets/images/ic-ring.svg" alt=""/>
+              </h1>
+            </div>
+            <div class="right"> 
+              <div class="btn trans popup-open" data-popup="popup-change-password"><span class="inner">THAY ĐỔI MẬT KHẨU</span></div><a class="btn" href=""><span class="inner">THAY ĐỔI THÔNG TIN</span><i></i></a>
+            </div>
+          </div>
+          <div class="admin-wrapper"> 
+            <div class="admin-block"> 
+              <div class="f-list row">
+                <div class="f-item col">
+                  <div class="admin-user-info"> 
+                    <p class="name fw-5">Profile Image</p>
+                    <div class="ava"> <img src="./assets/images/ava.png" alt=""/>
+                    </div>
+                  </div>
+                </div>
+                <div class="f-item col col-4"> 
+                  <label class="f-label">Full name</label>
+                  <input class="admin-input second --bg" type="text" value="Linh Doan">
+                </div>
+                <div class="f-item col col-4"> 
+                  <label class="f-label">Phone</label>
+                  <input class="admin-input second --bg" type="text" value="4704694788">
+                </div>
+                <div class="f-item col col-4"> 
+                  <label class="f-label">Email</label>
+                  <input class="admin-input second --bg" type="text" value="lethuylinh@gmail.com">
+                </div>
+                <div class="f-item col col-4"> 
+                  <label class="f-label">Loại hình kinh doanh</label>
+                  <div class="admin-select second --bg">
+                    <select>
+                      <option value="demo">Nail</option>
+                      <option value="demo">Nhà hàng</option>
+                      <option value="demo">Bất động sản</option>
+                      <option value="demo">Kế toán - CPA</option>
+                      <option value="demo">Y tế</option>
+                      <option value="demo">Luật</option>
+                      <option value="demo">Giải trí</option>
+                      <option value="demo">Kinh doanh khác</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="f-item col col-8">
+                  <label class="f-label">Tên doanh nghiệp của bạn <span class='fw-4'>(optional)</span></label>
+                  <input class="admin-input second --bg" type="text" value="Qixtech LLC">
+                </div>
+                <div class="f-item col col-6"> 
+                  <label class="f-label">Address 1 </label>
+                  <input class="admin-input second --bg" type="text" value="3286 Robinson Oaks Way NE">
+                </div>
+                <div class="f-item col col-6">
+                  <label class="f-label">Address 2 <span class='fw-4'>(optional)</span></label>
+                  <input class="admin-input second --bg" type="text" value="Apt, suite, unit, building, floor, etc.">
+                </div>
+                <div class="f-item col col-4">
+                  <label class="f-label">City</label>
+                  <input class="admin-input second --bg" type="text" value="Atlanta">
+                </div>
+                <div class="f-item col col-4">
+                  <label class="f-label">State</label>
+                  <div class="admin-select second --bg">
+                    <select>
+                      <option value="demo">Georgia</option>
+                      <option value="demo">Georgia</option>
+                      <option value="demo">Georgia</option>
+                      <option value="demo">Georgia</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="f-item col col-4">
+                  <label class="f-label">Zip code</label>
+                  <input class="admin-input second --bg" type="number" value="30062">
+                </div>
+              </div>
+            </div>
+            <button class="btn admin-btn" type="submit"><span class="inner">Save</span><i></i>
+            </button>
           </div>
         </div>
-        <div class="admin-heading flex"> 
-          <div class="left"> 
-            <h1 class="admin-title"> <span class="txt">Quản lý thông tin user </span><img src="./assets/images/ic-ring.svg" alt=""/>
-            </h1>
-          </div>
-          <div class="right"> 
-            <div class="btn trans popup-open" data-popup="popup-change-password"><span class="inner">THAY ĐỔI MẬT KHẨU</span></div><a class="btn" href=""><span class="inner">THAY ĐỔI THÔNG TIN</span><i></i></a>
-          </div>
-        </div>
-        <div class="admin-wrapper"> 
-          <div class="admin-block"> 
-            <div class="f-list row">
-              <div class="f-item col">
-                <div class="admin-user-info"> 
-                  <p class="name fw-5">Profile Image</p>
-                  <div class="ava"> <img src="./assets/images/ava.png" alt=""/>
-                  </div>
-                </div>
+        <div class="ft"> 
+          <div class="container"> 
+            <div class="ft-wrap"> 
+              <div class="ft-head"> 
+                <div class="ft-logo"> <a class="custom-logo-link" href=""><img src="./assets/images/logo.svg" alt=""/></a></div>
+                <div class="t-slogan"><span class="t-text">
+                     Cổng thông tin <span class="fw-7 c-pri">
+                       MIỄN PHÍ </span>dành cho cộng đồng người Việt tại Mỹ</span></div>
               </div>
-              <div class="f-item col col-4"> 
-                <label class="f-label">Full name</label>
-                <input class="admin-input second --bg" type="text" value="Linh Doan">
-              </div>
-              <div class="f-item col col-4"> 
-                <label class="f-label">Phone</label>
-                <input class="admin-input second --bg" type="text" value="4704694788">
-              </div>
-              <div class="f-item col col-4"> 
-                <label class="f-label">Email</label>
-                <input class="admin-input second --bg" type="text" value="lethuylinh@gmail.com">
-              </div>
-              <div class="f-item col col-4"> 
-                <label class="f-label">Loại hình kinh doanh</label>
-                <div class="admin-select second --bg">
-                  <select>
-                    <option value="demo">Nail</option>
-                    <option value="demo">Nhà hàng</option>
-                    <option value="demo">Bất động sản</option>
-                    <option value="demo">Kế toán - CPA</option>
-                    <option value="demo">Y tế</option>
-                    <option value="demo">Luật</option>
-                    <option value="demo">Giải trí</option>
-                    <option value="demo">Kinh doanh khác</option>
-                  </select>
-                </div>
-              </div>
-              <div class="f-item col col-8">
-                <label class="f-label">Tên doanh nghiệp của bạn <span class='fw-4'>(optional)</span></label>
-                <input class="admin-input second --bg" type="text" value="Qixtech LLC">
-              </div>
-              <div class="f-item col col-6"> 
-                <label class="f-label">Address 1 </label>
-                <input class="admin-input second --bg" type="text" value="3286 Robinson Oaks Way NE">
-              </div>
-              <div class="f-item col col-6">
-                <label class="f-label">Address 2 <span class='fw-4'>(optional)</span></label>
-                <input class="admin-input second --bg" type="text" value="Apt, suite, unit, building, floor, etc.">
-              </div>
-              <div class="f-item col col-4">
-                <label class="f-label">City</label>
-                <input class="admin-input second --bg" type="text" value="Atlanta">
-              </div>
-              <div class="f-item col col-4">
-                <label class="f-label">State</label>
-                <div class="admin-select second --bg">
-                  <select>
-                    <option value="demo">Georgia</option>
-                    <option value="demo">Georgia</option>
-                    <option value="demo">Georgia</option>
-                    <option value="demo">Georgia</option>
-                  </select>
-                </div>
-              </div>
-              <div class="f-item col col-4">
-                <label class="f-label">Zip code</label>
-                <input class="admin-input second --bg" type="number" value="30062">
-              </div>
-            </div>
-          </div>
-          <button class="btn admin-btn" type="submit"><span class="inner">Save</span><i></i>
-          </button>
-        </div>
-      </div>
-      <div class="ft"> 
-        <div class="container"> 
-          <div class="ft-wrap"> 
-            <div class="ft-head"> 
-              <div class="ft-logo"> <a class="custom-logo-link" href=""><img src="./assets/images/logo.svg" alt=""/></a></div>
-              <div class="t-slogan"><span class="t-text">
-                   Cổng thông tin <span class="fw-7 c-pri">
-                     MIỄN PHÍ </span>dành cho cộng đồng người Việt tại Mỹ</span></div>
-            </div>
-            <div class="ft-nav">
-              <ul class="menu"> 
-                <li><a href="">VIỆC LÀM</a></li>
-                <li><a href="">MUA CỬA TIỆM</a></li>
-                <li><a href="">VIỆT EVENTS</a></li>
-                <li><a href="">THUÊ NHÀ</a></li>
-                <li><a href="">MUA NHÀ</a></li>
-                <li><a href="">RAO VẶT</a></li>
-                <li><a href="">LIÊN HỆ QUẢNG CÁO</a></li>
-              </ul>
-            </div>
-            <div class="ft-sc"> 
-              <div class="social"> 
-                <div class="social-list"> <a class="social-link" href=""> <img src="./assets/images/ic-fb.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-yt.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-ins.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-x.svg" alt=""/></a></div>
-              </div>
-            </div>
-            <div class="ft-panel"> 
-              <div class="ft-list row"> 
-                <div class="col col-4">
-                  <div class="ft-box"> 
-                    <div class="b-inner"> <span class="t-text"> LIÊN HỆ HỢP TÁC</span>
-                      <div class="b-gr"> <a class="t-link" href="">Email:contact@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col col-4">
-                  <div class="ft-box"> 
-                    <div class="b-inner"> <span class="t-text"> LIÊN HỆ QUẢNG CÁO</span>
-                      <div class="b-gr"> <a class="t-link" href="">Email:ads@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col col-4">
-                  <div class="ft-box"> 
-                    <div class="b-inner"> <span class="t-text"> HỖ TRỢ KỸ THUẬT</span>
-                      <div class="b-gr"> <a class="t-link" href="">Email:admin@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="ft-bank"> 
-              <div class="i-list"><a class="i-link" href=""><img src="./assets/images/icon-bank (1).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (2).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (3).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (4).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (5).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (6).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (7).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (8).svg" alt=""/></a>
-              </div>
-            </div>
-            <div class="ft-bot">
-              <div class="ft-nav"> 
-                <ul class="menu">
-                  <li> <a href="">Privacy Policy</a></li>
-                  <li> <a href="">Terms of Service </a></li>
-                  <li> <a href="">Ads Service Agreement</a></li>
+              <div class="ft-nav">
+                <ul class="menu"> 
+                  <li><a href="">VIỆC LÀM</a></li>
+                  <li><a href="">MUA CỬA TIỆM</a></li>
+                  <li><a href="">VIỆT EVENTS</a></li>
+                  <li><a href="">THUÊ NHÀ</a></li>
+                  <li><a href="">MUA NHÀ</a></li>
+                  <li><a href="">RAO VẶT</a></li>
+                  <li><a href="">LIÊN HỆ QUẢNG CÁO</a></li>
                 </ul>
-              </div><span class="t-text">
-                  Designed by Qixtech - Web Design & Digital Marketing</span><span class="t-text">
-                 Copyright © 2024. VietInfo LLC. All Right Reserved. </span>
+              </div>
+              <div class="ft-sc"> 
+                <div class="social"> 
+                  <div class="social-list"> <a class="social-link" href=""> <img src="./assets/images/ic-fb.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-yt.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-ins.svg" alt=""/></a><a class="social-link" href=""> <img src="./assets/images/ic-x.svg" alt=""/></a></div>
+                </div>
+              </div>
+              <div class="ft-panel"> 
+                <div class="ft-list row"> 
+                  <div class="col col-4">
+                    <div class="ft-box"> 
+                      <div class="b-inner"> <span class="t-text"> LIÊN HỆ HỢP TÁC</span>
+                        <div class="b-gr"> <a class="t-link" href="">Email:contact@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-4">
+                    <div class="ft-box"> 
+                      <div class="b-inner"> <span class="t-text"> LIÊN HỆ QUẢNG CÁO</span>
+                        <div class="b-gr"> <a class="t-link" href="">Email:ads@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-4">
+                    <div class="ft-box"> 
+                      <div class="b-inner"> <span class="t-text"> HỖ TRỢ KỸ THUẬT</span>
+                        <div class="b-gr"> <a class="t-link" href="">Email:admin@vietinfo.us </a><a class="t-link" href="">Phone:678 408 2288 </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ft-bank"> 
+                <div class="i-list"><a class="i-link" href=""><img src="./assets/images/icon-bank (1).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (2).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (3).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (4).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (5).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (6).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (7).svg" alt=""/></a><a class="i-link" href=""><img src="./assets/images/icon-bank (8).svg" alt=""/></a>
+                </div>
+              </div>
+              <div class="ft-bot">
+                <div class="ft-nav"> 
+                  <ul class="menu">
+                    <li> <a href="">Privacy Policy</a></li>
+                    <li> <a href="">Terms of Service </a></li>
+                    <li> <a href="">Ads Service Agreement</a></li>
+                  </ul>
+                </div><span class="t-text">
+                    Designed by Qixtech - Web Design & Digital Marketing</span><span class="t-text">
+                   Copyright © 2024. VietInfo LLC. All Right Reserved. </span>
+              </div>
             </div>
           </div>
         </div>

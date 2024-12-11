@@ -157,6 +157,10 @@
   font-size: calc(20/14 * 1em);
   @include lc(1);
 
+  .txt {
+    @include lc(1);
+  }
+
   @include max($mobile) {
     font-size: calc(16/14 * 1em);
   }
@@ -268,7 +272,7 @@
     width: 100%;
   }
 
-  @include max($mobile) {
+  @include max(500px) {
     width: 100%;
 
     .pro-qc {
@@ -276,6 +280,8 @@
     }
   }
 }
+
+
 
 .pro-right {
   flex: 1;
@@ -298,7 +304,7 @@
   gap: 1em;
   padding: 0.8em;
 
-  @include max($mobile) {
+  @include max(500px) {
     flex-direction: column;
   }
 }
@@ -311,7 +317,7 @@
     padding-top: calc(3/4* 100%);
   }
 
-  @include max($mobile) {
+  @include max(500px) {
     width: 100%;
   }
 }
@@ -349,7 +355,7 @@
   flex-direction: column;
   gap: calc(24/16 * 1em);
 
-  @include min-max($mobile, $res-tablet) {
+  @include min-max(501px, $res-tablet) {
     flex-direction: row;
     gap: 1rem;
 
@@ -375,10 +381,11 @@
       left: 0;
       width: 100%;
       height: 100%;
+      overflow: hidden;
     }
   }
 
-  @include min($mobile-min) {
+  @include min(501px) {
     padding: 0.8em;
     border: 0.1rem solid #d9d9d9;
     border-radius: var(--rs);
@@ -386,7 +393,7 @@
 }
 
 .pro-calendar ul {
-  @include max($mobile) {
+  @include max(500px) {
     position: absolute;
     top: calc(100% + 0.8rem);
     left: 0;
@@ -401,7 +408,7 @@
     display: none;
   }
 
-  @include max($mobile) {
+  @include max(500px) {
     max-height: 30rem;
     overflow-y: auto;
   }
@@ -449,7 +456,7 @@
     font-size: 1.8rem;
   }
 
-  @include max($mobile) {
+  @include max(500px) {
     padding: 0.8em;
     border-radius: 6px;
     border: 1px solid rgba(208, 213, 221, 0.3);
@@ -485,7 +492,7 @@
     background-color: var(--color-pri);
     color: white;
 
-    @include min($mobile-min) {
+    @include min(501px) {
       padding: 1.5em;
     }
   }
@@ -569,7 +576,7 @@
 }
 
 .pro-wr.four .pro-name {
-  line-height: 1;
+  line-height: 1.3;
   display: flex;
   align-items: center;
   gap: .3em;
@@ -766,7 +773,7 @@
   font-weight: 600;
   border-radius: 0.8rem;
 
-  @include min($mobile-min) {
+  @include min(501px) {
     display: none;
   }
 }
@@ -782,7 +789,7 @@
   gap: 1.2rem;
   flex-wrap: wrap;
 
-  @include max($mobile) {
+  @include max(500px) {
     position: absolute;
     top: calc(100% + 0.8rem);
     left: 0;

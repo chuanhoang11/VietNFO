@@ -7,6 +7,9 @@
   }
   .section-sumary {
     width: 34.6rem;
+    position: sticky;
+    top: 1rem;
+    height: 100%;
   }
   @include max($res-tablet-min) {
     .admin-wrapper {

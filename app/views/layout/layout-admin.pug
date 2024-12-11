@@ -23,9 +23,10 @@ html(lang="en")
 		block header 
 			include ../blocks/admin-header
 		main.main-admin
-			.main-admin-wrapper
-				block container
-			block footer 
-				+footer
+			.main-admin-out
+				.main-admin-wrapper
+					block container
+				block footer 
+					+footer
 		block layer
 		include ../blocks/scripts

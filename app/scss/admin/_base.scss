@@ -2,6 +2,9 @@
     width: calc(100% - var(--w-sbar));
     margin-left: auto;
     min-height: 100vh;
+    width: 144rem;
+    max-width: 100%;
+    margin: 0 auto;
 
     @include max($res-tablet) {
         margin-top: var(--sz-hds);
@@ -12,20 +15,23 @@
 
 }
 
+.main-admin-out{
+    width: calc(100% - var(--w-sbar));
+    margin-left: auto;
+    max-width: 100%;
+    @include max($res-tablet) {
+        width: 100%;
+    }
+}
+
 .main-admin-wrapper {
     padding: 2.4rem 3.2rem;
-    max-width: 164.2rem;
-    margin: 0 auto;
-
     @include max($res-tablet) {
         padding: 1.6rem 1.5rem;
     }
 }
 
-.main-admin .ft {
-    max-width: 164.2rem;
-    margin: 0 auto;
-}
+
 
 .main-admin .ft .container {
     padding: 0 3.2rem;
@@ -240,4 +246,11 @@
     display: flex !important;
     margin-bottom: 2.4rem;
     flex-wrap: wrap;
+}
+
+.hideThongTinLienHe{
+    display: none !important;
+    &.open{
+        display: flex !important;
+    }
 }

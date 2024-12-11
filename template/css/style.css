@@ -7841,6 +7841,11 @@ ul.page-numbers {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden; }
+  .pro-name .txt {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden; }
   @media screen and (max-width: 700px) {
     .pro-name {
       font-size: calc(16/14 * 1em); } }
@@ -7947,7 +7952,7 @@ ul.page-numbers {
   @media screen and (max-width: 1024px) {
     .pro-left {
       width: 100%; } }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 500px) {
     .pro-left {
       width: 100%; }
       .pro-left .pro-qc {
@@ -7973,7 +7978,7 @@ ul.page-numbers {
   align-items: stretch;
   gap: 1em;
   padding: 0.8em; }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 500px) {
     .pro-wr.third {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -7985,7 +7990,7 @@ ul.page-numbers {
   height: 100%; }
   .pro-wr.third .pro-img .inner {
     padding-top: calc(3/4* 100%); }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 500px) {
     .pro-wr.third .pro-img {
       width: 100%; } }
 
@@ -8026,7 +8031,7 @@ ul.page-numbers {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: calc(24/16 * 1em); }
-  @media (min-width: 700px) and (max-width: 1024px) {
+  @media (min-width: 501px) and (max-width: 1024px) {
     .pro-bar {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -8050,14 +8055,15 @@ ul.page-numbers {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%; } }
-  @media screen and (min-width: 701px) {
+        height: 100%;
+        overflow: hidden; } }
+  @media screen and (min-width: 501px) {
     .pro-bar {
       padding: 0.8em;
       border: 0.1rem solid #d9d9d9;
       border-radius: var(--rs); } }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   .pro-calendar ul {
     position: absolute;
     top: calc(100% + 0.8rem);
@@ -8075,7 +8081,7 @@ ul.page-numbers {
     gap: 0.4rem;
     display: none; } }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   .pro-calendar ul {
     max-height: 30rem;
     overflow-y: auto; } }
@@ -8116,7 +8122,7 @@ ul.page-numbers {
   @media screen and (min-width: 1024px) {
     .pro-calendar li {
       font-size: 1.8rem; } }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 500px) {
     .pro-calendar li {
       padding: 0.8em;
       border-radius: 6px;
@@ -8147,7 +8153,7 @@ ul.page-numbers {
   .pro-calendar li.active {
     background-color: var(--color-pri);
     color: white; }
-    @media screen and (min-width: 701px) {
+    @media screen and (min-width: 501px) {
       .pro-calendar li.active {
         padding: 1.5em; } }
 
@@ -8217,7 +8223,7 @@ ul.page-numbers {
   gap: calc(5/12 * 1em); }
 
 .pro-wr.four .pro-name {
-  line-height: 1;
+  line-height: 1.3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8405,7 +8411,7 @@ ul.page-numbers {
   color: white;
   font-weight: 600;
   border-radius: 0.8rem; }
-  @media screen and (min-width: 701px) {
+  @media screen and (min-width: 501px) {
     .pro-calendar-head,
     .pro-fil-head {
       display: none; } }
@@ -8420,7 +8426,7 @@ ul.page-numbers {
   gap: 1.2rem;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 500px) {
     .pro-fil ul {
       position: absolute;
       top: calc(100% + 0.8rem);
@@ -16235,7 +16241,10 @@ input:checked + .control-round:before {
     -ms-flex: 1;
     flex: 1; }
   .register-promotion-section .section-sumary {
-    width: 34.6rem; }
+    width: 34.6rem;
+    position: sticky;
+    top: 1rem;
+    height: 100%; }
   @media screen and (max-width: 1025px) {
     .register-promotion-section .admin-wrapper {
       width: 100%; }
@@ -16352,24 +16361,29 @@ input:checked + .control-round:before {
 .main-admin {
   width: calc(100% - var(--w-sbar));
   margin-left: auto;
-  min-height: 100vh; }
+  min-height: 100vh;
+  width: 144rem;
+  max-width: 100%;
+  margin: 0 auto; }
   @media screen and (max-width: 1024px) {
     .main-admin {
       margin-top: var(--sz-hds);
       margin-left: 0;
       width: 100%; } }
 
+.main-admin-out {
+  width: calc(100% - var(--w-sbar));
+  margin-left: auto;
+  max-width: 100%; }
+  @media screen and (max-width: 1024px) {
+    .main-admin-out {
+      width: 100%; } }
+
 .main-admin-wrapper {
-  padding: 2.4rem 3.2rem;
-  max-width: 164.2rem;
-  margin: 0 auto; }
+  padding: 2.4rem 3.2rem; }
   @media screen and (max-width: 1024px) {
     .main-admin-wrapper {
       padding: 1.6rem 1.5rem; } }
-
-.main-admin .ft {
-  max-width: 164.2rem;
-  margin: 0 auto; }
 
 .main-admin .ft .container {
   padding: 0 3.2rem; }
@@ -16571,6 +16585,13 @@ input:checked + .control-round:before {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
+.hideThongTinLienHe {
+  display: none !important; }
+  .hideThongTinLienHe.open {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important; }
+
 .hds {
   height: var(--sz-hds);
   position: fixed;
@@ -16630,7 +16651,7 @@ input:checked + .control-round:before {
   width: var(--w-sbar);
   position: fixed;
   top: 0;
-  left: 0;
+  left: calc((100vw - 144rem) / 2);
   height: 100%;
   background-color: var(--color-pri);
   padding: 3rem 3.2rem;
@@ -16644,6 +16665,9 @@ input:checked + .control-round:before {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 2.4rem; }
+  @media screen and (max-width: 1440px) {
+    .sbar {
+      left: 0; } }
   @media screen and (max-width: 1024px) {
     .sbar {
       border-radius: 0 1.2rem 1.2rem 0;
@@ -17022,6 +17046,18 @@ input:checked + .control-round:before {
     width: 50%; }
   .f-list.layout-five .admin-check-posi {
     position: static; } }
+
+@media (min-width: 1130px) and (max-width: 1330px) {
+  .f-list.--layout-six .f-item.col-6 {
+    width: 50%; }
+  .f-list.--layout-six .f-item.col-4 {
+    width: 50%; } }
+
+@media (min-width: 1025px) and (max-width: 1130px) {
+  .f-list.--layout-six .f-item.col-6 {
+    width: 100%; }
+  .f-list.--layout-six .f-item.col-4 {
+    width: 100%; } }
 
 @media (min-width: 701px) and (max-width: 1199px) {
   .f-list.--layout-thongtinchung .col-4:nth-child(1) {

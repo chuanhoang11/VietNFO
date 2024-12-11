@@ -244,6 +244,27 @@
   }
 }
 
+.f-list.--layout-six{
+  @include min-max(1130px, 1330px) {
+    .f-item.col-6 {
+      width: 50%;
+    }
+
+    .f-item.col-4 {
+      width: 50%;
+    }
+  }
+  @include min-max($res-tablet-min, 1130px) {
+    .f-item.col-6 {
+      width: 100%;
+    }
+
+    .f-item.col-4 {
+      width: 100%;
+    }
+  }
+}
+
 .f-list.--layout-thongtinchung {
   @include min-max($mobile-min, $res-mobile) {
     .col-4:nth-child(1) {

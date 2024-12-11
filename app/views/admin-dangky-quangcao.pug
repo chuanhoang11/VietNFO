@@ -113,56 +113,60 @@ block container
 					thead 
 						tr 
 							td.title Billing information
-							td.--w Edit
 					tbody
 						tr
 							td 
-								label.admin-check 
-									input(type="radio" id="check-lienhe" name="check-lienhe" hidden)
+								label.admin-check.mb-8
+									input(type="radio"  class="check-radio-lienhe" id="check-lienhe" name="check-lienhe" hidden checked)
 									span.admin-check-radio
 									.admin-user 
 										p.name Tu Nguyen
 										p.des Email: admin@vietinfo.us
 										p.des Phone: 0123456789
-							td.--w 
-								.edit 
-									+img("ic-edit.svg")
-			.admin-block 
-				.admin-heading-second
-					p.c-txt.t20.fw-5(style="color: #1F2237") Update billing information
-				.f-list.row 
-					.f-item.col.col-4 	
-						+AdminLabel("Name")
-						input.admin-input.second(type="text" value="Tu Nguyen")
-					.f-item.col.col-4 	
-						+AdminLabel("Organization <span class='fw-4'>(optional)</span>")
-						input.admin-input.second(type="text" value="Qixtech LLC")
-					.f-item.col.col-4 	
-						+AdminLabel("Email")
-						input.admin-input.second(type="text" value="lethuylinh@gmail.com")
-					.f-item.col.col-6 
-						+AdminLabel("Address 1 ") 
-						input.admin-input.second(type="text" value="3286 Robinson Oaks Way NE")
-					.f-item.col.col-6
-						+AdminLabel("Address 2 <span class='fw-4'>(optional)</span>") 
-						input.admin-input.second(type="text" value="Apt, suite, unit, building, floor, etc.")
-					.f-item.col.col-4
-							+AdminLabel("City") 
-							input.admin-input.second(type="text" value="Atlanta")
-					.f-item.col.col-4
-						+AdminLabel("State") 
-						+AdminSelect(
-							[
-								"Georgia",
-								"Georgia",
-								"Georgia",
-								"Georgia"
-							],
-							"second"
-						)
-					.f-item.col.col-4
-						+AdminLabel("Zip code") 
-						input.admin-input.second(type="number" value="30062")
+								label.admin-check 
+									input(type="radio" id="check-lienhe" name="check-lienhe" hidden class="check-radio-lienhe check-themthongtin")
+									span.admin-check-radio
+									.admin-user 
+										p.c-pri Thêm thông tin khác
+			.admin-block.hideThongTinLienHe
+				div
+					.admin-heading-second
+						p.c-txt.t20.fw-5(style="color: #1F2237") Update billing information
+					.f-list.row.--layout-six
+						.f-item.col.col-4 	
+							+AdminLabel("Name")
+							input.admin-input.second(type="text" value="Tu Nguyen")
+						.f-item.col.col-4 	
+							+AdminLabel("Organization <span class='fw-4'>(optional)</span>")
+							input.admin-input.second(type="text" value="Qixtech LLC")
+						.f-item.col.col-4 	
+							+AdminLabel("Email")
+							input.admin-input.second(type="text" value="lethuylinh@gmail.com")
+						.f-item.col.col-6 
+							+AdminLabel("Address 1 ") 
+							input.admin-input.second(type="text" value="3286 Robinson Oaks Way NE")
+						.f-item.col.col-6
+							+AdminLabel("Address 2 <span class='fw-4'>(optional)</span>") 
+							input.admin-input.second(type="text" value="Apt, suite, unit, building, floor, etc.")
+						.f-item.col.col-4
+								+AdminLabel("City") 
+								input.admin-input.second(type="text" value="Atlanta")
+						.f-item.col.col-4
+							+AdminLabel("State") 
+							+AdminSelect(
+								[
+									"Georgia",
+									"Georgia",
+									"Georgia",
+									"Georgia"
+								],
+								"second"
+							)
+						.f-item.col.col-4
+							+AdminLabel("Zip code") 
+							input.admin-input.second(type="number" value="30062")
+						.f-item.col
+							+Checker("checkbox","","Save this information for next time")
 			+Btn("Lưu ", "button", "m-left")
 		.section-sumary.col.admin-wrapper
 			.admin-block 
