@@ -9,8 +9,8 @@ block container
 	a(href="").admin-back 
 		+img("ic-back.svg")
 		span.txt Quay lại
-	.admin-heading.t-center
-		h1.admin-title Chỉnh sửa quảng cáo
+	.admin-heading
+		h1.admin-title(style="justify-content: center;") Chỉnh sửa quảng cáo
 	.admin-pro.layout-half
 		.admin-pro-inner
 			.admin-pro-row.row
@@ -79,7 +79,7 @@ block container
 									input(type="text", hidden)
 									span.icon-arrow 
 										i.fa-light.fa-chevron-down
-									.txt States
+									.txt Alabama
 								.selectCusOptions
 									.text-head 
 										.b-ip-search
@@ -112,9 +112,7 @@ block container
 									.selectCusApply Xác nhận
 					.f-item.col
 						+AdminLabel("Thời gian quảng cáo <span class='fw-4'>(5% discount tự động apply cho quảng cáo trên 6 months)</span>")
-						.admin-date.f-left.--disable
-							+img("ic-calendar.svg")
-							input.admin-input.second.--bg(type="text" value="Jan, Feb +5" placeholder="Chọn ngày tháng tin hết hiệu lực")
+						+AdminDate("read-only",text="Jan, Feb +5")
 			.form-upload.collapse-block 
 				.b-inner 
 					span.t-head 
