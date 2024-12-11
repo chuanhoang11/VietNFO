@@ -2,7 +2,7 @@ body.page-search {
   .hd {
     box-shadow: unset;
 
-    ~.main {
+    ~ .main {
       .sear-map {
         @include min(1025px) {
           height: calc(100vh - 7.2rem - 7.8rem);
@@ -114,13 +114,13 @@ body.page-search {
         --rg: 0.8rem;
       }
 
-      >.col-4 {
+      > .col-4 {
         @include max(920px) {
           width: 100%;
         }
       }
 
-      >.col-3 {
+      > .col-3 {
         @include max(920px) {
           width: 40%;
         }
@@ -130,7 +130,7 @@ body.page-search {
         }
       }
 
-      >.col-2 {
+      > .col-2 {
         @include max(920px) {
           width: 20%;
         }
@@ -301,8 +301,6 @@ body.page-search {
         }
       }
 
-
-
       .col-sl-sm {
         width: calc(13rem + var(--cg));
 
@@ -337,7 +335,6 @@ body.page-search {
   }
 
   &-map {
-
     img,
     iframe {
       width: 100%;
@@ -414,7 +411,6 @@ body.page-search {
 }
 
 .pro-select {
-
   .selectCusValue,
   .selectTwoValue {
     border: unset;
@@ -491,7 +487,7 @@ body.page-search {
 
 .pro-panel {
   .swiper-container {
-    ~.box-btn {
+    ~ .box-btn {
       @include max(500px) {
         display: none;
       }
@@ -949,11 +945,11 @@ body.page-search {
 
   input {
     &:checked {
-      ~.t-txt {
+      ~ .t-txt {
         color: var(--color-pri);
       }
 
-      ~.ck-dot {
+      ~ .ck-dot {
         background: var(--color-pri);
 
         &::before {
@@ -961,7 +957,7 @@ body.page-search {
         }
       }
 
-      ~.t-des {
+      ~ .t-des {
         color: #1d2939;
 
         &::after {
@@ -1604,7 +1600,17 @@ body.page-search {
       display: none;
     }
   }
-
+  &-row {
+    .col {
+      &:nth-child(3):not(:nth-last-child(2)) {
+        .admin-pro-it {
+          .icon {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
   .col {
     position: relative;
 
@@ -1629,12 +1635,11 @@ body.page-search {
     }
 
     &.check-active {
-      +.col-line-mb {
+      + .col-line-mb {
         opacity: 1;
       }
 
       .admin-pro-it {
-
         .icon,
         .txt {
           opacity: 1;
@@ -1720,9 +1725,11 @@ body.page-search {
       gap: 0.6rem;
     }
 
-    &.active {}
+    &.active {
+    }
 
-    &.active-check {}
+    &.active-check {
+    }
 
     .icon {
       width: 3.6rem;
@@ -1774,5 +1781,11 @@ body.page-search {
   @include input-placeholder {
     font-weight: 400;
     color: #6b7280;
+  }
+}
+.read-only {
+  pointer-events: none;
+  .adminDate-ip input {
+    background: #f2f4f7;
   }
 }

@@ -1092,8 +1092,8 @@ mixin PopupSideBar()
       .pro-bner
          +proBannerSecond("pro-bner-sidebar.png")
 
-mixin AdminDate()
-   .adminDate 
+mixin AdminDate(classCustom,text="Chọn một hoặc nhiều tháng bạn muốn hiện quảng cáo")
+   .adminDate(class=classCustom)
       .adminDate-popup 
          .adminDate-slide 
             +SwiperControl("posi plus")
@@ -1122,7 +1122,7 @@ mixin AdminDate()
                         .adminDate-slide-item   
                            input(type="text" value=`${year.name}`)
                            p.txt=year.name
-         .adminDate-note Chọn một hoặc nhiều tháng bạn muốn hiện quảng cáo
+         .adminDate-note #{text}
          .adminDate-list.row 
             -
                var months = [
