@@ -14,9 +14,24 @@
 
 .main-admin-wrapper {
     padding: 2.4rem 3.2rem;
+    max-width: 164.2rem;
+    margin: 0 auto;
 
-    @include max($mobile) {
-        padding: 1.6rem 2rem;
+    @include max($res-tablet) {
+        padding: 1.6rem 1.5rem;
+    }
+}
+
+.main-admin .ft {
+    max-width: 164.2rem;
+    margin: 0 auto;
+}
+
+.main-admin .ft .container {
+    padding: 0 3.2rem;
+
+    @include max($res-tablet) {
+        padding: 0 1.5rem;
     }
 }
 
@@ -153,20 +168,24 @@
     .btn {
         flex: 1;
     }
-    .btn.trans{
+
+    .btn.trans {
         border-color: #D0D5DD;
         color: #344054;
-        &::after{
+
+        &::after {
             opacity: 0;
         }
     }
 }
-.admin-heading.t-center{
-    @include max($mobile){
+
+.admin-heading.t-center {
+    @include max($mobile) {
         text-align: left;
     }
 }
-.admin-back{
+
+.admin-back {
     display: flex;
     align-items: center;
     gap: .8rem;
@@ -174,46 +193,49 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 1.2rem;
-    >img{
+
+    >img {
         width: 2em;
         transition: .3s ease-in-out;
     }
-    @include hover{
-        img{
+
+    @include hover {
+        img {
             transform: translateX(-.2rem);
         }
     }
 }
 
-.popup-add-pay  .popup-main {
+.popup-add-pay .popup-main {
     width: 64rem;
 
 }
 
-.popup-add-pay  {
+.popup-add-pay {
     border-radius: .5rem;
 }
 
-.popup-add-pay ~.popup-close {
+.popup-add-pay~.popup-close {
     background-color: #344054;
     border-radius: .8rem;
-   i{
-    color: white !important;
-    font-size: 2rem !important;
-   }
-}   
 
-.popup-add-pay  .popup-wrapper {
+    i {
+        color: white !important;
+        font-size: 2rem !important;
+    }
+}
+
+.popup-add-pay .popup-wrapper {
     padding: 2.4rem;
 }
 
-.popup-add-pay .f-left.second >img{
+.popup-add-pay .f-left.second>img {
     width: 2rem;
     left: 2rem;
- 
+
 }
 
-.popup-add-pay .pay-list{
+.popup-add-pay .pay-list {
     justify-content: center;
     display: flex !important;
     margin-bottom: 2.4rem;

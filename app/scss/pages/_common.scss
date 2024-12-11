@@ -172,10 +172,12 @@ body.page-search {
         width: 100%;
         height: calc(100vh - var(--h-sear));
         z-index: 10;
+        opacity: 0;
+        visibility: hidden;
 
-        &.close {
-          opacity: 0;
-          visibility: hidden;
+        &.open {
+          opacity: 1;
+          visibility: visible;
         }
       }
     }

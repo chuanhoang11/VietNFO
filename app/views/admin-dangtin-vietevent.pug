@@ -96,4 +96,25 @@ block container
 						.f-label 
 							| Flyer photo 
 							span.fw-4 (upload một ảnh duy nhất)
+						.drz-flex.row
+							.drz-flex-item.col.col-6
+								.dropzone#dropzone
+									form(action="/upload")#dropzone-upload
+										.dropzone-content 
+											+img("ic-upload-pri.svg")
+											p.title 
+												| Kéo thả hình ảnh or 
+												span.fw-6.c-pri Chọn và tải lên
+											p.des Hoặc chọn ảnh cũ đã sử dụng lưu trong hệ thống để dùng lại
+							.drz-flex-item.col.col-6
+								.dropzone-wr.second
+									.dropzone-img 
+										+img("dropzone-img.jpg")
+									.dropzone-ct
+										.dropzone-top 
+											.content 
+												p.dropzone-title.fw-6 cover image.jpg
+												p.dropzone-des 500kb
+											.dropzone-delete
+												+img("ic-delete-2.svg")
 			+Btn("Đăng bài", "button", "admin-btn")

@@ -455,11 +455,11 @@ export default function ComponentModule() {
     btnDanhSach.addEventListener("click", () => {
       const list = document.querySelector("#map-block")
       const txt = btnDanhSach.querySelector(".txt")
-      list.classList.toggle("close")
-      if (list.classList.contains("close")) {
-        txt.innerHTML = "Bản đồ"
-      } else {
+      list.classList.toggle("open")
+      if (list.classList.contains("open")) {
         txt.innerHTML = "Danh sách"
+      } else {
+        txt.innerHTML = "Bản đồ"
       }
     })
   }

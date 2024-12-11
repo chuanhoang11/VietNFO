@@ -451,13 +451,13 @@ mixin proItem(item)
                      span.txt 
                         span.txt-hidden Rent: 
                         span.fw-6.c-txt-3 #{item.rent}
-                        span(style="font-size: .8em") /month
+                        span(style="font-size: .8em")  /month
                if item.income
                   .pro-note-item 
                      span.txt 
                         span.txt-hidden Income: 
                         span.fw-6.c-txt-3 #{item.income}
-                        span(style="font-size: .8em") /year
+                        span(style="font-size: .8em")  /year
          .pro-des #{item.address}
 mixin proItem2(item)
    .pro-wr
@@ -474,7 +474,7 @@ mixin proItem2(item)
                span(style="font-size: .8em").fw-4 /month
          if item.name
             h3.pro-name #{item.name}
-         div
+         div.pro-content-child
             if item.note.length > 0 
                .pro-note
                   each note in item.note
@@ -927,7 +927,7 @@ mixin SearLayout(title)
                   span 
                   span 
                   span 
-               span.txt Danh sách
+               span.txt Bản đồ
             .sear-block 
                .sear-row.row 
                   .col.col-7#map-block
@@ -1089,7 +1089,8 @@ mixin PopupSideBar()
                   +img("ic-fb.svg") 
                a(href="").social-link
                   +img("ic-x.svg") 
-      +proBannerSecond("pro-bner-sidebar.png")
+      .pro-bner
+         +proBannerSecond("pro-bner-sidebar.png")
 
 mixin AdminDate()
    .adminDate 
