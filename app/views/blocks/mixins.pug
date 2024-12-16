@@ -1,33 +1,33 @@
-mixin Btn(text, type, classCustom,icon)
-   if(!classCustom)
-      if(type == "button")
-         button.btn(type="submit",class=classCustom)
+mixin Btn(text, type, classCustom, icon=false)
+   if !classCustom
+      if type == "button"
+         button.btn(type="submit", class=classCustom)
             span.inner #{text}
-            if(icon===true)
+            if icon
                i.fa-light.fa-arrow-right.icon
-            else 
-               i(class=icon)
-      else
-         a.btn(href="",class=classCustom)
-            span.inner #{text}
-            if(icon===true)
-               i.fa-light.fa-arrow-right.icon
-            else 
-               i(class=icon)
-   else 
-      if(type == "button")
-         button.btn(type="submit",class=classCustom)
-            span.inner #{text}
-            if(icon===true)
-               i.fa-light.fa-arrow-right.icon
-            else 
+            else if icon !== false
                i(class=icon)
       else
          a.btn(href="", class=classCustom)
             span.inner #{text}
-            if(icon===true)
+            if icon
                i.fa-light.fa-arrow-right.icon
-            else 
+            else if icon !== false
+               i(class=icon)
+   else
+      if type == "button"
+         button.btn(type="submit", class=classCustom)
+            span.inner #{text}
+            if icon
+               i.fa-light.fa-arrow-right.icon
+            else if icon !== false
+               i(class=icon)
+      else
+         a.btn(href="", class=classCustom)
+            span.inner #{text}
+            if icon
+               i.fa-light.fa-arrow-right.icon
+            else if icon !== false
                i(class=icon)
 mixin PageNumber 
    ul.page-numbers
