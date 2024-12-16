@@ -190,6 +190,7 @@
       @include max(1200px) {
         --w: 15rem;
       }
+
       @include max($mobile) {
         margin: 0 auto;
       }
@@ -312,7 +313,7 @@
       }
 
       @include max(576px) {
-        --w: 13rem;
+        --w: 14rem;
 
         .sl,
         .ip {
@@ -322,7 +323,7 @@
         .sl {
           .select2-container .select2-selection--single .select2-selection__rendered {
             font-size: 1.4rem;
-            padding-left: 4rem;
+            padding-left: 5rem;
           }
         }
 
@@ -1240,6 +1241,7 @@
     overflow: hidden;
     border-radius: 0.5rem;
     width: 100%;
+
     iframe {
       height: 100%;
       width: 100%;
@@ -2735,6 +2737,7 @@ $table-spacing: 1rem; // 10px
   margin-bottom: 2.4rem;
   position: relative;
   height: 3.819rem;
+
   &-it {
     font-size: 2.4rem;
     border-bottom: 0.1rem solid var(--border);
@@ -2744,6 +2747,7 @@ $table-spacing: 1rem; // 10px
     font-weight: 400;
     // min-width: 13rem;
     position: absolute;
+
     &.active {
       border-color: var(--color-pri);
       color: var(--color-pri);
@@ -2751,10 +2755,12 @@ $table-spacing: 1rem; // 10px
       -webkit-text-stroke: 1px var(--color-pri);
 
     }
+
     &:nth-child(1) {
       left: 0;
       bottom: 0;
     }
+
     &:nth-child(2) {
       left: 15rem;
       bottom: 0;
@@ -3072,6 +3078,11 @@ $table-spacing: 1rem; // 10px
         flex-direction: row;
         text-align: left;
         gap: 2.4rem;
+      }
+      &.active {
+        &::after {
+          transform: translateX(-50%) translateY(calc(-50%)) scale(1.2);
+        }
       }
     }
 
@@ -3648,13 +3659,16 @@ $table-spacing: 1rem; // 10px
   &-item {
     width: 25%;
     cursor: pointer;
+
     @include max(1200px) {
       width: calc(100% / 3);
     }
+
     @include max(500px) {
       font-size: 1.2rem;
       width: 50%;
     }
+
     .inner {
       padding: .8rem 1rem;
       display: flex;
@@ -3665,6 +3679,7 @@ $table-spacing: 1rem; // 10px
       color: #344054;
       font-weight: 600;
       gap: 0.8rem;
+
       &::before {
         content: "";
         display: block;
@@ -3675,19 +3690,24 @@ $table-spacing: 1rem; // 10px
         background-color: #12B76A;
       }
     }
+
     input {
-      &:checked ~ .inner {
+      &:checked~.inner {
         background-color: #12B76A;
         color: white;
+
         &::before {
           border: 0.1rem solid white;
         }
       }
     }
+
     &.disabled {
       pointer-events: none;
+
       .inner {
         background-color: #D0D5DD;
+
         &::before {
           background-color: #B42318;
         }
@@ -3708,20 +3728,24 @@ $table-spacing: 1rem; // 10px
     z-index: 10;
     pointer-events: none;
     opacity: 0;
+
     &.open {
       opacity: 1;
       pointer-events: visible;
     }
   }
+
   &-bottom {
     border-top: 0.1rem solid var(--border);
     margin-top: 2rem;
     padding-top: 2rem;
   }
+
   &-result {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+
     .txt {
       font-weight: 500;
       font-size: 1.4rem;
@@ -3729,25 +3753,30 @@ $table-spacing: 1rem; // 10px
       color: #1D2939;
       white-space: nowrap;
     }
+
     &-list {
       display: flex;
       flex-wrap: wrap;
       gap: .8rem;
     }
+
     &-item {
       padding: 1rem 1.4rem;
       border: 0.1rem solid var(--border);
       border-radius: .5rem;
+
       @include max(500px) {
         font-size: 1.4rem;
       }
     }
   }
+
   &-button {
     margin-top: 2.4rem;
     display: flex;
     gap: 1rem;
   }
+
   &-btn {
     display: flex;
     justify-content: center;
@@ -3757,19 +3786,23 @@ $table-spacing: 1rem; // 10px
     border-radius: 1rem;
     cursor: pointer;
     transition: 0.4s;
+
     &.cancel {
       background-color: white;
       border: 0.1rem solid var(--border);
       margin-left: auto;
+
       @include hover {
         background-color: rgb(255, 205, 205);
         color: red;
         border-color: red;
       }
     }
+
     &.save {
       background-color: var(--color-pri);
       color: white;
+
       @include hover {
         background-color: #12B76A;
       }
@@ -3777,3 +3810,76 @@ $table-spacing: 1rem; // 10px
   }
 }
 
+// fb 16/12/2024
+.popdt .popup-over {
+  max-height: calc(100vh - 14rem);
+}
+
+.popup-main:has(.popdt) {
+  // top: unset;
+  // transform: translateY(0) translateX(-50%);
+  // bottom: 0;
+}
+@include max(1005px) {
+  .direc-data {
+    .sear-form .form-list .col-search {
+      width: calc(36rem + var(--cg));
+    }
+    .sear-form .form-list .col-btn {
+      width: calc(13rem + var(--cg));
+      margin: unset;
+      .btn {
+        padding: .6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          display: none;
+        }
+      }
+    }
+  }
+  @include max(700px) {
+    .direc-data {
+      .sear-form .form-list .col-search {
+        width: calc(100% - 13rem);
+        order: -1;
+      }
+      .sear-form .form-list .col-btn {
+        width: 13rem;
+        order: 1;
+      }
+      .sear-form .form-list .col-sl-md {
+        width: 100%;
+        order: 2;
+      }
+    }
+  }
+  
+}
+
+.sign-logo {
+  display: none;
+}
+
+@include min(681px) {
+  .qc-progress-it:nth-child(3) {
+    .inner {
+      >img {
+        margin-right: -0.8rem;
+      }
+    }
+  }
+}
+
+.terms-box .terms-box-des ul li {
+  a {
+    word-break: break-word;
+  }
+}
+
+@include max(576px) {
+  .hd .home-bn-srch-box .sl .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 5rem;
+  }
+}
