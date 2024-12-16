@@ -692,7 +692,8 @@ mixin AdminInput(...attributes)
    input.admin-input(type="text" ...attributes)
 mixin DropZone()
    .f-flex-col
-      .dropzone#dropzone
+      label.dropzone#dropzone
+         input(type="file" hidden)
          form(action="/upload")#dropzone-upload
             .dropzone-content 
                +img("ic-upload-pri.svg")
@@ -944,7 +945,7 @@ mixin SearLayout(title)
                      .sear-panel
                         .head-sc.mb-10
                            +title(title, "","dcor")
-                        .head-sc.mb-10 
+                        .head-sc.second.mb-10 
                            span.txt 107 kết quả
                            +selectPong("Mặc định",['Mới đăng Tiền lương (cao tới thấp)','Tiền lương (thấp tới cao)','Lượt xem (cao tới thấp)', 'Lượt xem (thấp tới cao)','Mặc định'])
                         block

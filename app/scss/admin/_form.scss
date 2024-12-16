@@ -73,6 +73,13 @@
   padding-left: 5rem;
 }
 
+
+.f-left>img {
+  width: 1.5rem;
+  @include posi-vertical;
+  left: 1rem;
+}
+
 .f-left>img {
   width: 1.5rem;
   @include posi-vertical;
@@ -561,6 +568,7 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 2.4rem !important;
   min-height: unset;
   cursor: pointer;
+  display: block;
 }
 
 .dropzone-content {
@@ -813,7 +821,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .prf-clear {
     cursor: pointer;
-    margin-left: 30%;
+    margin-left: 58%;
 
     @include max(500px) {
       display: none;
@@ -831,6 +839,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
 
   @include max(500px) {
     min-height: 30rem;
@@ -843,7 +852,15 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .prf-image-item {
-  max-width: 28rem;
+  // max-width: 28rem;
+  @include min-max($mobile-min,1330px){
+    &:nth-child(1){
+      width: 100%;
+    }
+    &:not(:first-child){
+      width: calc(100% / 3);
+    }
+  }
 
   @include max($mobile) {
     width: 50%;

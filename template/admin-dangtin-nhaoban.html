@@ -181,7 +181,8 @@
                   <div class="f-item col"> 
                     <label class="f-label">Photos</label>
                     <div class="f-flex-col">
-                      <div class="dropzone" id="dropzone">
+                      <label class="dropzone" id="dropzone">
+                        <input type="file" hidden="hidden"/>
                         <form action="/upload" id="dropzone-upload">
                           <div class="dropzone-content"> <img src="./assets/images/ic-upload-pri.svg" alt=""/>
                             <p class="title">
@@ -189,7 +190,7 @@
                             <p class="des">Hoặc chọn ảnh cũ đã sử dụng lưu trong hệ thống để dùng lại</p>
                           </div>
                         </form>
-                      </div>
+                      </label>
                       <div class="dropzone-slider">
                         <div class="swiper-control dropzone-control"> 
                           <div class="swiper-control-btn swiper-prev"> <i class="fa-light fa-chevron-left"></i></div>
