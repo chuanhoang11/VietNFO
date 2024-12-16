@@ -51,16 +51,17 @@ block container
 							p.fw-6.c-txt-2 Profile Image
 							.prf-clear.c-pri Clear
 						.prf-image-list.row 
-							.prf-image-item.col.col-4 
-								.prf-image-box 
+							.prf-image-item.col.col-3 
+								label.prf-image-box 
+									input(type="file" hidden)
 									.prf-image-box-inner 
 										+img("ic-upload-2.svg")
 										p.c-pri Chọn và tải lên
 										p.des hoặc kéo thả hình ảnh đại diện (size 1000x1000). Hoặc chọn các ảnh cũ đã sử dụng
-							.prf-image-item.col.col-4 
+							.prf-image-item.col.col-3 
 								.prf-clear.c-pri Clear
 							each item in Array(3)
-								.prf-image-item.col.col-4 
+								.prf-image-item.col.col-3 
 									.prf-image-wr 
 										+img("prf-img.jpg")
 										.prf-image-content

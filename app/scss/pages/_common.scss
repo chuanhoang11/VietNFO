@@ -5,8 +5,8 @@ body.page-search {
     ~ .main {
       .sear-map {
         @include min(1025px) {
-          height: calc(100vh - 7.2rem - 7.8rem);
-          top: calc(7.2rem + 7.8rem);
+          height: calc(100vh - 7.8rem - 5.6rem);
+          top: calc(5.6rem + 7.8rem);
         }
 
         @include max(1024px) {
@@ -79,7 +79,7 @@ body.page-search {
   }
 
   &-head {
-    padding: 1rem;
+    padding: 1rem var(--pd-container);
     background: #fff;
     position: sticky;
     top: 7.8rem;
@@ -212,7 +212,7 @@ body.page-search {
       }
     }
 
-    .head-sc {
+    .head-sc:not(.second) {
       @include max(600px) {
         flex-direction: column;
         align-items: unset;
