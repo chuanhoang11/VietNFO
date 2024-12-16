@@ -6,7 +6,7 @@
     width: 100%;
     z-index: 49;
     background-color: var(--color-pri);
-    padding: 0 1.5rem;
+    padding: 0 var(--pd-container);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +48,7 @@
     width: var(--w-sbar);
     position: fixed;
     top: 0;
-    left: calc((100vw - 144rem) / 2);
+    left: 0;
     height: 100%;
     background-color: var(--color-pri);
     padding: 3rem 3.2rem;

@@ -157,7 +157,8 @@
                        Flyer photo <span class="fw-4">(upload một ảnh duy nhất)</span></div>
                     <div class="drz-flex row">
                       <div class="drz-flex-item col col-6">
-                        <div class="dropzone" id="dropzone">
+                        <label class="dropzone" id="dropzone">
+                          <input type="file" hidden>
                           <form action="/upload" id="dropzone-upload">
                             <div class="dropzone-content"> <img src="./assets/images/ic-upload-pri.svg" alt=""/>
                               <p class="title">
@@ -165,7 +166,7 @@
                               <p class="des">Hoặc chọn ảnh cũ đã sử dụng lưu trong hệ thống để dùng lại</p>
                             </div>
                           </form>
-                        </div>
+                        </label>
                       </div>
                       <div class="drz-flex-item col col-6">
                         <div class="dropzone-wr second">
@@ -221,7 +222,7 @@
                   </div>
                 </div>
               </div>
-              <button class="btn admin-btn" type="submit"><span class="inner">Đăng bài</span><i></i>
+              <button class="btn admin-btn" type="submit"><span class="inner">Đăng bài</span>
               </button>
             </div>
           </div>

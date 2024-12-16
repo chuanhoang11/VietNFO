@@ -97,7 +97,8 @@ block container
 							span.fw-4 (upload một ảnh duy nhất)
 						.drz-flex.row
 							.drz-flex-item.col.col-6
-								.dropzone#dropzone
+								label.dropzone#dropzone
+									input(type="file" hidden)
 									form(action="/upload")#dropzone-upload
 										.dropzone-content 
 											+img("ic-upload-pri.svg")

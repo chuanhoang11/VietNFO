@@ -145,7 +145,41 @@ block container
 											span.icon 
 												i.fa-light.fa-chevron-down
 										.b-body.collapse-body
-											| Chưa có nội dung 
+											.b-boxed
+												.t-txt 
+													| Upload 1 banner cho màn hình mobile 
+													span.c-red 
+														| [ 100 x 100 px ]
+												.b-bdrop 
+													.progress-container
+														svg.progress-circle(viewbox='0 0 36 36' xmlns='http://www.w3.org/2000/svg')
+															path.circle-bg(fill='none' stroke='#FAFAFA' stroke-width='3' d='M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32')
+															path.circle(fill='none' stroke='#1849D6' stroke-width='3' stroke-dasharray='100, 100' d='M18 2 a16 16 0 1 1 0 32 a16 16 0 1 1 0 -32')
+															text(x="18" y="19" text-anchor="middle" alignment-baseline="middle" ).progress-text 0%
+														span.txt Uploading...
+														span.btn-cancel.btn-action.btnCalcelJs Cancel
+													.inner.dropzoneJs
+														input(type="file" class="ipUpFile" )
+														.b-gr 
+															span.icon 
+																+img("icon-upload.svg")
+															.t-text 
+																| Kéo thả hình ảnh or 
+																span.c-pri.fw-7 
+																	| Chọn và tải lên
+															.t-txt Hoặc chọn ảnh cũ đã sử dụng lưu trong hệ thống để dùng lại
+												.t-note Only support .jpg or .png files
+											.t-line
+												span.t-txt
+													| OR
+											.b-url 
+												.thead Upload from URL
+												.b-in 
+													input(type="text"  class="inputFileUrl" placeholder="Add file URL")
+													button.btn-upfile.btnUpfileJS.btn-action 
+														span 
+															| Upload
+											ul.b-list.hide.imageListJs
 									else
 										.thead.collapse-head Upload desktop version 
 											span.icon 
@@ -208,5 +242,15 @@ block container
 											span.c-pri 
 												| Chọn và tải lên 
 												span.c-text hoặc kéo thả để tải lên biên lai bạn đã thanh toán cho ad này
-							ul.b-list.hide.imageListJs
+						.t-line
+							span.t-txt
+								| OR
+						.b-url 
+							.thead Upload from URL
+							.b-in 
+								input(type="text"  class="inputFileUrl" placeholder="Add file URL")
+								button.btn-upfile.btnUpfileJS.btn-action 
+									span 
+										| Upload
+						ul.b-list.hide.imageListJs
 			+Btn("Tiếp theo","","admin-btn",true)

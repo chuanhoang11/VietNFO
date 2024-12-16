@@ -1,8 +1,6 @@
 .main-admin {
-    width: calc(100% - var(--w-sbar));
     margin-left: auto;
     min-height: 100vh;
-    width: 144rem;
     max-width: 100%;
     margin: 0 auto;
 
@@ -26,9 +24,15 @@
 
 .main-admin-wrapper {
     padding: 2.4rem 3.2rem;
+    max-width: 164rem;
+    margin: 0 auto;
     @include max($res-tablet) {
         padding: 1.6rem 1.5rem;
     }
+}
+.main-admin .ft{
+    max-width: 164rem;
+    margin: 0 auto;
 }
 
 
@@ -237,8 +241,10 @@
 
 .popup-add-pay .f-left.second>img {
     width: 2rem;
-    left: 2rem;
-
+    left: 1rem;
+}
+.popup-add-pay .f-left.second .admin-input{
+    padding-left: 4rem;
 }
 
 .popup-add-pay .pay-list {
