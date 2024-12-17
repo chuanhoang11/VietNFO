@@ -3812,7 +3812,10 @@ $table-spacing: 1rem; // 10px
 
 // fb 16/12/2024
 .popdt .popup-over {
-  max-height: calc(100vh - 14rem);
+  max-height: calc(100vh - 7rem);
+}
+.popdt .heads {
+  height: 7rem;
 }
 
 .popup-main:has(.popdt) {
@@ -3881,5 +3884,32 @@ $table-spacing: 1rem; // 10px
 @include max(576px) {
   .hd .home-bn-srch-box .sl .select2-container .select2-selection--single .select2-selection__rendered {
     padding-left: 5rem;
+  }
+}
+
+.t-title {
+  span {
+    color: var(--color-pri);
+  }
+}
+
+@include max(1024px) {
+  .form-upload .b-inner,
+  .upload-panel .inner-panel {
+      padding: 1.6rem 2.4rem;
+  }
+}
+@include max(700px) {
+  .form-upload .b-inner,
+  .upload-panel .inner-panel {
+      padding: 1.6rem;
+  }
+}
+
+.main-admin {
+  .table-pagi {
+    @include min-max(600px,1250px) {
+      padding: 1.2rem 1.6rem !important;
+    }
   }
 }
