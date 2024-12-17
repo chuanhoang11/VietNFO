@@ -3892,7 +3892,12 @@ $table-spacing: 1rem; // 10px
     color: var(--color-pri);
   }
 }
-
+@include min(1024px) {
+  .form-upload .b-inner,
+  .upload-panel .inner-panel {
+      padding: 1.6rem 2.4rem;
+  }
+}
 @include max(1024px) {
   .form-upload .b-inner,
   .upload-panel .inner-panel {
@@ -3911,5 +3916,11 @@ $table-spacing: 1rem; // 10px
     @include min-max(600px,1250px) {
       padding: 1.2rem 1.6rem !important;
     }
+  }
+}
+
+.direc-data  {
+  .cl-body {
+    display: block;
   }
 }

@@ -302,11 +302,15 @@ input:checked + .control-round:before {
 
 .das-table-header,
 .das-table-row {
-  display: grid;
-  grid-template-columns: 1fr 12.6rem 14rem 10rem 12.5rem 10rem 9.2rem 9.2rem;
+  @include min(1251px){
+    display: grid;
+  }
+  @include min(1401px){
+    grid-template-columns: 1fr 12.6rem 14rem 10rem 12.5rem 10rem 9.2rem 9.2rem;
+  }
   border-bottom: 0.1rem solid #e0e0e0;
 
-  @include max(1400px) {
+  @include min-max(1251px, 1400px) {
     grid-template-columns: 1fr 11rem 12rem 10rem 11rem 8.2rem 7.2rem 7.2rem;
   }
 }
@@ -499,9 +503,11 @@ input:checked + .control-round:before {
 .admin-block.--custom {
   .das-table-header,
   .das-table-row {
-    grid-template-columns: 1fr 18rem 10rem 9rem 12.5rem 10rem 11.5rem 9.2rem;
+    @include min(1401px){
+      grid-template-columns: 1fr 18rem 10rem 9rem 12.5rem 10rem 11.5rem 9.2rem;
+    }
 
-    @include max(1400px) {
+    @include min-max(1251px, 1400px) {
       grid-template-columns: 1fr 18rem 10rem 8rem 11rem 8.2rem 7.2rem 7.2rem;
     }
   }
