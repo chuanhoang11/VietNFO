@@ -26,7 +26,6 @@ import AdminDashboardModule from "./module/AdminDashboardModule.js";
 import ToggleSwitchModule from "./module/ToggleSwitchModule.js";
 
 
-
 window.addEventListener("DOMContentLoaded", () => {
   // Animation
   AnimatedModule();
