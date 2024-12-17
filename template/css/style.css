@@ -15480,6 +15480,11 @@ body.page-search {
 .t-title span {
   color: var(--color-pri); }
 
+@media screen and (min-width: 1024px) {
+  .form-upload .b-inner,
+  .upload-panel .inner-panel {
+    padding: 1.6rem 2.4rem; } }
+
 @media screen and (max-width: 1024px) {
   .form-upload .b-inner,
   .upload-panel .inner-panel {
@@ -15493,6 +15498,9 @@ body.page-search {
 @media (min-width: 600px) and (max-width: 1250px) {
   .main-admin .table-pagi {
     padding: 1.2rem 1.6rem !important; } }
+
+.direc-data .cl-body {
+  display: block; }
 
 .admin-dashboard .admin-block {
   padding: 0; }
@@ -15783,12 +15791,18 @@ input:checked + .control-round:before {
 
 .das-table-header,
 .das-table-row {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 12.6rem 14rem 10rem 12.5rem 10rem 9.2rem 9.2rem;
-  grid-template-columns: 1fr 12.6rem 14rem 10rem 12.5rem 10rem 9.2rem 9.2rem;
   border-bottom: 0.1rem solid #e0e0e0; }
-  @media screen and (max-width: 1400px) {
+  @media screen and (min-width: 1251px) {
+    .das-table-header,
+    .das-table-row {
+      display: -ms-grid;
+      display: grid; } }
+  @media screen and (min-width: 1401px) {
+    .das-table-header,
+    .das-table-row {
+      -ms-grid-columns: 1fr 12.6rem 14rem 10rem 12.5rem 10rem 9.2rem 9.2rem;
+      grid-template-columns: 1fr 12.6rem 14rem 10rem 12.5rem 10rem 9.2rem 9.2rem; } }
+  @media (min-width: 1251px) and (max-width: 1400px) {
     .das-table-header,
     .das-table-row {
       -ms-grid-columns: 1fr 11rem 12rem 10rem 11rem 8.2rem 7.2rem 7.2rem;
@@ -15960,15 +15974,17 @@ input:checked + .control-round:before {
       text-align: left;
       white-space: nowrap; } }
 
-.admin-block.--custom .das-table-header,
-.admin-block.--custom .das-table-row {
-  -ms-grid-columns: 1fr 18rem 10rem 9rem 12.5rem 10rem 11.5rem 9.2rem;
-  grid-template-columns: 1fr 18rem 10rem 9rem 12.5rem 10rem 11.5rem 9.2rem; }
-  @media screen and (max-width: 1400px) {
-    .admin-block.--custom .das-table-header,
-    .admin-block.--custom .das-table-row {
-      -ms-grid-columns: 1fr 18rem 10rem 8rem 11rem 8.2rem 7.2rem 7.2rem;
-      grid-template-columns: 1fr 18rem 10rem 8rem 11rem 8.2rem 7.2rem 7.2rem; } }
+@media screen and (min-width: 1401px) {
+  .admin-block.--custom .das-table-header,
+  .admin-block.--custom .das-table-row {
+    -ms-grid-columns: 1fr 18rem 10rem 9rem 12.5rem 10rem 11.5rem 9.2rem;
+    grid-template-columns: 1fr 18rem 10rem 9rem 12.5rem 10rem 11.5rem 9.2rem; } }
+
+@media (min-width: 1251px) and (max-width: 1400px) {
+  .admin-block.--custom .das-table-header,
+  .admin-block.--custom .das-table-row {
+    -ms-grid-columns: 1fr 18rem 10rem 8rem 11rem 8.2rem 7.2rem 7.2rem;
+    grid-template-columns: 1fr 18rem 10rem 8rem 11rem 8.2rem 7.2rem 7.2rem; } }
 
 .admin-note {
   display: -webkit-box;

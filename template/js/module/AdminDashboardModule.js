@@ -2,7 +2,7 @@ export default function AdminDashboardModule() {
   //===========  JS Table
   $(document).ready(function () {
     function applyResponsiveCollapse() {
-      if ($(window).width() <= 1250) {
+      if (window.innerWidth < 1250) {
         $('.das-table-row').each(function () {
           if (!$(this).find('.das-cell').first().hasClass('das-cl-head')) {
             const firstCell = $(this).find('.das-cell').first();

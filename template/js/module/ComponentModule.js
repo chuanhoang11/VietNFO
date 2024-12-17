@@ -353,7 +353,7 @@ export default function ComponentModule() {
 
   $(document).ready(function () {
     function applyResponsiveCollapse() {
-      if ($(window).width() <= 950) {
+      if (window.innerWidth < 950) {
         $('.table-row').each(function () {
           if (!$(this).find('.cell').first().hasClass('cl-head')) {
             const firstCell = $(this).find('.cell').first();
