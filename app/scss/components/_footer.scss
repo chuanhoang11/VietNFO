@@ -187,7 +187,7 @@
     flex-wrap: wrap;
     gap: 1.2rem;
     align-items: center;
-    @include max(1440px) {
+    @include max(1450px) {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
