@@ -532,9 +532,9 @@ export default function ComponentModule() {
       centeredSlides: false,
       loop: false,
       effect: "slide",
-      navigation:{
-        prevEl:".adminDate-slide .swiper-prev",
-        nextEl:".adminDate-slide .swiper-next",
+      navigation: {
+        prevEl: ".adminDate-slide .swiper-prev",
+        nextEl: ".adminDate-slide .swiper-next",
       },
       on: {
         slideChange: function () {
@@ -554,18 +554,23 @@ export default function ComponentModule() {
     checkThemThongTin.forEach((item) => {
       item.addEventListener("change", (e) => {
         const themThongTin = document.querySelectorAll(".hideThongTinLienHe");
-        if (e.target.classList.contains("check-themthongtin") && e.target.checked){
+        if (e.target.classList.contains("check-themthongtin") && e.target.checked) {
           themThongTin.forEach((item) => {
             item.classList.add("open");
           });
         }
-        else{
+        else {
           themThongTin.forEach((item) => {
             item.classList.remove("open");
           });
         }
       });
     });
-   
   }
+  const windowHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--window-height', `${window.innerHeight}px`)
+  }
+  window.addEventListener('resize', windowHeight);
+  windowHeight();
 }

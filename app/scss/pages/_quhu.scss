@@ -3815,6 +3815,7 @@ $table-spacing: 1rem; // 10px
   display: flex;
   flex-direction: column;
   height: 100vh;
+  height: var(--window-height);
 }
 .popdt .popup-over {
   max-height: 100%;
@@ -3824,9 +3825,7 @@ $table-spacing: 1rem; // 10px
 }
 
 .popup-main:has(.popdt) {
-  // top: unset;
-  // transform: translateY(0) translateX(-50%);
-  // bottom: 0;
+  height: 100%;
 }
 @include max(1005px) {
   .direc-data {

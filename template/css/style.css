@@ -15428,13 +15428,17 @@ body.page-search {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100vh; }
+  height: 100vh;
+  height: var(--window-height); }
 
 .popdt .popup-over {
   max-height: 100%; }
 
 .popdt .heads {
   height: 7rem; }
+
+.popup-main:has(.popdt) {
+  height: 100%; }
 
 @media screen and (max-width: 1005px) {
   .direc-data .sear-form .form-list .col-search {
