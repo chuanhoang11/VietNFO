@@ -15420,8 +15420,18 @@ body.page-search {
         .adminDate-btn.save:hover {
           background-color: #12B76A; } }
 
+.popdt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh; }
+
 .popdt .popup-over {
-  max-height: calc(100vh - 7rem); }
+  max-height: 100%; }
 
 .popdt .heads {
   height: 7rem; }

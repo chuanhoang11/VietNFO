@@ -3811,8 +3811,13 @@ $table-spacing: 1rem; // 10px
 }
 
 // fb 16/12/2024
+.popdt {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 .popdt .popup-over {
-  max-height: calc(100vh - 7rem);
+  max-height: 100%;
 }
 .popdt .heads {
   height: 7rem;
@@ -3860,6 +3865,8 @@ $table-spacing: 1rem; // 10px
   }
   
 }
+
+
 
 .sign-logo {
   display: none;
