@@ -1,7 +1,7 @@
 // --------------------------------------
 .mobile {
   position: fixed;
-  z-index: 12;
+  z-index: 30;
   top: var(--size-hd);
   left: 0;
   bottom: 0;
@@ -15,9 +15,9 @@
     min-width: initial;
   }
 
-  &.sticky {
-    --size-hd: 5.4rem;
-  }
+  //   &.sticky {
+  //     --size-hd: 5.4rem;
+  //   }
 
   &.open {
     transform: translateX(0);
@@ -37,7 +37,7 @@
 
   &-overlay {
     @include full-fixed;
-    z-index: 12;
+    z-index: 30;
     background-color: rgba(0, 0, 0, 0.8);
     @include transition(0.6s, ease);
     opacity: 0;
@@ -45,9 +45,9 @@
     transform: translateX(-110%);
     top: var(--size-hd);
 
-    &.sticky {
-      --size-hd: 5.4rem;
-    }
+    //  &.sticky {
+    //    --size-hd: 5.4rem;
+    //  }
 
     &.open {
       opacity: 1;
