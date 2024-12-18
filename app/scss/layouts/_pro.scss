@@ -10,7 +10,8 @@
   }
 }
 
-.pro {}
+.pro {
+}
 
 .pro-list {
   --rg: 1.6rem;
@@ -39,7 +40,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  --pd-content: calc(16/14 * 1em);
+  --pd-content: calc(16 / 14 * 1em);
   background-color: white;
   width: 100%;
   transition: 0.3s ease-in-out;
@@ -95,9 +96,9 @@
 }
 
 .pro-type {
-  font-size: calc(16/14 * 1em);
+  font-size: calc(16 / 14 * 1em);
   font-weight: 600;
-  padding: calc(8/16 * 1em) calc(24/16 * 1em);
+  padding: calc(8 / 16 * 1em) calc(24 / 16 * 1em);
   background: #e9effe;
   color: #6b686a;
   width: fit-content;
@@ -134,13 +135,12 @@
   left: 1em;
   z-index: 1;
   font-weight: 500;
-
 }
 
 .pro-content {
   display: flex;
   flex-direction: column;
-  gap: calc(12/14 * 1em);
+  gap: calc(12 / 14 * 1em);
   padding: var(--pd-content);
   flex: 1;
 }
@@ -148,13 +148,13 @@
 .pro-content-child {
   display: flex;
   flex-direction: column;
-  gap: calc(8/14 * 1em);
+  gap: calc(8 / 14 * 1em);
 }
 
 .pro-name {
   font-weight: 600;
   color: #1d2939;
-  font-size: calc(20/14 * 1em);
+  font-size: calc(20 / 14 * 1em);
   @include lc(1);
 
   .txt {
@@ -162,7 +162,7 @@
   }
 
   @include max($mobile) {
-    font-size: calc(16/14 * 1em);
+    font-size: calc(16 / 14 * 1em);
   }
 }
 
@@ -226,7 +226,7 @@
   width: fit-content;
   display: inline-block;
   font-feature-settings: "liga" off;
-  font-size: calc(16/14 * 1em);
+  font-size: calc(16 / 14 * 1em);
 }
 
 .pro-ul li {
@@ -240,20 +240,20 @@
   align-items: center;
   gap: 0.4em;
 
-  >img {
+  > img {
     width: 1.2em;
     position: relative;
     flex-shrink: 0;
   }
 
-  >.txt {
+  > .txt {
     @include lc(1);
   }
 }
 
 .pro-wr.second {
   --pd-content: 0.8em;
-  background-color: #FCFCFD;
+  background-color: #fcfcfd;
 
   @include hover {
     background-color: #f3faff;
@@ -280,8 +280,6 @@
     }
   }
 }
-
-
 
 .pro-right {
   flex: 1;
@@ -314,7 +312,7 @@
   height: 100%;
 
   .inner {
-    padding-top: calc(3/4* 100%);
+    padding-top: calc(3 / 4 * 100%);
   }
 
   @include max(500px) {
@@ -329,7 +327,7 @@
   flex-direction: column;
 
   @include max($tablet) {
-    gap: .4em;
+    gap: 0.4em;
   }
 }
 
@@ -343,17 +341,17 @@
 }
 
 .pro-wr.third .pro-des {
-  font-size: calc(15/14 * 1em);
+  font-size: calc(15 / 14 * 1em);
   color: #667085;
   -webkit-line-clamp: 3;
-  margin-bottom: .4em;
+  margin-bottom: 0.4em;
 }
 
 .pro-bar {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: calc(24/16 * 1em);
+  gap: calc(24 / 16 * 1em);
 
   @include min-max(501px, $res-tablet) {
     flex-direction: row;
@@ -474,7 +472,7 @@
     // opacity: 0;
     transition: 0.3s ease-in-out;
     pointer-events: none;
-    border: .1rem solid #d9d9d9;
+    border: 0.1rem solid #d9d9d9;
   }
 
   @include hover {
@@ -502,7 +500,7 @@
   border-radius: calc(var(--rs) / 2);
   height: 100%;
 
-  >img {
+  > img {
     display: block;
     width: 100%;
     height: 100%;
@@ -516,12 +514,10 @@
   grid-auto-rows: auto;
   gap: 1.6rem;
 
-
   @include max(700px) {
     grid-template-columns: 1fr;
   }
 }
-
 
 @include min($res-tablet-min) {
   .pro-grid-item:nth-child(1) {
@@ -550,39 +546,39 @@
 }
 
 .pro-wr.four {
-  --pd-content: calc(16/14 * 1em);
+  --pd-content: calc(16 / 14 * 1em);
   flex-direction: row;
   padding: var(--pd-content);
   gap: 1em;
   align-items: flex-start;
 
-  >img {
-    width: calc(48/14 * 1em);
+  > img {
+    width: calc(48 / 14 * 1em);
     flex-shrink: 0;
 
     @include max($res-tablet) {
-      width: calc(32/14 * 1em);
+      width: calc(32 / 14 * 1em);
     }
   }
 
   .pro-des {
     -webkit-line-clamp: 2;
-    word-break: break-all
+    word-break: break-all;
   }
 }
 
 .pro-wr.four .pro-content {
-  gap: calc(5/12 * 1em)
+  gap: calc(5 / 12 * 1em);
 }
 
 .pro-wr.four .pro-name {
   line-height: 1.3;
   display: flex;
   align-items: center;
-  gap: .3em;
+  gap: 0.3em;
 }
 
-.pro-wr.four .pro-name>img {
+.pro-wr.four .pro-name > img {
   width: 1.2em;
 }
 
@@ -591,10 +587,10 @@
 }
 
 .pro-wr.five .pro-content {
-  gap: calc(12/14 * 1em);
+  gap: calc(12 / 14 * 1em);
 
   .pro-btn {
-    padding: calc(8/14* 1em) calc(12/14* 1em);
+    padding: calc(8 / 14 * 1em) calc(12 / 14 * 1em);
   }
 
   .pro-name {
@@ -606,7 +602,8 @@
   padding: 0;
 }
 
-.pro-wr.four>img {}
+.pro-wr.four > img {
+}
 
 .pro-bner {
   border-radius: var(--rs);
@@ -633,7 +630,6 @@
     min-height: 27rem;
   }
 }
-
 
 .pro-bner-dc {
   position: absolute;
@@ -682,7 +678,7 @@
 }
 
 .pro-bner-name {
-  font-size: calc(32/16 * 1em);
+  font-size: calc(32 / 16 * 1em);
   font-weight: 600;
 
   @include max($mobile) {
@@ -708,13 +704,13 @@
   z-index: 2;
   margin-top: 1em;
   margin-left: 1em;
-  font-size: calc(10/16 * 1em);
+  font-size: calc(10 / 16 * 1em);
 }
 
 .pro-bner .pro-btn {
-  font-size: calc(15/16 * 1em);
-  padding: calc(8/16 * 1em) calc(12/16 * 1em);
-  border-radius: .6rem;
+  font-size: calc(15 / 16 * 1em);
+  padding: calc(8 / 16 * 1em) calc(12 / 16 * 1em);
+  border-radius: 0.6rem;
 }
 
 .pro-btn {
@@ -735,7 +731,7 @@
     color: var(--color-pri);
   }
 
-  >img {
+  > img {
     width: 1em;
     border-radius: 0;
     flex-shrink: 0;
@@ -904,7 +900,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: calc(12/14 * 1em);
+  gap: calc(12 / 14 * 1em);
   margin-top: auto;
 
   .pro-btn {
@@ -1038,7 +1034,6 @@
 
 .pro-item.col-third {
   @include min($mobile) {
-
     .pro-bner-content {
       padding: 1.4em;
     }
@@ -1084,7 +1079,6 @@
     min-height: unset;
   }
 
-
   .sear-panel .pro-item.col-third {
     @include max($res-tablet) {
       width: 100%;
@@ -1107,8 +1101,6 @@
 
 // }
 
-
-
 // @include min-max($mobile, $res-mobile) {
 //   .sear-panel .pro-img {
 //     display: none;
@@ -1130,7 +1122,9 @@
     height: unset;
   }
 
-  .select2-container--default .select2-selection--single .select2-selection__arrow {
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
     left: unset;
     right: 0;
   }
@@ -1160,7 +1154,7 @@
 
 .sear-panel .head-sc .t-title {
   font-size: 3rem;
-  @include max(1330px){
+  @include max(1330px) {
     font-size: 2.2rem;
   }
 }
@@ -1206,13 +1200,13 @@
 }
 
 .pro-bner.--modifier .pro-bner-content {
-  padding: calc(18/16 * 1em);
-  padding-left: calc(25/16 * 1em);
-  gap: calc(12/16 * 1em);
+  padding: calc(18 / 16 * 1em);
+  padding-left: calc(25 / 16 * 1em);
+  gap: calc(12 / 16 * 1em);
 }
 
 .pro-bner.--modifier .pro-bner-des {
-  margin-bottom: calc(12/16 * 1em);
+  margin-bottom: calc(12 / 16 * 1em);
 
   @include max(500px) {
     font-size: 1em;
@@ -1221,22 +1215,20 @@
 
 .pro-bner.--modifier.--third .pro-bner-name,
 .pro-bner.--modifier.--first .pro-bner-name {
-  font-size: calc(24/16 * 1em);
+  font-size: calc(24 / 16 * 1em);
 }
 
 .pro-bner.--modifier.--third .pro-bner-des,
 .pro-bner.--modifier.--first .pro-bner-des {
-  font-size: calc(14/16 * 1em);
+  font-size: calc(14 / 16 * 1em);
 }
 
 .pro-bner.--modifier.--third .pro-bner-content {
-
   @include min(1331px) {
-    padding: calc(11/16 * 1em);
-    padding-left: calc(50/16 * 1em);
+    padding: calc(11 / 16 * 1em);
+    padding-left: calc(50 / 16 * 1em);
   }
 }
-
 
 .home-hero-banner {
   display: block;
@@ -1259,13 +1251,12 @@
   }
 }
 
-
 .pro-list.grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   --rg: 0rem;
   --cg: 0rem;
-  gap: .8rem;
+  gap: 0.8rem;
 
   @include max(1330px) {
     grid-template-columns: 1fr;
@@ -1289,7 +1280,6 @@
 }
 
 .sear-head.sear-head-custom {
-
   .selectCusValue .txt,
   .selectTwoValue .txt {
     font-size: 1.4rem;
@@ -1298,7 +1288,6 @@
   .b-ip-search input {
     font-size: 1.4rem;
   }
-
 }
 
 @include min($res-tablet-min) {
@@ -1312,7 +1301,7 @@
   }
 
   .sear-head.sear-head-custom {
-    height: var(--h-sear);
+    min-height: var(--h-sear);
   }
 
   .sear-head.sear-head-custom {
@@ -1325,7 +1314,6 @@
       height: 3.6rem;
       font-size: 1.4rem;
     }
-
 
     .col-btn {
       .btn {
@@ -1342,10 +1330,7 @@
   top: var(--h-sear);
 }
 
-
-
 @include max($res-tablet) {
-
   .sear-head.sear-head-custom {
     position: sticky;
     top: 0;
@@ -1371,7 +1356,7 @@
   }
 
   .sear-head.sear-head-custom {
-    padding: 0 var(--pd-container);
+    padding: var(--pd-container);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1434,7 +1419,7 @@
   gap: 1rem;
   background-color: var(--color-pri);
   padding: 1.2rem;
-  border-radius: .6rem;
+  border-radius: 0.6rem;
   color: white;
 
   @include min($res-tablet-min) {
@@ -1443,13 +1428,13 @@
 
   &-burger {
     span:nth-child(2) {
-      margin: .3rem 0;
+      margin: 0.3rem 0;
     }
 
     span {
       display: block;
       width: 1.8rem;
-      height: .1rem;
+      height: 0.1rem;
       background-color: white;
       border-radius: 100rem;
     }
@@ -1457,7 +1442,6 @@
 }
 
 .pro-item.col-third {
-
   @include max($res-tablet) {
     width: 100%;
   }
