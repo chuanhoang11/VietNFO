@@ -8725,9 +8725,7 @@ ul.page-numbers {
   .pro-select .select2-container,
   .pro-select .select2-container--default .select2-selection--single {
     height: unset; }
-  .pro-select .select2-container--default
-.select2-selection--single
-.select2-selection__arrow {
+  .pro-select .select2-container--default .select2-selection--single .select2-selection__arrow {
     left: unset;
     right: 0; }
   .pro-select .select2-container .select2-selection--single .select2-selection__rendered {
@@ -8886,7 +8884,7 @@ ul.page-numbers {
   .page-search-res .main {
     padding-top: 0; }
   .sear-head.sear-head-custom {
-    height: var(--h-sear); }
+    min-height: var(--h-sear); }
   .sear-form .col-buger {
     width: -webkit-fit-content !important;
     width: -moz-fit-content !important;

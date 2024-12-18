@@ -1122,9 +1122,7 @@
     height: unset;
   }
 
-  .select2-container--default
-    .select2-selection--single
-    .select2-selection__arrow {
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
     left: unset;
     right: 0;
   }
@@ -1345,7 +1343,7 @@
   }
 
   .sear-head.sear-head-custom {
-    height: var(--h-sear);
+    min-height: var(--h-sear);
   }
 
   .sear-form .col-buger {
