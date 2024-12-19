@@ -187,7 +187,7 @@
     flex-wrap: wrap;
     gap: 1.2rem;
     align-items: center;
-    @include max(1460px) {
+    @include max(1200px) {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -295,6 +295,7 @@ body.page-result {
       &-bot {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
       }
     }
   }
@@ -303,4 +304,11 @@ body.page-result {
 .ft .social-link {
   width: 3.2rem;
   height: 3.2rem;
+}
+.page-dashboard-home .ft-bot {
+  @include max(1460px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 }
